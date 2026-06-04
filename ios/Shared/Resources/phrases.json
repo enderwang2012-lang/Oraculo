@@ -1,0 +1,3964 @@
+[
+  {
+    "id": "sb_1",
+    "text": "今日锦鲤",
+    "textEn": "Lucky koi, today",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 3.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_2",
+    "text": "文艺青年",
+    "textEn": "Artsy soul",
+    "layer": "anchor",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_3",
+    "text": "都挺好",
+    "textEn": "All's well enough",
+    "layer": "anchor",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_4",
+    "text": "小天使啊",
+    "textEn": "Little angel",
+    "layer": "active",
+    "emotionTheme": "亲昵身份",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_5",
+    "text": "能力不嫌多",
+    "textEn": "Skills never hurt",
+    "layer": "active",
+    "emotionTheme": "鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_6",
+    "text": "锦鲤本鲤",
+    "textEn": "Koi incarnate",
+    "layer": "active",
+    "emotionTheme": "好运身份",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 3.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_7",
+    "text": "凌波微步",
+    "textEn": "Light on water",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_8",
+    "text": "魅力四射",
+    "textEn": "Radiant charm",
+    "layer": "active",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_9",
+    "text": "这么优秀",
+    "textEn": "So brilliant",
+    "layer": "active",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_10",
+    "text": "鸟语蝉鸣",
+    "textEn": "Birdsong, cicada hum",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_11",
+    "text": "别人家孩子",
+    "textEn": "That golden child",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_12",
+    "text": "突然开心",
+    "textEn": "Sudden joy",
+    "layer": "active",
+    "emotionTheme": "即时心情",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_13",
+    "text": "喜欢夏天",
+    "textEn": "Summer's favorite",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_14",
+    "text": "一杯敬月光",
+    "textEn": "A cup to moonlight",
+    "layer": "active",
+    "emotionTheme": "夜晚浪漫",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_15",
+    "text": "蜘蛛侠",
+    "textEn": "Spider-Man",
+    "layer": "active",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_16",
+    "text": "芝麻开门",
+    "textEn": "Open sesame",
+    "layer": "active",
+    "emotionTheme": "暗号玩梗",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_17",
+    "text": "屠龙刀",
+    "textEn": "Dragon-slaying blade",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_18",
+    "text": "月光宝盒",
+    "textEn": "Moonlight box",
+    "layer": "active",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_19",
+    "text": "别人家的孩子",
+    "textEn": "The neighbor's wonder",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_20",
+    "text": "蔚蓝海面",
+    "textEn": "Azure sea",
+    "layer": "active",
+    "emotionTheme": "夏日景象",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_21",
+    "text": "去潜水吧",
+    "textEn": "Go dive",
+    "layer": "active",
+    "emotionTheme": "夏日行动",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_22",
+    "text": "万物生长",
+    "textEn": "Everything grows",
+    "layer": "active",
+    "emotionTheme": "自然季节",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_23",
+    "text": "水上乐园",
+    "textEn": "Water park dreams",
+    "layer": "active",
+    "emotionTheme": "夏日场景",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_24",
+    "text": "六脉神剑",
+    "textEn": "Six-vein sword",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_25",
+    "text": "唯快不破",
+    "textEn": "Speed wins all",
+    "layer": "active",
+    "emotionTheme": "速度与武侠",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_26",
+    "text": "他夏了夏天",
+    "textEn": "He summered summer",
+    "layer": "active",
+    "emotionTheme": "歌曲与季节",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_27",
+    "text": "我是蜘蛛侠",
+    "textEn": "I Am Spider-Man",
+    "layer": "active",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_28",
+    "text": "以秋风之名",
+    "textEn": "In autumn's name",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_29",
+    "text": "乌云散开",
+    "textEn": "Clouds disperse",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_30",
+    "text": "旅途甜甜",
+    "textEn": "Sweet journey",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_31",
+    "text": "烦恼退散",
+    "textEn": "Worries scatter",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_32",
+    "text": "人间值得",
+    "textEn": "The world still holds you",
+    "layer": "active",
+    "emotionTheme": "治愈肯定",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_33",
+    "text": "奥利给",
+    "textEn": "Let's go!",
+    "layer": "active",
+    "emotionTheme": "网络流行语",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_34",
+    "text": "妙啊妙啊",
+    "textEn": "Nice, so nice",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_35",
+    "text": "左边一起画个龙",
+    "textEn": "Draw a dragon, left",
+    "layer": "active",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_36",
+    "text": "画画的北北",
+    "textEn": "Northern doodler",
+    "layer": "active",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_37",
+    "text": "重启试试",
+    "textEn": "Reboot and try",
+    "layer": "active",
+    "emotionTheme": "日常玩梗",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_38",
+    "text": "一起星辰大海",
+    "textEn": "Stars and sea together",
+    "layer": "active",
+    "emotionTheme": "远方浪漫",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_39",
+    "text": "最是一年春好处",
+    "textEn": "Spring at its best",
+    "layer": "active",
+    "emotionTheme": "春季诗意",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:spring"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_40",
+    "text": "新一年总晴天",
+    "textEn": "Sunny year ahead",
+    "layer": "active",
+    "emotionTheme": "新年祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:clear",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_41",
+    "text": "冬日暖阳",
+    "textEn": "Winter sun warmth",
+    "layer": "active",
+    "emotionTheme": "冬季温暖",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:winter"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_42",
+    "text": "月是秋夜明",
+    "textEn": "Autumn moon, bright night",
+    "layer": "active",
+    "emotionTheme": "秋夜诗意",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:autumn"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_43",
+    "text": "秋天开始喝暖饮",
+    "textEn": "Warm drinks, autumn starts",
+    "layer": "active",
+    "emotionTheme": "秋季饮品",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:autumn"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_44",
+    "text": "最特别的存在",
+    "textEn": "Most special one",
+    "layer": "active",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_45",
+    "text": "美好拉开帷幕",
+    "textEn": "Beauty takes the stage",
+    "layer": "active",
+    "emotionTheme": "希望鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_46",
+    "text": "和幸福撞满杯",
+    "textEn": "Bump cups with joy",
+    "layer": "active",
+    "emotionTheme": "幸福与杯饮",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_47",
+    "text": "给你温暖阳光",
+    "textEn": "Warm sun for you",
+    "layer": "active",
+    "emotionTheme": "温暖治愈",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:clear",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_48",
+    "text": "温暖无限供应",
+    "textEn": "Warmth on tap",
+    "layer": "active",
+    "emotionTheme": "温暖治愈",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_49",
+    "text": "平安喜乐",
+    "textEn": "Peace and quiet joy",
+    "layer": "active",
+    "emotionTheme": "平安祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_50",
+    "text": "财神到家",
+    "textEn": "Fortune at the door",
+    "layer": "active",
+    "emotionTheme": "财运祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_51",
+    "text": "岁岁常欢愉",
+    "textEn": "Joy every year",
+    "layer": "active",
+    "emotionTheme": "长久祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_52",
+    "text": "年年皆胜意",
+    "textEn": "Winning years ahead",
+    "layer": "active",
+    "emotionTheme": "长久祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_53",
+    "text": "暴富暴瘦暴酷",
+    "textEn": "Rich, lean, cool",
+    "layer": "active",
+    "emotionTheme": "夸张祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_54",
+    "text": "扁担长板凳宽",
+    "textEn": "Long pole, wide bench",
+    "layer": "active",
+    "emotionTheme": "绕口令",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_55",
+    "text": "珊瑚海",
+    "textEn": "Coral sea",
+    "layer": "active",
+    "emotionTheme": "歌曲玩梗",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_56",
+    "text": "右手画彩虹",
+    "textEn": "Rainbow, right hand",
+    "layer": "active",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_57",
+    "text": "白胡子在路上",
+    "textEn": "White beard incoming",
+    "layer": "active",
+    "emotionTheme": "奇趣想象",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_58",
+    "text": "笑出强大",
+    "textEn": "Laugh with power",
+    "layer": "active",
+    "emotionTheme": "鼓励玩梗",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_59",
+    "text": "最靓的仔",
+    "textEn": "Coolest one around",
+    "layer": "active",
+    "emotionTheme": "身份自夸",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_60",
+    "text": "Hi走啦",
+    "textEn": "Hi, I'm off",
+    "layer": "active",
+    "emotionTheme": "口语玩梗",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_61",
+    "text": "是最喜欢的秋天啊",
+    "textEn": "Favorite season: fall",
+    "layer": "active",
+    "emotionTheme": "秋季心情",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:autumn"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_62",
+    "text": "月光下的锦鲤",
+    "textEn": "Koi in moonlight",
+    "layer": "active",
+    "emotionTheme": "好运浪漫",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 3.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_63",
+    "text": "奥力给",
+    "textEn": "Let's go!",
+    "layer": "active",
+    "emotionTheme": "网络流行语",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_64",
+    "text": "天选之子",
+    "textEn": "Chosen one",
+    "layer": "active",
+    "emotionTheme": "好运身份",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_65",
+    "text": "全能小天才",
+    "textEn": "Little prodigy",
+    "layer": "active",
+    "emotionTheme": "身份自夸",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_66",
+    "text": "甩碗米线",
+    "textEn": "Tossed bowl noodles",
+    "layer": "active",
+    "emotionTheme": "食物奇趣",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_67",
+    "text": "冲鸭冲鸭",
+    "textEn": "Go go duck!",
+    "layer": "active",
+    "emotionTheme": "网络鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_68",
+    "text": "诸事皆宜",
+    "textEn": "All things auspicious",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_69",
+    "text": "水逆绕行",
+    "textEn": "Mercury, step aside",
+    "layer": "active",
+    "emotionTheme": "转运祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_70",
+    "text": "快乐一夏",
+    "textEn": "Summer of joy",
+    "layer": "active",
+    "emotionTheme": "夏日祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_71",
+    "text": "赐予你力量",
+    "textEn": "Power granted you",
+    "layer": "active",
+    "emotionTheme": "鼓励祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_72",
+    "text": "召唤神龙",
+    "textEn": "Summon the dragon",
+    "layer": "active",
+    "emotionTheme": "奇幻玩梗",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_73",
+    "text": "美式发生",
+    "textEn": "Americano happens",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_74",
+    "text": "莫愁前路无知己",
+    "textEn": "Friends await ahead",
+    "layer": "active",
+    "emotionTheme": "前路安慰",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_75",
+    "text": "远行是走近自己",
+    "textEn": "Travel inward",
+    "layer": "active",
+    "emotionTheme": "出行自省",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_76",
+    "text": "浪漫不止",
+    "textEn": "Romance unending",
+    "layer": "active",
+    "emotionTheme": "浪漫祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_77",
+    "text": "好事将至",
+    "textEn": "Grace still on its way",
+    "layer": "active",
+    "emotionTheme": "好运预告",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_78",
+    "text": "新年有新意",
+    "textEn": "Fresh year, fresh spark",
+    "layer": "active",
+    "emotionTheme": "新年祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 3.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_79",
+    "text": "风和景明",
+    "textEn": "Clear wind, bright scene",
+    "layer": "active",
+    "emotionTheme": "春日景象",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_80",
+    "text": "五月被期待填满",
+    "textEn": "May, full of hope",
+    "layer": "active",
+    "emotionTheme": "月份希望",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "month:5",
+          "weight": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_81",
+    "text": "厉害了爹地们",
+    "textEn": "Dads on fire",
+    "layer": "active",
+    "emotionTheme": "称呼玩梗",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_82",
+    "text": "旅途如意",
+    "textEn": "Smooth travels",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_83",
+    "text": "悄悄惊艳大家",
+    "textEn": "Quietly dazzling all",
+    "layer": "active",
+    "emotionTheme": "学习鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_84",
+    "text": "好运加满",
+    "textEn": "Luck tank full",
+    "layer": "active",
+    "emotionTheme": "好运与杯饮",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_85",
+    "text": "Dobby is free",
+    "textEn": "Dobby is free",
+    "layer": "active",
+    "emotionTheme": "哈利波特联名",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_86",
+    "text": "霍格沃茨欢迎你",
+    "textEn": "Hogwarts welcomes you",
+    "layer": "active",
+    "emotionTheme": "哈利波特联名",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_87",
+    "text": "握紧魔杖",
+    "textEn": "Grip your wand",
+    "layer": "active",
+    "emotionTheme": "哈利波特联名",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_88",
+    "text": "终将胜利",
+    "textEn": "Victory in time",
+    "layer": "active",
+    "emotionTheme": "哈利波特联名",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_89",
+    "text": "左青龙右白虎",
+    "textEn": "Azure dragon, white tiger",
+    "layer": "active",
+    "emotionTheme": "江湖玩梗",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_90",
+    "text": "闯入9¾站台",
+    "textEn": "Through Platform 9¾",
+    "layer": "anchor",
+    "emotionTheme": "哈利波特联名",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_91",
+    "text": "自由是终极魔法",
+    "textEn": "Freedom, final magic",
+    "layer": "anchor",
+    "emotionTheme": "哈利波特联名",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_92",
+    "text": "常乐常安",
+    "textEn": "Ever joyful, ever calm",
+    "layer": "active",
+    "emotionTheme": "平安祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_93",
+    "text": "向上生长",
+    "textEn": "Grow upward",
+    "layer": "active",
+    "emotionTheme": "成长鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_94",
+    "text": "今天的你赞赞赞",
+    "textEn": "Triple thumbs-up today",
+    "layer": "anchor",
+    "emotionTheme": "夸赞鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_95",
+    "text": "万事皆合时宜",
+    "textEn": "All in season",
+    "layer": "anchor",
+    "emotionTheme": "顺遂祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_96",
+    "text": "赤诚亦勇敢",
+    "textEn": "Fierce and sincere",
+    "layer": "anchor",
+    "emotionTheme": "人格鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_97",
+    "text": "永远风华正茂",
+    "textEn": "Forever in bloom",
+    "layer": "anchor",
+    "emotionTheme": "青春祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_98",
+    "text": "幸福加倍",
+    "textEn": "Happiness doubled",
+    "layer": "anchor",
+    "emotionTheme": "幸福祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_99",
+    "text": "新年万事定称心",
+    "textEn": "New year, heart's desire",
+    "layer": "anchor",
+    "emotionTheme": "新年祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 3.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_100",
+    "text": "挂霜予你",
+    "textEn": "Frost for you",
+    "layer": "anchor",
+    "emotionTheme": "秋季温柔",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:cold",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_101",
+    "text": "新春开门红",
+    "textEn": "Spring opens red-hot",
+    "layer": "active",
+    "emotionTheme": "新年祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 3.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_102",
+    "text": "诸事皆顺",
+    "textEn": "All flows smooth",
+    "layer": "active",
+    "emotionTheme": "顺遂祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_103",
+    "text": "take it easy.",
+    "textEn": "Take it easy.",
+    "layer": "active",
+    "emotionTheme": "latin_phrase",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_104",
+    "text": "be real.",
+    "textEn": "Be real.",
+    "layer": "active",
+    "emotionTheme": "latin_phrase",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_105",
+    "text": "good vibes.",
+    "textEn": "Good vibes.",
+    "layer": "active",
+    "emotionTheme": "latin_phrase",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_106",
+    "text": "dare to dream.",
+    "textEn": "Dare to dream.",
+    "layer": "active",
+    "emotionTheme": "latin_phrase",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_107",
+    "text": "每一次全力以赴",
+    "textEn": "Every effort, whole heart",
+    "layer": "active",
+    "emotionTheme": "努力鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_108",
+    "text": "愿将来胜过往",
+    "textEn": "May tomorrow outshine yesterday",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_109",
+    "text": "为热爱 敢上场",
+    "textEn": "For love, take the field",
+    "layer": "active",
+    "emotionTheme": "热爱鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_110",
+    "text": "前行必有曙光",
+    "textEn": "Dawn waits ahead",
+    "layer": "active",
+    "emotionTheme": "前路鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_111",
+    "text": "硕果累累",
+    "textEn": "Heavy with fruit",
+    "layer": "active",
+    "emotionTheme": "收获祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_112",
+    "text": "记得微笑",
+    "textEn": "Let the smile come",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_113",
+    "text": "事缓则圆",
+    "textEn": "Haste softens into roundness",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_114",
+    "text": "奔向幸福",
+    "textEn": "Run toward joy",
+    "layer": "active",
+    "emotionTheme": "幸福祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_115",
+    "text": "花开地处",
+    "textEn": "Bloom where rooted",
+    "layer": "active",
+    "emotionTheme": "待复核",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_116",
+    "text": "适时转弯",
+    "textEn": "Turn in good time",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_117",
+    "text": "远方很美",
+    "textEn": "Far places shine",
+    "layer": "anchor",
+    "emotionTheme": "远方浪漫",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_118",
+    "text": "烦恼消除术",
+    "textEn": "Worry-dissolving spell",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_119",
+    "text": "不必逞强",
+    "textEn": "No need to pose strong",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_120",
+    "text": "珍惜一切",
+    "textEn": "Cherish it all",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_121",
+    "text": "做你自己就很好",
+    "textEn": "As you are, enough",
+    "layer": "active",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_122",
+    "text": "清风为我翻书",
+    "textEn": "Breeze reads for me",
+    "layer": "active",
+    "emotionTheme": "文艺治愈",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_123",
+    "text": "心宽路则宽",
+    "textEn": "Wide heart, wide road",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_124",
+    "text": "天高任鸟飞",
+    "textEn": "Sky high, birds roam",
+    "layer": "active",
+    "emotionTheme": "自由鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_125",
+    "text": "重要的是出发",
+    "textEn": "What matters: leaving",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_126",
+    "text": "成为自己的玫瑰",
+    "textEn": "Your own rose",
+    "layer": "active",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_127",
+    "text": "最棒的自己",
+    "textEn": "Best version, you",
+    "layer": "active",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_128",
+    "text": "见面是最棒的事",
+    "textEn": "Meeting beats all",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_129",
+    "text": "新序章",
+    "textEn": "New chapter",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_130",
+    "text": "宜相见",
+    "textEn": "Meet today",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_131",
+    "text": "轻松自在",
+    "textEn": "Easy and free",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_132",
+    "text": "惬意个登儿",
+    "textEn": "Blissfully laid-back",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_133",
+    "text": "一路风光一路诗",
+    "textEn": "Scenic road, verse road",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_134",
+    "text": "来了都是打工人",
+    "textEn": "Workers, all who come",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_135",
+    "text": "步履从容",
+    "textEn": "Steady gait",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_136",
+    "text": "一路向阳",
+    "textEn": "Sunward all the way",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_137",
+    "text": "不留遗憾",
+    "textEn": "No regrets left",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_138",
+    "text": "大有可为",
+    "textEn": "Much to accomplish",
+    "layer": "active",
+    "emotionTheme": "未来鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_139",
+    "text": "走过的是足迹",
+    "textEn": "Footprints behind",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_140",
+    "text": "自由在风里",
+    "textEn": "Freedom in the wind",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_141",
+    "text": "热烈自由",
+    "textEn": "Fierce and free",
+    "layer": "active",
+    "emotionTheme": "自由鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_142",
+    "text": "所行皆坦途",
+    "textEn": "Smooth every path",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_143",
+    "text": "美好常在",
+    "textEn": "Beauty stays near",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_144",
+    "text": "有趣有盼无忧虑",
+    "textEn": "Fun, hope, no frets",
+    "layer": "active",
+    "emotionTheme": "生活祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_145",
+    "text": "万事皆顺意",
+    "textEn": "All as wished",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_146",
+    "text": "大声称赞自己",
+    "textEn": "Praise yourself aloud",
+    "layer": "anchor",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_147",
+    "text": "卓然前行",
+    "textEn": "Walk with distinction",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_148",
+    "text": "思路清晰",
+    "textEn": "Mind, crystal clear",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_149",
+    "text": "愿前程可奔赴",
+    "textEn": "May paths be runnable",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_150",
+    "text": "爱人间烟火",
+    "textEn": "Love street-life glow",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_151",
+    "text": "状态不掉线",
+    "textEn": "Never drop offline",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_152",
+    "text": "生活向美而生",
+    "textEn": "Life grows toward beauty",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_153",
+    "text": "所念皆所愿",
+    "textEn": "Wishes thought, granted",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_154",
+    "text": "有诗有远方",
+    "textEn": "Verse and far horizons",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_155",
+    "text": "无往而不胜",
+    "textEn": "Victorious wherever",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_156",
+    "text": "开启高光模式",
+    "textEn": "Highlight mode on",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_157",
+    "text": "总有人正年轻",
+    "textEn": "Someone's always young",
+    "layer": "anchor",
+    "emotionTheme": "quiet_mirror",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_158",
+    "text": "每一刻充满可能",
+    "textEn": "Each moment, possibility",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_159",
+    "text": "知足且坚定",
+    "textEn": "Content, unshaken",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_160",
+    "text": "努力的样子很酷",
+    "textEn": "Trying looks cool",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_161",
+    "text": "只记欢喜不记忧",
+    "textEn": "Joy remembered, not sorrow",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_162",
+    "text": "夏天拍了拍你",
+    "textEn": "Summer tapped your shoulder",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_163",
+    "text": "心之所愿定如愿",
+    "textEn": "Heart's wish, fulfilled",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_164",
+    "text": "鸟语花香",
+    "textEn": "Birdsong, floral air",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_165",
+    "text": "前行有曙光",
+    "textEn": "Dawn ahead on the road",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_166",
+    "text": "大笑是困难解药",
+    "textEn": "Laughter, hardship's cure",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_167",
+    "text": "别错过天边彩虹",
+    "textEn": "Don't miss sky's rainbow",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_168",
+    "text": "尽情享受世界",
+    "textEn": "Savor the whole world",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_169",
+    "text": "去踏千重浪",
+    "textEn": "Wade thousand waves",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_170",
+    "text": "不问结果",
+    "textEn": "Results not required",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_171",
+    "text": "心动由己",
+    "textEn": "Heart moves by you",
+    "layer": "anchor",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_172",
+    "text": "不留憾",
+    "textEn": "Leave no what-ifs",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_173",
+    "text": "万物热情开朗",
+    "textEn": "All things warm and bright",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_174",
+    "text": "爱，不止此刻",
+    "textEn": "Love beyond this moment",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_175",
+    "text": "心向旷野",
+    "textEn": "Heart toward wild plains",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_176",
+    "text": "恰到好处",
+    "textEn": "Just enough, just right",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_177",
+    "text": "喝着咖啡吹着风",
+    "textEn": "Coffee, wind in hair",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_178",
+    "text": "一切皆有可能",
+    "textEn": "Anything might happen",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_179",
+    "text": "花自向阳开",
+    "textEn": "Flowers face the sun",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_180",
+    "text": "万事明朗",
+    "textEn": "All things lucid",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_181",
+    "text": "抬头望天接好运",
+    "textEn": "Look up, catch luck",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_182",
+    "text": "随遇 随喜 随安",
+    "textEn": "Flow, joy, peace",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_183",
+    "text": "期待新的故事",
+    "textEn": "New story awaited",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_184",
+    "text": "今日最佳",
+    "textEn": "Today's finest",
+    "layer": "anchor",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_185",
+    "text": "给生活一点留白",
+    "textEn": "Leave the day unwritten",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_186",
+    "text": "忙有度 闲有趣",
+    "textEn": "Busy bounded, leisure lit",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_187",
+    "text": "去有风的地方",
+    "textEn": "Where the wind lives",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_188",
+    "text": "小满胜万全",
+    "textEn": "Almost full beats perfect",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "solar_term:xiaoman",
+          "weight": 2.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_189",
+    "text": "恰逢好事",
+    "textEn": "Good thing, right time",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_190",
+    "text": "你值得玫瑰",
+    "textEn": "Roses owed to you",
+    "layer": "anchor",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_191",
+    "text": "永远在你身边",
+    "textEn": "Always beside you",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_192",
+    "text": "来参加魔法晚宴",
+    "textEn": "Come to the feast magical",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_193",
+    "text": "霍格沃茨永不毕业",
+    "textEn": "Hogwarts never graduates",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_194",
+    "text": "被礼物包围",
+    "textEn": "Wrapped in gifts",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_195",
+    "text": "慢下来看世界",
+    "textEn": "Slow down, see world",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_196",
+    "text": "春天在路上",
+    "textEn": "Spring en route",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:spring"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_197",
+    "text": "你亦是风景",
+    "textEn": "You are scenery too",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_198",
+    "text": "曙光在前",
+    "textEn": "Dawn up ahead",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_199",
+    "text": "新起点",
+    "textEn": "Fresh starting line",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_200",
+    "text": "家是唯一城堡",
+    "textEn": "Home, only castle",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_201",
+    "text": "手牵手",
+    "textEn": "Hand in hand",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_202",
+    "text": "回忆里的甜",
+    "textEn": "Sweetness in memory",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_203",
+    "text": "一路天晴",
+    "textEn": "Clear skies all through",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:clear",
+          "weight": 1.2
+        },
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_204",
+    "text": "热爱是生活解药",
+    "textEn": "Passion, life's antidote",
+    "layer": "active",
+    "emotionTheme": "生活鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_205",
+    "text": "心缓自有答案",
+    "textEn": "Unhurried heart, quiet knowing",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_206",
+    "text": "前路漫漫亦灿灿",
+    "textEn": "Long road, still glittering",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_207",
+    "text": "好运挡不住",
+    "textEn": "Luck unstoppable",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_208",
+    "text": "无忧亦无惧",
+    "textEn": "Carefree, unafraid",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_209",
+    "text": "向前看",
+    "textEn": "Eyes forward",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_210",
+    "text": "好心情正发芽",
+    "textEn": "Good mood sprouting",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_211",
+    "text": "魔法奇遇",
+    "textEn": "Magic adventure",
+    "layer": "active",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_212",
+    "text": "注入满满元气",
+    "textEn": "Infuse full vitality",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_213",
+    "text": "追光的人会发光",
+    "textEn": "Light-chasers glow",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_214",
+    "text": "你自信又坦荡",
+    "textEn": "You, bold and open",
+    "layer": "active",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_215",
+    "text": "人生无限可能",
+    "textEn": "Life, infinite maybe",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_216",
+    "text": "保持出发的心情",
+    "textEn": "Keep the leaving mood",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_217",
+    "text": "美好不期而至",
+    "textEn": "Beauty arrives unplanned",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_218",
+    "text": "心动不如行动",
+    "textEn": "Heartbeat to motion",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_219",
+    "text": "自有明月照山河",
+    "textEn": "Moon lights hills and rivers",
+    "layer": "active",
+    "emotionTheme": "lyric_image",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_220",
+    "text": "将来胜过往",
+    "textEn": "Tomorrow beats yesterday",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_221",
+    "text": "成为自己的宇宙",
+    "textEn": "A cosmos of your own",
+    "layer": "active",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_222",
+    "text": "新一年多爱自己",
+    "textEn": "New year, more self-love",
+    "layer": "active",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_223",
+    "text": "星光不问赶路人",
+    "textEn": "Stars don't ask who's rushing",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_224",
+    "text": "活在当下",
+    "textEn": "Live this now",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_225",
+    "text": "分院中",
+    "textEn": "Sorting in progress",
+    "layer": "active",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_226",
+    "text": "一起发光的日子",
+    "textEn": "Days we glow together",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_227",
+    "text": "与万事言和",
+    "textEn": "At peace with all things",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_228",
+    "text": "执手天涯",
+    "textEn": "Hands held, world's end",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_229",
+    "text": "爱上五月天",
+    "textEn": "Fall for Mayday",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "month:5",
+          "weight": 1.0
+        },
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_230",
+    "text": "用力唱",
+    "textEn": "Sing with force",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_231",
+    "text": "五月天盛夏",
+    "textEn": "Mayday midsummer",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [
+        {
+          "tag": "month:5",
+          "weight": 1.0
+        },
+        {
+          "tag": "month:7",
+          "weight": 1.0
+        },
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_232",
+    "text": "将你紧握",
+    "textEn": "Hold you tight",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_233",
+    "text": "我不一样",
+    "textEn": "I'm not the same",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_234",
+    "text": "绝对不放",
+    "textEn": "Never let go",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_235",
+    "text": "爱是宝藏",
+    "textEn": "Love is treasure",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_236",
+    "text": "去疯去爱",
+    "textEn": "Run wild, love hard",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_237",
+    "text": "有失有得",
+    "textEn": "Lose some, gain some",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_238",
+    "text": "此刻纯真",
+    "textEn": "This moment, pure",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_239",
+    "text": "丢掉烦恼",
+    "textEn": "Drop the worries",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_240",
+    "text": "知足此刻",
+    "textEn": "Enough, right now",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_241",
+    "text": "一起走吧",
+    "textEn": "Walk on together",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_242",
+    "text": "勾勾手",
+    "textEn": "Pinky promise",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_243",
+    "text": "逆风飞翔",
+    "textEn": "Fly against wind",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        },
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_244",
+    "text": "抓住夏天",
+    "textEn": "Catch the summer",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_245",
+    "text": "宜见面",
+    "textEn": "Good day to meet",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_246",
+    "text": "答案在路上",
+    "textEn": "Answers still en route",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_247",
+    "text": "好消息加载中",
+    "textEn": "Good news, buffering",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_248",
+    "text": "不追风时吹吹风",
+    "textEn": "When still, feel breeze",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_249",
+    "text": "把快乐加满",
+    "textEn": "Fill joy to brim",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_250",
+    "text": "每天明媚媚",
+    "textEn": "Bright every day",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_251",
+    "text": "允许一切发生",
+    "textEn": "Let all unfold",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_252",
+    "text": "心愿得偿",
+    "textEn": "Wishes come true",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_253",
+    "text": "这一杯致彩虹",
+    "textEn": "This cup to rainbow",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_254",
+    "text": "可爱第一名",
+    "textEn": "Cutest rank one",
+    "layer": "anchor",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_255",
+    "text": "桃气启新芳",
+    "textEn": "Peach scent, fresh bloom",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_256",
+    "text": "家人健康",
+    "textEn": "Family in health",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_257",
+    "text": "新一年蓄力向上",
+    "textEn": "New year, charge upward",
+    "layer": "anchor",
+    "emotionTheme": "新年祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_258",
+    "text": "向快乐出发",
+    "textEn": "Toward joy, depart",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_259",
+    "text": "咖啡自由",
+    "textEn": "Coffee freedom",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_260",
+    "text": "兔里兔气",
+    "textEn": "A bit bunny-ish",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_261",
+    "text": "给你所有好运",
+    "textEn": "All luck to you",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_262",
+    "text": "十全十美",
+    "textEn": "Ten of ten perfect",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_263",
+    "text": "苹苹安安",
+    "textEn": "Peace, apple-blessed",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_264",
+    "text": "有梦可期",
+    "textEn": "Dreams within reach",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_265",
+    "text": "听从内心",
+    "textEn": "Listen inside",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_266",
+    "text": "总有远方可奔赴",
+    "textEn": "Always a far place to go",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_267",
+    "text": "眉目舒展",
+    "textEn": "Brows unfurrowed",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_268",
+    "text": "随心随性",
+    "textEn": "Heart-led, free-spirited",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_269",
+    "text": "但行前路不辜负",
+    "textEn": "Walk on, don't betray road",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_270",
+    "text": "开心做自己",
+    "textEn": "Happy being you",
+    "layer": "anchor",
+    "emotionTheme": "self_affirmation",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_271",
+    "text": "有动力，有方向",
+    "textEn": "Drive and direction",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_272",
+    "text": "努力沉淀",
+    "textEn": "Earn your depth",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_273",
+    "text": "新年暴富",
+    "textEn": "New year, sudden wealth",
+    "layer": "anchor",
+    "emotionTheme": "新年祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 3.0
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_274",
+    "text": "美好正在路上",
+    "textEn": "Beauty still inbound",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_275",
+    "text": "热爱经久不息",
+    "textEn": "Passion long-burning",
+    "layer": "anchor",
+    "emotionTheme": "生活鼓励",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_276",
+    "text": "今天起 新开始",
+    "textEn": "From today, restart",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_277",
+    "text": "时光清浅",
+    "textEn": "Time shallow-clear",
+    "layer": "anchor",
+    "emotionTheme": "lyric_image",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_278",
+    "text": "明媚的日子奔来",
+    "textEn": "Bright days rushing in",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_279",
+    "text": "所愿皆成真",
+    "textEn": "All wished-for, real",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_280",
+    "text": "逐梦可乘凉",
+    "textEn": "Chase dreams in shade",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_281",
+    "text": "云朵也自由",
+    "textEn": "Clouds roam free too",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_282",
+    "text": "远方自明朗",
+    "textEn": "Far shores self-brighten",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_283",
+    "text": "行止由心",
+    "textEn": "Steps follow heart",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_284",
+    "text": "万事可期",
+    "textEn": "All things can wait hopefully",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_285",
+    "text": "各自努力顶峰见",
+    "textEn": "Struggle up, meet at peak",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_286",
+    "text": "昂首前瞻",
+    "textEn": "Head high, look on",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_287",
+    "text": "自然会相逢",
+    "textEn": "You'll meet naturally",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_288",
+    "text": "过滤烦恼",
+    "textEn": "Filter the frets",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_289",
+    "text": "保持好奇心",
+    "textEn": "Keep curiosity alive",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_290",
+    "text": "风动心也动",
+    "textEn": "Wind moves, heart too",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_291",
+    "text": "心情明媚",
+    "textEn": "Mood sunlit",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_292",
+    "text": "循梦而行",
+    "textEn": "Walk the dream line",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_293",
+    "text": "美好不期而遇",
+    "textEn": "Beauty meets by chance",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_294",
+    "text": "万象更新",
+    "textEn": "Ten thousand things renew",
+    "layer": "anchor",
+    "emotionTheme": "新年祝福",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_295",
+    "text": "无限好运",
+    "textEn": "Luck without limit",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_296",
+    "text": "彻底放空",
+    "textEn": "Empty out completely",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_297",
+    "text": "值得记录",
+    "textEn": "Worth the jotting down",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_298",
+    "text": "所愿皆得",
+    "textEn": "All wants received",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_299",
+    "text": "无所不达",
+    "textEn": "Nothing out of reach",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_300",
+    "text": "慢慢懂得",
+    "textEn": "Slowly understood",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_301",
+    "text": "得失看淡",
+    "textEn": "Gains, losses lightly held",
+    "layer": "anchor",
+    "emotionTheme": "ip_collab",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_302",
+    "text": "保持好奇",
+    "textEn": "Stay curious",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_303",
+    "text": "自有天意",
+    "textEn": "Heaven has its say",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_304",
+    "text": "解锁新成就",
+    "textEn": "New achievement unlocked",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    }
+  }
+]

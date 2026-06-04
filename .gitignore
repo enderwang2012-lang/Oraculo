@@ -1,0 +1,11 @@
+# Xcode / macOS
+.DS_Store
+*.xcuserstate
+xcuserdata/
+DerivedData/
+build/
+
+# Python / 本地构建产物（勿提交；线上用 public/oraculo/）
+dist/
+__pycache__/
+*.pyc

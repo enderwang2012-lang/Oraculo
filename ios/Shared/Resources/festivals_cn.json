@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "festivals": [
+    {
+      "id": "new_year",
+      "name": "元旦",
+      "ranges": [
+        { "start": "12-31", "end": "01-02" }
+      ],
+      "pre_days": 0,
+      "post_days": 0
+    },
+    {
+      "id": "spring_festival",
+      "name": "春节",
+      "ranges": [
+        { "start": "2025-01-22", "end": "2025-02-04" },
+        { "start": "2026-02-08", "end": "2026-02-23" },
+        { "start": "2027-02-06", "end": "2027-02-20" }
+      ],
+      "pre_days": 7,
+      "post_days": 15
+    },
+    {
+      "id": "lantern_festival",
+      "name": "元宵",
+      "ranges": [
+        { "start": "2025-02-12", "end": "2025-02-12" },
+        { "start": "2026-03-03", "end": "2026-03-03" },
+        { "start": "2027-02-20", "end": "2027-02-20" }
+      ],
+      "pre_days": 2,
+      "post_days": 2
+    },
+    {
+      "id": "qingming",
+      "name": "清明",
+      "ranges": [
+        { "start": "2025-04-04", "end": "2025-04-06" },
+        { "start": "2026-04-04", "end": "2026-04-06" },
+        { "start": "2027-04-05", "end": "2027-04-05" }
+      ],
+      "pre_days": 0,
+      "post_days": 0
+    },
+    {
+      "id": "labor_day",
+      "name": "劳动节",
+      "ranges": [
+        { "start": "05-01", "end": "05-05" }
+      ],
+      "pre_days": 0,
+      "post_days": 0
+    },
+    {
+      "id": "dragon_boat",
+      "name": "端午",
+      "ranges": [
+        { "start": "2025-05-31", "end": "2025-06-02" },
+        { "start": "2026-06-19", "end": "2026-06-21" },
+        { "start": "2027-06-09", "end": "2027-06-09" }
+      ],
+      "pre_days": 2,
+      "post_days": 2
+    },
+    {
+      "id": "mid_autumn",
+      "name": "中秋",
+      "ranges": [
+        { "start": "2025-10-06", "end": "2025-10-06" },
+        { "start": "2026-09-25", "end": "2026-09-27" },
+        { "start": "2027-10-15", "end": "2027-10-15" }
+      ],
+      "pre_days": 3,
+      "post_days": 3
+    },
+    {
+      "id": "national_day",
+      "name": "国庆",
+      "ranges": [
+        { "start": "10-01", "end": "10-07" }
+      ],
+      "pre_days": 0,
+      "post_days": 0
+    },
+    {
+      "id": "valentine",
+      "name": "情人节",
+      "ranges": [
+        { "start": "02-14", "end": "02-14" }
+      ],
+      "pre_days": 1,
+      "post_days": 0
+    },
+    {
+      "id": "christmas",
+      "name": "圣诞",
+      "ranges": [
+        { "start": "12-24", "end": "12-26" }
+      ],
+      "pre_days": 2,
+      "post_days": 1
+    }
+  ]
+}

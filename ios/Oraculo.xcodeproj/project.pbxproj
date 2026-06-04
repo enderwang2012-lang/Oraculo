@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00BF7FCD29B6936723B372A6 /* ContextSnapshotBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D3DB5407851B6455ED830 /* ContextSnapshotBuilder.swift */; };
+		035A9B1B17BB78E2A7BD38EB /* NipponAmbienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A91D1C93FD2EA1E5403F92B /* NipponAmbienceView.swift */; };
+		08A69834B5941F6919A115FB /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B0A74825F2A74887D314D /* AppConstants.swift */; };
+		10D6174DC814D900948ACBE3 /* NipponColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84A3B3FB7271A3CF71CC13 /* NipponColor.swift */; };
+		1294E1136911CC829352CA09 /* DailyOracle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EE75B9B90AB6BCFF5E4178 /* DailyOracle.swift */; };
+		13C6D965936479CA23F6572D /* BreathingBottomGlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE6A3D57D031312F58A0004 /* BreathingBottomGlow.swift */; };
+		16B4D2EC4E531A44E6F970BB /* PhraseDispatchScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE012B503C227516BADBBB59 /* PhraseDispatchScorer.swift */; };
+		16BAD90FAF898203EF60A279 /* OraculoTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B382505ECE55478D085DFEC0 /* OraculoTypography.swift */; };
+		18D2EC0865878B3B58E2A704 /* PhrasePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B994708A0A24C4ABDFE9E8 /* PhrasePicker.swift */; };
+		1EC1265B4FA0254AF0FFEDCD /* DailyOracle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EE75B9B90AB6BCFF5E4178 /* DailyOracle.swift */; };
+		265469DAC66B6FD66342DE7D /* OraculoWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BCEA231A7BD4F5C018F4E4D1 /* OraculoWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B2F5BADB2645C5017FA26AA /* festivals_cn.json in Resources */ = {isa = PBXBuildFile; fileRef = B41564B202FE518F7C9EAD4A /* festivals_cn.json */; };
+		2E344E081CC360C436D5F21F /* nippon_colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 286579DA06CDDDB0EA595726 /* nippon_colors.json */; };
+		2F00D1F8B61D1DC3FFB045AF /* CorpusBundledMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BBBE77C4008147393A3F63 /* CorpusBundledMeta.swift */; };
+		3345158CD7D3E71092A6E26B /* FestivalCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B3EC9AF6A99A30E37A42D4 /* FestivalCalendar.swift */; };
+		37AEA475FB7096F371B2A863 /* DailyPhraseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E354E68A3A649C3656352B5 /* DailyPhraseService.swift */; };
+		3EA925D444853744E463ADC0 /* NipponCrossfadeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798C1365A10E743DEFE7D69C /* NipponCrossfadeBackground.swift */; };
+		3F06626F578BBCF57B1F91B8 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AECD19F25E5AAEBD8F60F /* Color+Hex.swift */; };
+		40CEF3CC60C01E3977BFA963 /* corpus_bundled_meta.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B4D3BE4D5F2FBB972E0E156 /* corpus_bundled_meta.json */; };
+		43F07C5924CAAF39726C6122 /* PhraseAppearSweep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCFA4F82399E71D4D25702 /* PhraseAppearSweep.swift */; };
+		46A637376343DA47267C95C4 /* festivals_cn.json in Resources */ = {isa = PBXBuildFile; fileRef = B41564B202FE518F7C9EAD4A /* festivals_cn.json */; };
+		49AB45024E89A939EC572A41 /* NipponColorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5763DB9446B36D8B92372F9 /* NipponColorStore.swift */; };
+		4A8B8A8488DA3D8D2312157C /* OraculoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC58A12DAFD42C5F210934 /* OraculoWidget.swift */; };
+		5037CB591591298B999B557E /* NipponCrossfadeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798C1365A10E743DEFE7D69C /* NipponCrossfadeBackground.swift */; };
+		54D1576F33F74084442CF733 /* OpenMeteoWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED17C48AE89C1CBF7EC71F70 /* OpenMeteoWeatherService.swift */; };
+		5612512048C6BCAB9C2289A4 /* LocationContextCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEF157B8DA40B058D726F5 /* LocationContextCache.swift */; };
+		5670EF0B4BEC189AABE854B8 /* GeoCoordinateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A31BFEE1A3EFB86616C5FA /* GeoCoordinateMapper.swift */; };
+		5AA045126FDAB84D166454E4 /* CorpusBundledMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BBBE77C4008147393A3F63 /* CorpusBundledMeta.swift */; };
+		67FD9301E551AA4E30DAA3CD /* SessionOracleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56420C1766EA2738BE6139F7 /* SessionOracleService.swift */; };
+		6C87ACF03DFBAB6192D7EC9D /* PhraseWidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47155F29CF4A831AC339DD /* PhraseWidgetViews.swift */; };
+		725FE35123A08B804A264372 /* DailyPhraseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E354E68A3A649C3656352B5 /* DailyPhraseService.swift */; };
+		75D8C510A43EB7BE3F68DE88 /* PhraseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E4376D90FA89DAFD1F308 /* PhraseStore.swift */; };
+		782E2F468A9946B8BA2F40FE /* GeoContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BE81D03B4E3717E2FCDF00 /* GeoContext.swift */; };
+		7F9C9AA92C850457C9EDC6B3 /* phrases.json in Resources */ = {isa = PBXBuildFile; fileRef = 58AB6282009775871274E6ED /* phrases.json */; };
+		8053C13576FBB0D8FF138034 /* SolarTermCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C37A12397445A0FE50A68B /* SolarTermCalendar.swift */; };
+		88A58B119606B4673E6929BF /* SessionOracleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56420C1766EA2738BE6139F7 /* SessionOracleService.swift */; };
+		88E63D82DE9BBA28ECAC0154 /* WeatherContextCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2929CF705C79418BF7AFD11A /* WeatherContextCache.swift */; };
+		8ADFD20824530039E31AD1A6 /* PhraseDispatchScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE012B503C227516BADBBB59 /* PhraseDispatchScorer.swift */; };
+		8DBB6A1600FF3AAF34F9BCCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1640B3900A9F41606E2783 /* ContentView.swift */; };
+		8E6E595949F36C687D883BEB /* ClockVerticalSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57727F6477BCC955651A37FD /* ClockVerticalSlide.swift */; };
+		8E966FEE996EAF93AAC77A27 /* LocationContextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B680DCBAEC6D0DBA2A9B5C /* LocationContextProvider.swift */; };
+		8F4AACA58B99A639B07F1D1A /* ContextSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4DF5D6491B8052C1073B3 /* ContextSnapshot.swift */; };
+		92371AAB0A281600C4DB3F0B /* OraculoWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A071D3F65A6EBF693194CE7 /* OraculoWidgetBundle.swift */; };
+		9308AAA68DB842991D3FA7F4 /* solar_terms_cn.json in Resources */ = {isa = PBXBuildFile; fileRef = 782B8DAD71FE97914E788978 /* solar_terms_cn.json */; };
+		97175E0A08BF22B742A8D4B8 /* NipponColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84A3B3FB7271A3CF71CC13 /* NipponColor.swift */; };
+		98BE89A8CB2C976807D9D00C /* GeoContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BE81D03B4E3717E2FCDF00 /* GeoContext.swift */; };
+		9C59D01B8A30316934EA7A10 /* nippon_colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 286579DA06CDDDB0EA595726 /* nippon_colors.json */; };
+		9FBD9AD31A21D099D64E875E /* LocationContextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B680DCBAEC6D0DBA2A9B5C /* LocationContextProvider.swift */; };
+		A8434984152A76763F211316 /* Phrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257B38E6910C176109E3CB8E /* Phrase.swift */; };
+		AA3421463ED6EB78E37BD809 /* solar_terms_cn.json in Resources */ = {isa = PBXBuildFile; fileRef = 782B8DAD71FE97914E788978 /* solar_terms_cn.json */; };
+		B11BD8FC8DAA320575CC4BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6B87D5C43ED8CAC68216329 /* Assets.xcassets */; };
+		B182F3AFC81E6D1CC2E09B52 /* OraculoMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7569E583A1F18B88C36601B1 /* OraculoMotion.swift */; };
+		B1D05D05A52B5E42D20AA63E /* Phrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257B38E6910C176109E3CB8E /* Phrase.swift */; };
+		B3B3471155B47F77C785CB92 /* FestivalCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B3EC9AF6A99A30E37A42D4 /* FestivalCalendar.swift */; };
+		BE0218A5FB25CBAB13B7645C /* ContextSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4DF5D6491B8052C1073B3 /* ContextSnapshot.swift */; };
+		BED82787C2528440F0B2B154 /* WeatherContextCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2929CF705C79418BF7AFD11A /* WeatherContextCache.swift */; };
+		BF70B9157DDBACFB16167220 /* SolarTermCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C37A12397445A0FE50A68B /* SolarTermCalendar.swift */; };
+		C256066F61EE7D10581772E3 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AECD19F25E5AAEBD8F60F /* Color+Hex.swift */; };
+		C5027215F9B8ACED09D33457 /* OraculoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA6821FDD729C4BE307075F /* OraculoApp.swift */; };
+		C548B7DF47C09D1BA95C1E82 /* OracleMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB998C2D17A79F85625CB06C /* OracleMoment.swift */; };
+		C551D7E179C84C36A62815AE /* PhraseDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D508FD3905C869704EF26C /* PhraseDispatch.swift */; };
+		C756AC48988EA0D4D98EE972 /* LocationContextCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEF157B8DA40B058D726F5 /* LocationContextCache.swift */; };
+		CBE2BE7AD1EF4482DBD5A119 /* phrases.json in Resources */ = {isa = PBXBuildFile; fileRef = 58AB6282009775871274E6ED /* phrases.json */; };
+		CDE49B83CE2DA084D2C2BB04 /* CorpusRemoteUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33D730302EEF8B691F14CA /* CorpusRemoteUpdateService.swift */; };
+		CFD08DA53785B8922BA3E38E /* OracleMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB998C2D17A79F85625CB06C /* OracleMoment.swift */; };
+		D00E5A34B948A34D7F48127D /* PhraseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E4376D90FA89DAFD1F308 /* PhraseStore.swift */; };
+		D08852C3B071DC4299DCF175 /* DeviceShakeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006ADC8E20245A4F1C581F76 /* DeviceShakeDetector.swift */; };
+		D27302CA437B9713D7210009 /* PhraseDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D508FD3905C869704EF26C /* PhraseDispatch.swift */; };
+		D543C9BCBB2454882964D461 /* OpenMeteoWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED17C48AE89C1CBF7EC71F70 /* OpenMeteoWeatherService.swift */; };
+		D73ADEBF31F3D27976123305 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B0A74825F2A74887D314D /* AppConstants.swift */; };
+		D9DB462303C893A4E74CCB30 /* PhrasePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B994708A0A24C4ABDFE9E8 /* PhrasePicker.swift */; };
+		DA15579FCF315DB687F93140 /* ContextSnapshotBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D3DB5407851B6455ED830 /* ContextSnapshotBuilder.swift */; };
+		E0BE3D27373671A756FF52B7 /* CorpusRemoteUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33D730302EEF8B691F14CA /* CorpusRemoteUpdateService.swift */; };
+		E49CEEE1D6B447962EB99815 /* corpus_bundled_meta.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B4D3BE4D5F2FBB972E0E156 /* corpus_bundled_meta.json */; };
+		E7852CC1FA72E21E896827FB /* OraculoTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B382505ECE55478D085DFEC0 /* OraculoTypography.swift */; };
+		E7EA12D7CA0F42B3C30A2D0C /* NipponAmbienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A91D1C93FD2EA1E5403F92B /* NipponAmbienceView.swift */; };
+		E902ED48AAD43E1D8CB3315C /* BreathingBottomGlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE6A3D57D031312F58A0004 /* BreathingBottomGlow.swift */; };
+		ECB30685DE62DF9B2EA5B58B /* OracleSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB796BF371257D36B81A6F8 /* OracleSessionModel.swift */; };
+		F18D4AA586A81FB5E18B4C97 /* LiveClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992B199119608953BFB47C6A /* LiveClockView.swift */; };
+		F20318F1A27850D610ECD789 /* GeoCoordinateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A31BFEE1A3EFB86616C5FA /* GeoCoordinateMapper.swift */; };
+		F83EC82CB5C7B7618C08F34C /* NipponColorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5763DB9446B36D8B92372F9 /* NipponColorStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0B1646835DCCF7A43306370 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CC6A47BF4A46710A80032A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFF85AB84F017B379785D914;
+			remoteInfo = OraculoWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F06544EF503DB16E6940259B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				265469DAC66B6FD66342DE7D /* OraculoWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		006ADC8E20245A4F1C581F76 /* DeviceShakeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceShakeDetector.swift; sourceTree = "<group>"; };
+		0B4D3BE4D5F2FBB972E0E156 /* corpus_bundled_meta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = corpus_bundled_meta.json; sourceTree = "<group>"; };
+		0E354E68A3A649C3656352B5 /* DailyPhraseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPhraseService.swift; sourceTree = "<group>"; };
+		16A31BFEE1A3EFB86616C5FA /* GeoCoordinateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCoordinateMapper.swift; sourceTree = "<group>"; };
+		1B9B0A74825F2A74887D314D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		257B38E6910C176109E3CB8E /* Phrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrase.swift; sourceTree = "<group>"; };
+		27BEF157B8DA40B058D726F5 /* LocationContextCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationContextCache.swift; sourceTree = "<group>"; };
+		286579DA06CDDDB0EA595726 /* nippon_colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nippon_colors.json; sourceTree = "<group>"; };
+		2929CF705C79418BF7AFD11A /* WeatherContextCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContextCache.swift; sourceTree = "<group>"; };
+		2A071D3F65A6EBF693194CE7 /* OraculoWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OraculoWidgetBundle.swift; sourceTree = "<group>"; };
+		2FE4DF5D6491B8052C1073B3 /* ContextSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextSnapshot.swift; sourceTree = "<group>"; };
+		37BCC488CCE2C8CA22F7FE11 /* OraculoWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OraculoWidget.entitlements; sourceTree = "<group>"; };
+		3D47155F29CF4A831AC339DD /* PhraseWidgetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseWidgetViews.swift; sourceTree = "<group>"; };
+		4BE6A3D57D031312F58A0004 /* BreathingBottomGlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingBottomGlow.swift; sourceTree = "<group>"; };
+		4F0AECD19F25E5AAEBD8F60F /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		56420C1766EA2738BE6139F7 /* SessionOracleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionOracleService.swift; sourceTree = "<group>"; };
+		57727F6477BCC955651A37FD /* ClockVerticalSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockVerticalSlide.swift; sourceTree = "<group>"; };
+		58AB6282009775871274E6ED /* phrases.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = phrases.json; sourceTree = "<group>"; };
+		62B994708A0A24C4ABDFE9E8 /* PhrasePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasePicker.swift; sourceTree = "<group>"; };
+		67BE81D03B4E3717E2FCDF00 /* GeoContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoContext.swift; sourceTree = "<group>"; };
+		68B3EC9AF6A99A30E37A42D4 /* FestivalCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalCalendar.swift; sourceTree = "<group>"; };
+		698A5ABF42E4F21E0E481803 /* Oraculo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Oraculo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A3D3DB5407851B6455ED830 /* ContextSnapshotBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextSnapshotBuilder.swift; sourceTree = "<group>"; };
+		6DA6821FDD729C4BE307075F /* OraculoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OraculoApp.swift; sourceTree = "<group>"; };
+		7569E583A1F18B88C36601B1 /* OraculoMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OraculoMotion.swift; sourceTree = "<group>"; };
+		76C37A12397445A0FE50A68B /* SolarTermCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarTermCalendar.swift; sourceTree = "<group>"; };
+		782B8DAD71FE97914E788978 /* solar_terms_cn.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = solar_terms_cn.json; sourceTree = "<group>"; };
+		798C1365A10E743DEFE7D69C /* NipponCrossfadeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NipponCrossfadeBackground.swift; sourceTree = "<group>"; };
+		7A91D1C93FD2EA1E5403F92B /* NipponAmbienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NipponAmbienceView.swift; sourceTree = "<group>"; };
+		992B199119608953BFB47C6A /* LiveClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveClockView.swift; sourceTree = "<group>"; };
+		9BB796BF371257D36B81A6F8 /* OracleSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OracleSessionModel.swift; sourceTree = "<group>"; };
+		A3D508FD3905C869704EF26C /* PhraseDispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseDispatch.swift; sourceTree = "<group>"; };
+		A6B87D5C43ED8CAC68216329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A95E4376D90FA89DAFD1F308 /* PhraseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseStore.swift; sourceTree = "<group>"; };
+		AB998C2D17A79F85625CB06C /* OracleMoment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OracleMoment.swift; sourceTree = "<group>"; };
+		AD84A3B3FB7271A3CF71CC13 /* NipponColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NipponColor.swift; sourceTree = "<group>"; };
+		B382505ECE55478D085DFEC0 /* OraculoTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OraculoTypography.swift; sourceTree = "<group>"; };
+		B41564B202FE518F7C9EAD4A /* festivals_cn.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = festivals_cn.json; sourceTree = "<group>"; };
+		BCEA231A7BD4F5C018F4E4D1 /* OraculoWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = OraculoWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4BBBE77C4008147393A3F63 /* CorpusBundledMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorpusBundledMeta.swift; sourceTree = "<group>"; };
+		C8EE75B9B90AB6BCFF5E4178 /* DailyOracle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyOracle.swift; sourceTree = "<group>"; };
+		CC33D730302EEF8B691F14CA /* CorpusRemoteUpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorpusRemoteUpdateService.swift; sourceTree = "<group>"; };
+		CECCFA4F82399E71D4D25702 /* PhraseAppearSweep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseAppearSweep.swift; sourceTree = "<group>"; };
+		D22053C97EA0AAF889CB705B /* Oraculo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Oraculo.entitlements; sourceTree = "<group>"; };
+		DE012B503C227516BADBBB59 /* PhraseDispatchScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseDispatchScorer.swift; sourceTree = "<group>"; };
+		E5763DB9446B36D8B92372F9 /* NipponColorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NipponColorStore.swift; sourceTree = "<group>"; };
+		E6B680DCBAEC6D0DBA2A9B5C /* LocationContextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationContextProvider.swift; sourceTree = "<group>"; };
+		ED17C48AE89C1CBF7EC71F70 /* OpenMeteoWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMeteoWeatherService.swift; sourceTree = "<group>"; };
+		EF1640B3900A9F41606E2783 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FFEC58A12DAFD42C5F210934 /* OraculoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OraculoWidget.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		04F7948AF59CCD0A73BD52AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B4D3BE4D5F2FBB972E0E156 /* corpus_bundled_meta.json */,
+				B41564B202FE518F7C9EAD4A /* festivals_cn.json */,
+				286579DA06CDDDB0EA595726 /* nippon_colors.json */,
+				58AB6282009775871274E6ED /* phrases.json */,
+				782B8DAD71FE97914E788978 /* solar_terms_cn.json */,
+			);
+			name = Resources;
+			path = Shared/Resources;
+			sourceTree = "<group>";
+		};
+		074C8BA5BA4B05EE835DF8A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				698A5ABF42E4F21E0E481803 /* Oraculo.app */,
+				BCEA231A7BD4F5C018F4E4D1 /* OraculoWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BBC6121E2BB4730085DF954 /* OraculoWidget */ = {
+			isa = PBXGroup;
+			children = (
+				37BCC488CCE2C8CA22F7FE11 /* OraculoWidget.entitlements */,
+				FFEC58A12DAFD42C5F210934 /* OraculoWidget.swift */,
+				2A071D3F65A6EBF693194CE7 /* OraculoWidgetBundle.swift */,
+				3D47155F29CF4A831AC339DD /* PhraseWidgetViews.swift */,
+			);
+			path = OraculoWidget;
+			sourceTree = "<group>";
+		};
+		90438CF378656E87A6AEA6C1 /* Oraculo */ = {
+			isa = PBXGroup;
+			children = (
+				A6B87D5C43ED8CAC68216329 /* Assets.xcassets */,
+				57727F6477BCC955651A37FD /* ClockVerticalSlide.swift */,
+				EF1640B3900A9F41606E2783 /* ContentView.swift */,
+				006ADC8E20245A4F1C581F76 /* DeviceShakeDetector.swift */,
+				992B199119608953BFB47C6A /* LiveClockView.swift */,
+				9BB796BF371257D36B81A6F8 /* OracleSessionModel.swift */,
+				D22053C97EA0AAF889CB705B /* Oraculo.entitlements */,
+				6DA6821FDD729C4BE307075F /* OraculoApp.swift */,
+				7569E583A1F18B88C36601B1 /* OraculoMotion.swift */,
+				CECCFA4F82399E71D4D25702 /* PhraseAppearSweep.swift */,
+			);
+			path = Oraculo;
+			sourceTree = "<group>";
+		};
+		CA253288E5FB8A202B02C95B = {
+			isa = PBXGroup;
+			children = (
+				90438CF378656E87A6AEA6C1 /* Oraculo */,
+				3BBC6121E2BB4730085DF954 /* OraculoWidget */,
+				04F7948AF59CCD0A73BD52AE /* Resources */,
+				E2B407BB02E2EF795EC43605 /* Shared */,
+				074C8BA5BA4B05EE835DF8A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2B407BB02E2EF795EC43605 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1B9B0A74825F2A74887D314D /* AppConstants.swift */,
+				4BE6A3D57D031312F58A0004 /* BreathingBottomGlow.swift */,
+				4F0AECD19F25E5AAEBD8F60F /* Color+Hex.swift */,
+				2FE4DF5D6491B8052C1073B3 /* ContextSnapshot.swift */,
+				6A3D3DB5407851B6455ED830 /* ContextSnapshotBuilder.swift */,
+				C4BBBE77C4008147393A3F63 /* CorpusBundledMeta.swift */,
+				CC33D730302EEF8B691F14CA /* CorpusRemoteUpdateService.swift */,
+				C8EE75B9B90AB6BCFF5E4178 /* DailyOracle.swift */,
+				0E354E68A3A649C3656352B5 /* DailyPhraseService.swift */,
+				68B3EC9AF6A99A30E37A42D4 /* FestivalCalendar.swift */,
+				67BE81D03B4E3717E2FCDF00 /* GeoContext.swift */,
+				16A31BFEE1A3EFB86616C5FA /* GeoCoordinateMapper.swift */,
+				27BEF157B8DA40B058D726F5 /* LocationContextCache.swift */,
+				E6B680DCBAEC6D0DBA2A9B5C /* LocationContextProvider.swift */,
+				7A91D1C93FD2EA1E5403F92B /* NipponAmbienceView.swift */,
+				AD84A3B3FB7271A3CF71CC13 /* NipponColor.swift */,
+				E5763DB9446B36D8B92372F9 /* NipponColorStore.swift */,
+				798C1365A10E743DEFE7D69C /* NipponCrossfadeBackground.swift */,
+				ED17C48AE89C1CBF7EC71F70 /* OpenMeteoWeatherService.swift */,
+				AB998C2D17A79F85625CB06C /* OracleMoment.swift */,
+				B382505ECE55478D085DFEC0 /* OraculoTypography.swift */,
+				257B38E6910C176109E3CB8E /* Phrase.swift */,
+				A3D508FD3905C869704EF26C /* PhraseDispatch.swift */,
+				DE012B503C227516BADBBB59 /* PhraseDispatchScorer.swift */,
+				62B994708A0A24C4ABDFE9E8 /* PhrasePicker.swift */,
+				A95E4376D90FA89DAFD1F308 /* PhraseStore.swift */,
+				56420C1766EA2738BE6139F7 /* SessionOracleService.swift */,
+				76C37A12397445A0FE50A68B /* SolarTermCalendar.swift */,
+				2929CF705C79418BF7AFD11A /* WeatherContextCache.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4482053E2B55B376443B8064 /* Oraculo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54CC55AB87BCE383905F1B6D /* Build configuration list for PBXNativeTarget "Oraculo" */;
+			buildPhases = (
+				91DB3428FEF5A568E8E81EBC /* Sources */,
+				40F923D7608C444DE8E7EC6D /* Resources */,
+				F06544EF503DB16E6940259B /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				302B479B2D275B2DB249E6EB /* PBXTargetDependency */,
+			);
+			name = Oraculo;
+			packageProductDependencies = (
+			);
+			productName = Oraculo;
+			productReference = 698A5ABF42E4F21E0E481803 /* Oraculo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFF85AB84F017B379785D914 /* OraculoWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8218951E94746827DD1522A5 /* Build configuration list for PBXNativeTarget "OraculoWidget" */;
+			buildPhases = (
+				1A6B94E804E80987CECBC38A /* Sources */,
+				74CAB312C5A63AED478C6D83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OraculoWidget;
+			packageProductDependencies = (
+			);
+			productName = OraculoWidget;
+			productReference = BCEA231A7BD4F5C018F4E4D1 /* OraculoWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CC6A47BF4A46710A80032A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					4482053E2B55B376443B8064 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					DFF85AB84F017B379785D914 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7EE8F649AEE7E960FEB5D839 /* Build configuration list for PBXProject "Oraculo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CA253288E5FB8A202B02C95B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 074C8BA5BA4B05EE835DF8A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4482053E2B55B376443B8064 /* Oraculo */,
+				DFF85AB84F017B379785D914 /* OraculoWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40F923D7608C444DE8E7EC6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B11BD8FC8DAA320575CC4BAB /* Assets.xcassets in Resources */,
+				40CEF3CC60C01E3977BFA963 /* corpus_bundled_meta.json in Resources */,
+				46A637376343DA47267C95C4 /* festivals_cn.json in Resources */,
+				2E344E081CC360C436D5F21F /* nippon_colors.json in Resources */,
+				7F9C9AA92C850457C9EDC6B3 /* phrases.json in Resources */,
+				AA3421463ED6EB78E37BD809 /* solar_terms_cn.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CAB312C5A63AED478C6D83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49CEEE1D6B447962EB99815 /* corpus_bundled_meta.json in Resources */,
+				2B2F5BADB2645C5017FA26AA /* festivals_cn.json in Resources */,
+				9C59D01B8A30316934EA7A10 /* nippon_colors.json in Resources */,
+				CBE2BE7AD1EF4482DBD5A119 /* phrases.json in Resources */,
+				9308AAA68DB842991D3FA7F4 /* solar_terms_cn.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A6B94E804E80987CECBC38A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08A69834B5941F6919A115FB /* AppConstants.swift in Sources */,
+				E902ED48AAD43E1D8CB3315C /* BreathingBottomGlow.swift in Sources */,
+				C256066F61EE7D10581772E3 /* Color+Hex.swift in Sources */,
+				BE0218A5FB25CBAB13B7645C /* ContextSnapshot.swift in Sources */,
+				DA15579FCF315DB687F93140 /* ContextSnapshotBuilder.swift in Sources */,
+				2F00D1F8B61D1DC3FFB045AF /* CorpusBundledMeta.swift in Sources */,
+				CDE49B83CE2DA084D2C2BB04 /* CorpusRemoteUpdateService.swift in Sources */,
+				1294E1136911CC829352CA09 /* DailyOracle.swift in Sources */,
+				725FE35123A08B804A264372 /* DailyPhraseService.swift in Sources */,
+				3345158CD7D3E71092A6E26B /* FestivalCalendar.swift in Sources */,
+				98BE89A8CB2C976807D9D00C /* GeoContext.swift in Sources */,
+				F20318F1A27850D610ECD789 /* GeoCoordinateMapper.swift in Sources */,
+				5612512048C6BCAB9C2289A4 /* LocationContextCache.swift in Sources */,
+				8E966FEE996EAF93AAC77A27 /* LocationContextProvider.swift in Sources */,
+				E7EA12D7CA0F42B3C30A2D0C /* NipponAmbienceView.swift in Sources */,
+				10D6174DC814D900948ACBE3 /* NipponColor.swift in Sources */,
+				49AB45024E89A939EC572A41 /* NipponColorStore.swift in Sources */,
+				5037CB591591298B999B557E /* NipponCrossfadeBackground.swift in Sources */,
+				D543C9BCBB2454882964D461 /* OpenMeteoWeatherService.swift in Sources */,
+				CFD08DA53785B8922BA3E38E /* OracleMoment.swift in Sources */,
+				E7852CC1FA72E21E896827FB /* OraculoTypography.swift in Sources */,
+				4A8B8A8488DA3D8D2312157C /* OraculoWidget.swift in Sources */,
+				92371AAB0A281600C4DB3F0B /* OraculoWidgetBundle.swift in Sources */,
+				A8434984152A76763F211316 /* Phrase.swift in Sources */,
+				C551D7E179C84C36A62815AE /* PhraseDispatch.swift in Sources */,
+				16B4D2EC4E531A44E6F970BB /* PhraseDispatchScorer.swift in Sources */,
+				D9DB462303C893A4E74CCB30 /* PhrasePicker.swift in Sources */,
+				75D8C510A43EB7BE3F68DE88 /* PhraseStore.swift in Sources */,
+				6C87ACF03DFBAB6192D7EC9D /* PhraseWidgetViews.swift in Sources */,
+				88A58B119606B4673E6929BF /* SessionOracleService.swift in Sources */,
+				BF70B9157DDBACFB16167220 /* SolarTermCalendar.swift in Sources */,
+				BED82787C2528440F0B2B154 /* WeatherContextCache.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91DB3428FEF5A568E8E81EBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D73ADEBF31F3D27976123305 /* AppConstants.swift in Sources */,
+				13C6D965936479CA23F6572D /* BreathingBottomGlow.swift in Sources */,
+				8E6E595949F36C687D883BEB /* ClockVerticalSlide.swift in Sources */,
+				3F06626F578BBCF57B1F91B8 /* Color+Hex.swift in Sources */,
+				8DBB6A1600FF3AAF34F9BCCC /* ContentView.swift in Sources */,
+				8F4AACA58B99A639B07F1D1A /* ContextSnapshot.swift in Sources */,
+				00BF7FCD29B6936723B372A6 /* ContextSnapshotBuilder.swift in Sources */,
+				5AA045126FDAB84D166454E4 /* CorpusBundledMeta.swift in Sources */,
+				E0BE3D27373671A756FF52B7 /* CorpusRemoteUpdateService.swift in Sources */,
+				1EC1265B4FA0254AF0FFEDCD /* DailyOracle.swift in Sources */,
+				37AEA475FB7096F371B2A863 /* DailyPhraseService.swift in Sources */,
+				D08852C3B071DC4299DCF175 /* DeviceShakeDetector.swift in Sources */,
+				B3B3471155B47F77C785CB92 /* FestivalCalendar.swift in Sources */,
+				782E2F468A9946B8BA2F40FE /* GeoContext.swift in Sources */,
+				5670EF0B4BEC189AABE854B8 /* GeoCoordinateMapper.swift in Sources */,
+				F18D4AA586A81FB5E18B4C97 /* LiveClockView.swift in Sources */,
+				C756AC48988EA0D4D98EE972 /* LocationContextCache.swift in Sources */,
+				9FBD9AD31A21D099D64E875E /* LocationContextProvider.swift in Sources */,
+				035A9B1B17BB78E2A7BD38EB /* NipponAmbienceView.swift in Sources */,
+				97175E0A08BF22B742A8D4B8 /* NipponColor.swift in Sources */,
+				F83EC82CB5C7B7618C08F34C /* NipponColorStore.swift in Sources */,
+				3EA925D444853744E463ADC0 /* NipponCrossfadeBackground.swift in Sources */,
+				54D1576F33F74084442CF733 /* OpenMeteoWeatherService.swift in Sources */,
+				C548B7DF47C09D1BA95C1E82 /* OracleMoment.swift in Sources */,
+				ECB30685DE62DF9B2EA5B58B /* OracleSessionModel.swift in Sources */,
+				C5027215F9B8ACED09D33457 /* OraculoApp.swift in Sources */,
+				B182F3AFC81E6D1CC2E09B52 /* OraculoMotion.swift in Sources */,
+				16BAD90FAF898203EF60A279 /* OraculoTypography.swift in Sources */,
+				B1D05D05A52B5E42D20AA63E /* Phrase.swift in Sources */,
+				43F07C5924CAAF39726C6122 /* PhraseAppearSweep.swift in Sources */,
+				D27302CA437B9713D7210009 /* PhraseDispatch.swift in Sources */,
+				8ADFD20824530039E31AD1A6 /* PhraseDispatchScorer.swift in Sources */,
+				18D2EC0865878B3B58E2A704 /* PhrasePicker.swift in Sources */,
+				D00E5A34B948A34D7F48127D /* PhraseStore.swift in Sources */,
+				67FD9301E551AA4E30DAA3CD /* SessionOracleService.swift in Sources */,
+				8053C13576FBB0D8FF138034 /* SolarTermCalendar.swift in Sources */,
+				88E63D82DE9BBA28ECAC0154 /* WeatherContextCache.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		302B479B2D275B2DB249E6EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFF85AB84F017B379785D914 /* OraculoWidget */;
+			targetProxy = D0B1646835DCCF7A43306370 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2246376EB19ADB50F16B8620 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		79395E8B5323041172992477 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Oraculo/Oraculo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Oraculo;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "用于根据你所在的位置、海拔与节气，推荐更契合的一句。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.oraculo.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A9AD47C24C0B11EDDB8D8AD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = OraculoWidget/OraculoWidget.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OraculoWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.oraculo.app.OraculoWidget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0FF152D4A2D1DD463B97503 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Oraculo/Oraculo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Oraculo;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "用于根据你所在的位置、海拔与节气，推荐更契合的一句。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.oraculo.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D6FBF906113A01F20CDE408E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = OraculoWidget/OraculoWidget.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OraculoWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.oraculo.app.OraculoWidget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FED0A07182980F8324FE0182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54CC55AB87BCE383905F1B6D /* Build configuration list for PBXNativeTarget "Oraculo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79395E8B5323041172992477 /* Debug */,
+				B0FF152D4A2D1DD463B97503 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7EE8F649AEE7E960FEB5D839 /* Build configuration list for PBXProject "Oraculo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FED0A07182980F8324FE0182 /* Debug */,
+				2246376EB19ADB50F16B8620 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8218951E94746827DD1522A5 /* Build configuration list for PBXNativeTarget "OraculoWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9AD47C24C0B11EDDB8D8AD5 /* Debug */,
+				D6FBF906113A01F20CDE408E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CC6A47BF4A46710A80032A7 /* Project object */;
+}
