@@ -38,4 +38,13 @@ struct Phrase: Codable, Identifiable, Hashable {
     private enum CodingKeys: String, CodingKey {
         case id, text, textEn, layer, emotionTheme, dispatch
     }
+
+    /// 语料缺失时的统一兜底句（id="fallback"），全工程唯一来源。
+    static let fallback = Phrase(
+        id: "fallback",
+        text: "先缓一缓",
+        textEn: "Pause, and soften",
+        layer: "anchor",
+        emotionTheme: "light_comfort"
+    )
 }

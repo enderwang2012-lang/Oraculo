@@ -18,8 +18,9 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
     }
 
     func refreshIfNeeded() {
-        guard CLLocationManager.locationServicesEnabled() else { return }
-
+        // 不在主线程调用 CLLocationManager.locationServicesEnabled()（iOS 17 起会刷主线程警告）。
+        // 鉴权状态足以判断是否能继续：denied/restricted 走 default 分支不动作；
+        // 服务被系统关时 requestLocation 会以 didFailWithError 形式回来，由 delegate 重置 isUpdating。
         switch manager.authorizationStatus {
         case .notDetermined:
             manager.requestWhenInUseAuthorization()

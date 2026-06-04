@@ -7,7 +7,7 @@ struct OraculoApp: App {
     private let daily = DailyOracleService()
 
     init() {
-        DailyOracleService().refreshSharedCache()
+        daily.refreshSharedCache()
         #if DEBUG
         let phrases = PhraseStore.shared.phraseCount
         let colors = NipponColorStore.shared.colorCount

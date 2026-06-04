@@ -26,8 +26,9 @@ struct SessionOracleService {
 
         if let current {
             var attempts = 0
-            while phrase.id == current.phrase.id,
-                  nippon.hex == current.nipponColor.hex,
+            // 保证至少一项变化：句 *或* 色与上次不同。
+            // 之前用 AND 会让「同句换色」直接通过，违背「换一句、换一色」的承诺。
+            while (phrase.id == current.phrase.id || nippon.hex == current.nipponColor.hex),
                   attempts < 16 {
                 let retryNonce = UUID().uuidString
                 phrase = phrases.contextualPhrase(
@@ -44,9 +45,7 @@ struct SessionOracleService {
     }
 
     private func pickColor(from list: [NipponColor], excluding: NipponColor?) -> NipponColor {
-        guard !list.isEmpty else {
-            return NipponColor(id: "011", name: "nakabeni", cname: "中紅", hex: "DB4D6D", foreground: "light")
-        }
+        guard !list.isEmpty else { return NipponColor.fallback }
         if list.count == 1 { return list[0] }
         let pool = list.filter { $0.hex != excluding?.hex }
         return (pool.isEmpty ? list : pool).randomElement()!

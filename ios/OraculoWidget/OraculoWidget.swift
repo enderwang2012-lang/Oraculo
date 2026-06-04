@@ -22,27 +22,36 @@ struct PhraseTimelineProvider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<PhraseEntry>) -> Void) {
         let now = Date()
-        let entry = makeEntry(for: now)
-        let nextRefresh = nextMidnight(after: now)
-        completion(Timeline(entries: [entry], policy: .after(nextRefresh)))
+        let cal = Calendar.current
+        let m1 = nextMidnight(after: now)
+        // Calendar.byAdding 处理 DST 切换；不要用 +86400 秒。
+        let m2 = cal.date(byAdding: .day, value: 1, to: m1) ?? m1.addingTimeInterval(60 * 60 * 24)
+
+        // 多 entry：今天 + 明日 0 点 + 后日 0 点。
+        // 即使系统降级了刷新 budget，也至少能一路展示到第三天的 0 点，避免长时间停在过时一句。
+        let entries = [
+            makeEntry(for: now, persistTodaySharedDefaults: true),
+            makeEntry(for: m1, persistTodaySharedDefaults: false),
+            makeEntry(for: m2, persistTodaySharedDefaults: false),
+        ]
+        completion(Timeline(entries: entries, policy: .after(m2)))
     }
 
-    private func makeEntry(for date: Date) -> PhraseEntry {
-        let bundle = Bundle.main
-        let phrases = PhraseStore.loadPhrases(from: bundle) ?? []
-        let colors = NipponColorStore.loadColors(from: bundle)
+    private func makeEntry(for date: Date, persistTodaySharedDefaults: Bool = true) -> PhraseEntry {
+        let colors = NipponColorStore.loadColors(from: .main)
         let dayKey = PhraseStore.dayKey(for: date)
 
-        let phraseIndex = PhraseStore.stableIndex(for: dayKey, count: max(phrases.count, 1))
+        // 与摇一摇/主 App 共用 PhraseDispatchScorer + PhrasePicker 的情境加权（仅种子不同）。
+        // 文档 docs/CONTEXTUAL_PHRASE_DISPATCH.md 的承诺在此兑现。
+        let phrase = PhraseStore.shared.contextualPhrase(for: date)
+
         let colorIndex = PhraseStore.stableIndex(for: dayKey + "|color", count: max(colors.count, 1))
+        let nippon = colors.isEmpty ? NipponColor.fallback : colors[colorIndex]
 
-        let phrase = phrases.isEmpty
-            ? Phrase(id: "fallback", text: "先缓一缓", textEn: "Pause, and soften", layer: "anchor", emotionTheme: "light_comfort")
-            : phrases[phraseIndex]
-        let nippon = colors.isEmpty ? NipponColor(id: "011", name: "nakabeni", cname: "中紅", hex: "DB4D6D", foreground: "light") : colors[colorIndex]
-
-        if let defaults = UserDefaults(suiteName: AppConstants.appGroupID) {
-            defaults.set(phrase.text, forKey: AppConstants.sharedTodayPhraseKey)
+        // 主 App 的 DailyPhraseService.refreshSharedCache() 是 sharedTodayPhraseKey/sharedTodayPhraseIDKey 的权威写入方。
+        // Widget 只回填颜色相关 key（主 App 暂不写颜色），避免与主 App 的写入相互覆盖。
+        // 只为「今天」的 entry 写共享缓存；未来 entry 不能覆盖今天的色。
+        if persistTodaySharedDefaults, let defaults = UserDefaults(suiteName: AppConstants.appGroupID) {
             defaults.set(dayKey, forKey: AppConstants.sharedTodayDayKeyKey)
             defaults.set(nippon.hex, forKey: AppConstants.sharedTodayColorHexKey)
             defaults.set(nippon.cname, forKey: AppConstants.sharedTodayColorCnameKey)

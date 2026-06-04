@@ -15,7 +15,7 @@ final class NipponColorStore {
         if let decoded = loadColorsOrNil(from: bundle), !decoded.isEmpty {
             return decoded
         }
-        return [NipponColor(id: "011", name: "nakabeni", cname: "中紅", hex: "DB4D6D", foreground: "light")]
+        return [NipponColor.fallback]
     }
 
     private static func loadColorsOrNil(from bundle: Bundle) -> [NipponColor]? {
@@ -32,9 +32,7 @@ final class NipponColorStore {
     }
 
     func color(for date: Date = Date()) -> NipponColor {
-        guard !colors.isEmpty else {
-            return NipponColor(id: "011", name: "nakabeni", cname: "中紅", hex: "DB4D6D", foreground: "light")
-        }
+        guard !colors.isEmpty else { return NipponColor.fallback }
         let key = PhraseStore.dayKey(for: date)
         // 与短语不同种子，避免「句子和颜色」永远同索引
         let index = PhraseStore.stableIndex(for: key + "|color", count: colors.count)

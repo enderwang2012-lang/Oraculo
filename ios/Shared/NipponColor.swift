@@ -21,4 +21,13 @@ struct NipponColor: Codable, Identifiable, Hashable {
     }
 
     var displayLabel: String { "\(cname) · \(name)" }
+
+    /// 色板缺失时的统一兜底色（中紅 nakabeni），全工程唯一来源。
+    static let fallback = NipponColor(
+        id: "011",
+        name: "nakabeni",
+        cname: "中紅",
+        hex: "DB4D6D",
+        foreground: "light"
+    )
 }

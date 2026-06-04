@@ -35,7 +35,7 @@ final class PhraseStore {
         if let decoded = loadPhrases(from: .main), !decoded.isEmpty {
             return decoded
         }
-        return [Phrase(id: "fallback", text: "先缓一缓", textEn: "Pause, and soften", layer: "anchor", emotionTheme: "light_comfort")]
+        return [Phrase.fallback]
     }
 
     private static func jsonURL(in bundle: Bundle, name: String) -> URL? {
@@ -66,7 +66,7 @@ final class PhraseStore {
         excluding: Phrase? = nil
     ) -> Phrase {
         guard !phrases.isEmpty else {
-            return Phrase(id: "empty", text: "先缓一缓", textEn: "Pause, and soften", layer: "anchor", emotionTheme: "light_comfort")
+            return Phrase.fallback
         }
         let context = ContextSnapshotBuilder.snapshot(for: date, calendar: calendar)
         let dayKey = Self.dayKey(for: date, calendar: calendar)
@@ -85,15 +85,6 @@ final class PhraseStore {
         defaults.set(phrase.id, forKey: AppConstants.sharedTodayPhraseIDKey)
         defaults.set(key, forKey: AppConstants.sharedTodayDayKeyKey)
         defaults.set(activeCorpusVersion, forKey: AppConstants.sharedCorpusVersionKey)
-    }
-
-    func todayPhraseFromSharedDefaults() -> (dayKey: String, phrase: Phrase)? {
-        guard let defaults = UserDefaults(suiteName: AppConstants.appGroupID),
-              let text = defaults.string(forKey: AppConstants.sharedTodayPhraseKey),
-              let id = defaults.string(forKey: AppConstants.sharedTodayPhraseIDKey),
-              let dayKey = defaults.string(forKey: AppConstants.sharedTodayDayKeyKey)
-        else { return nil }
-        return (dayKey, Phrase(id: id, text: text, textEn: "", layer: "cached", emotionTheme: ""))
     }
 
     static func dayKey(for date: Date, calendar: Calendar = .current) -> String {

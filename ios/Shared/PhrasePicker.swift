@@ -10,7 +10,7 @@ enum PhrasePicker {
     ) -> Phrase {
         let pool = phrases.filter { $0.id != excluding?.id }
         guard !pool.isEmpty else {
-            return excluding ?? fallbackPhrase
+            return excluding ?? Phrase.fallback
         }
 
         var weighted: [(phrase: Phrase, weight: Double)] = []
@@ -26,7 +26,7 @@ enum PhrasePicker {
             if let phrase = universalPool.randomElement() ?? pool.randomElement() {
                 return phrase
             }
-            return fallbackPhrase
+            return Phrase.fallback
         }
 
         let total = weighted.reduce(0) { $0 + $1.weight }
@@ -46,11 +46,4 @@ enum PhrasePicker {
         return Double(hash % 1_000_000) / 1_000_000.0
     }
 
-    private static let fallbackPhrase = Phrase(
-        id: "fallback",
-        text: "先缓一缓",
-        textEn: "Pause, and soften",
-        layer: "anchor",
-        emotionTheme: "light_comfort"
-    )
 }

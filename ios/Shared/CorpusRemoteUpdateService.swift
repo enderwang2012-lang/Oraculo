@@ -7,10 +7,21 @@ import Foundation
 enum CorpusRemoteUpdateService {
     private static let appliedVersionKey = "corpusAppliedVersion"
 
+    /// 默认会话：单请求 15s，整个 resource 30s。
+    /// 防止劫持/异常 CDN 让前台启动悬挂在默认 60s+。
+    private static let defaultSession: URLSession = {
+        let config = URLSessionConfiguration.ephemeral
+        config.timeoutIntervalForRequest = 15
+        config.timeoutIntervalForResource = 30
+        config.waitsForConnectivity = false
+        return URLSession(configuration: config)
+    }()
+
     /// 前台拉 manifest，有新版本则下载并校验 SHA256。
     @MainActor
-    static func refreshIfNeeded(session: URLSession = .shared) async {
+    static func refreshIfNeeded(session: URLSession? = nil) async {
         guard let manifestURL = AppConstants.corpusManifestURL else { return }
+        let session = session ?? defaultSession
 
         do {
             let updated = try await performRefresh(manifestURL: manifestURL, session: session)
