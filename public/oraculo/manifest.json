@@ -1,8 +1,8 @@
 {
-  "corpusVersion": 1,
-  "publishedAt": "2026-06-04T03:51:41Z",
+  "corpusVersion": 2,
+  "publishedAt": "2026-06-04T04:05:42Z",
   "minAppVersion": "0.1.0",
-  "releaseNotes": null,
+  "releaseNotes": "v2 热更新验证（版本号测试，语料句数不变）",
   "phrases": {
     "url": "https://oraculo-one.vercel.app/oraculo/phrases.json",
     "sha256": "ae775cecbdb0e4a5b797d81bfa0b46a89814d75a075ffbaecdbf05987bff73f0"
