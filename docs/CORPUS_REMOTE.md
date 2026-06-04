@@ -16,13 +16,14 @@ Widget 与主 App 共用 App Group，**不单独请求网络**。
 1. 打开 [vercel.com/new](https://vercel.com/new)，用 GitHub 导入 **Oraculo** 仓库。
 2. **Framework Preset**：Other（纯静态即可）。
 3. **Root Directory**：仓库根目录（默认 `.`）。
-4. **Project Name**：建议设为 `oraculo`，Production 域名为 `https://oraculo.vercel.app`。
-5. 无需 Build Command；`public/` 下文件会按路径发布。
+4. **Project Name**：必须设为 **`oraculo-corpus`**（不要用 `oraculo`：`oraculo.vercel.app` 已被其他站点占用，访问 `/oraculo/manifest.json` 会返回 `NOT_FOUND`）。
+5. Framework：Other；根目录 `vercel.json` 已指定 `outputDirectory: public`，无需 Build Command。
 6. Deploy 完成后在浏览器验证：
-   - `https://oraculo.vercel.app/oraculo/manifest.json`
-   - `https://oraculo.vercel.app/oraculo/phrases.json`
+   - `https://oraculo-corpus.vercel.app/`（应看到语料索引页）
+   - `https://oraculo-corpus.vercel.app/oraculo/manifest.json`
+   - `https://oraculo-corpus.vercel.app/oraculo/phrases.json`
 
-若 Vercel 分配的域名不是 `oraculo.vercel.app`，请把实际 Production URL 写进 `ios/Shared/AppConstants.swift` 的 `corpusManifestURLString`（路径仍为 `/oraculo/manifest.json`）。
+若 Production 域名不同，请把实际 URL 写进 `ios/Shared/AppConstants.swift` 的 `corpusManifestURLString`（路径仍为 `/oraculo/manifest.json`）。
 
 缓存策略见仓库根目录 `vercel.json`（manifest 短缓存、phrases 较长）。
 
@@ -39,7 +40,7 @@ python3 scripts/embed_corpus.py
 
 # 3. 生成 dist/ 并同步到 public/oraculo/（供 Vercel）
 python3 scripts/publish_corpus_static.py \
-  --base-url https://oraculo.vercel.app/oraculo
+  --base-url https://oraculo-corpus.vercel.app/oraculo
 
 # 4. 提交并 push（Vercel 会自动重新部署）
 git add public/oraculo config/corpus_version.txt ios/Shared/Resources/
@@ -54,7 +55,7 @@ git push
 `ios/Shared/AppConstants.swift`：
 
 ```swift
-static let corpusManifestURLString = "https://oraculo.vercel.app/oraculo/manifest.json"
+static let corpusManifestURLString = "https://oraculo-corpus.vercel.app/oraculo/manifest.json"
 ```
 
 留空 `""` 则完全关闭热更新，仅使用 Bundle 语料。
@@ -68,7 +69,7 @@ static let corpusManifestURLString = "https://oraculo.vercel.app/oraculo/manifes
   "minAppVersion": "0.1.0",
   "releaseNotes": "新增 12 条口令，修正春节打标",
   "phrases": {
-    "url": "https://oraculo.vercel.app/oraculo/phrases.json",
+    "url": "https://oraculo-corpus.vercel.app/oraculo/phrases.json",
     "sha256": "全文件小写 hex"
   }
 }

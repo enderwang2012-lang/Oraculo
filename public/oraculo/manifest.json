@@ -4,7 +4,7 @@
   "minAppVersion": "0.1.0",
   "releaseNotes": null,
   "phrases": {
-    "url": "https://oraculo.vercel.app/oraculo/phrases.json",
+    "url": "https://oraculo-corpus.vercel.app/oraculo/phrases.json",
     "sha256": "ae775cecbdb0e4a5b797d81bfa0b46a89814d75a075ffbaecdbf05987bff73f0"
   }
 }

@@ -30,8 +30,8 @@ enum AppConstants {
     static let sharedCorpusVersionKey = "corpusAppliedVersion"
 
     /// 静态热更新 manifest URL。留空则关闭。见 docs/CORPUS_REMOTE.md
-    /// Vercel 部署后若 Production 域名不是 oraculo.vercel.app，请改为此处 manifest 完整 URL。
-    static let corpusManifestURLString = "https://oraculo.vercel.app/oraculo/manifest.json"
+    /// 勿用 oraculo.vercel.app（已被其他站点占用）。Vercel Project Name 请设为 oraculo-corpus。
+    static let corpusManifestURLString = "https://oraculo-corpus.vercel.app/oraculo/manifest.json"
 
     static var corpusManifestURL: URL? {
         let trimmed = corpusManifestURLString.trimmingCharacters(in: .whitespacesAndNewlines)
