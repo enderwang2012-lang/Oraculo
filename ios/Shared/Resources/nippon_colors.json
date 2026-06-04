@@ -4,1735 +4,2575 @@
     "name": "nadeshiko",
     "cname": "撫子",
     "hex": "DC9F84",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "002",
     "name": "kohbai",
     "cname": "紅梅",
     "hex": "E16B8C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "003",
     "name": "suoh",
     "cname": "蘇芳",
     "hex": "8E354A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "004",
     "name": "taikoh",
     "cname": "退紅",
     "hex": "F8C3CD",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "005",
     "name": "ikkonzome",
     "cname": "一斥染",
     "hex": "F4A7B9",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "006",
     "name": "kuwazome",
     "cname": "桑染",
     "hex": "64363C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "007",
     "name": "momo",
     "cname": "桃",
     "hex": "F596AA",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "008",
     "name": "ichigo",
     "cname": "莓",
     "hex": "B5495B",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "009",
     "name": "usubeni",
     "cname": "薄紅",
     "hex": "E87A90",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "010",
     "name": "imayoh",
     "cname": "今様",
     "hex": "D05A6E",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "011",
     "name": "nakabeni",
     "cname": "中紅",
     "hex": "DB4D6D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "012",
     "name": "sakura",
     "cname": "桜",
     "hex": "FEDFE1",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "013",
     "name": "umenezumi",
     "cname": "梅鼠",
     "hex": "9E7A7A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "014",
     "name": "karakurenai",
     "cname": "韓紅花",
     "hex": "D0104C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "015",
     "name": "enji",
     "cname": "燕脂",
     "hex": "9F353A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "016",
     "name": "kurenai",
     "cname": "紅",
     "hex": "CB1B45",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "017",
     "name": "toki",
     "cname": "鴇",
     "hex": "EEA9A9",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "018",
     "name": "cyohsyun",
     "cname": "長春",
     "hex": "BF6766",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "019",
     "name": "kokiake",
     "cname": "深緋",
     "hex": "86473F",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "020",
     "name": "sakuranezumi",
     "cname": "桜鼠",
     "hex": "B19693",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "021",
     "name": "jinzamomi",
     "cname": "甚三紅",
     "hex": "EB7A77",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "022",
     "name": "azuki",
     "cname": "小豆",
     "hex": "954A45",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "023",
     "name": "suohkoh",
     "cname": "蘇芳香",
     "hex": "A96360",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "024",
     "name": "akabeni",
     "cname": "赤紅",
     "hex": "CB4042",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "025",
     "name": "shinsyu",
     "cname": "真朱",
     "hex": "AB3B3A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "026",
     "name": "haizakura",
     "cname": "灰桜",
     "hex": "D7C4BB",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "027",
     "name": "kuriume",
     "cname": "栗梅",
     "hex": "904840",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "028",
     "name": "ebicha",
     "cname": "海老茶",
     "hex": "734338",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "029",
     "name": "ginsyu",
     "cname": "銀朱",
     "hex": "C73E3A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "030",
     "name": "kurotobi",
     "cname": "黒鳶",
     "hex": "554236",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "031",
     "name": "benitobi",
     "cname": "紅鳶",
     "hex": "994639",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "032",
     "name": "akebono",
     "cname": "曙",
     "hex": "F19483",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "033",
     "name": "benikaba",
     "cname": "紅樺",
     "hex": "B54434",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "034",
     "name": "mizugaki",
     "cname": "水がき",
     "hex": "B9887D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "035",
     "name": "sangosyu",
     "cname": "珊瑚朱",
     "hex": "F17C67",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "036",
     "name": "benihiwada",
     "cname": "紅檜皮",
     "hex": "884C3A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "037",
     "name": "syojyohi",
     "cname": "猩猩緋",
     "hex": "E83015",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "038",
     "name": "entan",
     "cname": "鉛丹",
     "hex": "D75455",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "039",
     "name": "shikancha",
     "cname": "芝翫茶",
     "hex": "B55D4C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "040",
     "name": "hiwada",
     "cname": "檜皮",
     "hex": "854836",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "041",
     "name": "kakishibu",
     "cname": "柿渋",
     "hex": "A35E47",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "042",
     "name": "ake",
     "cname": "緋",
     "hex": "CC543A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "043",
     "name": "tobi",
     "cname": "鳶",
     "hex": "724832",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "044",
     "name": "benihi",
     "cname": "紅緋",
     "hex": "F75C2F",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "045",
     "name": "kurikawacha",
     "cname": "栗皮茶",
     "hex": "6A4028",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "046",
     "name": "bengara",
     "cname": "弁柄",
     "hex": "9A5034",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "047",
     "name": "terigaki",
     "cname": "照柿",
     "hex": "C46243",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "048",
     "name": "edocha",
     "cname": "江戸茶",
     "hex": "AF5F3C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "049",
     "name": "araisyu",
     "cname": "洗朱",
     "hex": "FB966E",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "050",
     "name": "momoshiocha",
     "cname": "百塩茶",
     "hex": "724938",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "051",
     "name": "karacha",
     "cname": "唐茶",
     "hex": "B47157",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "052",
     "name": "tokigaracha",
     "cname": "ときがら茶",
     "hex": "DB8E71",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "053",
     "name": "ohni",
     "cname": "黄丹",
     "hex": "F05E1C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "054",
     "name": "sohi",
     "cname": "纁",
     "hex": "ED784A",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "055",
     "name": "ensyucha",
     "cname": "遠州茶",
     "hex": "CA7853",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "056",
     "name": "kabacha",
     "cname": "樺茶",
     "hex": "B35C37",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "057",
     "name": "kogecha",
     "cname": "焦茶",
     "hex": "563F2E",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "058",
     "name": "akakoh",
     "cname": "赤香",
     "hex": "E3916E",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "059",
     "name": "suzumecha",
     "cname": "雀茶",
     "hex": "8F5A3C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "060",
     "name": "shishi",
     "cname": "宍",
     "hex": "F0A986",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "061",
     "name": "sodenkaracha",
     "cname": "宗伝唐茶",
     "hex": "A0674B",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "062",
     "name": "kaba",
     "cname": "樺",
     "hex": "C1693C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "063",
     "name": "kokikuchinashi",
     "cname": "深支子",
     "hex": "FB9966",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "064",
     "name": "kurumi",
     "cname": "胡桃",
     "hex": "947A6D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "065",
     "name": "taisya",
     "cname": "代赭",
     "hex": "A36336",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "066",
     "name": "araigaki",
     "cname": "洗柿",
     "hex": "E79460",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "067",
     "name": "kohrozen",
     "cname": "黄櫨染",
     "hex": "7D532C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "068",
     "name": "akakuchiba",
     "cname": "赤朽葉",
     "hex": "C78550",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "069",
     "name": "tonocha",
     "cname": "礪茶",
     "hex": "985F2A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "070",
     "name": "akashiritsurubami",
     "cname": "赤白橡",
     "hex": "E1A679",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "071",
     "name": "sencha",
     "cname": "煎茶",
     "hex": "855B32",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "072",
     "name": "kanzo",
     "cname": "萱草",
     "hex": "FC9F4D",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "073",
     "name": "sharegaki",
     "cname": "洒落柿",
     "hex": "FFBA84",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "074",
     "name": "beniukon",
     "cname": "紅鬱金",
     "hex": "E98B2A",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "075",
     "name": "umezome",
     "cname": "梅染",
     "hex": "E9A368",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "076",
     "name": "biwacha",
     "cname": "枇杷茶",
     "hex": "B17844",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "077",
     "name": "chojicha",
     "cname": "丁子茶",
     "hex": "96632E",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "078",
     "name": "kenpohzome",
     "cname": "憲法染",
     "hex": "43341B",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "079",
     "name": "kohaku",
     "cname": "琥珀",
     "hex": "CA7A2C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "080",
     "name": "usugaki",
     "cname": "薄柿",
     "hex": "ECB88A",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "081",
     "name": "kyara",
     "cname": "伽羅",
     "hex": "78552B",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "082",
     "name": "chojizome",
     "cname": "丁子染",
     "hex": "B07736",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "083",
     "name": "FUSHIZOME",
     "cname": "柴染",
     "hex": "967249",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "084",
     "name": "KUCHIBA",
     "cname": "朽葉",
     "hex": "E2943B",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "085",
     "name": "KINCHA",
     "cname": "金茶",
     "hex": "C7802D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "086",
     "name": "KITSUNE",
     "cname": "狐",
     "hex": "9B6E23",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "087",
     "name": "SUSUTAKE",
     "cname": "煤竹",
     "hex": "6E552F",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "088",
     "name": "USUKOH",
     "cname": "薄香",
     "hex": "EBB471",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "089",
     "name": "TONOKO",
     "cname": "砥粉",
     "hex": "D7B98E",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "090",
     "name": "GINSUSUTAKE",
     "cname": "銀煤竹",
     "hex": "82663A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "091",
     "name": "OHDO",
     "cname": "黄土",
     "hex": "B68E55",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "092",
     "name": "SHIRACHA",
     "cname": "白茶",
     "hex": "BC9F77",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "093",
     "name": "KOBICHA",
     "cname": "媚茶",
     "hex": "876633",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "094",
     "name": "KIGARACHA",
     "cname": "黄唐茶",
     "hex": "C18A26",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "095",
     "name": "YAMABUKI",
     "cname": "山吹",
     "hex": "FFB11B",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "096",
     "name": "YAMABUKICHA",
     "cname": "山吹茶",
     "hex": "D19826",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "097",
     "name": "HAJIZOME",
     "cname": "櫨染",
     "hex": "DDA52D",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "098",
     "name": "KUWACHA",
     "cname": "桑茶",
     "hex": "C99833",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "099",
     "name": "TAMAGO",
     "cname": "玉子",
     "hex": "F9BF45",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "100",
     "name": "SHIROTSURUBAMI",
     "cname": "白橡",
     "hex": "DCB879",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "101",
     "name": "KITSURUBAMI",
     "cname": "黄橡",
     "hex": "BA9132",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "102",
     "name": "TAMAMOROKOSHI",
     "cname": "玉蜀黍",
     "hex": "E8B647",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "103",
     "name": "HANABA",
     "cname": "花葉",
     "hex": "F7C242",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "104",
     "name": "NAMAKABE",
     "cname": "生壁",
     "hex": "7D6C46",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "105",
     "name": "TORINOKO",
     "cname": "鳥の子",
     "hex": "DAC9A6",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "106",
     "name": "USUKI",
     "cname": "浅黄",
     "hex": "FAD689",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "107",
     "name": "KIKUCHIBA",
     "cname": "黄朽葉",
     "hex": "D9AB42",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "108",
     "name": "KUCHINASHI",
     "cname": "梔子",
     "hex": "F6C555",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "109",
     "name": "TOHOH",
     "cname": "籐黄",
     "hex": "FFC408",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "110",
     "name": "UKON",
     "cname": "鬱金",
     "hex": "EFBB24",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "111",
     "name": "KARASHI",
     "cname": "芥子",
     "hex": "CAAD5F",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "112",
     "name": "HIGOSUSUTAKE",
     "cname": "肥後煤竹",
     "hex": "8D742A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "113",
     "name": "RIKYUSHIRACHA",
     "cname": "利休白茶",
     "hex": "B4A582",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "114",
     "name": "AKU",
     "cname": "灰汁",
     "hex": "877F6C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "115",
     "name": "RIKYUCHA",
     "cname": "利休茶",
     "hex": "897D55",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "116",
     "name": "ROKOHCHA",
     "cname": "路考茶",
     "hex": "74673E",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "117",
     "name": "NATANEYU",
     "cname": "菜種油",
     "hex": "A28C37",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "118",
     "name": "UGUISUCHA",
     "cname": "鶯茶",
     "hex": "6C6024",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "119",
     "name": "KIMIRUCHA",
     "cname": "黄海松茶",
     "hex": "867835",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "120",
     "name": "MIRUCHA",
     "cname": "海松茶",
     "hex": "62592C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "121",
     "name": "KARIYASU",
     "cname": "刈安",
     "hex": "E9CD4C",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "122",
     "name": "NANOHANA",
     "cname": "菜の花",
     "hex": "F7D94C",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "123",
     "name": "KIHADA",
     "cname": "黄蘗",
     "hex": "FBE251",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "124",
     "name": "MUSHIKURI",
     "cname": "蒸栗",
     "hex": "D9CD90",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "125",
     "name": "AOKUCHIBA",
     "cname": "青朽葉",
     "hex": "ADA142",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "126",
     "name": "OMINAESHI",
     "cname": "女郎花",
     "hex": "DDD23B",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "127",
     "name": "HIWACHA",
     "cname": "鶸茶",
     "hex": "A5A051",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "128",
     "name": "HIWA",
     "cname": "鶸",
     "hex": "BEC23F",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "129",
     "name": "UGUISU",
     "cname": "鶯",
     "hex": "6C6A2D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "130",
     "name": "YANAGICHA",
     "cname": "柳茶",
     "hex": "939650",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "131",
     "name": "KOKE",
     "cname": "苔",
     "hex": "838A2D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "132",
     "name": "KIKUJIN",
     "cname": "麹塵",
     "hex": "B1B479",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "133",
     "name": "RIKANCHA",
     "cname": "璃寛茶",
     "hex": "616138",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "134",
     "name": "AIKOBICHA",
     "cname": "藍媚茶",
     "hex": "4B4E2A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "135",
     "name": "MIRU",
     "cname": "海松",
     "hex": "5B622E",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "136",
     "name": "SENSAICHA",
     "cname": "千歳茶",
     "hex": "4D5139",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "137",
     "name": "BAIKOCHA",
     "cname": "梅幸茶",
     "hex": "89916B",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "138",
     "name": "HIWAMOEGI",
     "cname": "鶸萌黄",
     "hex": "90B44B",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "139",
     "name": "YANAGIZOME",
     "cname": "柳染",
     "hex": "91AD70",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "140",
     "name": "URAYANAGI",
     "cname": "裏柳",
     "hex": "B5CAA0",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "141",
     "name": "IWAICHA",
     "cname": "岩井茶",
     "hex": "646A58",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "142",
     "name": "MOEGI",
     "cname": "萌黄",
     "hex": "7BA23F",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "143",
     "name": "NAE",
     "cname": "苗",
     "hex": "86C166",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "144",
     "name": "YANAGISUSUTAKE",
     "cname": "柳煤竹",
     "hex": "4A593D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "145",
     "name": "MATSUBA",
     "cname": "松葉",
     "hex": "42602D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "146",
     "name": "AONI",
     "cname": "青丹",
     "hex": "516E41",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "147",
     "name": "USUAO",
     "cname": "薄青",
     "hex": "91B493",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "148",
     "name": "YANAGINEZUMI",
     "cname": "柳鼠",
     "hex": "808F7C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "149",
     "name": "TOKIWA",
     "cname": "常磐",
     "hex": "1B813E",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "150",
     "name": "WAKATAKE",
     "cname": "若竹",
     "hex": "5DAC81",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "151",
     "name": "CHITOSEMIDORI",
     "cname": "千歳緑",
     "hex": "36563C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "152",
     "name": "MIDORI",
     "cname": "緑",
     "hex": "227D51",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "153",
     "name": "BYAKUROKU",
     "cname": "白緑",
     "hex": "A8D8B9",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "154",
     "name": "OITAKE",
     "cname": "老竹",
     "hex": "6A8372",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "155",
     "name": "TOKUSA",
     "cname": "木賊",
     "hex": "2D6D4B",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "156",
     "name": "ONANDOCHA",
     "cname": "御納戸茶",
     "hex": "465D4C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "157",
     "name": "ROKUSYOH",
     "cname": "緑青",
     "hex": "24936E",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "158",
     "name": "SABISEIJI",
     "cname": "錆青磁",
     "hex": "86A697",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "159",
     "name": "AOTAKE",
     "cname": "青竹",
     "hex": "00896C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "160",
     "name": "VELUDO",
     "cname": "ビロード",
     "hex": "096148",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "161",
     "name": "MUSHIAO",
     "cname": "虫襖",
     "hex": "20604F",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "162",
     "name": "AIMIRUCHA",
     "cname": "藍海松茶",
     "hex": "0F4C3A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "163",
     "name": "TONOCHA2",
     "cname": "沈香茶",
     "hex": "4F726C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "164",
     "name": "AOMIDORI",
     "cname": "青緑",
     "hex": "00AA90",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "165",
     "name": "SEIJI",
     "cname": "青磁",
     "hex": "69B0AC",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "166",
     "name": "TETSU",
     "cname": "鉄",
     "hex": "26453D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "167",
     "name": "MIZUASAGI",
     "cname": "水浅葱",
     "hex": "66BAB7",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "168",
     "name": "SEIHEKI",
     "cname": "青碧",
     "hex": "268785",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "169",
     "name": "SABITETSUONANDO",
     "cname": "錆鉄御納戸",
     "hex": "405B55",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "170",
     "name": "KORAINANDO",
     "cname": "高麗納戸",
     "hex": "305A56",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "171",
     "name": "BYAKUGUN",
     "cname": "白群",
     "hex": "78C2C4",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "172",
     "name": "OMESHICHA",
     "cname": "御召茶",
     "hex": "376B6D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "173",
     "name": "KAMENOZOKI",
     "cname": "瓶覗",
     "hex": "A5DEE4",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "174",
     "name": "FUKAGAWANEZUMI",
     "cname": "深川鼠",
     "hex": "77969A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "175",
     "name": "SABIASAGI",
     "cname": "錆浅葱",
     "hex": "6699A1",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "176",
     "name": "MIZU",
     "cname": "水",
     "hex": "81C7D4",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "177",
     "name": "ASAGI",
     "cname": "浅葱",
     "hex": "33A6B8",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "178",
     "name": "ONANDO",
     "cname": "御納戸",
     "hex": "0C4842",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "179",
     "name": "AI",
     "cname": "藍",
     "hex": "0D5661",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "180",
     "name": "SHINBASHI",
     "cname": "新橋",
     "hex": "0089A7",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "181",
     "name": "SABIONANDO",
     "cname": "錆御納戸",
     "hex": "336774",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "182",
     "name": "TETSUONANDO",
     "cname": "鉄御納戸",
     "hex": "255359",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "183",
     "name": "HANAASAGI",
     "cname": "花浅葱",
     "hex": "1E88A8",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "184",
     "name": "AINEZUMI",
     "cname": "藍鼠",
     "hex": "566C73",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "185",
     "name": "MASUHANA",
     "cname": "舛花",
     "hex": "577C8A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "186",
     "name": "SORA",
     "cname": "空",
     "hex": "58B2DC",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "187",
     "name": "NOSHIMEHANA",
     "cname": "熨斗目花",
     "hex": "2B5F75",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "188",
     "name": "CHIGUSA",
     "cname": "千草",
     "hex": "3A8FB7",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "189",
     "name": "OMESHIONANDO",
     "cname": "御召御納戸",
     "hex": "2E5C6E",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "190",
     "name": "HANADA",
     "cname": "縹",
     "hex": "006284",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "191",
     "name": "WASURENAGUSA",
     "cname": "勿忘草",
     "hex": "7DB9DE",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "192",
     "name": "GUNJYO",
     "cname": "群青",
     "hex": "51A8DD",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "193",
     "name": "TSUYUKUSA",
     "cname": "露草",
     "hex": "2EA9DF",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "194",
     "name": "KUROTSURUBAMI",
     "cname": "黒橡",
     "hex": "0B1013",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "195",
     "name": "KON",
     "cname": "紺",
     "hex": "0F2540",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "196",
     "name": "KACHI",
     "cname": "褐",
     "hex": "08192D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "197",
     "name": "RURI",
     "cname": "瑠璃",
     "hex": "005CAF",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "198",
     "name": "RURIKON",
     "cname": "瑠璃紺",
     "hex": "0B346E",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "199",
     "name": "BENIMIDORI",
     "cname": "紅碧",
     "hex": "7B90D2",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "200",
     "name": "FUJINEZUMI",
     "cname": "藤鼠",
     "hex": "6E75A4",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "201",
     "name": "TETSUKON",
     "cname": "鉄紺",
     "hex": "261E47",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "202",
     "name": "KONJYO",
     "cname": "紺青",
     "hex": "113285",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "203",
     "name": "BENIKAKEHANA",
     "cname": "紅掛花",
     "hex": "4E4F97",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "204",
     "name": "KONKIKYO",
     "cname": "紺桔梗",
     "hex": "211E55",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "205",
     "name": "FUJI",
     "cname": "藤",
     "hex": "8B81C3",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "206",
     "name": "FUTAAI",
     "cname": "二藍",
     "hex": "70649A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "207",
     "name": "OUCHI",
     "cname": "楝",
     "hex": "9B90C2",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "208",
     "name": "FUJIMURASAKI",
     "cname": "藤紫",
     "hex": "8A6BBE",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "209",
     "name": "KIKYO",
     "cname": "桔梗",
     "hex": "6A4C9C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "210",
     "name": "SHION",
     "cname": "紫苑",
     "hex": "8F77B5",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "211",
     "name": "MESSHI",
     "cname": "滅紫",
     "hex": "533D5B",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "212",
     "name": "USU",
     "cname": "薄",
     "hex": "B28FCE",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "213",
     "name": "HASHITA",
     "cname": "半",
     "hex": "986DB2",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "214",
     "name": "EDOMURASAKI",
     "cname": "江戸紫",
     "hex": "77428D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "215",
     "name": "SHIKON",
     "cname": "紫紺",
     "hex": "3C2F41",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "216",
     "name": "KOKIMURASAKI",
     "cname": "深紫",
     "hex": "4A225D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "217",
     "name": "SUMIRE",
     "cname": "菫",
     "hex": "66327C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "218",
     "name": "MURASAKI",
     "cname": "紫",
     "hex": "592C63",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "219",
     "name": "AYAME",
     "cname": "菖蒲",
     "hex": "6F3381",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "220",
     "name": "FUJISUSUTAKE",
     "cname": "藤煤竹",
     "hex": "574C57",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "221",
     "name": "BENIFUJI",
     "cname": "紅藤",
     "hex": "B481BB",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "222",
     "name": "KUROBENI",
     "cname": "黒紅",
     "hex": "3F2B36",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "223",
     "name": "NASUKON",
     "cname": "茄子紺",
     "hex": "572A3F",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "224",
     "name": "BUDOHNEZUMI",
     "cname": "葡萄鼠",
     "hex": "5E3D50",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "225",
     "name": "HATOBANEZUMI",
     "cname": "鳩羽鼠",
     "hex": "72636E",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "226",
     "name": "KAKITSUBATA",
     "cname": "杜若",
     "hex": "622954",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "227",
     "name": "EBIZOME",
     "cname": "蒲葡",
     "hex": "6D2E5B",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "228",
     "name": "BOTAN",
     "cname": "牡丹",
     "hex": "C1328E",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "229",
     "name": "UMEMURASAKI",
     "cname": "梅紫",
     "hex": "A8497A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "230",
     "name": "NISEMURASAKI",
     "cname": "似紫",
     "hex": "562E37",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "231",
     "name": "TSUTSUJI",
     "cname": "躑躅",
     "hex": "E03C8A",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm"
+    ]
   },
   {
     "id": "232",
     "name": "MURASAKITOBI",
     "cname": "紫鳶",
     "hex": "60373E",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "235",
     "name": "SHIRONEZUMI",
     "cname": "白鼠",
     "hex": "BDC0BA",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "236",
     "name": "GINNEZUMI",
     "cname": "銀鼠",
     "hex": "91989F",
-    "foreground": "dark"
+    "foreground": "dark",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "237",
     "name": "NAMARI",
     "cname": "鉛",
     "hex": "787878",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "238",
     "name": "HAI",
     "cname": "灰",
     "hex": "828282",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "239",
     "name": "SUNEZUMI",
     "cname": "素鼠",
     "hex": "787D7B",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "240",
     "name": "RIKYUNEZUMI",
     "cname": "利休鼠",
     "hex": "707C74",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "241",
     "name": "NIBI",
     "cname": "鈍",
     "hex": "656765",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "242",
     "name": "AONIBI",
     "cname": "青鈍",
     "hex": "535953",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool"
+    ]
   },
   {
     "id": "243",
     "name": "DOBUNEZUMI",
     "cname": "溝鼠",
     "hex": "4F4F48",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "light"
+    ]
   },
   {
     "id": "244",
     "name": "BENIKESHINEZUMI",
     "cname": "紅消鼠",
     "hex": "52433D",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "light"
+    ]
   },
   {
     "id": "245",
     "name": "AISUMICHA",
     "cname": "藍墨茶",
     "hex": "373C38",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "246",
     "name": "BINROJIZOME",
     "cname": "檳榔子染",
     "hex": "3A3226",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "warm",
+      "dark"
+    ]
   },
   {
     "id": "247",
     "name": "KESHIZUMI",
     "cname": "消炭",
     "hex": "434343",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "248",
     "name": "SUMI",
     "cname": "墨",
     "hex": "1C1C1C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "249",
     "name": "KURO",
     "cname": "黒",
     "hex": "080808",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   },
   {
     "id": "250",
     "name": "RO",
     "cname": "呂",
     "hex": "0C0C0C",
-    "foreground": "light"
+    "foreground": "light",
+    "moods": [
+      "cool",
+      "dark"
+    ]
   }
 ]

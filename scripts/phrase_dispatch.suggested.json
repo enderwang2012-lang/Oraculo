@@ -1,0 +1,155 @@
+{
+  "sb_1": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_13": {
+    "colorMoods": [
+      "warm"
+    ]
+  },
+  "sb_26": {
+    "colorMoods": [
+      "warm"
+    ]
+  },
+  "sb_39": {
+    "colorMoods": [
+      "warm",
+      "light"
+    ]
+  },
+  "sb_41": {
+    "colorMoods": [
+      "warm"
+    ]
+  },
+  "sb_42": {
+    "colorMoods": [
+      "warm"
+    ]
+  },
+  "sb_43": {
+    "colorMoods": [
+      "warm"
+    ]
+  },
+  "sb_61": {
+    "colorMoods": [
+      "warm"
+    ]
+  },
+  "sb_68": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_109": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "cool"
+    ]
+  },
+  "sb_141": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "cool"
+    ]
+  },
+  "sb_162": {
+    "colorMoods": [
+      "warm"
+    ]
+  },
+  "sb_173": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "cool"
+    ]
+  },
+  "sb_194": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_196": {
+    "colorMoods": [
+      "warm",
+      "light"
+    ]
+  },
+  "sb_204": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "cool"
+    ]
+  },
+  "sb_231": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "cool"
+    ]
+  },
+  "sb_244": {
+    "colorMoods": [
+      "warm"
+    ]
+  },
+  "sb_255": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_260": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_263": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_275": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "cool"
+    ]
+  },
+  "sb_280": {
+    "colorMoods": [
+      "warm"
+    ]
+  }
+}

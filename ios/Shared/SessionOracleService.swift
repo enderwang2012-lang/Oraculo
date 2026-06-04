@@ -22,7 +22,11 @@ struct SessionOracleService {
             seedSuffix: "shake|\(shakeNonce)",
             excluding: current?.phrase
         )
-        var nippon = pickColor(from: colorList, excluding: current?.nipponColor)
+        var nippon = pickColor(
+            from: colorList,
+            phrase: phrase,
+            excluding: current?.nipponColor
+        )
 
         if let current {
             var attempts = 0
@@ -36,7 +40,11 @@ struct SessionOracleService {
                     seedSuffix: "shake|\(retryNonce)",
                     excluding: current.phrase
                 )
-                nippon = pickColor(from: colorList, excluding: current.nipponColor)
+                nippon = pickColor(
+                    from: colorList,
+                    phrase: phrase,
+                    excluding: current.nipponColor
+                )
                 attempts += 1
             }
         }
@@ -44,10 +52,29 @@ struct SessionOracleService {
         return OracleMoment(phrase: phrase, nipponColor: nippon, dayKey: dayKey)
     }
 
-    private func pickColor(from list: [NipponColor], excluding: NipponColor?) -> NipponColor {
+    /// 摇一摇用：先按句的 colorMoods/colorBan 收窄候选池，再排除上次色，最后均匀随机。
+    /// 与每日选色不同——这里不用 InstallID 切片，每次都要变（这是摇一摇的本质）。
+    private func pickColor(
+        from list: [NipponColor],
+        phrase: Phrase,
+        excluding: NipponColor?
+    ) -> NipponColor {
         guard !list.isEmpty else { return NipponColor.fallback }
         if list.count == 1 { return list[0] }
-        let pool = list.filter { $0.hex != excluding?.hex }
-        return (pool.isEmpty ? list : pool).randomElement()!
+
+        let moodPool = ColorMoodPicker.candidatePool(from: list, dispatch: phrase.dispatch)
+        let pool = moodPool.filter { $0.hex != excluding?.hex }
+        let final = pool.isEmpty ? moodPool : pool
+
+        // 在 mood 池里仍按 colorMoods 加权倾向（摇一摇也要尊重情绪倾向）。
+        if let moods = phrase.dispatch?.colorMoods, !moods.isEmpty {
+            let moodSet = Set(moods)
+            let preferred = final.filter { c in c.moods.contains(where: { moodSet.contains($0) }) }
+            // 70% 概率从偏好色里抽，30% 从整池抽——保留 248 色丰富感
+            if !preferred.isEmpty, Double.random(in: 0 ..< 1) < 0.7 {
+                return preferred.randomElement()!
+            }
+        }
+        return final.randomElement()!
     }
 }

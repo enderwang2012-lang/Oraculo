@@ -35,6 +35,7 @@
 		5612512048C6BCAB9C2289A4 /* LocationContextCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEF157B8DA40B058D726F5 /* LocationContextCache.swift */; };
 		5670EF0B4BEC189AABE854B8 /* GeoCoordinateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A31BFEE1A3EFB86616C5FA /* GeoCoordinateMapper.swift */; };
 		5AA045126FDAB84D166454E4 /* CorpusBundledMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BBBE77C4008147393A3F63 /* CorpusBundledMeta.swift */; };
+		611CAEBB296395313279193F /* InstallID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57226918A5A06E7EC7A7F67C /* InstallID.swift */; };
 		67FD9301E551AA4E30DAA3CD /* SessionOracleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56420C1766EA2738BE6139F7 /* SessionOracleService.swift */; };
 		6C87ACF03DFBAB6192D7EC9D /* PhraseWidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47155F29CF4A831AC339DD /* PhraseWidgetViews.swift */; };
 		725FE35123A08B804A264372 /* DailyPhraseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E354E68A3A649C3656352B5 /* DailyPhraseService.swift */; };
@@ -65,6 +66,7 @@
 		BED82787C2528440F0B2B154 /* WeatherContextCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2929CF705C79418BF7AFD11A /* WeatherContextCache.swift */; };
 		BF70B9157DDBACFB16167220 /* SolarTermCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C37A12397445A0FE50A68B /* SolarTermCalendar.swift */; };
 		C256066F61EE7D10581772E3 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AECD19F25E5AAEBD8F60F /* Color+Hex.swift */; };
+		C2FBC8651D5C3CB6D3D9D66A /* InstallID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57226918A5A06E7EC7A7F67C /* InstallID.swift */; };
 		C5027215F9B8ACED09D33457 /* OraculoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA6821FDD729C4BE307075F /* OraculoApp.swift */; };
 		C548B7DF47C09D1BA95C1E82 /* OracleMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB998C2D17A79F85625CB06C /* OracleMoment.swift */; };
 		C551D7E179C84C36A62815AE /* PhraseDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D508FD3905C869704EF26C /* PhraseDispatch.swift */; };
@@ -131,6 +133,7 @@
 		4BE6A3D57D031312F58A0004 /* BreathingBottomGlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingBottomGlow.swift; sourceTree = "<group>"; };
 		4F0AECD19F25E5AAEBD8F60F /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		56420C1766EA2738BE6139F7 /* SessionOracleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionOracleService.swift; sourceTree = "<group>"; };
+		57226918A5A06E7EC7A7F67C /* InstallID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallID.swift; sourceTree = "<group>"; };
 		57727F6477BCC955651A37FD /* ClockVerticalSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockVerticalSlide.swift; sourceTree = "<group>"; };
 		58AB6282009775871274E6ED /* phrases.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = phrases.json; sourceTree = "<group>"; };
 		62B994708A0A24C4ABDFE9E8 /* PhrasePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasePicker.swift; sourceTree = "<group>"; };
@@ -244,6 +247,7 @@
 				68B3EC9AF6A99A30E37A42D4 /* FestivalCalendar.swift */,
 				67BE81D03B4E3717E2FCDF00 /* GeoContext.swift */,
 				16A31BFEE1A3EFB86616C5FA /* GeoCoordinateMapper.swift */,
+				57226918A5A06E7EC7A7F67C /* InstallID.swift */,
 				27BEF157B8DA40B058D726F5 /* LocationContextCache.swift */,
 				E6B680DCBAEC6D0DBA2A9B5C /* LocationContextProvider.swift */,
 				7A91D1C93FD2EA1E5403F92B /* NipponAmbienceView.swift */,
@@ -390,6 +394,7 @@
 				3345158CD7D3E71092A6E26B /* FestivalCalendar.swift in Sources */,
 				98BE89A8CB2C976807D9D00C /* GeoContext.swift in Sources */,
 				F20318F1A27850D610ECD789 /* GeoCoordinateMapper.swift in Sources */,
+				611CAEBB296395313279193F /* InstallID.swift in Sources */,
 				5612512048C6BCAB9C2289A4 /* LocationContextCache.swift in Sources */,
 				8E966FEE996EAF93AAC77A27 /* LocationContextProvider.swift in Sources */,
 				E7EA12D7CA0F42B3C30A2D0C /* NipponAmbienceView.swift in Sources */,
@@ -432,6 +437,7 @@
 				B3B3471155B47F77C785CB92 /* FestivalCalendar.swift in Sources */,
 				782E2F468A9946B8BA2F40FE /* GeoContext.swift in Sources */,
 				5670EF0B4BEC189AABE854B8 /* GeoCoordinateMapper.swift in Sources */,
+				C2FBC8651D5C3CB6D3D9D66A /* InstallID.swift in Sources */,
 				F18D4AA586A81FB5E18B4C97 /* LiveClockView.swift in Sources */,
 				C756AC48988EA0D4D98EE972 /* LocationContextCache.swift in Sources */,
 				9FBD9AD31A21D099D64E875E /* LocationContextProvider.swift in Sources */,

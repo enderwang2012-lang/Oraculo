@@ -45,8 +45,16 @@ struct PhraseTimelineProvider: TimelineProvider {
         // 文档 docs/CONTEXTUAL_PHRASE_DISPATCH.md 的承诺在此兑现。
         let phrase = PhraseStore.shared.contextualPhrase(for: date)
 
-        let colorIndex = PhraseStore.stableIndex(for: dayKey + "|color", count: max(colors.count, 1))
-        let nippon = colors.isEmpty ? NipponColor.fallback : colors[colorIndex]
+        // 与 NipponColorStore.color(for:phrase:) 走同一条路径：按句的 colorMoods/colorBan 收窄池。
+        // 同人当天稳定（dayKey + InstallID 切片），且与主 App 看到的色一致。
+        let colorSeed = "\(dayKey)|color|\(InstallID.value)"
+        let nippon: NipponColor
+        if colors.isEmpty {
+            nippon = NipponColor.fallback
+        } else {
+            let pool = ColorMoodPicker.candidatePool(from: colors, dispatch: phrase.dispatch)
+            nippon = ColorMoodPicker.pick(from: pool, dispatch: phrase.dispatch, seed: colorSeed)
+        }
 
         // 主 App 的 DailyPhraseService.refreshSharedCache() 是 sharedTodayPhraseKey/sharedTodayPhraseIDKey 的权威写入方。
         // Widget 只回填颜色相关 key（主 App 暂不写颜色），避免与主 App 的写入相互覆盖。

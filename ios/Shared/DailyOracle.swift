@@ -13,10 +13,12 @@ struct DailyOracleService {
 
     func oracle(for date: Date = Date()) -> DailyOracle {
         let key = PhraseStore.dayKey(for: date)
+        // 先选句，再让色按句的 colorMoods/colorBan 收窄候选池。
+        let phrase = phrases.phrase(for: date)
         return DailyOracle(
             dayKey: key,
-            phrase: phrases.phrase(for: date),
-            nipponColor: colors.color(for: date)
+            phrase: phrase,
+            nipponColor: colors.color(for: date, phrase: phrase)
         )
     }
 

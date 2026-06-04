@@ -70,7 +70,9 @@ final class PhraseStore {
         }
         let context = ContextSnapshotBuilder.snapshot(for: date, calendar: calendar)
         let dayKey = Self.dayKey(for: date, calendar: calendar)
-        var seed = "\(dayKey)|\(context.selectionFingerprint)"
+        // 末尾混入 InstallID：同日同情境的不同用户拿到不同句子（B 方案——"集合变小"靠标签控制，
+        // 集合内的"哪一句"靠用户切片）。InstallID 放最后，便于 grep 调试。
+        var seed = "\(dayKey)|\(context.selectionFingerprint)|\(InstallID.value)"
         if let seedSuffix, !seedSuffix.isEmpty {
             seed += "|\(seedSuffix)"
         }
