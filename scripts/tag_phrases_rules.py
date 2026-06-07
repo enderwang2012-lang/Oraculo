@@ -14,6 +14,8 @@ from embed_corpus import theme_slug  # noqa: E402
 
 SOURCE = ROOT / "starbucks_now_passphrases.csv"
 OUT = ROOT / "scripts" / "phrase_dispatch.json"
+# 手工授权的派发覆盖（口语句字面抽不出场合词，规则无法生成硬锁）。
+OVERRIDES = ROOT / "config" / "phrase_dispatch_overrides.json"
 
 # 主题级节日硬门槛：非窗口内权重为 0，摇一摇/回前台也抽不到。
 FESTIVAL_EXCLUSIVE_THEMES: dict[str, str] = {
@@ -239,13 +241,25 @@ def main() -> None:
             pid = f"sb_{row['id'].strip()}"
             dispatch_by_id[pid] = build_dispatch(text, row.get("theme", "").strip())
 
+    overridden = 0
+    if OVERRIDES.exists():
+        raw = json.loads(OVERRIDES.read_text(encoding="utf-8"))
+        for pid, rule in raw.items():
+            if pid.startswith("_"):
+                continue
+            dispatch_by_id[pid] = rule
+            overridden += 1
+
     OUT.write_text(
         json.dumps(dispatch_by_id, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
     universal = sum(1 for d in dispatch_by_id.values() if d["universal"])
     seasonal = len(dispatch_by_id) - universal
-    print(f"Wrote {len(dispatch_by_id)} dispatch ({universal} universal, {seasonal} season-locked) → {OUT}")
+    print(
+        f"Wrote {len(dispatch_by_id)} dispatch ({universal} universal, "
+        f"{seasonal} season-locked, {overridden} overridden) → {OUT}"
+    )
 
 
 if __name__ == "__main__":

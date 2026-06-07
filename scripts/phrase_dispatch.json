@@ -1297,5 +1297,87 @@
     "universal": true,
     "onlyWhen": [],
     "boost": []
+  },
+  "sb_2001": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": []
+  },
+  "sb_2002": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": []
+  },
+  "sb_2003": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": []
+  },
+  "sb_2004": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": []
+  },
+  "sb_2005": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": [
+      {
+        "tag": "weather:windy",
+        "weight": 1.2
+      }
+    ]
+  },
+  "sb_2006": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": []
+  },
+  "sb_2021": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:dragon_boat"
+    ],
+    "boost": []
+  },
+  "sb_2022": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:dragon_boat"
+    ],
+    "boost": []
+  },
+  "sb_2023": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:mid_autumn"
+    ],
+    "boost": []
+  },
+  "sb_2035": {
+    "universal": false,
+    "onlyWhen": [
+      "month:6"
+    ],
+    "boost": []
+  },
+  "sb_2041": {
+    "universal": false,
+    "onlyWhen": [
+      "weather:rain"
+    ],
+    "boost": []
   }
 }

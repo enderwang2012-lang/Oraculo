@@ -1,0 +1,14 @@
+{
+  "_comment": "手工授权的派发覆盖。口语句字面抽不出场合词，规则打标器无法生成硬锁，这里直接指定最终派发规则。tag_phrases_rules.py 在生成后会用本表覆盖对应 pid，确保重跑不丢。",
+  "sb_2001": { "universal": false, "onlyWhen": ["season:summer"], "boost": [] },
+  "sb_2002": { "universal": false, "onlyWhen": ["season:summer"], "boost": [] },
+  "sb_2003": { "universal": false, "onlyWhen": ["season:summer"], "boost": [] },
+  "sb_2004": { "universal": false, "onlyWhen": ["season:summer"], "boost": [] },
+  "sb_2005": { "universal": false, "onlyWhen": ["season:summer"], "boost": [{ "tag": "weather:windy", "weight": 1.2 }] },
+  "sb_2006": { "universal": false, "onlyWhen": ["season:summer"], "boost": [] },
+  "sb_2021": { "universal": false, "onlyWhen": ["festival:dragon_boat"], "boost": [] },
+  "sb_2022": { "universal": false, "onlyWhen": ["festival:dragon_boat"], "boost": [] },
+  "sb_2023": { "universal": false, "onlyWhen": ["festival:mid_autumn"], "boost": [] },
+  "sb_2035": { "universal": false, "onlyWhen": ["month:6"], "boost": [] },
+  "sb_2041": { "universal": false, "onlyWhen": ["weather:rain"], "boost": [] }
+}

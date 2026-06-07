@@ -1,0 +1,665 @@
+[
+  {
+    "id": "sb_2001",
+    "text": "来杯冰美式",
+    "occasion": "season:summer",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2002",
+    "text": "第一口冰咖啡最上头",
+    "occasion": "season:summer",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2003",
+    "text": "空调和西瓜不能少",
+    "occasion": "season:summer",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2004",
+    "text": "今天又想吃冰的了",
+    "occasion": "season:summer",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2005",
+    "text": "傍晚的风总算凉了",
+    "occasion": "season:summer",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2006",
+    "text": "蝉一叫就知道是夏天",
+    "occasion": "season:summer",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2007",
+    "text": "天凉了想喝热拿铁",
+    "occasion": "season:autumn",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:autumn"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2008",
+    "text": "风一吹就想加件外套",
+    "occasion": "season:autumn",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:autumn"
+      ],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2009",
+    "text": "桂花香飘了一整条街",
+    "occasion": "season:autumn",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:autumn"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2010",
+    "text": "秋天就该去看银杏",
+    "occasion": "season:autumn",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:autumn"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2011",
+    "text": "今年第一杯热饮安排",
+    "occasion": "season:autumn",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:autumn"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2012",
+    "text": "被窝才是冬天的归宿",
+    "occasion": "season:winter",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:winter"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2013",
+    "text": "手冻得握不住杯子",
+    "occasion": "season:winter",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:winter"
+      ],
+      "boost": [
+        {
+          "tag": "weather:snow",
+          "weight": 1.5
+        }
+      ]
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2014",
+    "text": "来杯热的暖暖手",
+    "occasion": "season:winter",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:winter"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2015",
+    "text": "冬天的太阳格外珍贵",
+    "occasion": "season:winter",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:winter"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2016",
+    "text": "哈出来的气都是白的",
+    "occasion": "season:winter",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:winter"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2017",
+    "text": "终于能不穿秋裤了",
+    "occasion": "season:spring",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:spring"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2018",
+    "text": "天气正好出去走走",
+    "occasion": "season:spring",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:spring"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2019",
+    "text": "樱花开了赶紧去拍",
+    "occasion": "season:spring",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:spring"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2020",
+    "text": "万物都在悄悄发芽",
+    "occasion": "season:spring",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:spring"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2021",
+    "text": "妈妈包的粽子最好吃",
+    "occasion": "festival:dragon_boat",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:dragon_boat"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2022",
+    "text": "甜粽还是咸粽你站哪边",
+    "occasion": "festival:dragon_boat",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:dragon_boat"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2023",
+    "text": "月亮今晚好像特别圆",
+    "occasion": "festival:mid_autumn",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:mid_autumn"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2024",
+    "text": "记得回家吃口月饼",
+    "occasion": "festival:mid_autumn",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:mid_autumn"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2025",
+    "text": "该收拾行李回家过年了",
+    "occasion": "festival:spring_festival",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:spring_festival"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2026",
+    "text": "红包都准备好了吗",
+    "occasion": "festival:spring_festival",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:spring_festival"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2027",
+    "text": "又要长一岁咯",
+    "occasion": "festival:spring_festival",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:spring_festival"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2028",
+    "text": "汤圆你要吃几颗",
+    "occasion": "festival:lantern_festival",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:lantern_festival"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2029",
+    "text": "回趟老家看看长辈",
+    "occasion": "festival:qingming",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:qingming"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2030",
+    "text": "终于盼到放假啦",
+    "occasion": "festival:national_day",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:national_day"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2031",
+    "text": "圣诞要不要一起过",
+    "occasion": "festival:christmas",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:christmas"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2032",
+    "text": "给自己挑份圣诞礼物",
+    "occasion": "festival:christmas",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:christmas"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2033",
+    "text": "今天先对自己好一点",
+    "occasion": "festival:valentine",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:valentine"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2034",
+    "text": "新的一年慢慢来",
+    "occasion": "festival:new_year",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:new_year"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2035",
+    "text": "一年已经过半了",
+    "occasion": "month:6",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "month:6"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2036",
+    "text": "开学了又得早起",
+    "occasion": "month:9",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "month:9"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2037",
+    "text": "年底了再拼一把",
+    "occasion": "month:12",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "month:12"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2038",
+    "text": "转眼就到十二月",
+    "occasion": "month:12",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "month:12"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2039",
+    "text": "五一假期想好去哪了吗",
+    "occasion": "festival:labor_day",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:labor_day"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2040",
+    "text": "三月了该换薄外套了",
+    "occasion": "month:3",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "month:3"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2041",
+    "text": "下雨天最适合赖床",
+    "occasion": "weather:rain",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "weather:rain"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2042",
+    "text": "出门记得带把伞",
+    "occasion": "weather:rain",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "weather:rain"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2043",
+    "text": "下雪了快看窗外",
+    "occasion": "weather:snow",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "weather:snow"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2044",
+    "text": "今天阳光好得不像话",
+    "occasion": "weather:clear",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "weather:clear"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2045",
+    "text": "风大到帽子要飞走",
+    "occasion": "weather:windy",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "weather:windy"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2046",
+    "text": "早安今天也要元气满满",
+    "occasion": "daypart:morning",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "daypart:morning"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2047",
+    "text": "晚安记得好好睡",
+    "occasion": "daypart:late_night",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "daypart:late_night"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2048",
+    "text": "夕阳把天边烧红了",
+    "occasion": "daypart:evening",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "daypart:evening"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2049",
+    "text": "这么晚还舍不得睡",
+    "occasion": "daypart:late_night",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "daypart:late_night"
+      ],
+      "boost": []
+    },
+    "review_note": "OK"
+  },
+  {
+    "id": "sb_2050",
+    "text": "今天也辛苦你啦",
+    "occasion": "none",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": []
+    },
+    "review_note": "OK"
+  }
+]

@@ -4130,5 +4130,164 @@
       "onlyWhen": [],
       "boost": []
     }
+  },
+  {
+    "id": "sb_2001",
+    "text": "来杯冰美式",
+    "textEn": "An iced americano, please",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_2002",
+    "text": "第一口冰咖啡最上头",
+    "textEn": "First sip of iced coffee hits",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_2003",
+    "text": "空调和西瓜不能少",
+    "textEn": "AC and watermelon, non-negotiable",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_2004",
+    "text": "今天又想吃冰的了",
+    "textEn": "Craving something icy again",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_2005",
+    "text": "傍晚的风总算凉了",
+    "textEn": "Evening breeze finally cooled",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sb_2006",
+    "text": "楼下的青蛙好聒噪",
+    "textEn": "Frogs downstairs won't hush",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_2021",
+    "text": "妈妈包的粽子最好吃",
+    "textEn": "Mom's zongzi taste the best",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:dragon_boat"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_2022",
+    "text": "甜粽还是咸粽你站哪边",
+    "textEn": "Sweet or savory zongzi?",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:dragon_boat"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_2023",
+    "text": "月亮今晚好像特别圆",
+    "textEn": "Moon looks extra full tonight",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:mid_autumn"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_2035",
+    "text": "一年已经过半了",
+    "textEn": "Half the year already gone",
+    "layer": "active",
+    "emotionTheme": "quiet_mirror",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "month:6"
+      ],
+      "boost": []
+    }
+  },
+  {
+    "id": "sb_2041",
+    "text": "下雨天最适合赖床",
+    "textEn": "Rainy days are made for sleeping in",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "weather:rain"
+      ],
+      "boost": []
+    }
   }
 ]
