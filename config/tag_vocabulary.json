@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "description": "情境标签中央词表。所有 boost/onlyWhen/negative/colorMoods/colorBan 的取值必须在此枚举内，由 scripts/validate_dispatch.py 强校验，防拼错与 LLM 幻觉。weight_range 为该维度推荐权重区间（含），越界仅告警不报错。",
+  "dimensions": {
+    "season": {
+      "desc": "气象季（北半球）",
+      "values": ["spring", "summer", "autumn", "winter"],
+      "weight_range": [1.0, 6.0]
+    },
+    "month": {
+      "desc": "公历月 1-12",
+      "values": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+      "weight_range": [0.8, 4.0]
+    },
+    "solar_term": {
+      "desc": "二十四节气",
+      "values": [
+        "xiaohan", "dahan", "lichun", "yushui", "jingzhe", "chunfen",
+        "qingming", "guyu", "lixia", "xiaoman", "mangzhong", "xiazhi",
+        "xiaoshu", "dashu", "liqiu", "chushu", "bailu", "qiufen",
+        "hanlu", "shuangjiang", "lidong", "xiaoxue", "daxue", "dongzhi"
+      ],
+      "weight_range": [1.5, 3.0]
+    },
+    "festival": {
+      "desc": "节日（与 config/festivals_cn.json 的 id 对齐）",
+      "values": [
+        "new_year", "spring_festival", "lantern_festival", "qingming",
+        "labor_day", "dragon_boat", "mid_autumn", "national_day",
+        "valentine", "christmas"
+      ],
+      "weight_range": [1.5, 6.0]
+    },
+    "theme": {
+      "desc": "内容主题信号（保留：IP/联名营销窗口，需上层向 context 注入 theme:ip 才会命中）",
+      "values": ["ip"],
+      "weight_range": [1.0, 2.0]
+    },
+    "weekday": {
+      "desc": "星期（ContextSnapshot.weekday 为 1=周日…7=周六，标签用整数字符串）",
+      "values": ["1", "2", "3", "4", "5", "6", "7"],
+      "weight_range": [0.5, 1.5]
+    },
+    "daypart": {
+      "desc": "时段",
+      "values": ["morning", "noon", "afternoon", "evening", "late_night"],
+      "weight_range": [0.5, 1.5]
+    },
+    "weather": {
+      "desc": "粗粒度天气（Open-Meteo 映射）",
+      "values": ["clear", "cloudy", "overcast", "rain", "snow", "fog", "windy"],
+      "weight_range": [1.0, 3.0]
+    },
+    "temp": {
+      "desc": "体感温度档",
+      "values": ["freezing", "cold", "mild", "warm", "hot"],
+      "weight_range": [1.0, 2.5]
+    },
+    "emotion": {
+      "desc": "情绪母题（软应景，与 emotionTheme slug 对齐）",
+      "values": [
+        "light_comfort", "soft_hope", "daily_romance", "self_affirmation",
+        "gentle_departure", "luck_blessing", "lyric_image", "playful_meme",
+        "quiet_mirror", "ip_collab", "latin_phrase"
+      ],
+      "weight_range": [0.5, 1.5]
+    },
+    "tone": {
+      "desc": "语气气质（软应景 / 归档）",
+      "values": ["warm", "light", "playful", "calm", "bright", "tender", "cool"],
+      "weight_range": [0.5, 1.0]
+    },
+    "scene": {
+      "desc": "生活场景（软应景）",
+      "values": [
+        "commute", "work_pause", "late_night", "decision_wait", "travel",
+        "rainy_day", "restart", "self_time", "after_setback", "festival",
+        "season_change", "love_resonance", "meeting_friend"
+      ],
+      "weight_range": [0.8, 2.0]
+    },
+    "geo": {
+      "desc": "大区（不强校验取值，仅占位）",
+      "values": [],
+      "weight_range": [0.5, 1.5],
+      "skip_value_check": true
+    },
+    "altitude": {
+      "desc": "海拔档（不强校验取值）",
+      "values": [],
+      "weight_range": [0.5, 1.5],
+      "skip_value_check": true
+    },
+    "locale": {
+      "desc": "Locale（不强校验取值）",
+      "values": [],
+      "weight_range": [0.5, 1.5],
+      "skip_value_check": true
+    }
+  },
+  "color_moods": {
+    "desc": "色情绪桶（colorMoods 加权 ×2 / colorBan 硬剔除）",
+    "values": ["warm", "cool", "light", "dark"]
+  },
+  "color_family": {
+    "desc": "细色族（P4 精确配色，nippon_colors.json 与语料可双向指定）",
+    "values": [
+      "red", "orange", "yellow", "green", "blue", "purple",
+      "pink", "brown", "white", "gray", "black"
+    ]
+  }
+}

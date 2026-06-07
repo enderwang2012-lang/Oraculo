@@ -14,10 +14,13 @@ import csv
 import hashlib
 import json
 import re
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+from dispatch_overlay import load_overlay, merge_dispatch, strip_for_embed  # noqa: E402
 SOURCE = ROOT / "starbucks_now_passphrases.csv"
 EN_MAP = ROOT / "scripts" / "phrases_en.json"
 DISPATCH_MAP = ROOT / "scripts" / "phrase_dispatch.json"
@@ -118,6 +121,7 @@ def main() -> None:
 
     en_map = load_en_map()
     dispatch_map = load_dispatch_map()
+    overlay_map = load_overlay()
     corpus_version = read_corpus_version()
     phrases = []
     seen: set[str] = set()
@@ -137,9 +141,12 @@ def main() -> None:
             if not text_en:
                 raise SystemExit(f"Missing textEn for {pid} in {EN_MAP}")
 
-            dispatch = dispatch_map.get(pid)
-            if not dispatch:
+            base = dispatch_map.get(pid)
+            if not base:
                 raise SystemExit(f"Missing dispatch for {pid} in {DISPATCH_MAP}")
+
+            merged = merge_dispatch(base, overlay_map.get(pid))
+            dispatch = strip_for_embed(merged)
 
             phrases.append({
                 "id": pid,

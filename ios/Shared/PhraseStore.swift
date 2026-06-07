@@ -84,6 +84,7 @@ final class PhraseStore {
         let key = Self.dayKey(for: date, calendar: calendar)
         guard let defaults = UserDefaults(suiteName: AppConstants.appGroupID) else { return }
         defaults.set(phrase.text, forKey: AppConstants.sharedTodayPhraseKey)
+        defaults.set(phrase.textEn, forKey: AppConstants.sharedTodayPhraseTextEnKey)
         defaults.set(phrase.id, forKey: AppConstants.sharedTodayPhraseIDKey)
         defaults.set(key, forKey: AppConstants.sharedTodayDayKeyKey)
         defaults.set(activeCorpusVersion, forKey: AppConstants.sharedCorpusVersionKey)

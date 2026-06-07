@@ -48,7 +48,7 @@ enum ContextSnapshotBuilder {
         case 11 ..< 14: return "noon"
         case 14 ..< 18: return "afternoon"
         case 18 ..< 22: return "evening"
-        default: return "night"
+        default: return "late_night"
         }
     }
 }

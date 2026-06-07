@@ -60,6 +60,10 @@ struct ContentView: View {
         }
         .ignoresSafeArea()
         .preferredColorScheme(session.usesLightText ? .dark : .light)
+        .task {
+            // scenePhase.onChange 在冷启动首帧不一定触发；此处保证杀进程重进也会播放入场动画。
+            session.refreshOnOpen()
+        }
         .onDeviceShake {
             session.refreshOnShake()
         }

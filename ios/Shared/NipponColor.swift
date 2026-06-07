@@ -10,6 +10,13 @@ struct NipponColor: Codable, Identifiable, Hashable {
     /// 情绪桶（4 桶：warm/cool/light/dark），由 `scripts/tag_color_moods.py` 生成。
     /// 旧色板 JSON 无此字段，默认空数组——选色算法对空数组按"无情绪信息"处理。
     let moods: [String]
+    /// 情境亲和扁平标签（如 `season:spring` `festival:spring_festival` `weather:snow`），
+    /// 由 `scripts/tag_color_context.py` 生成。命中当前 ContextSnapshot 时该色加权——「颜色也应景」。
+    /// 旧 JSON 无此字段，默认空数组（不影响选色）。
+    let contextTags: [String]
+    /// 细色族（red/orange/.../black），由 `scripts/tag_color_context.py` 按 HSL 归类。
+    /// 语料 dispatch.colorFamilies 命中此族时加权。旧 JSON 无此字段默认空串。
+    let family: String
 
     var swiftUIColor: Color { Color(hex: hex) }
 
@@ -21,7 +28,9 @@ struct NipponColor: Codable, Identifiable, Hashable {
         cname: String,
         hex: String,
         foreground: String,
-        moods: [String] = []
+        moods: [String] = [],
+        contextTags: [String] = [],
+        family: String = ""
     ) {
         self.id = id
         self.name = name
@@ -29,6 +38,8 @@ struct NipponColor: Codable, Identifiable, Hashable {
         self.hex = hex
         self.foreground = foreground
         self.moods = moods
+        self.contextTags = contextTags
+        self.family = family
     }
 
     init(from decoder: Decoder) throws {
@@ -39,10 +50,17 @@ struct NipponColor: Codable, Identifiable, Hashable {
         hex = try c.decode(String.self, forKey: .hex)
         foreground = try c.decode(String.self, forKey: .foreground)
         moods = try c.decodeIfPresent([String].self, forKey: .moods) ?? []
+        // context 以 {season:[],festival:[],weather:[]} 存储，扁平化成 "dim:value" 直接匹配 activeTags。
+        if let ctx = try c.decodeIfPresent([String: [String]].self, forKey: .context) {
+            contextTags = ctx.flatMap { dim, values in values.map { "\(dim):\($0)" } }.sorted()
+        } else {
+            contextTags = try c.decodeIfPresent([String].self, forKey: .contextTags) ?? []
+        }
+        family = try c.decodeIfPresent(String.self, forKey: .family) ?? ""
     }
 
     private enum CodingKeys: String, CodingKey {
-        case id, name, cname, hex, foreground, moods
+        case id, name, cname, hex, foreground, moods, context, contextTags, family
     }
 
     var primaryTextColor: Color {

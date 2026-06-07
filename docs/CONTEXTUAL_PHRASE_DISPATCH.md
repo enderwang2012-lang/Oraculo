@@ -333,3 +333,76 @@ score_i = (base_i + boost_i + affinity_i) \cdot penalty_i
 4. 改 `SessionOracleService.pickPhrase` 为加权抽样  
 
 你确认 P0/P1 边界后，可以从「节日配置表 + 50 条试标 + 摇一摇加权」开始写代码。
+
+---
+
+## 12. 已实现 v2 —— 标签扩充 + 颜色应景（本次）
+
+在 v1（句子情境加权）基础上，本次补齐**两件事**：① 打标流水线工业化、可复现、强校验；② **颜色也应景**（季节/节日/天气命中时该色加权 + 语料可点名细色族）。
+
+### 12.1 数据流（句子）
+
+```
+starbucks_now_passphrases.csv
+  │
+  ├─ scripts/tag_phrases_rules.py   规则基线（字面 → universal/onlyWhen/boost：季节、天气、时段、IP）
+  │     → scripts/phrase_dispatch.json
+  │
+  ├─ scripts/tag_phrases_llm.py     语义层（编辑直觉 → colorMoods/colorBan/colorFamilies/boostAdd/negativeAdd + _meta）
+  │     → config/phrase_context_tags.json   （overlay；含人工 OVERRIDES 锚点句）
+  │     → scripts/phrase_context_tags_review.md（人工校对清单）
+  │
+  ├─ scripts/dispatch_overlay.py    合并逻辑（base + overlay；boost 同名取 max，颜色 overlay 优先）
+  ├─ scripts/validate_dispatch.py   强校验（所有 tag 落在 config/tag_vocabulary.json；越界告警）
+  │
+  └─ scripts/embed_corpus.py        合并 + 清洗（strip 空字段与 _meta）→ ios/Shared/Resources/phrases.json
+```
+
+`config/tag_vocabulary.json` 是**唯一真源**：所有维度取值、权重区间、`color_moods`、`color_family` 都在此枚举，防拼错/LLM 幻觉。新增维度或取值先改它。
+
+### 12.2 数据流（颜色应景）
+
+```
+scripts/tag_color_context.py   按 HSL + 色名汉字给 248 色打：
+  · context = {season:[], festival:[], weather:[]}   情境亲和
+  · family  = red|orange|…|black                      细色族（P4）
+  → ios/Shared/Resources/nippon_colors.json（in-place）
+  → scripts/tag_color_context_review.md（人工校对清单）
+```
+
+Swift 选色（`ColorMoodPicker.pick`）权重为乘法叠加：
+
+| 命中 | 乘数 | 常量 |
+| --- | --- | --- |
+| 句 `colorMoods`（warm/cool/light/dark） | ×2 | `moodBoostMultiplier` |
+| 句 `colorFamilies`（精确点名 green/blue…） | ×3 | `familyBoostMultiplier` |
+| 当日 `ContextSnapshot` 命中色 `context` 亲和 | ×2 | `contextBoostMultiplier` |
+| 句 `colorBan` | 硬剔除（池 <30 回落只降权） | `minPoolSize` |
+
+调用链：`DailyOracleService.oracle` / `SessionOracleService.randomMoment` 构建一次 `ContextSnapshot`，同时喂给选句与选色——句与色共享同一情境。
+
+> ⚠️ 对齐修复：`ContextSnapshotBuilder.dayPart` 深夜段由 `night` 改为 `late_night`，与词表/标签一致（原先 `daypart:late_night` 永不命中）。
+
+### 12.3 通用兜底 vs 应景比例（本次实测）
+
+- 上线目标：约 **40% 兜底 / 60% 应景**。
+- 实测：218 句中 **67% 带情境信号 / 33% 纯兜底**；且 **91% 仍 `universal:true`**（仅 20 句季节硬门槛）——日常候选池基本是全库，应景只是叠加权重，**多样性不受损**。
+- 调比例的旋钮：`scripts/tag_phrases_llm.py` 里的关键词表（`WARM_WORDS`/`COOL_WORDS`/各 `*_WORDS`）。想更兜底就收紧关键词，想更应景就放宽。
+
+### 12.4 重建命令（新增/修改语料后照跑）
+
+```bash
+# 句子标签全链路（顺序不能乱）
+python3 scripts/tag_phrases_rules.py      # 1. 规则基线
+python3 scripts/tag_phrases_llm.py        # 2. 语义 overlay（+ 校对 md）
+python3 scripts/validate_dispatch.py      # 3. 强校验（0 error 才继续）
+python3 scripts/embed_corpus.py           # 4. 合并落地 phrases.json
+
+# 颜色应景（改了色板或分类规则才需跑）
+python3 scripts/tag_color_context.py      # 给 248 色打 context + family（+ 校对 md）
+
+# 发布到 CDN / Vercel（独立的发布动作，会动线上 manifest，按需执行）
+python3 scripts/publish_corpus_static.py --base-url https://oraculo-one.vercel.app/oraculo
+```
+
+校对清单（`*_review.md`）是给人扫一眼接受/改写的；分类是产品判断而非物理真值，可直接改对应 JSON 的字段。

@@ -15,6 +15,9 @@ struct PhraseDispatch: Codable, Equatable, Hashable {
     /// 禁忌的色情绪桶。命中时硬剔除——「我爱你」配灰黑、"冷静下来"配红的反讽场景。
     /// 实际剔除时如剩余池过小（< 30），算法会回落为不剔除只降权。
     var colorBan: [String]?
+    /// 偏好的细色族（red/orange/.../black，见 tag_vocabulary.json color_family）。
+    /// 命中时色权重 ×colorFamilyBoost——比 colorMoods 更精确，如「森林」点名 green。空表示无偏好。
+    var colorFamilies: [String]?
 
     static let fallback = PhraseDispatch(
         universal: true,
@@ -22,7 +25,8 @@ struct PhraseDispatch: Codable, Equatable, Hashable {
         boost: [],
         negative: nil,
         colorMoods: nil,
-        colorBan: nil
+        colorBan: nil,
+        colorFamilies: nil
     )
 }
 

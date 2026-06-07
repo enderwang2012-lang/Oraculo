@@ -6,14 +6,14 @@ import SwiftUI
 /// - `#colorTitle`: 站点 `fadeOut` 1.5s ease-in / `fadeIn` 2.5s ease-out；App：消失 **opacity**，出现 **横向扫字**（横排自左向右）
 /// - `#colorRuby`: `fadeOut` 1.5s linear，**keyframes 在 66% 已到 opacity 0**（英文先消失）→ `fadeIn` 2.5s ease-in，**前 25% 仍透明**（英文后出现）
 enum OraculoMotion {
-    /// 背景色切换（与文案淡出同时开始）
-    static let backgroundCrossfade: TimeInterval = 2.0
+    /// 背景色切换（与文案淡出同时开始；略长于站点 2s，更从容）
+    static let backgroundCrossfade: TimeInterval = 3.0
 
     /// 主文案淡出（`h2-fadeOut` 1.5s ease-in，opacity 渐隐）
     static let phraseFadeOut: TimeInterval = 1.5
 
-    /// 主文案出现扫字（略短于站点 2.5s，尾部更利落）
-    static let phraseFadeIn: TimeInterval = 2.0
+    /// 主文案出现扫字（3s ease-out，比站点略慢、更从容）
+    static let phraseFadeIn: TimeInterval = 3.0
 
     /// 比标准 ease-out 更早到位，减少末段拖沓；仍保持前段快露出
     static let phraseAppearEaseOut = (x1: 0.22, y1: 1.0, x2: 0.36, y2: 1.0)

@@ -53,6 +53,14 @@ def suggest(phrase: str, theme: str, current: dict) -> dict | None:
             moods.append("cool")
             why.append("冬→cool")
 
+    # —— 字面颜色 / 水象 ——
+    if any(t in phrase for t in ["蔚蓝", "蓝天", "碧海", "海面", "大海", "翠", "绿茶", "青", "碧", "澄"]):
+        if "cool" not in moods:
+            moods.append("cool")
+        if "warm" not in ban:
+            ban.append("warm")
+        why.append("字面蓝/海/绿→cool，ban warm")
+
     # —— 字面物理感受 ——
     if any(t in phrase for t in ["热", "炎", "盛夏", "暑"]):
         if "warm" not in moods:

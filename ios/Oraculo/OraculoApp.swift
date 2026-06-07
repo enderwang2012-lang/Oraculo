@@ -4,10 +4,8 @@ import SwiftUI
 struct OraculoApp: App {
     @Environment(\.scenePhase) private var scenePhase
     @StateObject private var session = OracleSessionModel()
-    private let daily = DailyOracleService()
 
     init() {
-        daily.refreshSharedCache()
         #if DEBUG
         let phrases = PhraseStore.shared.phraseCount
         let colors = NipponColorStore.shared.colorCount
@@ -22,17 +20,23 @@ struct OraculoApp: App {
         WindowGroup {
             ContentView(session: session)
         }
-        .onChange(of: scenePhase) { _, phase in
+        .onChange(of: scenePhase) { oldPhase, phase in
             switch phase {
             case .active:
+                // 先换句/换色，勿等待语料或天气网络（否则回前台会卡数秒像 bug）。
+                if oldPhase == .background {
+                    session.refreshOnOpen()
+                }
                 Task { @MainActor in
                     #if !APPLICATION_EXTENSION_API_ONLY
                     LocationContextProvider.shared.refreshIfNeeded()
                     await CorpusRemoteUpdateService.refreshIfNeeded()
                     #endif
                     await OpenMeteoWeatherService.refreshSharedCacheIfNeeded()
-                    daily.refreshSharedCache()
-                    session.refreshOnOpen()
+                }
+            case .background:
+                Task { @MainActor in
+                    session.syncWidgetDisplay()
                 }
             default:
                 break

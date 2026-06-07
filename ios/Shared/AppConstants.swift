@@ -5,6 +5,7 @@ enum AppConstants {
     static let appGroupID = "group.ai.oraculo.shared"
 
     static let sharedTodayPhraseKey = "todayPhraseText"
+    static let sharedTodayPhraseTextEnKey = "todayPhraseTextEn"
     static let sharedTodayPhraseIDKey = "todayPhraseID"
     static let sharedTodayDayKeyKey = "todayDayKey"
     static let sharedTodayColorHexKey = "todayColorHex"

@@ -4,10 +4,9 @@ import WidgetKit
 struct PhraseEntry: TimelineEntry {
     let date: Date
     let phraseText: String
+    let phraseTextEn: String
     let dayKey: String
     let colorHex: String
-    let colorCname: String
-    let colorName: String
     let usesLightText: Bool
 }
 
@@ -38,42 +37,43 @@ struct PhraseTimelineProvider: TimelineProvider {
     }
 
     private func makeEntry(for date: Date, persistTodaySharedDefaults: Bool = true) -> PhraseEntry {
-        let colors = NipponColorStore.loadColors(from: .main)
         let dayKey = PhraseStore.dayKey(for: date)
+        let dailyOracle = DailyOracleService()
 
-        // 与摇一摇/主 App 共用 PhraseDispatchScorer + PhrasePicker 的情境加权（仅种子不同）。
-        // 文档 docs/CONTEXTUAL_PHRASE_DISPATCH.md 的承诺在此兑现。
+        // 主 App 打开/摇一摇后会写入 App Group；今日 entry 优先与主屏同步。
+        let isToday = dayKey == PhraseStore.dayKey(for: Date())
+        if (persistTodaySharedDefaults || isToday),
+           let snapshot = dailyOracle.loadDisplayedSnapshot(for: date) {
+            return PhraseEntry(
+                date: date,
+                phraseText: snapshot.phraseText,
+                phraseTextEn: snapshot.phraseTextEn,
+                dayKey: snapshot.dayKey,
+                colorHex: snapshot.colorHex,
+                usesLightText: snapshot.usesLightText
+            )
+        }
+
+        let colors = NipponColorStore.loadColors(from: .main)
+
+        // 用户今日尚未打开 App：按情境推算今日一句（与旧逻辑一致）。
         let phrase = PhraseStore.shared.contextualPhrase(for: date)
-
-        // 与 NipponColorStore.color(for:phrase:) 走同一条路径：按句的 colorMoods/colorBan 收窄池。
-        // 同人当天稳定（dayKey + InstallID 切片），且与主 App 看到的色一致。
         let colorSeed = "\(dayKey)|color|\(InstallID.value)"
         let nippon: NipponColor
         if colors.isEmpty {
             nippon = NipponColor.fallback
         } else {
-            let pool = ColorMoodPicker.candidatePool(from: colors, dispatch: phrase.dispatch)
-            nippon = ColorMoodPicker.pick(from: pool, dispatch: phrase.dispatch, seed: colorSeed)
-        }
-
-        // 主 App 的 DailyPhraseService.refreshSharedCache() 是 sharedTodayPhraseKey/sharedTodayPhraseIDKey 的权威写入方。
-        // Widget 只回填颜色相关 key（主 App 暂不写颜色），避免与主 App 的写入相互覆盖。
-        // 只为「今天」的 entry 写共享缓存；未来 entry 不能覆盖今天的色。
-        if persistTodaySharedDefaults, let defaults = UserDefaults(suiteName: AppConstants.appGroupID) {
-            defaults.set(dayKey, forKey: AppConstants.sharedTodayDayKeyKey)
-            defaults.set(nippon.hex, forKey: AppConstants.sharedTodayColorHexKey)
-            defaults.set(nippon.cname, forKey: AppConstants.sharedTodayColorCnameKey)
-            defaults.set(nippon.name, forKey: AppConstants.sharedTodayColorNameKey)
-            defaults.set(nippon.foreground, forKey: AppConstants.sharedTodayColorForegroundKey)
+            let colorDispatch = phrase.effectiveColorDispatch
+            let pool = ColorMoodPicker.candidatePool(from: colors, dispatch: colorDispatch)
+            nippon = ColorMoodPicker.pick(from: pool, dispatch: colorDispatch, seed: colorSeed)
         }
 
         return PhraseEntry(
             date: date,
             phraseText: phrase.text,
+            phraseTextEn: phrase.textEn,
             dayKey: dayKey,
             colorHex: nippon.hex,
-            colorCname: nippon.cname,
-            colorName: nippon.name,
             usesLightText: nippon.usesLightText
         )
     }
@@ -82,10 +82,9 @@ struct PhraseTimelineProvider: TimelineProvider {
         PhraseEntry(
             date: Date(),
             phraseText: "先缓一缓",
+            phraseTextEn: "Pause, and soften",
             dayKey: PhraseStore.dayKey(for: Date()),
             colorHex: "DB4D6D",
-            colorCname: "中紅",
-            colorName: "nakabeni",
             usesLightText: true
         )
     }
@@ -142,7 +141,7 @@ struct OraculoLockRectangularWidget: Widget {
                 }
         }
         .configurationDisplayName("Oraculo（锁屏块）")
-        .description("锁屏矩形：短签 + 色名。")
+        .description("锁屏矩形：图标 + 中英文短签。")
         .supportedFamilies([.accessoryRectangular])
     }
 }

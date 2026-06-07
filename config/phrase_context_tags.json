@@ -1,0 +1,2746 @@
+{
+  "sb_1": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "luck_blessing",
+      "tone": "bright"
+    }
+  },
+  "sb_2": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "_meta": {
+      "emotion": "playful_meme",
+      "tone": "playful"
+    }
+  },
+  "sb_3": {
+    "_meta": {
+      "emotion": "playful_meme",
+      "tone": "playful"
+    }
+  },
+  "sb_6": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_7": {
+    "_meta": {
+      "emotion": "playful_meme",
+      "tone": "playful"
+    }
+  },
+  "sb_8": {
+    "_meta": {
+      "emotion": "self_affirmation",
+      "tone": "bright"
+    }
+  },
+  "sb_9": {
+    "_meta": {
+      "emotion": "self_affirmation",
+      "tone": "bright"
+    }
+  },
+  "sb_10": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_11": {
+    "_meta": {
+      "emotion": "playful_meme",
+      "tone": "playful"
+    }
+  },
+  "sb_13": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_17": {
+    "_meta": {
+      "emotion": "playful_meme",
+      "tone": "playful"
+    }
+  },
+  "sb_20": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "colorFamilies": [
+      "blue"
+    ],
+    "boostAdd": [
+      {
+        "tag": "season:summer",
+        "weight": 2.0
+      },
+      {
+        "tag": "weather:clear",
+        "weight": 1.5
+      },
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "cool",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_21": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_23": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ]
+  },
+  "sb_29": {
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:clear",
+        "weight": 2.5
+      },
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "bright",
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_31": {
+    "boostAdd": [
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_34": {
+    "_meta": {
+      "emotion": "playful_meme",
+      "tone": "playful"
+    }
+  },
+  "sb_37": {
+    "boostAdd": [
+      {
+        "tag": "scene:restart",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "scene": [
+        "restart"
+      ]
+    }
+  },
+  "sb_40": {
+    "colorMoods": [
+      "warm",
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      },
+      {
+        "tag": "weather:clear",
+        "weight": 2.0
+      },
+      {
+        "tag": "scene:restart",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "scene": [
+        "restart"
+      ]
+    }
+  },
+  "sb_41": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "cool"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:clear",
+        "weight": 2.0
+      },
+      {
+        "tag": "temp:cold",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "warm"
+    }
+  },
+  "sb_42": {
+    "colorMoods": [
+      "dark"
+    ],
+    "colorBan": [
+      "light"
+    ],
+    "boostAdd": [
+      {
+        "tag": "daypart:late_night",
+        "weight": 1.2
+      },
+      {
+        "tag": "festival:mid_autumn",
+        "weight": 2.5
+      }
+    ],
+    "_meta": {
+      "emotion": "lyric_image",
+      "tone": "calm",
+      "scene": []
+    }
+  },
+  "sb_43": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_49": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ]
+  },
+  "sb_50": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ]
+  },
+  "sb_51": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:new_year",
+        "weight": 4.0
+      },
+      {
+        "tag": "festival:lantern_festival",
+        "weight": 3.0
+      }
+    ],
+    "_meta": {
+      "emotion": "luck_blessing",
+      "tone": "bright",
+      "scene": [
+        "festival"
+      ]
+    }
+  },
+  "sb_52": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ]
+  },
+  "sb_53": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_61": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_68": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "luck_blessing",
+      "tone": "bright"
+    }
+  },
+  "sb_69": {
+    "boostAdd": [
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_73": {
+    "_meta": {
+      "emotion": "playful_meme",
+      "tone": "playful"
+    }
+  },
+  "sb_74": {
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      },
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "scene": [
+        "after_setback",
+        "travel"
+      ]
+    }
+  },
+  "sb_76": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_78": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ]
+  },
+  "sb_83": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_91": {
+    "colorMoods": [
+      "cool"
+    ],
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "ip_collab",
+      "tone": "playful",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_94": {
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_96": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "colorFamilies": [
+      "red"
+    ]
+  },
+  "sb_99": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ]
+  },
+  "sb_100": {
+    "colorMoods": [
+      "light",
+      "cool"
+    ],
+    "boostAdd": [
+      {
+        "tag": "temp:cold",
+        "weight": 2.0
+      },
+      {
+        "tag": "solar_term:shuangjiang",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_101": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "colorFamilies": [
+      "red"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ]
+  },
+  "sb_102": {
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ]
+  },
+  "sb_103": {
+    "_meta": {
+      "emotion": "latin_phrase"
+    }
+  },
+  "sb_104": {
+    "_meta": {
+      "emotion": "latin_phrase"
+    }
+  },
+  "sb_105": {
+    "_meta": {
+      "emotion": "latin_phrase"
+    }
+  },
+  "sb_106": {
+    "_meta": {
+      "emotion": "latin_phrase"
+    }
+  },
+  "sb_108": {
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_109": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_112": {
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "daypart:morning",
+        "weight": 0.8
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_113": {
+    "boostAdd": [
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_116": {
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm"
+    }
+  },
+  "sb_117": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_118": {
+    "boostAdd": [
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_121": {
+    "_meta": {
+      "emotion": "self_affirmation",
+      "tone": "bright"
+    }
+  },
+  "sb_122": {
+    "colorMoods": [
+      "cool",
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:windy",
+        "weight": 2.5
+      },
+      {
+        "tag": "weather:clear",
+        "weight": 1.5
+      },
+      {
+        "tag": "scene:self_time",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "self_time"
+      ]
+    }
+  },
+  "sb_123": {
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm"
+    }
+  },
+  "sb_125": {
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_128": {
+    "boostAdd": [
+      {
+        "tag": "scene:meeting_friend",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "meeting_friend"
+      ]
+    }
+  },
+  "sb_129": {
+    "boostAdd": [
+      {
+        "tag": "scene:restart",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm",
+      "scene": [
+        "restart"
+      ]
+    }
+  },
+  "sb_130": {
+    "boostAdd": [
+      {
+        "tag": "scene:meeting_friend",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "meeting_friend"
+      ]
+    }
+  },
+  "sb_131": {
+    "boostAdd": [
+      {
+        "tag": "scene:self_time",
+        "weight": 1.0
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "self_time"
+      ]
+    }
+  },
+  "sb_132": {
+    "_meta": {
+      "emotion": "playful_meme",
+      "tone": "playful"
+    }
+  },
+  "sb_133": {
+    "colorMoods": [
+      "cool",
+      "light"
+    ],
+    "colorBan": [
+      "dark",
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:windy",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_140": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:windy",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_141": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_142": {
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_143": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_146": {
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "self_affirmation",
+      "tone": "bright"
+    }
+  },
+  "sb_147": {
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_148": {
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_149": {
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_150": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_151": {
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_152": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_153": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_154": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_155": {
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm"
+    }
+  },
+  "sb_156": {
+    "colorMoods": [
+      "warm",
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_157": {
+    "_meta": {
+      "emotion": "quiet_mirror",
+      "tone": "calm"
+    }
+  },
+  "sb_158": {
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm"
+    }
+  },
+  "sb_160": {
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm"
+    }
+  },
+  "sb_161": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_162": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_163": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_164": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_165": {
+    "colorMoods": [
+      "warm",
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:clear",
+        "weight": 2.0
+      },
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_166": {
+    "boostAdd": [
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_169": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_171": {
+    "boostAdd": [
+      {
+        "tag": "festival:valentine",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "self_affirmation",
+      "tone": "bright"
+    }
+  },
+  "sb_172": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_174": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_175": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_176": {
+    "boostAdd": [
+      {
+        "tag": "scene:self_time",
+        "weight": 1.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "self_time"
+      ]
+    }
+  },
+  "sb_177": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:windy",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_181": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "dark",
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      },
+      {
+        "tag": "weather:clear",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_183": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_184": {
+    "_meta": {
+      "emotion": "self_affirmation",
+      "tone": "bright"
+    }
+  },
+  "sb_186": {
+    "boostAdd": [
+      {
+        "tag": "scene:self_time",
+        "weight": 1.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "self_time"
+      ]
+    }
+  },
+  "sb_187": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:windy",
+        "weight": 2.0
+      },
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_188": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_189": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_190": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "colorFamilies": [
+      "red",
+      "pink"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:valentine",
+        "weight": 3.0
+      }
+    ],
+    "_meta": {
+      "emotion": "self_affirmation",
+      "tone": "tender",
+      "scene": [
+        "love_resonance"
+      ]
+    }
+  },
+  "sb_194": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:christmas",
+        "weight": 4.0
+      },
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "luck_blessing",
+      "tone": "bright",
+      "scene": [
+        "festival"
+      ]
+    }
+  },
+  "sb_195": {
+    "boostAdd": [
+      {
+        "tag": "scene:self_time",
+        "weight": 1.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "self_time"
+      ]
+    }
+  },
+  "sb_197": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:windy",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_198": {
+    "colorMoods": [
+      "warm",
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:clear",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_199": {
+    "boostAdd": [
+      {
+        "tag": "scene:restart",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm",
+      "scene": [
+        "restart"
+      ]
+    }
+  },
+  "sb_200": {
+    "_meta": {
+      "emotion": "ip_collab",
+      "tone": "playful"
+    }
+  },
+  "sb_201": {
+    "boostAdd": [
+      {
+        "tag": "festival:valentine",
+        "weight": 2.0
+      },
+      {
+        "tag": "scene:meeting_friend",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "ip_collab",
+      "tone": "playful",
+      "scene": [
+        "meeting_friend"
+      ]
+    }
+  },
+  "sb_205": {
+    "boostAdd": [
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_206": {
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_207": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_208": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_209": {
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm"
+    }
+  },
+  "sb_210": {
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm"
+    }
+  },
+  "sb_212": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "daypart:morning",
+        "weight": 0.8
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_213": {
+    "colorMoods": [
+      "warm",
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm"
+    }
+  },
+  "sb_214": {
+    "_meta": {
+      "emotion": "self_affirmation",
+      "tone": "bright"
+    }
+  },
+  "sb_215": {
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_216": {
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_217": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_218": {
+    "boostAdd": [
+      {
+        "tag": "festival:valentine",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm"
+    }
+  },
+  "sb_219": {
+    "colorMoods": [
+      "cool",
+      "dark"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "lyric_image",
+      "tone": "calm",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_220": {
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_221": {
+    "_meta": {
+      "emotion": "self_affirmation",
+      "tone": "bright"
+    }
+  },
+  "sb_222": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "scene:restart",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "self_affirmation",
+      "tone": "bright",
+      "scene": [
+        "restart"
+      ]
+    }
+  },
+  "sb_227": {
+    "boostAdd": [
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_228": {
+    "boostAdd": [
+      {
+        "tag": "festival:valentine",
+        "weight": 2.0
+      },
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      },
+      {
+        "tag": "scene:meeting_friend",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "meeting_friend",
+        "travel"
+      ]
+    }
+  },
+  "sb_236": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "ip_collab",
+      "tone": "playful"
+    }
+  },
+  "sb_237": {
+    "_meta": {
+      "emotion": "ip_collab",
+      "tone": "playful"
+    }
+  },
+  "sb_238": {
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "ip_collab",
+      "tone": "playful"
+    }
+  },
+  "sb_239": {
+    "boostAdd": [
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "ip_collab",
+      "tone": "playful",
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_240": {
+    "_meta": {
+      "emotion": "ip_collab",
+      "tone": "playful"
+    }
+  },
+  "sb_241": {
+    "boostAdd": [
+      {
+        "tag": "scene:meeting_friend",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "ip_collab",
+      "tone": "playful",
+      "scene": [
+        "meeting_friend"
+      ]
+    }
+  },
+  "sb_242": {
+    "boostAdd": [
+      {
+        "tag": "festival:valentine",
+        "weight": 2.0
+      },
+      {
+        "tag": "scene:meeting_friend",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "ip_collab",
+      "tone": "playful",
+      "scene": [
+        "meeting_friend"
+      ]
+    }
+  },
+  "sb_243": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:windy",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "ip_collab",
+      "tone": "playful"
+    }
+  },
+  "sb_244": {
+    "_meta": {
+      "emotion": "ip_collab",
+      "tone": "playful"
+    }
+  },
+  "sb_245": {
+    "boostAdd": [
+      {
+        "tag": "scene:meeting_friend",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "meeting_friend"
+      ]
+    }
+  },
+  "sb_246": {
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_247": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_248": {
+    "colorMoods": [
+      "cool"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:windy",
+        "weight": 2.5
+      },
+      {
+        "tag": "scene:self_time",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "self_time"
+      ]
+    }
+  },
+  "sb_249": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_250": {
+    "colorMoods": [
+      "warm",
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      },
+      {
+        "tag": "daypart:morning",
+        "weight": 0.8
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_251": {
+    "boostAdd": [
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_252": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_254": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "self_affirmation",
+      "tone": "bright"
+    }
+  },
+  "sb_255": {
+    "colorMoods": [
+      "warm",
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "colorFamilies": [
+      "pink"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "luck_blessing",
+      "tone": "bright"
+    }
+  },
+  "sb_256": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_257": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      },
+      {
+        "tag": "scene:restart",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "scene": [
+        "restart"
+      ]
+    }
+  },
+  "sb_258": {
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      },
+      {
+        "tag": "daypart:morning",
+        "weight": 0.8
+      }
+    ],
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_259": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_260": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "luck_blessing",
+      "tone": "bright"
+    }
+  },
+  "sb_261": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_262": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_263": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "luck_blessing",
+      "tone": "bright"
+    }
+  },
+  "sb_264": {
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_265": {
+    "boostAdd": [
+      {
+        "tag": "scene:self_time",
+        "weight": 1.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "self_time"
+      ]
+    }
+  },
+  "sb_266": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_267": {
+    "boostAdd": [
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_268": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_269": {
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_270": {
+    "_meta": {
+      "emotion": "self_affirmation",
+      "tone": "bright"
+    }
+  },
+  "sb_271": {
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm"
+    }
+  },
+  "sb_272": {
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm"
+    }
+  },
+  "sb_273": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ]
+  },
+  "sb_274": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      },
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_275": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_276": {
+    "boostAdd": [
+      {
+        "tag": "scene:restart",
+        "weight": 1.2
+      },
+      {
+        "tag": "daypart:morning",
+        "weight": 0.8
+      }
+    ],
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm",
+      "scene": [
+        "restart"
+      ]
+    }
+  },
+  "sb_277": {
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "lyric_image",
+      "tone": "calm"
+    }
+  },
+  "sb_278": {
+    "colorMoods": [
+      "warm",
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_279": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_280": {
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm"
+    }
+  },
+  "sb_281": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:clear",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_282": {
+    "colorMoods": [
+      "cool",
+      "light"
+    ],
+    "colorBan": [
+      "dark",
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:clear",
+        "weight": 2.0
+      },
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_286": {
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm"
+    }
+  },
+  "sb_287": {
+    "boostAdd": [
+      {
+        "tag": "scene:meeting_friend",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "meeting_friend"
+      ]
+    }
+  },
+  "sb_288": {
+    "boostAdd": [
+      {
+        "tag": "scene:after_setback",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm",
+      "scene": [
+        "after_setback"
+      ]
+    }
+  },
+  "sb_289": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_290": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:windy",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_291": {
+    "colorMoods": [
+      "warm",
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_292": {
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm"
+    }
+  },
+  "sb_293": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_294": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ]
+  },
+  "sb_295": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_297": {
+    "boostAdd": [
+      {
+        "tag": "scene:self_time",
+        "weight": 1.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "self_time"
+      ]
+    }
+  },
+  "sb_299": {
+    "boostAdd": [
+      {
+        "tag": "scene:travel",
+        "weight": 1.2
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender",
+      "scene": [
+        "travel"
+      ]
+    }
+  },
+  "sb_300": {
+    "boostAdd": [
+      {
+        "tag": "scene:self_time",
+        "weight": 1.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender",
+      "scene": [
+        "self_time"
+      ]
+    }
+  },
+  "sb_302": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_304": {
+    "_meta": {
+      "emotion": "gentle_departure",
+      "tone": "warm"
+    }
+  }
+}

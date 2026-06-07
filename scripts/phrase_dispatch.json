@@ -76,42 +76,7 @@
     ],
     "boost": []
   },
-  "sb_14": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_15": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_16": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_17": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_18": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_19": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -136,11 +101,6 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_24": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_25": {
     "universal": true,
     "onlyWhen": [],
@@ -153,35 +113,15 @@
     ],
     "boost": []
   },
-  "sb_27": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_28": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "weather:windy",
-        "weight": 1.2
-      }
-    ]
-  },
   "sb_29": {
     "universal": true,
     "onlyWhen": [],
-    "boost": []
-  },
-  "sb_30": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
+    "boost": [
+      {
+        "tag": "weather:overcast",
+        "weight": 1.2
+      }
+    ]
   },
   "sb_31": {
     "universal": true,
@@ -203,32 +143,7 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_35": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_36": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
   "sb_37": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_38": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -241,8 +156,10 @@
     "boost": []
   },
   "sb_40": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
     "boost": [
       {
         "tag": "weather:clear",
@@ -271,32 +188,7 @@
     ],
     "boost": []
   },
-  "sb_44": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_45": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_46": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_47": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "weather:clear",
-        "weight": 1.2
-      }
-    ]
-  },
-  "sb_48": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -312,41 +204,20 @@
     "boost": []
   },
   "sb_51": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
     "boost": []
   },
   "sb_52": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
     "boost": []
   },
   "sb_53": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_54": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_55": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_56": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_57": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -371,21 +242,6 @@
     "onlyWhen": [
       "season:autumn"
     ],
-    "boost": []
-  },
-  "sb_62": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "festival:spring_festival",
-        "weight": 3.0
-      }
-    ]
-  },
-  "sb_63": {
-    "universal": true,
-    "onlyWhen": [],
     "boost": []
   },
   "sb_64": {
@@ -428,22 +284,12 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_72": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_73": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
   },
   "sb_74": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_75": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -459,8 +305,10 @@
     "boost": []
   },
   "sb_78": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
     "boost": [
       {
         "tag": "festival:spring_festival",
@@ -468,19 +316,11 @@
       }
     ]
   },
-  "sb_79": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "weather:windy",
-        "weight": 1.2
-      }
-    ]
-  },
   "sb_80": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "month:5"
+    ],
     "boost": [
       {
         "tag": "month:5",
@@ -493,57 +333,12 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_82": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_83": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
   },
-  "sb_84": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_85": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_86": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_87": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_88": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_89": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_90": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_91": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_92": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -568,24 +363,11 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_97": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "weather:windy",
-        "weight": 1.2
-      }
-    ]
-  },
-  "sb_98": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_99": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
     "boost": [
       {
         "tag": "festival:spring_festival",
@@ -598,14 +380,16 @@
     "onlyWhen": [],
     "boost": [
       {
-        "tag": "weather:cold",
+        "tag": "weather:snow",
         "weight": 1.5
       }
     ]
   },
   "sb_101": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
     "boost": [
       {
         "tag": "festival:spring_festival",
@@ -653,11 +437,6 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_110": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_111": {
     "universal": true,
     "onlyWhen": [],
@@ -673,16 +452,6 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_114": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_115": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_116": {
     "universal": true,
     "onlyWhen": [],
@@ -694,16 +463,6 @@
     "boost": []
   },
   "sb_118": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_119": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_120": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -734,16 +493,6 @@
     "boost": []
   },
   "sb_125": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_126": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_127": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -783,32 +532,7 @@
       }
     ]
   },
-  "sb_134": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_135": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_136": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_137": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_138": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_139": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -839,11 +563,6 @@
     "boost": []
   },
   "sb_144": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_145": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -913,11 +632,6 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_159": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_160": {
     "universal": true,
     "onlyWhen": [],
@@ -948,29 +662,19 @@
   "sb_165": {
     "universal": true,
     "onlyWhen": [],
-    "boost": []
+    "boost": [
+      {
+        "tag": "weather:clear",
+        "weight": 1.2
+      }
+    ]
   },
   "sb_166": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
   },
-  "sb_167": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_168": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_169": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_170": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -981,11 +685,6 @@
     "boost": []
   },
   "sb_172": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_173": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -1015,27 +714,7 @@
       }
     ]
   },
-  "sb_178": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_179": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_180": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_181": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_182": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -1046,11 +725,6 @@
     "boost": []
   },
   "sb_184": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_185": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -1090,31 +764,6 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_191": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_192": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_193": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
   "sb_194": {
     "universal": true,
     "onlyWhen": [],
@@ -1123,13 +772,6 @@
   "sb_195": {
     "universal": true,
     "onlyWhen": [],
-    "boost": []
-  },
-  "sb_196": {
-    "universal": false,
-    "onlyWhen": [
-      "season:spring"
-    ],
     "boost": []
   },
   "sb_197": {
@@ -1145,7 +787,12 @@
   "sb_198": {
     "universal": true,
     "onlyWhen": [],
-    "boost": []
+    "boost": [
+      {
+        "tag": "weather:clear",
+        "weight": 1.2
+      }
+    ]
   },
   "sb_199": {
     "universal": true,
@@ -1171,35 +818,6 @@
         "weight": 1.5
       }
     ]
-  },
-  "sb_202": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_203": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "weather:clear",
-        "weight": 1.2
-      },
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_204": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
   },
   "sb_205": {
     "universal": true,
@@ -1230,16 +848,6 @@
     "universal": true,
     "onlyWhen": [],
     "boost": []
-  },
-  "sb_211": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
   },
   "sb_212": {
     "universal": true,
@@ -1279,7 +887,12 @@
   "sb_219": {
     "universal": true,
     "onlyWhen": [],
-    "boost": []
+    "boost": [
+      {
+        "tag": "daypart:late_night",
+        "weight": 1.0
+      }
+    ]
   },
   "sb_220": {
     "universal": true,
@@ -1296,31 +909,6 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_223": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_224": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_225": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_226": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_227": {
     "universal": true,
     "onlyWhen": [],
@@ -1330,90 +918,6 @@
     "universal": true,
     "onlyWhen": [],
     "boost": []
-  },
-  "sb_229": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "month:5",
-        "weight": 1.0
-      },
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_230": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_231": {
-    "universal": false,
-    "onlyWhen": [
-      "season:summer"
-    ],
-    "boost": [
-      {
-        "tag": "month:5",
-        "weight": 1.0
-      },
-      {
-        "tag": "month:7",
-        "weight": 1.0
-      },
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_232": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_233": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_234": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
-  "sb_235": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
   },
   "sb_236": {
     "universal": true,
@@ -1556,11 +1060,6 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_253": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_254": {
     "universal": true,
     "onlyWhen": [],
@@ -1577,8 +1076,10 @@
     "boost": []
   },
   "sb_257": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
     "boost": []
   },
   "sb_258": {
@@ -1657,8 +1158,10 @@
     "boost": []
   },
   "sb_273": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
     "boost": [
       {
         "tag": "festival:spring_festival",
@@ -1713,21 +1216,6 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_283": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_284": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_285": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_286": {
     "universal": true,
     "onlyWhen": [],
@@ -1774,8 +1262,10 @@
     "boost": []
   },
   "sb_294": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
     "boost": []
   },
   "sb_295": {
@@ -1783,17 +1273,7 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_296": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
   "sb_297": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_298": {
     "universal": true,
     "onlyWhen": [],
     "boost": []
@@ -1808,22 +1288,7 @@
     "onlyWhen": [],
     "boost": []
   },
-  "sb_301": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": [
-      {
-        "tag": "theme:ip",
-        "weight": 1.5
-      }
-    ]
-  },
   "sb_302": {
-    "universal": true,
-    "onlyWhen": [],
-    "boost": []
-  },
-  "sb_303": {
     "universal": true,
     "onlyWhen": [],
     "boost": []

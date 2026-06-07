@@ -32,6 +32,8 @@ final class OracleSessionModel: ObservableObject {
 
     private let session = SessionOracleService()
 
+    private let dailyOracle = DailyOracleService()
+
     private var isTransitioning = false
 
     private var hasPresentedOnce = false
@@ -111,7 +113,7 @@ final class OracleSessionModel: ObservableObject {
 
         overlayColor = next.nipponColor
 
-        moment = next
+        applyMoment(next)
 
         momentShownAt = Date()
 
@@ -196,7 +198,7 @@ final class OracleSessionModel: ObservableObject {
 
             guard let self else { return }
 
-            self.moment = next
+            self.applyMoment(next)
 
             self.momentShownAt = Date()
 
@@ -243,6 +245,16 @@ final class OracleSessionModel: ObservableObject {
     }
 
 
+
+    private func applyMoment(_ next: OracleMoment) {
+        moment = next
+        dailyOracle.syncDisplayedMoment(next)
+    }
+
+    /// 退到后台时再推一次 Widget，避免系统节流 reload 后锁屏仍停在旧句。
+    func syncWidgetDisplay() {
+        dailyOracle.syncDisplayedMoment(moment)
+    }
 
     var usesLightText: Bool {
 

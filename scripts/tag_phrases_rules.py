@@ -15,6 +15,19 @@ from embed_corpus import theme_slug  # noqa: E402
 SOURCE = ROOT / "starbucks_now_passphrases.csv"
 OUT = ROOT / "scripts" / "phrase_dispatch.json"
 
+# 主题级节日硬门槛：非窗口内权重为 0，摇一摇/回前台也抽不到。
+FESTIVAL_EXCLUSIVE_THEMES: dict[str, str] = {
+    "新年祝福": "festival:spring_festival",
+    # 经典春节对仗祝福（语料里仅「岁岁常欢愉」「年年皆胜意」）
+    "长久祝福": "festival:spring_festival",
+}
+
+# 字面春节祝福语（主题可能标成别的，用句式兜底）
+FESTIVAL_EXCLUSIVE_TEXT: list[re.Pattern[str]] = [
+    re.compile(r"岁岁常欢愉"),
+    re.compile(r"年年皆胜意"),
+]
+
 SUMMER_EXCLUSIVE = [r"夏天", r"夏日", r"夏夜", r"盛夏", r"夏至", r"消暑", r"乘凉"]
 AUTUMN_EXCLUSIVE = [r"秋天", r"秋日", r"秋夜", r"金秋", r"秋意", r"秋枫", r"秋凉", r"秋高气爽"]
 WINTER_EXCLUSIVE = [r"冬天", r"冬日", r"冬夜", r"寒冬", r"冬至", r"围炉", r"冬日暖阳"]
@@ -70,10 +83,17 @@ SOLAR_TERM_RULES: list[tuple[str, str, float]] = [
 
 WEATHER_BOOST: list[tuple[re.Pattern[str], str, float]] = [
     (re.compile(r"雨|淋|伞|潮湿|淅沥"), "weather:rain", 1.5),
-    (re.compile(r"雪|霜|冰|寒|冷|冻"), "weather:cold", 1.5),
-    (re.compile(r"晴|阳光|烈日|晒|晴朗"), "weather:clear", 1.2),
+    (re.compile(r"雪|霜|冰|冻"), "weather:snow", 1.5),
+    (re.compile(r"晴|阳光|烈日|晒|晴朗|曙光"), "weather:clear", 1.2),
     (re.compile(r"风|微风|清风|大风"), "weather:windy", 1.2),
-    (re.compile(r"雾|霾|阴"), "weather:overcast", 1.2),
+    (re.compile(r"雾|霾|阴|乌云"), "weather:overcast", 1.2),
+]
+
+# 时段：句面明确时间意象才标，避免误伤（语义层的早安/晚安交给 overlay）。
+DAYPART_BOOST: list[tuple[re.Pattern[str], str, float]] = [
+    (re.compile(r"清晨|晨光|破晓|黎明|日出|朝阳|早安"), "daypart:morning", 1.0),
+    (re.compile(r"黄昏|暮色|夕阳|日落|晚霞"), "daypart:evening", 1.0),
+    (re.compile(r"深夜|星空|星河|明月|月色|晚安|子夜|夜色"), "daypart:late_night", 1.0),
 ]
 
 
@@ -113,6 +133,10 @@ def collect_boosts(text: str, theme_slug_value: str) -> list[dict]:
         if pattern.search(text):
             add(tag, w)
 
+    for pattern, tag, w in DAYPART_BOOST:
+        if pattern.search(text):
+            add(tag, w)
+
     for keyword, tag, w in SOLAR_TERM_RULES:
         if keyword in text:
             add(tag, w)
@@ -141,10 +165,57 @@ def collect_boosts(text: str, theme_slug_value: str) -> list[dict]:
     return boosts
 
 
+def festival_exclusive(theme: str) -> list[str] | None:
+    tag = FESTIVAL_EXCLUSIVE_THEMES.get(theme.strip())
+    return [tag] if tag else None
+
+
+def festival_exclusive_by_text(text: str) -> list[str] | None:
+    for pattern in FESTIVAL_EXCLUSIVE_TEXT:
+        if pattern.search(text):
+            return ["festival:spring_festival"]
+    return None
+
+
+# 长月份先匹配，避免「十一月」误命中「一月」。
+MONTH_EXCLUSIVE_PATTERNS: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"十一月"), "month:11"),
+    (re.compile(r"十二月|岁末"), "month:12"),
+    (re.compile(r"一月|元月"), "month:1"),
+    (re.compile(r"二月"), "month:2"),
+    (re.compile(r"三月"), "month:3"),
+    (re.compile(r"四月"), "month:4"),
+    (re.compile(r"五月"), "month:5"),
+    (re.compile(r"六月"), "month:6"),
+    (re.compile(r"七月"), "month:7"),
+    (re.compile(r"八月"), "month:8"),
+    (re.compile(r"九月|金秋"), "month:9"),
+    (re.compile(r"十月"), "month:10"),
+]
+
+
+def month_exclusive(text: str, theme: str) -> list[str] | None:
+    """「月份希望」主题：句内写明几月，则仅该月可出。"""
+    if theme.strip() != "月份希望":
+        return None
+    for pattern, tag in MONTH_EXCLUSIVE_PATTERNS:
+        if pattern.search(text):
+            return [tag]
+    return None
+
+
 def build_dispatch(text: str, theme: str) -> dict:
     slug = theme_slug(theme)
     exclusive = season_exclusive(text)
     boosts = collect_boosts(text, slug)
+    festival_only = festival_exclusive(theme) or festival_exclusive_by_text(text)
+    month_only = month_exclusive(text, theme)
+
+    if festival_only:
+        return {"universal": False, "onlyWhen": festival_only, "boost": boosts}
+
+    if month_only:
+        return {"universal": False, "onlyWhen": month_only, "boost": boosts}
 
     if exclusive:
         return {"universal": False, "onlyWhen": exclusive, "boost": boosts}
