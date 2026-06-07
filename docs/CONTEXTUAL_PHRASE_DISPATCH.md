@@ -402,7 +402,7 @@ python3 scripts/embed_corpus.py           # 4. 合并落地 phrases.json
 python3 scripts/tag_color_context.py      # 给 248 色打 context + family（+ 校对 md）
 
 # 发布到 CDN / Vercel（独立的发布动作，会动线上 manifest，按需执行）
-python3 scripts/publish_corpus_static.py --base-url https://oraculo-one.vercel.app/oraculo
+python3 scripts/publish_corpus_static.py --base-url https://oraculo-corpus.vercel.app/oraculo
 ```
 
 校对清单（`*_review.md`）是给人扫一眼接受/改写的；分类是产品判断而非物理真值，可直接改对应 JSON 的字段。

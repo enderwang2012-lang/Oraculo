@@ -7,7 +7,7 @@ import json
 import sys
 import urllib.request
 
-MANIFEST_URL = "https://oraculo-one.vercel.app/oraculo/manifest.json"
+MANIFEST_URL = "https://oraculo-corpus.vercel.app/oraculo/manifest.json"
 SIMULATED_LOCAL_VERSION = 1
 
 

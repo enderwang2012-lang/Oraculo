@@ -35,8 +35,8 @@ enum AppConstants {
     static let sharedInstallIDKey = "installID"
 
     /// 静态热更新 manifest URL。留空则关闭。见 docs/CORPUS_REMOTE.md
-    /// 语料 CDN：Vercel Production https://oraculo-one.vercel.app
-    static let corpusManifestURLString = "https://oraculo-one.vercel.app/oraculo/manifest.json"
+    /// 语料 CDN：Vercel Production https://oraculo-corpus.vercel.app
+    static let corpusManifestURLString = "https://oraculo-corpus.vercel.app/oraculo/manifest.json"
 
     static var corpusManifestURL: URL? {
         let trimmed = corpusManifestURLString.trimmingCharacters(in: .whitespacesAndNewlines)

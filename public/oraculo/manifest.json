@@ -4,7 +4,7 @@
   "minAppVersion": "0.1.0",
   "releaseNotes": "语料标签富集：颜色/天气/节日/时段/季节应景 + 248色情境亲和与细色族",
   "phrases": {
-    "url": "https://oraculo-one.vercel.app/oraculo/phrases.json",
+    "url": "https://oraculo-corpus.vercel.app/oraculo/phrases.json",
     "sha256": "ef834de7cf25b8e19279dbb43070d4c83a096e08c52ffc8ec6e5226ee4663c8e"
   }
 }
