@@ -28,6 +28,9 @@ enum OraculoMotion {
     /// 淡出结束再换字，无额外停顿（等同网站的 `animationend`）
     static var phraseSwapDelay: TimeInterval { phraseFadeOut }
 
+    /// 从后台回前台：先展示离开前的当前句，停留后再自动换句（非冷启动）。
+    static let resumeDwellBeforeRefresh: TimeInterval = 0.65
+
     /// 整段切换结束前忽略新的 `refreshOnOpen`
     static var transitionLock: TimeInterval { phraseFadeOut + phraseFadeIn }
 

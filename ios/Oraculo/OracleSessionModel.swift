@@ -38,6 +38,8 @@ final class OracleSessionModel: ObservableObject {
 
     private var hasPresentedOnce = false
 
+    private var resumeRefreshTask: Task<Void, Never>?
+
 
 
     init() {
@@ -54,8 +56,33 @@ final class OracleSessionModel: ObservableObject {
 
 
 
-    func refreshOnOpen() {
+    /// 从后台回前台（含 Widget 点开）：先完整展示离开前的句+色，停留后再自动换句。
+    func refreshOnResumeFromBackground() {
+        cancelPendingResumeRefresh()
+        guard !isTransitioning else { return }
 
+        if !hasPresentedOnce {
+            refreshOnOpen()
+            return
+        }
+
+        ensureCurrentMomentFullyVisible()
+
+        resumeRefreshTask = Task { @MainActor in
+            try? await Task.sleep(nanoseconds: UInt64(OraculoMotion.resumeDwellBeforeRefresh * 1_000_000_000))
+            guard !Task.isCancelled, !isTransitioning else { return }
+            let next = session.randomMoment(excluding: moment)
+            transition(to: next)
+        }
+    }
+
+    func cancelPendingResumeRefresh() {
+        resumeRefreshTask?.cancel()
+        resumeRefreshTask = nil
+    }
+
+    func refreshOnOpen() {
+        cancelPendingResumeRefresh()
         guard !isTransitioning else { return }
 
         let next = session.randomMoment(excluding: moment)
@@ -83,6 +110,7 @@ final class OracleSessionModel: ObservableObject {
     /// 摇一摇：与再次进入前台相同的全套 crossfade（需已完成首屏呈现）。
 
     func refreshOnShake() {
+        cancelPendingResumeRefresh()
         guard !isTransitioning else { return }
         guard let next = drawDistinctMoment() else { return }
         if !hasPresentedOnce {
@@ -249,6 +277,16 @@ final class OracleSessionModel: ObservableObject {
     private func applyMoment(_ next: OracleMoment) {
         moment = next
         dailyOracle.syncDisplayedMoment(next)
+    }
+
+    /// 回前台首帧：确保离开前那句完整可见（避免上次动画半途被挂起）。
+    private func ensureCurrentMomentFullyVisible() {
+        baseColor = moment.nipponColor
+        overlayColor = nil
+        colorBlend = 0
+        phraseFadeOpacity = 1
+        phraseAppearReveal = 1
+        subtitleOpacity = moment.phrase.textEn.isEmpty ? 0 : 1
     }
 
     /// 退到后台时再推一次 Widget，避免系统节流 reload 后锁屏仍停在旧句。

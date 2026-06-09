@@ -23,9 +23,9 @@ struct OraculoApp: App {
         .onChange(of: scenePhase) { oldPhase, phase in
             switch phase {
             case .active:
-                // 先换句/换色，勿等待语料或天气网络（否则回前台会卡数秒像 bug）。
+                // 回前台：先展示当前句，略停后再换句；勿等待语料或天气网络。
                 if oldPhase == .background {
-                    session.refreshOnOpen()
+                    session.refreshOnResumeFromBackground()
                 }
                 Task { @MainActor in
                     #if !APPLICATION_EXTENSION_API_ONLY
@@ -36,6 +36,7 @@ struct OraculoApp: App {
                 }
             case .background:
                 Task { @MainActor in
+                    session.cancelPendingResumeRefresh()
                     session.syncWidgetDisplay()
                 }
             default:
