@@ -194,6 +194,7 @@ TONE_BY_THEME = {
     "gentle_departure": "warm",
     "lyric_image": "calm",
     "quiet_mirror": "calm",
+    "latin_phrase": "bright",
 }
 
 
@@ -214,9 +215,71 @@ def meta(phrase: str, theme: str, boosts: list[dict]) -> dict:
     return m
 
 
+def fallback_entry(phrase: str, theme: str, entry: dict) -> dict:
+    slug = theme_slug(theme)
+    if not entry.get("colorMoods"):
+        if slug in ("luck_blessing", "self_affirmation", "gentle_departure"):
+            entry["colorMoods"] = ["warm"]
+        elif slug in ("light_comfort", "lyric_image"):
+            entry["colorMoods"] = ["light"]
+        elif slug == "quiet_mirror":
+            entry["colorMoods"] = ["cool"]
+        else:
+            entry["colorMoods"] = ["light"]
+    if not entry.get("colorBan"):
+        moods = entry.get("colorMoods", [])
+        if "warm" in moods or "light" in moods:
+            entry["colorBan"] = ["dark"]
+        elif "cool" in moods:
+            entry["colorBan"] = ["warm"]
+    if "_meta" not in entry:
+        m = meta(phrase, theme, entry.get("boostAdd", []))
+        if m:
+            entry["_meta"] = m
+    return entry
 # ───────────── 锚点句逐条 override（true per-phrase 判断，优先级最高） ─────────────
 # 结构同 overlay 条目；会整条替换生成结果（而非合并）。
 OVERRIDES: dict[str, dict] = {
+    "sb_4": {"colorMoods": ["light"], "colorBan": ["dark"], "_meta": {"emotion": "playful_meme", "tone": "tender"}},
+    "sb_5": {"colorMoods": ["warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:restart", "weight": 1.0}], "_meta": {"emotion": "gentle_departure", "tone": "warm", "scene": ["restart"]}},
+    "sb_12": {"colorMoods": ["light"], "colorBan": ["dark"], "boostAdd": [{"tag": "daypart:afternoon", "weight": 0.6}], "_meta": {"emotion": "daily_romance", "tone": "bright"}},
+    "sb_22": {"colorMoods": ["cool", "light"], "colorBan": ["dark"], "colorFamilies": ["green"], "boostAdd": [{"tag": "season:spring", "weight": 2.0}, {"tag": "solar_term:jingzhe", "weight": 1.5}], "_meta": {"emotion": "daily_romance", "tone": "tender", "scene": ["season_change"]}},
+    "sb_25": {"colorMoods": ["cool"], "colorBan": ["warm"], "boostAdd": [{"tag": "scene:commute", "weight": 1.0}], "_meta": {"emotion": "playful_meme", "tone": "playful", "scene": ["commute"]}},
+    "sb_26": {"colorMoods": ["warm", "light"], "colorBan": ["dark"], "boostAdd": [{"tag": "season:summer", "weight": 2.0}], "_meta": {"emotion": "daily_romance", "tone": "playful", "scene": ["season_change"]}},
+    "sb_32": {"colorMoods": ["light"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:after_setback", "weight": 1.5}], "_meta": {"emotion": "light_comfort", "tone": "tender", "scene": ["after_setback"]}},
+    "sb_33": {"colorMoods": ["warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:work_pause", "weight": 1.0}], "_meta": {"emotion": "playful_meme", "tone": "playful", "scene": ["work_pause"]}},
+    "sb_39": {"colorMoods": ["light", "warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "season:spring", "weight": 2.0}, {"tag": "solar_term:yushui", "weight": 1.5}], "_meta": {"emotion": "daily_romance", "tone": "tender", "scene": ["season_change"]}},
+    "sb_45": {"colorMoods": ["light"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:restart", "weight": 1.2}], "_meta": {"emotion": "soft_hope", "tone": "bright", "scene": ["restart"]}},
+    "sb_58": {"colorMoods": ["warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:after_setback", "weight": 1.0}], "_meta": {"emotion": "playful_meme", "tone": "playful", "scene": ["after_setback"]}},
+    "sb_59": {"colorMoods": ["warm"], "colorBan": ["dark"], "_meta": {"emotion": "self_affirmation", "tone": "playful"}},
+    "sb_60": {"colorMoods": ["light"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:commute", "weight": 1.0}], "_meta": {"emotion": "playful_meme", "tone": "playful", "scene": ["commute"]}},
+    "sb_64": {"colorMoods": ["warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "festival:new_year", "weight": 1.5}], "_meta": {"emotion": "luck_blessing", "tone": "bright"}},
+    "sb_65": {"colorMoods": ["warm"], "colorBan": ["dark"], "_meta": {"emotion": "self_affirmation", "tone": "playful"}},
+    "sb_66": {"colorMoods": ["warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:work_pause", "weight": 0.8}], "_meta": {"emotion": "playful_meme", "tone": "playful", "scene": ["work_pause"]}},
+    "sb_67": {"colorMoods": ["warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:restart", "weight": 1.2}], "_meta": {"emotion": "playful_meme", "tone": "playful", "scene": ["restart"]}},
+    "sb_70": {"colorMoods": ["warm", "light"], "colorBan": ["dark"], "boostAdd": [{"tag": "season:summer", "weight": 2.0}], "_meta": {"emotion": "luck_blessing", "tone": "bright", "scene": ["season_change"]}},
+    "sb_71": {"colorMoods": ["warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:restart", "weight": 1.2}], "_meta": {"emotion": "soft_hope", "tone": "bright", "scene": ["restart"]}},
+    "sb_77": {"colorMoods": ["light", "warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "festival:new_year", "weight": 1.5}], "_meta": {"emotion": "soft_hope", "tone": "bright"}},
+    "sb_80": {"colorMoods": ["light"], "colorBan": ["dark"], "boostAdd": [{"tag": "month:5", "weight": 2.0}], "_meta": {"emotion": "soft_hope", "tone": "tender", "scene": ["season_change"]}},
+    "sb_81": {"colorMoods": ["warm"], "colorBan": ["dark"], "_meta": {"emotion": "playful_meme", "tone": "playful"}},
+    "sb_93": {"colorMoods": ["warm", "light"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:restart", "weight": 1.2}], "_meta": {"emotion": "gentle_departure", "tone": "warm", "scene": ["restart"]}},
+    "sb_95": {"colorMoods": ["warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "festival:spring_festival", "weight": 2.0}, {"tag": "festival:new_year", "weight": 1.5}], "_meta": {"emotion": "soft_hope", "tone": "bright", "scene": ["festival"]}},
+    "sb_107": {"colorMoods": ["warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:restart", "weight": 1.2}, {"tag": "scene:work_pause", "weight": 0.8}], "_meta": {"emotion": "gentle_departure", "tone": "warm", "scene": ["restart", "work_pause"]}},
+    "sb_111": {"colorMoods": ["warm"], "colorBan": ["dark"], "colorFamilies": ["yellow"], "boostAdd": [{"tag": "season:autumn", "weight": 1.8}], "_meta": {"emotion": "luck_blessing", "tone": "bright", "scene": ["season_change"]}},
+    "sb_124": {"colorMoods": ["cool"], "colorBan": ["warm"], "colorFamilies": ["blue"], "boostAdd": [{"tag": "scene:travel", "weight": 1.2}, {"tag": "weather:clear", "weight": 1.5}], "_meta": {"emotion": "gentle_departure", "tone": "cool", "scene": ["travel"]}},
+    "sb_138": {"colorMoods": ["warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:restart", "weight": 1.2}], "_meta": {"emotion": "soft_hope", "tone": "bright", "scene": ["restart"]}},
+    "sb_144": {"colorMoods": ["light"], "colorBan": ["dark"], "boostAdd": [{"tag": "scene:self_time", "weight": 1.0}], "_meta": {"emotion": "soft_hope", "tone": "bright", "scene": ["self_time"]}},
+    "sb_2001": {"colorMoods": ["cool"], "colorBan": ["warm"], "boostAdd": [{"tag": "season:summer", "weight": 2.5}, {"tag": "temp:hot", "weight": 2.0}, {"tag": "daypart:afternoon", "weight": 1.0}], "_meta": {"emotion": "daily_romance", "tone": "cool", "scene": ["work_pause"]}},
+    "sb_2002": {"colorMoods": ["cool"], "colorBan": ["warm"], "boostAdd": [{"tag": "season:summer", "weight": 2.5}, {"tag": "temp:hot", "weight": 2.0}, {"tag": "daypart:morning", "weight": 0.8}], "_meta": {"emotion": "daily_romance", "tone": "cool", "scene": ["work_pause"]}},
+    "sb_2003": {"colorMoods": ["cool"], "colorBan": ["warm"], "boostAdd": [{"tag": "season:summer", "weight": 2.5}, {"tag": "temp:hot", "weight": 2.0}], "_meta": {"emotion": "daily_romance", "tone": "cool", "scene": ["self_time"]}},
+    "sb_2004": {"colorMoods": ["cool"], "colorBan": ["warm"], "boostAdd": [{"tag": "season:summer", "weight": 2.5}, {"tag": "temp:hot", "weight": 2.0}], "_meta": {"emotion": "daily_romance", "tone": "playful", "scene": ["work_pause"]}},
+    "sb_2005": {"colorMoods": ["cool", "light"], "colorBan": ["dark"], "boostAdd": [{"tag": "season:summer", "weight": 2.0}, {"tag": "daypart:evening", "weight": 1.2}, {"tag": "weather:windy", "weight": 1.5}], "_meta": {"emotion": "daily_romance", "tone": "cool", "scene": ["self_time"]}},
+    "sb_2006": {"colorMoods": ["cool", "dark"], "colorBan": ["warm"], "boostAdd": [{"tag": "season:summer", "weight": 2.0}, {"tag": "daypart:late_night", "weight": 1.0}], "_meta": {"emotion": "daily_romance", "tone": "playful"}},
+    "sb_2021": {"colorMoods": ["warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "festival:dragon_boat", "weight": 4.0}], "_meta": {"emotion": "luck_blessing", "tone": "warm", "scene": ["festival"]}},
+    "sb_2022": {"colorMoods": ["warm"], "colorBan": ["dark"], "boostAdd": [{"tag": "festival:dragon_boat", "weight": 4.0}], "_meta": {"emotion": "luck_blessing", "tone": "playful", "scene": ["festival"]}},
+    "sb_2023": {"colorMoods": ["light", "dark"], "colorBan": ["warm"], "boostAdd": [{"tag": "festival:mid_autumn", "weight": 4.0}, {"tag": "daypart:evening", "weight": 1.0}], "_meta": {"emotion": "luck_blessing", "tone": "calm", "scene": ["festival"]}},
+    "sb_2035": {"colorMoods": ["cool"], "colorBan": ["warm"], "boostAdd": [{"tag": "month:6", "weight": 1.5}], "_meta": {"emotion": "quiet_mirror", "tone": "calm"}},
+    "sb_2041": {"colorMoods": ["cool", "light"], "colorBan": ["warm"], "boostAdd": [{"tag": "weather:rain", "weight": 3.0}, {"tag": "scene:rainy_day", "weight": 1.5}], "_meta": {"emotion": "daily_romance", "tone": "calm", "scene": ["rainy_day"]}},
     "sb_20": {  # 蔚蓝海面
         "colorMoods": ["cool"], "colorBan": ["warm"], "colorFamilies": ["blue"],
         "boostAdd": [{"tag": "season:summer", "weight": 2.0}, {"tag": "weather:clear", "weight": 1.5}, {"tag": "scene:travel", "weight": 1.2}],
@@ -238,7 +301,7 @@ OVERRIDES: dict[str, dict] = {
         "_meta": {"emotion": "luck_blessing", "tone": "bright", "scene": ["festival"]},
     },
     "sb_91": {  # 自由是终极魔法
-        "colorMoods": ["cool"],
+        "colorMoods": ["cool"], "colorBan": ["warm"],
         "boostAdd": [{"tag": "scene:travel", "weight": 1.2}],
         "_meta": {"emotion": "ip_collab", "tone": "playful", "scene": ["travel"]},
     },
@@ -263,12 +326,12 @@ OVERRIDES: dict[str, dict] = {
         "_meta": {"emotion": "light_comfort", "tone": "bright", "scene": ["after_setback"]},
     },
     "sb_248": {  # 不追风时吹吹风
-        "colorMoods": ["cool"],
+        "colorMoods": ["cool"], "colorBan": ["warm"],
         "boostAdd": [{"tag": "weather:windy", "weight": 2.5}, {"tag": "scene:self_time", "weight": 1.2}],
         "_meta": {"emotion": "light_comfort", "tone": "calm", "scene": ["self_time"]},
     },
     "sb_100": {  # 挂霜予你（季节已锁 autumn）
-        "colorMoods": ["light", "cool"],
+        "colorMoods": ["light", "cool"], "colorBan": ["dark"],
         "boostAdd": [{"tag": "temp:cold", "weight": 2.0}, {"tag": "solar_term:shuangjiang", "weight": 2.0}],
         "_meta": {"emotion": "daily_romance", "tone": "tender"},
     },
@@ -291,7 +354,7 @@ def build_entry(phrase: str, theme: str) -> dict | None:
     m = meta(phrase, theme, boosts)
     if m:
         entry["_meta"] = m
-    return entry or None
+    return fallback_entry(phrase, theme, entry)
 
 
 def main() -> None:

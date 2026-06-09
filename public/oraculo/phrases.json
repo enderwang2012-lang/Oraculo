@@ -53,7 +53,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -61,11 +67,17 @@
     "text": "小天使啊",
     "textEn": "Little angel",
     "layer": "active",
-    "emotionTheme": "亲昵身份",
+    "emotionTheme": "playful_meme",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -73,11 +85,22 @@
     "text": "能力不嫌多",
     "textEn": "Skills never hurt",
     "layer": "active",
-    "emotionTheme": "鼓励",
+    "emotionTheme": "gentle_departure",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -85,7 +108,7 @@
     "text": "锦鲤本鲤",
     "textEn": "Koi incarnate",
     "layer": "active",
-    "emotionTheme": "好运身份",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -112,7 +135,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -124,7 +153,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -136,7 +171,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -148,7 +189,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -160,7 +207,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -168,11 +221,22 @@
     "text": "突然开心",
     "textEn": "Sudden joy",
     "layer": "active",
-    "emotionTheme": "即时心情",
+    "emotionTheme": "daily_romance",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "daypart:afternoon",
+          "weight": 0.6
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -204,7 +268,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -212,7 +282,7 @@
     "text": "蔚蓝海面",
     "textEn": "Azure sea",
     "layer": "active",
-    "emotionTheme": "夏日景象",
+    "emotionTheme": "daily_romance",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -246,7 +316,7 @@
     "text": "去潜水吧",
     "textEn": "Go dive",
     "layer": "active",
-    "emotionTheme": "夏日行动",
+    "emotionTheme": "gentle_departure",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -269,11 +339,30 @@
     "text": "万物生长",
     "textEn": "Everything grows",
     "layer": "active",
-    "emotionTheme": "自然季节",
+    "emotionTheme": "daily_romance",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "season:spring",
+          "weight": 2.0
+        },
+        {
+          "tag": "solar_term:jingzhe",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ],
+      "colorFamilies": [
+        "green"
+      ]
     }
   },
   {
@@ -281,7 +370,7 @@
     "text": "水上乐园",
     "textEn": "Water park dreams",
     "layer": "active",
-    "emotionTheme": "夏日场景",
+    "emotionTheme": "daily_romance",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -299,11 +388,22 @@
     "text": "唯快不破",
     "textEn": "Speed wins all",
     "layer": "active",
-    "emotionTheme": "速度与武侠",
+    "emotionTheme": "playful_meme",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:commute",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
     }
   },
   {
@@ -311,13 +411,25 @@
     "text": "他夏了夏天",
     "textEn": "He summered summer",
     "layer": "active",
-    "emotionTheme": "歌曲与季节",
+    "emotionTheme": "daily_romance",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
         "season:summer"
       ],
-      "boost": []
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -365,6 +477,12 @@
           "tag": "scene:after_setback",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -373,11 +491,22 @@
     "text": "人间值得",
     "textEn": "The world still holds you",
     "layer": "active",
-    "emotionTheme": "治愈肯定",
+    "emotionTheme": "light_comfort",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -385,11 +514,22 @@
     "text": "奥利给",
     "textEn": "Let's go!",
     "layer": "active",
-    "emotionTheme": "网络流行语",
+    "emotionTheme": "playful_meme",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:work_pause",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -401,7 +541,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -409,7 +555,7 @@
     "text": "重启试试",
     "textEn": "Reboot and try",
     "layer": "active",
-    "emotionTheme": "日常玩梗",
+    "emotionTheme": "playful_meme",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -418,6 +564,12 @@
           "tag": "scene:restart",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -426,13 +578,29 @@
     "text": "最是一年春好处",
     "textEn": "Spring at its best",
     "layer": "active",
-    "emotionTheme": "春季诗意",
+    "emotionTheme": "daily_romance",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
         "season:spring"
       ],
-      "boost": []
+      "boost": [
+        {
+          "tag": "season:spring",
+          "weight": 2.0
+        },
+        {
+          "tag": "solar_term:yushui",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light",
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -440,7 +608,7 @@
     "text": "新一年总晴天",
     "textEn": "Sunny year ahead",
     "layer": "active",
-    "emotionTheme": "新年祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -478,7 +646,7 @@
     "text": "冬日暖阳",
     "textEn": "Winter sun warmth",
     "layer": "active",
-    "emotionTheme": "冬季温暖",
+    "emotionTheme": "daily_romance",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -507,7 +675,7 @@
     "text": "月是秋夜明",
     "textEn": "Autumn moon, bright night",
     "layer": "active",
-    "emotionTheme": "秋夜诗意",
+    "emotionTheme": "lyric_image",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -536,7 +704,7 @@
     "text": "秋天开始喝暖饮",
     "textEn": "Warm drinks, autumn starts",
     "layer": "active",
-    "emotionTheme": "秋季饮品",
+    "emotionTheme": "daily_romance",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -556,11 +724,22 @@
     "text": "美好拉开帷幕",
     "textEn": "Beauty takes the stage",
     "layer": "active",
-    "emotionTheme": "希望鼓励",
+    "emotionTheme": "soft_hope",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -568,7 +747,7 @@
     "text": "平安喜乐",
     "textEn": "Peace and quiet joy",
     "layer": "active",
-    "emotionTheme": "平安祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -595,7 +774,7 @@
     "text": "财神到家",
     "textEn": "Fortune at the door",
     "layer": "active",
-    "emotionTheme": "财运祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -622,7 +801,7 @@
     "text": "岁岁常欢愉",
     "textEn": "Joy every year",
     "layer": "active",
-    "emotionTheme": "长久祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -651,7 +830,7 @@
     "text": "年年皆胜意",
     "textEn": "Winning years ahead",
     "layer": "active",
-    "emotionTheme": "长久祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -680,7 +859,7 @@
     "text": "暴富暴瘦暴酷",
     "textEn": "Rich, lean, cool",
     "layer": "active",
-    "emotionTheme": "夸张祝福",
+    "emotionTheme": "playful_meme",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -698,11 +877,22 @@
     "text": "笑出强大",
     "textEn": "Laugh with power",
     "layer": "active",
-    "emotionTheme": "鼓励玩梗",
+    "emotionTheme": "playful_meme",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -710,11 +900,17 @@
     "text": "最靓的仔",
     "textEn": "Coolest one around",
     "layer": "active",
-    "emotionTheme": "身份自夸",
+    "emotionTheme": "self_affirmation",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -722,11 +918,22 @@
     "text": "Hi走啦",
     "textEn": "Hi, I'm off",
     "layer": "active",
-    "emotionTheme": "口语玩梗",
+    "emotionTheme": "playful_meme",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:commute",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -734,7 +941,7 @@
     "text": "是最喜欢的秋天啊",
     "textEn": "Favorite season: fall",
     "layer": "active",
-    "emotionTheme": "秋季心情",
+    "emotionTheme": "daily_romance",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -754,11 +961,22 @@
     "text": "天选之子",
     "textEn": "Chosen one",
     "layer": "active",
-    "emotionTheme": "好运身份",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -766,11 +984,17 @@
     "text": "全能小天才",
     "textEn": "Little prodigy",
     "layer": "active",
-    "emotionTheme": "身份自夸",
+    "emotionTheme": "self_affirmation",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -778,11 +1002,22 @@
     "text": "甩碗米线",
     "textEn": "Tossed bowl noodles",
     "layer": "active",
-    "emotionTheme": "食物奇趣",
+    "emotionTheme": "playful_meme",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:work_pause",
+          "weight": 0.8
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -790,11 +1025,22 @@
     "text": "冲鸭冲鸭",
     "textEn": "Go go duck!",
     "layer": "active",
-    "emotionTheme": "网络鼓励",
+    "emotionTheme": "playful_meme",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -829,7 +1075,7 @@
     "text": "水逆绕行",
     "textEn": "Mercury, step aside",
     "layer": "active",
-    "emotionTheme": "转运祝福",
+    "emotionTheme": "light_comfort",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -838,6 +1084,12 @@
           "tag": "scene:after_setback",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -846,11 +1098,23 @@
     "text": "快乐一夏",
     "textEn": "Summer of joy",
     "layer": "active",
-    "emotionTheme": "夏日祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -858,11 +1122,22 @@
     "text": "赐予你力量",
     "textEn": "Power granted you",
     "layer": "active",
-    "emotionTheme": "鼓励祝福",
+    "emotionTheme": "soft_hope",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -874,7 +1149,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -882,7 +1163,7 @@
     "text": "莫愁前路无知己",
     "textEn": "Friends await ahead",
     "layer": "active",
-    "emotionTheme": "前路安慰",
+    "emotionTheme": "light_comfort",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -895,6 +1176,12 @@
           "tag": "scene:after_setback",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -903,7 +1190,7 @@
     "text": "浪漫不止",
     "textEn": "Romance unending",
     "layer": "active",
-    "emotionTheme": "浪漫祝福",
+    "emotionTheme": "daily_romance",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -926,11 +1213,23 @@
     "text": "好事将至",
     "textEn": "Grace still on its way",
     "layer": "active",
-    "emotionTheme": "好运预告",
+    "emotionTheme": "soft_hope",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light",
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -938,7 +1237,7 @@
     "text": "新年有新意",
     "textEn": "Fresh year, fresh spark",
     "layer": "active",
-    "emotionTheme": "新年祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -967,7 +1266,7 @@
     "text": "五月被期待填满",
     "textEn": "May, full of hope",
     "layer": "active",
-    "emotionTheme": "月份希望",
+    "emotionTheme": "soft_hope",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -976,8 +1275,14 @@
       "boost": [
         {
           "tag": "month:5",
-          "weight": 1.0
+          "weight": 2.0
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -986,11 +1291,17 @@
     "text": "厉害了爹地们",
     "textEn": "Dads on fire",
     "layer": "active",
-    "emotionTheme": "称呼玩梗",
+    "emotionTheme": "playful_meme",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -998,7 +1309,7 @@
     "text": "悄悄惊艳大家",
     "textEn": "Quietly dazzling all",
     "layer": "active",
-    "emotionTheme": "学习鼓励",
+    "emotionTheme": "gentle_departure",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -1016,7 +1327,7 @@
     "text": "自由是终极魔法",
     "textEn": "Freedom, final magic",
     "layer": "anchor",
-    "emotionTheme": "哈利波特联名",
+    "emotionTheme": "ip_collab",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -1028,6 +1339,9 @@
       ],
       "colorMoods": [
         "cool"
+      ],
+      "colorBan": [
+        "warm"
       ]
     }
   },
@@ -1036,11 +1350,23 @@
     "text": "向上生长",
     "textEn": "Grow upward",
     "layer": "active",
-    "emotionTheme": "成长鼓励",
+    "emotionTheme": "gentle_departure",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1048,7 +1374,7 @@
     "text": "今天的你赞赞赞",
     "textEn": "Triple thumbs-up today",
     "layer": "anchor",
-    "emotionTheme": "夸赞鼓励",
+    "emotionTheme": "self_affirmation",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -1066,11 +1392,26 @@
     "text": "万事皆合时宜",
     "textEn": "All in season",
     "layer": "anchor",
-    "emotionTheme": "顺遂祝福",
+    "emotionTheme": "soft_hope",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.0
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1078,7 +1419,7 @@
     "text": "赤诚亦勇敢",
     "textEn": "Fierce and sincere",
     "layer": "anchor",
-    "emotionTheme": "人格鼓励",
+    "emotionTheme": "self_affirmation",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -1099,7 +1440,7 @@
     "text": "新年万事定称心",
     "textEn": "New year, heart's desire",
     "layer": "anchor",
-    "emotionTheme": "新年祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -1128,7 +1469,7 @@
     "text": "挂霜予你",
     "textEn": "Frost for you",
     "layer": "anchor",
-    "emotionTheme": "秋季温柔",
+    "emotionTheme": "daily_romance",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -1149,6 +1490,9 @@
       "colorMoods": [
         "light",
         "cool"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -1157,7 +1501,7 @@
     "text": "新春开门红",
     "textEn": "Spring opens red-hot",
     "layer": "active",
-    "emotionTheme": "新年祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -1189,7 +1533,7 @@
     "text": "诸事皆顺",
     "textEn": "All flows smooth",
     "layer": "active",
-    "emotionTheme": "顺遂祝福",
+    "emotionTheme": "soft_hope",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -1202,6 +1546,12 @@
           "tag": "festival:new_year",
           "weight": 1.5
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -1214,7 +1564,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1226,7 +1582,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1238,7 +1600,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1250,7 +1618,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1258,11 +1632,26 @@
     "text": "每一次全力以赴",
     "textEn": "Every effort, whole heart",
     "layer": "active",
-    "emotionTheme": "努力鼓励",
+    "emotionTheme": "gentle_departure",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        },
+        {
+          "tag": "scene:work_pause",
+          "weight": 0.8
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1274,7 +1663,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1282,7 +1677,7 @@
     "text": "为热爱 敢上场",
     "textEn": "For love, take the field",
     "layer": "active",
-    "emotionTheme": "热爱鼓励",
+    "emotionTheme": "gentle_departure",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -1300,11 +1695,25 @@
     "text": "硕果累累",
     "textEn": "Heavy with fruit",
     "layer": "active",
-    "emotionTheme": "收获祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "season:autumn",
+          "weight": 1.8
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ],
+      "colorFamilies": [
+        "yellow"
+      ]
     }
   },
   {
@@ -1344,6 +1753,12 @@
           "tag": "scene:after_setback",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -1356,7 +1771,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1364,7 +1785,7 @@
     "text": "远方很美",
     "textEn": "Far places shine",
     "layer": "anchor",
-    "emotionTheme": "远方浪漫",
+    "emotionTheme": "daily_romance",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -1396,6 +1817,12 @@
           "tag": "scene:after_setback",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -1408,7 +1835,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1416,7 +1849,7 @@
     "text": "清风为我翻书",
     "textEn": "Breeze reads for me",
     "layer": "active",
-    "emotionTheme": "文艺治愈",
+    "emotionTheme": "light_comfort",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -1452,7 +1885,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1460,11 +1899,29 @@
     "text": "天高任鸟飞",
     "textEn": "Sky high, birds roam",
     "layer": "active",
-    "emotionTheme": "自由鼓励",
+    "emotionTheme": "gentle_departure",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        },
+        {
+          "tag": "weather:clear",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ],
+      "colorFamilies": [
+        "blue"
+      ]
     }
   },
   {
@@ -1481,6 +1938,12 @@
           "tag": "scene:travel",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -1498,6 +1961,12 @@
           "tag": "scene:meeting_friend",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -1515,6 +1984,12 @@
           "tag": "scene:restart",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -1532,6 +2007,12 @@
           "tag": "scene:meeting_friend",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -1549,6 +2030,12 @@
           "tag": "scene:self_time",
           "weight": 1.0
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -1561,7 +2048,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1594,11 +2087,22 @@
     "text": "大有可为",
     "textEn": "Much to accomplish",
     "layer": "active",
-    "emotionTheme": "未来鼓励",
+    "emotionTheme": "soft_hope",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1629,7 +2133,7 @@
     "text": "热烈自由",
     "textEn": "Fierce and free",
     "layer": "active",
-    "emotionTheme": "自由鼓励",
+    "emotionTheme": "gentle_departure",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -1656,6 +2160,12 @@
           "tag": "scene:travel",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -1691,11 +2201,22 @@
     "text": "有趣有盼无忧虑",
     "textEn": "Fun, hope, no frets",
     "layer": "active",
-    "emotionTheme": "生活祝福",
+    "emotionTheme": "soft_hope",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1730,6 +2251,12 @@
           "tag": "scene:travel",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -1742,7 +2269,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1759,6 +2292,12 @@
           "tag": "scene:travel",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -1789,7 +2328,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1801,7 +2346,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1863,7 +2414,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1894,7 +2451,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
     }
   },
   {
@@ -1906,7 +2469,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1918,7 +2487,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1955,7 +2530,13 @@
       "onlyWhen": [
         "season:summer"
       ],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -1994,7 +2575,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -2039,6 +2626,12 @@
           "tag": "scene:after_setback",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2079,6 +2672,12 @@
           "tag": "festival:valentine",
           "weight": 2.0
         }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2091,7 +2690,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -2149,6 +2754,12 @@
           "tag": "scene:self_time",
           "weight": 1.0
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2243,7 +2854,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -2260,6 +2877,12 @@
           "tag": "scene:self_time",
           "weight": 1.0
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2304,6 +2927,12 @@
           "tag": "solar_term:xiaoman",
           "weight": 2.0
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2402,6 +3031,12 @@
           "tag": "scene:self_time",
           "weight": 1.0
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2466,6 +3101,12 @@
           "tag": "scene:restart",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2483,6 +3124,12 @@
           "tag": "theme:ip",
           "weight": 1.5
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2508,6 +3155,12 @@
           "tag": "scene:meeting_friend",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2525,6 +3178,12 @@
           "tag": "scene:after_setback",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2542,6 +3201,12 @@
           "tag": "scene:travel",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2581,7 +3246,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -2593,7 +3264,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -2605,7 +3282,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -2659,7 +3342,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -2671,7 +3360,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -2688,6 +3383,12 @@
           "tag": "scene:travel",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2732,6 +3433,12 @@
           "tag": "festival:valentine",
           "weight": 2.0
         }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2772,7 +3479,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -2784,7 +3497,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -2824,6 +3543,12 @@
           "tag": "scene:after_setback",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2849,6 +3574,12 @@
           "tag": "scene:meeting_friend",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2889,6 +3620,12 @@
           "tag": "theme:ip",
           "weight": 1.5
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2933,6 +3670,12 @@
           "tag": "scene:after_setback",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2950,6 +3693,12 @@
           "tag": "theme:ip",
           "weight": 1.5
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2971,6 +3720,12 @@
           "tag": "scene:meeting_friend",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -2996,6 +3751,12 @@
           "tag": "scene:meeting_friend",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -3042,6 +3803,12 @@
           "tag": "theme:ip",
           "weight": 1.5
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -3059,6 +3826,12 @@
           "tag": "scene:meeting_friend",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -3076,6 +3849,12 @@
           "tag": "scene:travel",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -3127,6 +3906,9 @@
       ],
       "colorMoods": [
         "cool"
+      ],
+      "colorBan": [
+        "warm"
       ]
     }
   },
@@ -3203,6 +3985,12 @@
           "tag": "scene:after_setback",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -3314,7 +4102,7 @@
     "text": "新一年蓄力向上",
     "textEn": "New year, charge upward",
     "layer": "anchor",
-    "emotionTheme": "新年祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -3360,6 +4148,12 @@
           "tag": "daypart:morning",
           "weight": 0.8
         }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -3498,7 +4292,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -3515,6 +4315,12 @@
           "tag": "scene:self_time",
           "weight": 1.0
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -3555,6 +4361,12 @@
           "tag": "scene:after_setback",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -3567,7 +4379,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -3584,6 +4402,12 @@
           "tag": "scene:travel",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -3596,7 +4420,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -3608,7 +4438,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -3620,7 +4456,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -3628,7 +4470,7 @@
     "text": "新年暴富",
     "textEn": "New year, sudden wealth",
     "layer": "anchor",
-    "emotionTheme": "新年祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -3688,7 +4530,7 @@
     "text": "热爱经久不息",
     "textEn": "Passion long-burning",
     "layer": "anchor",
-    "emotionTheme": "生活鼓励",
+    "emotionTheme": "gentle_departure",
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
@@ -3719,6 +4561,12 @@
           "tag": "daypart:morning",
           "weight": 0.8
         }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -3806,7 +4654,13 @@
       "onlyWhen": [
         "season:summer"
       ],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -3870,7 +4724,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -3887,6 +4747,12 @@
           "tag": "scene:meeting_friend",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -3904,6 +4770,12 @@
           "tag": "scene:after_setback",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -3916,7 +4788,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -3970,7 +4848,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -4005,7 +4889,7 @@
     "text": "万象更新",
     "textEn": "Ten thousand things renew",
     "layer": "anchor",
-    "emotionTheme": "新年祝福",
+    "emotionTheme": "luck_blessing",
     "dispatch": {
       "universal": false,
       "onlyWhen": [
@@ -4070,6 +4954,12 @@
           "tag": "scene:self_time",
           "weight": 1.0
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -4087,6 +4977,12 @@
           "tag": "scene:travel",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -4104,6 +5000,12 @@
           "tag": "scene:self_time",
           "weight": 1.0
         }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -4116,7 +5018,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -4128,7 +5036,13 @@
     "dispatch": {
       "universal": true,
       "onlyWhen": [],
-      "boost": []
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -4142,7 +5056,26 @@
       "onlyWhen": [
         "season:summer"
       ],
-      "boost": []
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.5
+        },
+        {
+          "tag": "temp:hot",
+          "weight": 2.0
+        },
+        {
+          "tag": "daypart:afternoon",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
     }
   },
   {
@@ -4156,7 +5089,26 @@
       "onlyWhen": [
         "season:summer"
       ],
-      "boost": []
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.5
+        },
+        {
+          "tag": "temp:hot",
+          "weight": 2.0
+        },
+        {
+          "tag": "daypart:morning",
+          "weight": 0.8
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
     }
   },
   {
@@ -4170,7 +5122,22 @@
       "onlyWhen": [
         "season:summer"
       ],
-      "boost": []
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.5
+        },
+        {
+          "tag": "temp:hot",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
     }
   },
   {
@@ -4184,7 +5151,22 @@
       "onlyWhen": [
         "season:summer"
       ],
-      "boost": []
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.5
+        },
+        {
+          "tag": "temp:hot",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
     }
   },
   {
@@ -4201,8 +5183,23 @@
       "boost": [
         {
           "tag": "weather:windy",
+          "weight": 1.5
+        },
+        {
+          "tag": "season:summer",
+          "weight": 2.0
+        },
+        {
+          "tag": "daypart:evening",
           "weight": 1.2
         }
+      ],
+      "colorMoods": [
+        "cool",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
       ]
     }
   },
@@ -4217,7 +5214,23 @@
       "onlyWhen": [
         "season:summer"
       ],
-      "boost": []
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.0
+        },
+        {
+          "tag": "daypart:late_night",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "dark"
+      ],
+      "colorBan": [
+        "warm"
+      ]
     }
   },
   {
@@ -4231,7 +5244,18 @@
       "onlyWhen": [
         "festival:dragon_boat"
       ],
-      "boost": []
+      "boost": [
+        {
+          "tag": "festival:dragon_boat",
+          "weight": 4.0
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -4245,7 +5269,18 @@
       "onlyWhen": [
         "festival:dragon_boat"
       ],
-      "boost": []
+      "boost": [
+        {
+          "tag": "festival:dragon_boat",
+          "weight": 4.0
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
     }
   },
   {
@@ -4259,7 +5294,23 @@
       "onlyWhen": [
         "festival:mid_autumn"
       ],
-      "boost": []
+      "boost": [
+        {
+          "tag": "festival:mid_autumn",
+          "weight": 4.0
+        },
+        {
+          "tag": "daypart:evening",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "light",
+        "dark"
+      ],
+      "colorBan": [
+        "warm"
+      ]
     }
   },
   {
@@ -4273,7 +5324,18 @@
       "onlyWhen": [
         "month:6"
       ],
-      "boost": []
+      "boost": [
+        {
+          "tag": "month:6",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
     }
   },
   {
@@ -4287,7 +5349,23 @@
       "onlyWhen": [
         "weather:rain"
       ],
-      "boost": []
+      "boost": [
+        {
+          "tag": "weather:rain",
+          "weight": 3.0
+        },
+        {
+          "tag": "scene:rainy_day",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "light"
+      ],
+      "colorBan": [
+        "warm"
+      ]
     }
   }
 ]

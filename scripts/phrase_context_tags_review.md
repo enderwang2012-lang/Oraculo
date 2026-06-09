@@ -2,194 +2,234 @@
 
 AI 语义层产出，逐条扫一眼接受/改写。锚点句在 tag_phrases_llm.py 的 OVERRIDES 里。
 
-覆盖 189 / 218 条。
+覆盖 229 / 229 条。
 
 - `sb_1` **今日锦鲤** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_2` **文艺青年** — moods=['cool']; ban=['warm']
-- `sb_3` **都挺好** — 
+- `sb_3` **都挺好** — moods=['light']; ban=['dark']
+- `sb_4` **小天使啊** — moods=['light']; ban=['dark']
+- `sb_5` **能力不嫌多** — moods=['warm']; ban=['dark']; boost=scene:restart×1.0
 - `sb_6` **锦鲤本鲤** — moods=['warm']; ban=['dark']
-- `sb_7` **凌波微步** — 
-- `sb_8` **魅力四射** — 
-- `sb_9` **这么优秀** — 
-- `sb_10` **鸟语蝉鸣** — 
-- `sb_11` **别人家孩子** — 
+- `sb_7` **凌波微步** — moods=['light']; ban=['dark']
+- `sb_8` **魅力四射** — moods=['warm']; ban=['dark']
+- `sb_9` **这么优秀** — moods=['warm']; ban=['dark']
+- `sb_10` **鸟语蝉鸣** — moods=['light']; ban=['dark']
+- `sb_11` **别人家孩子** — moods=['light']; ban=['dark']
+- `sb_12` **突然开心** — moods=['light']; ban=['dark']; boost=daypart:afternoon×0.6
 - `sb_13` **喜欢夏天** — moods=['warm']; ban=['dark']
-- `sb_17` **屠龙刀** — 
+- `sb_17` **屠龙刀** — moods=['light']; ban=['dark']
 - `sb_20` **蔚蓝海面** — moods=['cool']; ban=['warm']; family=['blue']; boost=season:summer×2.0,weather:clear×1.5,scene:travel×1.2
 - `sb_21` **去潜水吧** — moods=['cool']; ban=['warm']; boost=scene:travel×1.2
+- `sb_22` **万物生长** — moods=['cool', 'light']; ban=['dark']; family=['green']; boost=season:spring×2.0,solar_term:jingzhe×1.5
 - `sb_23` **水上乐园** — moods=['cool']; ban=['warm']
+- `sb_25` **唯快不破** — moods=['cool']; ban=['warm']; boost=scene:commute×1.0
+- `sb_26` **他夏了夏天** — moods=['warm', 'light']; ban=['dark']; boost=season:summer×2.0
 - `sb_29` **乌云散开** — moods=['light']; ban=['dark']; boost=weather:clear×2.5,scene:after_setback×1.5
-- `sb_31` **烦恼退散** — boost=scene:after_setback×1.2
-- `sb_34` **妙啊妙啊** — 
-- `sb_37` **重启试试** — boost=scene:restart×1.2
+- `sb_31` **烦恼退散** — moods=['light']; ban=['dark']; boost=scene:after_setback×1.2
+- `sb_32` **人间值得** — moods=['light']; ban=['dark']; boost=scene:after_setback×1.5
+- `sb_33` **奥利给** — moods=['warm']; ban=['dark']; boost=scene:work_pause×1.0
+- `sb_34` **妙啊妙啊** — moods=['light']; ban=['dark']
+- `sb_37` **重启试试** — moods=['light']; ban=['dark']; boost=scene:restart×1.2
+- `sb_39` **最是一年春好处** — moods=['light', 'warm']; ban=['dark']; boost=season:spring×2.0,solar_term:yushui×1.5
 - `sb_40` **新一年总晴天** — moods=['warm', 'light']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5,weather:clear×2.0,scene:restart×1.2
 - `sb_41` **冬日暖阳** — moods=['warm']; ban=['cool']; boost=weather:clear×2.0,temp:cold×1.5
 - `sb_42` **月是秋夜明** — moods=['dark']; ban=['light']; boost=daypart:late_night×1.2,festival:mid_autumn×2.5
 - `sb_43` **秋天开始喝暖饮** — moods=['warm']; ban=['dark']
+- `sb_45` **美好拉开帷幕** — moods=['light']; ban=['dark']; boost=scene:restart×1.2
 - `sb_49` **平安喜乐** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_50` **财神到家** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_51` **岁岁常欢愉** — moods=['warm']; ban=['dark']; boost=festival:new_year×4.0,festival:lantern_festival×3.0
 - `sb_52` **年年皆胜意** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_53` **暴富暴瘦暴酷** — moods=['warm']; ban=['dark']
+- `sb_58` **笑出强大** — moods=['warm']; ban=['dark']; boost=scene:after_setback×1.0
+- `sb_59` **最靓的仔** — moods=['warm']; ban=['dark']
+- `sb_60` **Hi走啦** — moods=['light']; ban=['dark']; boost=scene:commute×1.0
 - `sb_61` **是最喜欢的秋天啊** — moods=['warm']; ban=['dark']
+- `sb_64` **天选之子** — moods=['warm']; ban=['dark']; boost=festival:new_year×1.5
+- `sb_65` **全能小天才** — moods=['warm']; ban=['dark']
+- `sb_66` **甩碗米线** — moods=['warm']; ban=['dark']; boost=scene:work_pause×0.8
+- `sb_67` **冲鸭冲鸭** — moods=['warm']; ban=['dark']; boost=scene:restart×1.2
 - `sb_68` **诸事皆宜** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
-- `sb_69` **水逆绕行** — boost=scene:after_setback×1.2
-- `sb_73` **美式发生** — 
-- `sb_74` **莫愁前路无知己** — boost=scene:travel×1.2,scene:after_setback×1.2
+- `sb_69` **水逆绕行** — moods=['light']; ban=['dark']; boost=scene:after_setback×1.2
+- `sb_70` **快乐一夏** — moods=['warm', 'light']; ban=['dark']; boost=season:summer×2.0
+- `sb_71` **赐予你力量** — moods=['warm']; ban=['dark']; boost=scene:restart×1.2
+- `sb_73` **美式发生** — moods=['light']; ban=['dark']
+- `sb_74` **莫愁前路无知己** — moods=['light']; ban=['dark']; boost=scene:travel×1.2,scene:after_setback×1.2
 - `sb_76` **浪漫不止** — moods=['cool']; ban=['warm']; boost=scene:travel×1.2
+- `sb_77` **好事将至** — moods=['light', 'warm']; ban=['dark']; boost=festival:new_year×1.5
 - `sb_78` **新年有新意** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_80` **五月被期待填满** — moods=['light']; ban=['dark']; boost=month:5×2.0
+- `sb_81` **厉害了爹地们** — moods=['warm']; ban=['dark']
 - `sb_83` **悄悄惊艳大家** — moods=['warm']; ban=['dark']
-- `sb_91` **自由是终极魔法** — moods=['cool']; boost=scene:travel×1.2
+- `sb_91` **自由是终极魔法** — moods=['cool']; ban=['warm']; boost=scene:travel×1.2
+- `sb_93` **向上生长** — moods=['warm', 'light']; ban=['dark']; boost=scene:restart×1.2
 - `sb_94` **今天的你赞赞赞** — moods=['light']; ban=['dark']
+- `sb_95` **万事皆合时宜** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.0,festival:new_year×1.5
 - `sb_96` **赤诚亦勇敢** — moods=['warm']; ban=['dark']; family=['red']
 - `sb_99` **新年万事定称心** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
-- `sb_100` **挂霜予你** — moods=['light', 'cool']; boost=temp:cold×2.0,solar_term:shuangjiang×2.0
+- `sb_100` **挂霜予你** — moods=['light', 'cool']; ban=['dark']; boost=temp:cold×2.0,solar_term:shuangjiang×2.0
 - `sb_101` **新春开门红** — moods=['warm']; ban=['dark']; family=['red']; boost=festival:spring_festival×2.5,festival:new_year×1.5
-- `sb_102` **诸事皆顺** — boost=festival:spring_festival×2.5,festival:new_year×1.5
-- `sb_103` **take it easy.** — 
-- `sb_104` **be real.** — 
-- `sb_105` **good vibes.** — 
-- `sb_106` **dare to dream.** — 
-- `sb_108` **愿将来胜过往** — 
+- `sb_102` **诸事皆顺** — moods=['light']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_103` **take it easy.** — moods=['light']; ban=['dark']
+- `sb_104` **be real.** — moods=['light']; ban=['dark']
+- `sb_105` **good vibes.** — moods=['light']; ban=['dark']
+- `sb_106` **dare to dream.** — moods=['light']; ban=['dark']
+- `sb_107` **每一次全力以赴** — moods=['warm']; ban=['dark']; boost=scene:restart×1.2,scene:work_pause×0.8
+- `sb_108` **愿将来胜过往** — moods=['light']; ban=['dark']
 - `sb_109` **为热爱 敢上场** — moods=['warm']; ban=['dark']
+- `sb_111` **硕果累累** — moods=['warm']; ban=['dark']; family=['yellow']; boost=season:autumn×1.8
 - `sb_112` **记得微笑** — moods=['light']; ban=['dark']; boost=daypart:morning×0.8
-- `sb_113` **事缓则圆** — boost=scene:after_setback×1.2
-- `sb_116` **适时转弯** — 
+- `sb_113` **事缓则圆** — moods=['light']; ban=['dark']; boost=scene:after_setback×1.2
+- `sb_116` **适时转弯** — moods=['light']; ban=['dark']
 - `sb_117` **远方很美** — moods=['cool']; ban=['warm']; boost=scene:travel×1.2
-- `sb_118` **烦恼消除术** — boost=scene:after_setback×1.2
-- `sb_121` **做你自己就很好** — 
+- `sb_118` **烦恼消除术** — moods=['light']; ban=['dark']; boost=scene:after_setback×1.2
+- `sb_121` **做你自己就很好** — moods=['warm']; ban=['dark']
 - `sb_122` **清风为我翻书** — moods=['cool', 'light']; ban=['dark']; boost=weather:windy×2.5,weather:clear×1.5,scene:self_time×1.2
-- `sb_123` **心宽路则宽** — 
-- `sb_125` **重要的是出发** — boost=scene:travel×1.2
-- `sb_128` **见面是最棒的事** — boost=scene:meeting_friend×1.2
-- `sb_129` **新序章** — boost=scene:restart×1.2
-- `sb_130` **宜相见** — boost=scene:meeting_friend×1.2
-- `sb_131` **轻松自在** — boost=scene:self_time×1.0
-- `sb_132` **惬意个登儿** — 
+- `sb_123` **心宽路则宽** — moods=['light']; ban=['dark']
+- `sb_124` **天高任鸟飞** — moods=['cool']; ban=['warm']; family=['blue']; boost=scene:travel×1.2,weather:clear×1.5
+- `sb_125` **重要的是出发** — moods=['warm']; ban=['dark']; boost=scene:travel×1.2
+- `sb_128` **见面是最棒的事** — moods=['light']; ban=['dark']; boost=scene:meeting_friend×1.2
+- `sb_129` **新序章** — moods=['warm']; ban=['dark']; boost=scene:restart×1.2
+- `sb_130` **宜相见** — moods=['light']; ban=['dark']; boost=scene:meeting_friend×1.2
+- `sb_131` **轻松自在** — moods=['light']; ban=['dark']; boost=scene:self_time×1.0
+- `sb_132` **惬意个登儿** — moods=['light']; ban=['dark']
 - `sb_133` **一路风光一路诗** — moods=['cool', 'light']; ban=['dark', 'warm']; boost=weather:windy×2.0
+- `sb_138` **大有可为** — moods=['warm']; ban=['dark']; boost=scene:restart×1.2
 - `sb_140` **自由在风里** — moods=['cool']; ban=['warm']; boost=weather:windy×2.0
 - `sb_141` **热烈自由** — moods=['warm']; ban=['dark']
-- `sb_142` **所行皆坦途** — boost=scene:travel×1.2
+- `sb_142` **所行皆坦途** — moods=['light']; ban=['dark']; boost=scene:travel×1.2
 - `sb_143` **美好常在** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_144` **有趣有盼无忧虑** — moods=['light']; ban=['dark']; boost=scene:self_time×1.0
 - `sb_146` **大声称赞自己** — moods=['light']; ban=['dark']
-- `sb_147` **卓然前行** — boost=scene:travel×1.2
-- `sb_148` **思路清晰** — 
-- `sb_149` **愿前程可奔赴** — boost=scene:travel×1.2
+- `sb_147` **卓然前行** — moods=['warm']; ban=['dark']; boost=scene:travel×1.2
+- `sb_148` **思路清晰** — moods=['light']; ban=['dark']
+- `sb_149` **愿前程可奔赴** — moods=['light']; ban=['dark']; boost=scene:travel×1.2
 - `sb_150` **爱人间烟火** — moods=['warm']; ban=['dark']
-- `sb_151` **状态不掉线** — 
-- `sb_152` **生活向美而生** — 
+- `sb_151` **状态不掉线** — moods=['light']; ban=['dark']
+- `sb_152` **生活向美而生** — moods=['light']; ban=['dark']
 - `sb_153` **所念皆所愿** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_154` **有诗有远方** — moods=['cool']; ban=['warm']; boost=scene:travel×1.2
-- `sb_155` **无往而不胜** — 
+- `sb_155` **无往而不胜** — moods=['warm']; ban=['dark']
 - `sb_156` **开启高光模式** — moods=['warm', 'light']; ban=['dark']
-- `sb_157` **总有人正年轻** — 
-- `sb_158` **每一刻充满可能** — 
-- `sb_160` **努力的样子很酷** — 
+- `sb_157` **总有人正年轻** — moods=['cool']; ban=['warm']
+- `sb_158` **每一刻充满可能** — moods=['warm']; ban=['dark']
+- `sb_160` **努力的样子很酷** — moods=['warm']; ban=['dark']
 - `sb_161` **只记欢喜不记忧** — moods=['warm']; ban=['dark']; boost=scene:after_setback×1.2
-- `sb_162` **夏天拍了拍你** — 
+- `sb_162` **夏天拍了拍你** — moods=['light']; ban=['dark']
 - `sb_163` **心之所愿定如愿** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
-- `sb_164` **鸟语花香** — 
+- `sb_164` **鸟语花香** — moods=['light']; ban=['dark']
 - `sb_165` **前行有曙光** — moods=['warm', 'light']; ban=['dark']; boost=weather:clear×2.0,scene:travel×1.2
-- `sb_166` **大笑是困难解药** — boost=scene:after_setback×1.2
+- `sb_166` **大笑是困难解药** — moods=['light']; ban=['dark']; boost=scene:after_setback×1.2
 - `sb_169` **去踏千重浪** — moods=['cool']; ban=['warm']; boost=scene:travel×1.2
-- `sb_171` **心动由己** — boost=festival:valentine×2.0
-- `sb_172` **不留憾** — 
+- `sb_171` **心动由己** — moods=['warm']; ban=['dark']; boost=festival:valentine×2.0
+- `sb_172` **不留憾** — moods=['light']; ban=['dark']
 - `sb_174` **爱，不止此刻** — moods=['warm']; ban=['dark']
 - `sb_175` **心向旷野** — moods=['cool']; ban=['warm']; boost=scene:travel×1.2
-- `sb_176` **恰到好处** — boost=scene:self_time×1.0
+- `sb_176` **恰到好处** — moods=['light']; ban=['dark']; boost=scene:self_time×1.0
 - `sb_177` **喝着咖啡吹着风** — moods=['cool']; ban=['warm']; boost=weather:windy×2.0
 - `sb_181` **抬头望天接好运** — moods=['cool']; ban=['dark', 'warm']; boost=festival:spring_festival×2.5,festival:new_year×1.5,weather:clear×2.0
 - `sb_183` **期待新的故事** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
-- `sb_184` **今日最佳** — 
-- `sb_186` **忙有度 闲有趣** — boost=scene:self_time×1.0
+- `sb_184` **今日最佳** — moods=['warm']; ban=['dark']
+- `sb_186` **忙有度 闲有趣** — moods=['light']; ban=['dark']; boost=scene:self_time×1.0
 - `sb_187` **去有风的地方** — moods=['cool']; ban=['warm']; boost=weather:windy×2.0,scene:travel×1.2
-- `sb_188` **小满胜万全** — 
+- `sb_188` **小满胜万全** — moods=['light']; ban=['dark']
 - `sb_189` **恰逢好事** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_190` **你值得玫瑰** — moods=['warm']; ban=['dark']; family=['red', 'pink']; boost=festival:valentine×3.0
 - `sb_194` **被礼物包围** — moods=['warm']; ban=['dark']; boost=festival:christmas×4.0,festival:spring_festival×2.0
-- `sb_195` **慢下来看世界** — boost=scene:self_time×1.0
+- `sb_195` **慢下来看世界** — moods=['light']; ban=['dark']; boost=scene:self_time×1.0
 - `sb_197` **你亦是风景** — moods=['cool']; ban=['warm']; boost=weather:windy×2.0
 - `sb_198` **曙光在前** — moods=['warm', 'light']; ban=['dark']; boost=weather:clear×2.0
-- `sb_199` **新起点** — boost=scene:restart×1.2
-- `sb_200` **家是唯一城堡** — 
-- `sb_201` **手牵手** — boost=festival:valentine×2.0,scene:meeting_friend×1.2
-- `sb_205` **心缓自有答案** — boost=scene:after_setback×1.2
-- `sb_206` **前路漫漫亦灿灿** — boost=scene:travel×1.2
+- `sb_199` **新起点** — moods=['warm']; ban=['dark']; boost=scene:restart×1.2
+- `sb_200` **家是唯一城堡** — moods=['light']; ban=['dark']
+- `sb_201` **手牵手** — moods=['light']; ban=['dark']; boost=festival:valentine×2.0,scene:meeting_friend×1.2
+- `sb_205` **心缓自有答案** — moods=['light']; ban=['dark']; boost=scene:after_setback×1.2
+- `sb_206` **前路漫漫亦灿灿** — moods=['light']; ban=['dark']; boost=scene:travel×1.2
 - `sb_207` **好运挡不住** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
-- `sb_208` **无忧亦无惧** — 
-- `sb_209` **向前看** — 
-- `sb_210` **好心情正发芽** — 
+- `sb_208` **无忧亦无惧** — moods=['light']; ban=['dark']
+- `sb_209` **向前看** — moods=['warm']; ban=['dark']
+- `sb_210` **好心情正发芽** — moods=['light']; ban=['dark']
 - `sb_212` **注入满满元气** — moods=['warm']; ban=['dark']; boost=daypart:morning×0.8
 - `sb_213` **追光的人会发光** — moods=['warm', 'light']; ban=['dark']
-- `sb_214` **你自信又坦荡** — 
-- `sb_215` **人生无限可能** — 
-- `sb_216` **保持出发的心情** — boost=scene:travel×1.2
+- `sb_214` **你自信又坦荡** — moods=['warm']; ban=['dark']
+- `sb_215` **人生无限可能** — moods=['light']; ban=['dark']
+- `sb_216` **保持出发的心情** — moods=['warm']; ban=['dark']; boost=scene:travel×1.2
 - `sb_217` **美好不期而至** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
-- `sb_218` **心动不如行动** — boost=festival:valentine×2.0
+- `sb_218` **心动不如行动** — moods=['warm']; ban=['dark']; boost=festival:valentine×2.0
 - `sb_219` **自有明月照山河** — moods=['cool', 'dark']; ban=['warm']; boost=scene:travel×1.2
-- `sb_220` **将来胜过往** — 
-- `sb_221` **成为自己的宇宙** — 
+- `sb_220` **将来胜过往** — moods=['light']; ban=['dark']
+- `sb_221` **成为自己的宇宙** — moods=['warm']; ban=['dark']
 - `sb_222` **新一年多爱自己** — moods=['warm']; ban=['dark']; boost=scene:restart×1.2
-- `sb_227` **与万事言和** — boost=scene:after_setback×1.2
-- `sb_228` **执手天涯** — boost=festival:valentine×2.0,scene:travel×1.2,scene:meeting_friend×1.2
+- `sb_227` **与万事言和** — moods=['light']; ban=['dark']; boost=scene:after_setback×1.2
+- `sb_228` **执手天涯** — moods=['light']; ban=['dark']; boost=festival:valentine×2.0,scene:travel×1.2,scene:meeting_friend×1.2
 - `sb_236` **去疯去爱** — moods=['warm']; ban=['dark']
-- `sb_237` **有失有得** — 
+- `sb_237` **有失有得** — moods=['light']; ban=['dark']
 - `sb_238` **此刻纯真** — moods=['light']; ban=['dark']
-- `sb_239` **丢掉烦恼** — boost=scene:after_setback×1.2
-- `sb_240` **知足此刻** — 
-- `sb_241` **一起走吧** — boost=scene:meeting_friend×1.2
-- `sb_242` **勾勾手** — boost=festival:valentine×2.0,scene:meeting_friend×1.2
+- `sb_239` **丢掉烦恼** — moods=['light']; ban=['dark']; boost=scene:after_setback×1.2
+- `sb_240` **知足此刻** — moods=['light']; ban=['dark']
+- `sb_241` **一起走吧** — moods=['light']; ban=['dark']; boost=scene:meeting_friend×1.2
+- `sb_242` **勾勾手** — moods=['light']; ban=['dark']; boost=festival:valentine×2.0,scene:meeting_friend×1.2
 - `sb_243` **逆风飞翔** — moods=['cool']; ban=['warm']; boost=weather:windy×2.0
-- `sb_244` **抓住夏天** — 
-- `sb_245` **宜见面** — boost=scene:meeting_friend×1.2
-- `sb_246` **答案在路上** — boost=scene:travel×1.2
+- `sb_244` **抓住夏天** — moods=['light']; ban=['dark']
+- `sb_245` **宜见面** — moods=['light']; ban=['dark']; boost=scene:meeting_friend×1.2
+- `sb_246` **答案在路上** — moods=['light']; ban=['dark']; boost=scene:travel×1.2
 - `sb_247` **好消息加载中** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
-- `sb_248` **不追风时吹吹风** — moods=['cool']; boost=weather:windy×2.5,scene:self_time×1.2
+- `sb_248` **不追风时吹吹风** — moods=['cool']; ban=['warm']; boost=weather:windy×2.5,scene:self_time×1.2
 - `sb_249` **把快乐加满** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_250` **每天明媚媚** — moods=['warm', 'light']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5,daypart:morning×0.8
-- `sb_251` **允许一切发生** — boost=scene:after_setback×1.2
+- `sb_251` **允许一切发生** — moods=['light']; ban=['dark']; boost=scene:after_setback×1.2
 - `sb_252` **心愿得偿** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_254` **可爱第一名** — moods=['warm']; ban=['dark']
 - `sb_255` **桃气启新芳** — moods=['warm', 'light']; ban=['dark']; family=['pink']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_256` **家人健康** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_257` **新一年蓄力向上** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5,scene:restart×1.2
-- `sb_258` **向快乐出发** — boost=scene:travel×1.2,daypart:morning×0.8
+- `sb_258` **向快乐出发** — moods=['warm']; ban=['dark']; boost=scene:travel×1.2,daypart:morning×0.8
 - `sb_259` **咖啡自由** — moods=['cool']; ban=['warm']
 - `sb_260` **兔里兔气** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_261` **给你所有好运** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_262` **十全十美** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_263` **苹苹安安** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
-- `sb_264` **有梦可期** — 
-- `sb_265` **听从内心** — boost=scene:self_time×1.0
+- `sb_264` **有梦可期** — moods=['light']; ban=['dark']
+- `sb_265` **听从内心** — moods=['light']; ban=['dark']; boost=scene:self_time×1.0
 - `sb_266` **总有远方可奔赴** — moods=['cool']; ban=['warm']; boost=scene:travel×1.2
-- `sb_267` **眉目舒展** — boost=scene:after_setback×1.2
-- `sb_268` **随心随性** — 
-- `sb_269` **但行前路不辜负** — boost=scene:travel×1.2
-- `sb_270` **开心做自己** — 
-- `sb_271` **有动力，有方向** — 
-- `sb_272` **努力沉淀** — 
+- `sb_267` **眉目舒展** — moods=['light']; ban=['dark']; boost=scene:after_setback×1.2
+- `sb_268` **随心随性** — moods=['light']; ban=['dark']
+- `sb_269` **但行前路不辜负** — moods=['light']; ban=['dark']; boost=scene:travel×1.2
+- `sb_270` **开心做自己** — moods=['warm']; ban=['dark']
+- `sb_271` **有动力，有方向** — moods=['warm']; ban=['dark']
+- `sb_272` **努力沉淀** — moods=['warm']; ban=['dark']
 - `sb_273` **新年暴富** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_274` **美好正在路上** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5,scene:travel×1.2
 - `sb_275` **热爱经久不息** — moods=['warm']; ban=['dark']
-- `sb_276` **今天起 新开始** — boost=scene:restart×1.2,daypart:morning×0.8
+- `sb_276` **今天起 新开始** — moods=['warm']; ban=['dark']; boost=scene:restart×1.2,daypart:morning×0.8
 - `sb_277` **时光清浅** — moods=['light']; ban=['dark']
 - `sb_278` **明媚的日子奔来** — moods=['warm', 'light']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_279` **所愿皆成真** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
-- `sb_280` **逐梦可乘凉** — 
+- `sb_280` **逐梦可乘凉** — moods=['warm']; ban=['dark']
 - `sb_281` **云朵也自由** — moods=['cool']; ban=['warm']; boost=weather:clear×2.0
 - `sb_282` **远方自明朗** — moods=['cool', 'light']; ban=['dark', 'warm']; boost=weather:clear×2.0,scene:travel×1.2
-- `sb_286` **昂首前瞻** — 
-- `sb_287` **自然会相逢** — boost=scene:meeting_friend×1.2
-- `sb_288` **过滤烦恼** — boost=scene:after_setback×1.2
-- `sb_289` **保持好奇心** — 
+- `sb_286` **昂首前瞻** — moods=['warm']; ban=['dark']
+- `sb_287` **自然会相逢** — moods=['light']; ban=['dark']; boost=scene:meeting_friend×1.2
+- `sb_288` **过滤烦恼** — moods=['light']; ban=['dark']; boost=scene:after_setback×1.2
+- `sb_289` **保持好奇心** — moods=['light']; ban=['dark']
 - `sb_290` **风动心也动** — moods=['cool']; ban=['warm']; boost=weather:windy×2.0
 - `sb_291` **心情明媚** — moods=['warm', 'light']; ban=['dark']
-- `sb_292` **循梦而行** — 
+- `sb_292` **循梦而行** — moods=['warm']; ban=['dark']
 - `sb_293` **美好不期而遇** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_294` **万象更新** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_295` **无限好运** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
-- `sb_297` **值得记录** — boost=scene:self_time×1.0
-- `sb_299` **无所不达** — boost=scene:travel×1.2
-- `sb_300` **慢慢懂得** — boost=scene:self_time×1.0
-- `sb_302` **保持好奇** — 
-- `sb_304` **解锁新成就** — 
+- `sb_297` **值得记录** — moods=['light']; ban=['dark']; boost=scene:self_time×1.0
+- `sb_299` **无所不达** — moods=['light']; ban=['dark']; boost=scene:travel×1.2
+- `sb_300` **慢慢懂得** — moods=['light']; ban=['dark']; boost=scene:self_time×1.0
+- `sb_302` **保持好奇** — moods=['light']; ban=['dark']
+- `sb_304` **解锁新成就** — moods=['warm']; ban=['dark']
+- `sb_2001` **来杯冰美式** — moods=['cool']; ban=['warm']; boost=season:summer×2.5,temp:hot×2.0,daypart:afternoon×1.0
+- `sb_2002` **第一口冰咖啡最上头** — moods=['cool']; ban=['warm']; boost=season:summer×2.5,temp:hot×2.0,daypart:morning×0.8
+- `sb_2003` **空调和西瓜不能少** — moods=['cool']; ban=['warm']; boost=season:summer×2.5,temp:hot×2.0
+- `sb_2004` **今天又想吃冰的了** — moods=['cool']; ban=['warm']; boost=season:summer×2.5,temp:hot×2.0
+- `sb_2005` **傍晚的风总算凉了** — moods=['cool', 'light']; ban=['dark']; boost=season:summer×2.0,daypart:evening×1.2,weather:windy×1.5
+- `sb_2006` **楼下的青蛙好聒噪** — moods=['cool', 'dark']; ban=['warm']; boost=season:summer×2.0,daypart:late_night×1.0
+- `sb_2021` **妈妈包的粽子最好吃** — moods=['warm']; ban=['dark']; boost=festival:dragon_boat×4.0
+- `sb_2022` **甜粽还是咸粽你站哪边** — moods=['warm']; ban=['dark']; boost=festival:dragon_boat×4.0
+- `sb_2023` **月亮今晚好像特别圆** — moods=['light', 'dark']; ban=['warm']; boost=festival:mid_autumn×4.0,daypart:evening×1.0
+- `sb_2035` **一年已经过半了** — moods=['cool']; ban=['warm']; boost=month:6×1.5
+- `sb_2041` **下雨天最适合赖床** — moods=['cool', 'light']; ban=['warm']; boost=weather:rain×3.0,scene:rainy_day×1.5
