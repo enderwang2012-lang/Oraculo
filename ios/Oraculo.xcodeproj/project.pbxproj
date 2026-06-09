@@ -18,6 +18,7 @@
 		16BAD90FAF898203EF60A279 /* OraculoTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B382505ECE55478D085DFEC0 /* OraculoTypography.swift */; };
 		18D2EC0865878B3B58E2A704 /* PhrasePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B994708A0A24C4ABDFE9E8 /* PhrasePicker.swift */; };
 		1EC1265B4FA0254AF0FFEDCD /* DailyOracle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EE75B9B90AB6BCFF5E4178 /* DailyOracle.swift */; };
+		21C7B007417819D0535E9DE5 /* PhraseColorHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ACCA7AC9831E4C61B7C66 /* PhraseColorHint.swift */; };
 		265469DAC66B6FD66342DE7D /* OraculoWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BCEA231A7BD4F5C018F4E4D1 /* OraculoWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2B2F5BADB2645C5017FA26AA /* festivals_cn.json in Resources */ = {isa = PBXBuildFile; fileRef = B41564B202FE518F7C9EAD4A /* festivals_cn.json */; };
 		2E344E081CC360C436D5F21F /* nippon_colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 286579DA06CDDDB0EA595726 /* nippon_colors.json */; };
@@ -81,6 +82,7 @@
 		D00E5A34B948A34D7F48127D /* PhraseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E4376D90FA89DAFD1F308 /* PhraseStore.swift */; };
 		D08852C3B071DC4299DCF175 /* DeviceShakeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006ADC8E20245A4F1C581F76 /* DeviceShakeDetector.swift */; };
 		D27302CA437B9713D7210009 /* PhraseDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D508FD3905C869704EF26C /* PhraseDispatch.swift */; };
+		D29747CB825A6BF49C0D2AC9 /* PhraseColorHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ACCA7AC9831E4C61B7C66 /* PhraseColorHint.swift */; };
 		D543C9BCBB2454882964D461 /* OpenMeteoWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED17C48AE89C1CBF7EC71F70 /* OpenMeteoWeatherService.swift */; };
 		D73ADEBF31F3D27976123305 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B0A74825F2A74887D314D /* AppConstants.swift */; };
 		D9DB462303C893A4E74CCB30 /* PhrasePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B994708A0A24C4ABDFE9E8 /* PhrasePicker.swift */; };
@@ -129,6 +131,7 @@
 		0EFD33117543DA3B1E2A5A14 /* OraculoWidgetMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OraculoWidgetMark.swift; sourceTree = "<group>"; };
 		16A31BFEE1A3EFB86616C5FA /* GeoCoordinateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCoordinateMapper.swift; sourceTree = "<group>"; };
 		1B9B0A74825F2A74887D314D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		214ACCA7AC9831E4C61B7C66 /* PhraseColorHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseColorHint.swift; sourceTree = "<group>"; };
 		257B38E6910C176109E3CB8E /* Phrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrase.swift; sourceTree = "<group>"; };
 		27BEF157B8DA40B058D726F5 /* LocationContextCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationContextCache.swift; sourceTree = "<group>"; };
 		286579DA06CDDDB0EA595726 /* nippon_colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nippon_colors.json; sourceTree = "<group>"; };
@@ -289,6 +292,7 @@
 				AB998C2D17A79F85625CB06C /* OracleMoment.swift */,
 				B382505ECE55478D085DFEC0 /* OraculoTypography.swift */,
 				257B38E6910C176109E3CB8E /* Phrase.swift */,
+				214ACCA7AC9831E4C61B7C66 /* PhraseColorHint.swift */,
 				A3D508FD3905C869704EF26C /* PhraseDispatch.swift */,
 				DE012B503C227516BADBBB59 /* PhraseDispatchScorer.swift */,
 				62B994708A0A24C4ABDFE9E8 /* PhrasePicker.swift */,
@@ -440,6 +444,7 @@
 				92371AAB0A281600C4DB3F0B /* OraculoWidgetBundle.swift in Sources */,
 				C2D4850D8D67AFCF804FFE3E /* OraculoWidgetMark.swift in Sources */,
 				A8434984152A76763F211316 /* Phrase.swift in Sources */,
+				21C7B007417819D0535E9DE5 /* PhraseColorHint.swift in Sources */,
 				C551D7E179C84C36A62815AE /* PhraseDispatch.swift in Sources */,
 				16B4D2EC4E531A44E6F970BB /* PhraseDispatchScorer.swift in Sources */,
 				D9DB462303C893A4E74CCB30 /* PhrasePicker.swift in Sources */,
@@ -487,6 +492,7 @@
 				16BAD90FAF898203EF60A279 /* OraculoTypography.swift in Sources */,
 				B1D05D05A52B5E42D20AA63E /* Phrase.swift in Sources */,
 				43F07C5924CAAF39726C6122 /* PhraseAppearSweep.swift in Sources */,
+				D29747CB825A6BF49C0D2AC9 /* PhraseColorHint.swift in Sources */,
 				D27302CA437B9713D7210009 /* PhraseDispatch.swift in Sources */,
 				8ADFD20824530039E31AD1A6 /* PhraseDispatchScorer.swift in Sources */,
 				18D2EC0865878B3B58E2A704 /* PhrasePicker.swift in Sources */,

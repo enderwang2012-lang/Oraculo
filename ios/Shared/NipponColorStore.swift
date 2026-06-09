@@ -90,7 +90,7 @@ enum ColorMoodPicker {
     ) -> NipponColor {
         let moods = Set(dispatch?.colorMoods ?? [])
         let families = Set(dispatch?.colorFamilies ?? [])
-        let ctx = contextTags ?? []
+        let ctx = contextTags ?? Set<String>()
         if moods.isEmpty && families.isEmpty && ctx.isEmpty {
             // 无情绪偏好、无色族偏好、无情境信息：均匀切片，与原行为一致。
             let index = PhraseStore.stableIndex(for: seed, count: pool.count)

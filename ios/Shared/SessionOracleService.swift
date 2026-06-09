@@ -76,7 +76,7 @@ struct SessionOracleService {
         // 偏好池 = 命中句情绪 ∪ 句色族 ∪ 当日情境的色（摇一摇也要尊重情绪倾向 + 应景）。
         let moodSet = Set(colorDispatch?.colorMoods ?? [])
         let familySet = Set(colorDispatch?.colorFamilies ?? [])
-        let ctxTags = context?.activeTags ?? []
+        let ctxTags = context?.activeTags ?? Set<String>()
         if !moodSet.isEmpty || !familySet.isEmpty || !ctxTags.isEmpty {
             let preferred = final.filter { c in
                 (!moodSet.isEmpty && c.moods.contains(where: { moodSet.contains($0) }))

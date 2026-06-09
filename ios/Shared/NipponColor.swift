@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct NipponColor: Codable, Identifiable, Hashable {
+struct NipponColor: Decodable, Identifiable, Hashable {
     let id: String
     let name: String
     let cname: String
