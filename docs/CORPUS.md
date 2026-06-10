@@ -1,5 +1,31 @@
 # Oraculo 语料（第一版）
 
+## 快速更新流程
+
+常规协作方式：用户提供候选语料，助手负责候选池、入库、打标、校验、重建和同步产物。
+
+候选池：
+
+- 文件：`review/corpus_candidates.csv`
+- 字段：`phrase, theme_hint, source_type, source_note, status, rewrite_note`
+- `status`：`candidate` / `accepted` / `rejected` / `needs_rewrite` / `promoted`
+- 候选池不进 App，只有 `accepted` 被提升后才入库。
+
+手动命令（需要时）：
+
+```bash
+python3 scripts/promote_corpus_candidates.py
+python3 scripts/rebuild_corpus.py --publish --bump
+python3 scripts/validate_corpus.py
+```
+
+语料约束：
+
+- 入库源仍然只有 `starbucks_now_passphrases.csv`。
+- 情绪/场景标签只做分类展示或软加权，不做硬条件。
+- `onlyWhen` 只放可靠上下文：季节、节日、天气、温度、月份、节气、星期、时段。
+- 发布热更新时需要递增 `config/corpus_version.txt`；`rebuild_corpus.py --bump` 会自动处理。
+
 ## 数据源
 
 App 内置句库**仅**来自收集的真实啡快口令：

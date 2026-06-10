@@ -40,6 +40,8 @@ final class OracleSessionModel: ObservableObject {
 
     private var resumeRefreshTask: Task<Void, Never>?
 
+    private var chargeRefreshTask: Task<Void, Never>?
+
 
 
     init() {
@@ -51,6 +53,8 @@ final class OracleSessionModel: ObservableObject {
         momentShownAt = Date()
 
         baseColor = baseline.nipponColor
+
+        dailyOracle.syncDisplayedMoment(baseline)
 
     }
 
@@ -107,11 +111,27 @@ final class OracleSessionModel: ObservableObject {
 
 
 
-    /// 摇一摇：与再次进入前台相同的全套 crossfade（需已完成首屏呈现）。
+    /// 长按蓄力：与再次进入前台相同的全套 crossfade（需已完成首屏呈现）。
 
-    func refreshOnShake() {
+    func refreshOnCharge() {
         cancelPendingResumeRefresh()
-        guard !isTransitioning else { return }
+        chargeRefreshTask?.cancel()
+
+        if isTransitioning {
+            chargeRefreshTask = Task { @MainActor in
+                while isTransitioning, !Task.isCancelled {
+                    try? await Task.sleep(nanoseconds: 50_000_000)
+                }
+                guard !Task.isCancelled else { return }
+                performChargeRefresh()
+            }
+            return
+        }
+
+        performChargeRefresh()
+    }
+
+    private func performChargeRefresh() {
         guard let next = drawDistinctMoment() else { return }
         if !hasPresentedOnce {
             hasPresentedOnce = true

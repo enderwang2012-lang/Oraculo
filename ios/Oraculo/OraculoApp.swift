@@ -11,7 +11,7 @@ struct OraculoApp: App {
         let colors = NipponColorStore.shared.colorCount
         print("[Oraculo] bundled phrases=\(phrases), colors=\(colors)")
         if phrases <= 1 || colors <= 1 {
-            print("[Oraculo] WARNING: corpus missing from bundle — shake will not change content. Clean build after xcodegen.")
+            print("[Oraculo] WARNING: corpus missing from bundle — long-press refresh will not change content. Clean build after xcodegen.")
         }
         #endif
     }
@@ -27,6 +27,7 @@ struct OraculoApp: App {
                 if oldPhase == .background {
                     session.refreshOnResumeFromBackground()
                 }
+                session.syncWidgetDisplay()
                 Task { @MainActor in
                     #if !APPLICATION_EXTENSION_API_ONLY
                     LocationContextProvider.shared.refreshIfNeeded()

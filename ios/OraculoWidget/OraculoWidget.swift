@@ -11,39 +11,42 @@ struct PhraseEntry: TimelineEntry {
 }
 
 struct PhraseTimelineProvider: TimelineProvider {
+    /// 预生成未来若干天的 0 点 entry，降低 WidgetKit budget 耗尽后长期卡在旧句的概率。
+    private static let futureMidnightEntryCount = 13
+
     func placeholder(in context: Context) -> PhraseEntry {
         sampleEntry()
     }
 
     func getSnapshot(in context: Context, completion: @escaping (PhraseEntry) -> Void) {
+        PhraseStore.shared.reloadFromDisk()
         completion(makeEntry(for: Date()))
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<PhraseEntry>) -> Void) {
-        let now = Date()
-        let cal = Calendar.current
-        let m1 = nextMidnight(after: now)
-        // Calendar.byAdding 处理 DST 切换；不要用 +86400 秒。
-        let m2 = cal.date(byAdding: .day, value: 1, to: m1) ?? m1.addingTimeInterval(60 * 60 * 24)
+        PhraseStore.shared.reloadFromDisk()
 
-        // 多 entry：今天 + 明日 0 点 + 后日 0 点。
-        // 即使系统降级了刷新 budget，也至少能一路展示到第三天的 0 点，避免长时间停在过时一句。
-        let entries = [
-            makeEntry(for: now, persistTodaySharedDefaults: true),
-            makeEntry(for: m1, persistTodaySharedDefaults: false),
-            makeEntry(for: m2, persistTodaySharedDefaults: false),
-        ]
-        completion(Timeline(entries: entries, policy: .after(m2)))
+        let now = Date()
+        var entries: [PhraseEntry] = [makeEntry(for: now)]
+        var cursor = now
+
+        for _ in 0 ..< Self.futureMidnightEntryCount {
+            let midnight = nextMidnight(after: cursor)
+            entries.append(makeEntry(for: midnight))
+            cursor = midnight
+        }
+
+        let reloadAfter = nextMidnight(after: cursor)
+        completion(Timeline(entries: entries, policy: .after(reloadAfter)))
     }
 
-    private func makeEntry(for date: Date, persistTodaySharedDefaults: Bool = true) -> PhraseEntry {
+    private func makeEntry(for date: Date) -> PhraseEntry {
         let dayKey = PhraseStore.dayKey(for: date)
         let dailyOracle = DailyOracleService()
-
-        // 主 App 打开/摇一摇后会写入 App Group；今日 entry 优先与主屏同步。
         let isToday = dayKey == PhraseStore.dayKey(for: Date())
-        if (persistTodaySharedDefaults || isToday),
-           let snapshot = dailyOracle.loadDisplayedSnapshot(for: date) {
+
+        // 仅「今天」读 App Group；未来 entry 一律按日种子推算，避免旧 sync 污染。
+        if isToday, let snapshot = dailyOracle.loadDisplayedSnapshot(for: date) {
             return PhraseEntry(
                 date: date,
                 phraseText: snapshot.phraseText,
@@ -55,8 +58,6 @@ struct PhraseTimelineProvider: TimelineProvider {
         }
 
         let colors = NipponColorStore.loadColors(from: .main)
-
-        // 用户今日尚未打开 App：按情境推算今日一句（与旧逻辑一致）。
         let phrase = PhraseStore.shared.contextualPhrase(for: date)
         let colorSeed = "\(dayKey)|color|\(InstallID.value)"
         let nippon: NipponColor

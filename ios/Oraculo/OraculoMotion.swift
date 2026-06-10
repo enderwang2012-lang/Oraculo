@@ -87,6 +87,73 @@ enum OraculoMotion {
         .easeIn(duration: duration * clockDigitDepartFadeRatio)
     }
 
+    // MARK: - 长按蓄力换句
+
+    /// LOGO 长按蓄满时长（光晕外扩与透明度同步进度）
+    static let chargeDuration: TimeInterval = 2.0
+
+    static let chargeOpacityMin: Double = 0.24
+    static let chargeOpacityMax: Double = 0.40
+
+    /// 点按 / 蓄力起点缩放；满蓄为 chargeScaleMax
+    static let chargeScaleMin: CGFloat = 1.05
+    static let chargeScaleMax: CGFloat = 1.2
+
+    static var chargePressAnimation: Animation {
+        .easeInOut(duration: 0.22)
+    }
+
+    static var chargeProgressAnimation: Animation {
+        .easeInOut(duration: 0.22)
+    }
+
+    /// 蓄力完成：涟漪外扩（与成功震动同步）
+    static let chargeRippleDuration: TimeInterval = 0.72
+
+    static var chargeRippleAnimation: Animation {
+        .timingCurve(0.16, 0.84, 0.24, 1, duration: chargeRippleDuration)
+    }
+
+    /// 满蓄涟漪进行到该比例时即开始渐暗（避免峰值停驻）
+    static let chargeRippleSettleOverlap: Double = 0.28
+
+    /// 消逝段：LOGO 渐暗缩小、光晕化开
+    static let chargeSettleDuration: TimeInterval = 2.0
+
+    static var chargeReleaseAnimation: Animation {
+        chargeReleaseAnimation(duration: chargeSettleDuration)
+    }
+
+    /// 提前松手时按当前蓄力比例缩短消逝时长
+    static func chargeSettleDuration(for glow: CGFloat) -> TimeInterval {
+        max(0.4, chargeSettleDuration * Double(min(max(glow, 0), 1)))
+    }
+
+    /// 消逝缓动：先快后慢（ease-out）
+    static func chargeReleaseAnimation(duration: TimeInterval) -> Animation {
+        .timingCurve(0, 0, 0.22, 1, duration: duration)
+    }
+
+    // MARK: - LOGO 静息呼吸
+
+    /// 与 `BreathingBottomGlow` 同节奏：吸短呼长
+    static let markIdleBreathPeriod: TimeInterval = 5.2
+    static let markIdleBreathInhaleFraction: Double = 0.38
+    static let markIdleOpacityMin: Double = 0.10
+    static let markIdleOpacityMax: Double = 0.15
+
+    /// 0…1，吸短呼长的平滑起伏
+    static func markBreathingStrength(at date: Date) -> Double {
+        let t = date.timeIntervalSince1970
+            .truncatingRemainder(dividingBy: markIdleBreathPeriod) / markIdleBreathPeriod
+        if t < markIdleBreathInhaleFraction {
+            let u = t / markIdleBreathInhaleFraction
+            return 0.5 - 0.5 * cos(.pi * u)
+        }
+        let u = (t - markIdleBreathInhaleFraction) / (1 - markIdleBreathInhaleFraction)
+        return 0.5 + 0.5 * cos(.pi * u)
+    }
+
     // MARK: - 底部呼吸光（`BreathingBottomGlow`）
 
     /// 静息呼吸周期；吸约占 38%，呼更长

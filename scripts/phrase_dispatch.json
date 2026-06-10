@@ -341,7 +341,12 @@
   "sb_91": {
     "universal": true,
     "onlyWhen": [],
-    "boost": []
+    "boost": [
+      {
+        "tag": "theme:ip",
+        "weight": 1.5
+      }
+    ]
   },
   "sb_93": {
     "universal": true,
@@ -1378,6 +1383,11 @@
     "onlyWhen": [
       "weather:rain"
     ],
+    "boost": []
+  },
+  "sb_2042": {
+    "universal": true,
+    "onlyWhen": [],
     "boost": []
   }
 }

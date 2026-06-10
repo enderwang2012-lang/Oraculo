@@ -280,6 +280,7 @@ OVERRIDES: dict[str, dict] = {
     "sb_2023": {"colorMoods": ["light", "dark"], "colorBan": ["warm"], "boostAdd": [{"tag": "festival:mid_autumn", "weight": 4.0}, {"tag": "daypart:evening", "weight": 1.0}], "_meta": {"emotion": "luck_blessing", "tone": "calm", "scene": ["festival"]}},
     "sb_2035": {"colorMoods": ["cool"], "colorBan": ["warm"], "boostAdd": [{"tag": "month:6", "weight": 1.5}], "_meta": {"emotion": "quiet_mirror", "tone": "calm"}},
     "sb_2041": {"colorMoods": ["cool", "light"], "colorBan": ["warm"], "boostAdd": [{"tag": "weather:rain", "weight": 3.0}, {"tag": "scene:rainy_day", "weight": 1.5}], "_meta": {"emotion": "daily_romance", "tone": "calm", "scene": ["rainy_day"]}},
+    "sb_2042": {"colorMoods": ["cool", "dark"], "colorBan": ["warm"], "boostAdd": [{"tag": "scene:decision_wait", "weight": 1.5}, {"tag": "scene:travel", "weight": 1.0}], "_meta": {"emotion": "lyric_image", "tone": "calm", "scene": ["decision_wait", "travel"]}},
     "sb_20": {  # 蔚蓝海面
         "colorMoods": ["cool"], "colorBan": ["warm"], "colorFamilies": ["blue"],
         "boostAdd": [{"tag": "season:summer", "weight": 2.0}, {"tag": "weather:clear", "weight": 1.5}, {"tag": "scene:travel", "weight": 1.2}],

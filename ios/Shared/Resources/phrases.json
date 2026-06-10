@@ -1333,6 +1333,10 @@
       "onlyWhen": [],
       "boost": [
         {
+          "tag": "theme:ip",
+          "weight": 1.5
+        },
+        {
           "tag": "scene:travel",
           "weight": 1.2
         }
@@ -5362,6 +5366,34 @@
       "colorMoods": [
         "cool",
         "light"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    }
+  },
+  {
+    "id": "sb_2042",
+    "text": "站在能分割世界的桥",
+    "textEn": "Standing on a bridge that divides the world",
+    "layer": "active",
+    "emotionTheme": "lyric_image",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:decision_wait",
+          "weight": 1.5
+        },
+        {
+          "tag": "scene:travel",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "dark"
       ],
       "colorBan": [
         "warm"

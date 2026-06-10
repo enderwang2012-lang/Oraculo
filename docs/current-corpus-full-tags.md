@@ -62,7 +62,7 @@
 | sb_80 | 五月被期待填满 | May, full of hope | 月份希望 | soft_hope | active | soft_hope | tender | season_change | False | month:5 | month:5:2.0 |  | light | dark |  |
 | sb_81 | 厉害了爹地们 | Dads on fire | 称呼玩梗 | playful_meme | active | playful_meme | playful |  | True |  |  |  | warm | dark |  |
 | sb_83 | 悄悄惊艳大家 | Quietly dazzling all | 学习鼓励 | gentle_departure | active | gentle_departure | warm |  | True |  |  |  | warm | dark |  |
-| sb_91 | 自由是终极魔法 | Freedom, final magic | 哈利波特联名 | ip_collab | anchor | ip_collab | playful | travel | True |  | scene:travel:1.2 |  | cool | warm |  |
+| sb_91 | 自由是终极魔法 | Freedom, final magic | 哈利波特联名 | ip_collab | anchor | ip_collab | playful | travel | True |  | theme:ip:1.5<br>scene:travel:1.2 |  | cool | warm |  |
 | sb_93 | 向上生长 | Grow upward | 成长鼓励 | gentle_departure | active | gentle_departure | warm | restart | True |  | scene:restart:1.2 |  | warm<br>light | dark |  |
 | sb_94 | 今天的你赞赞赞 | Triple thumbs-up today | 夸赞鼓励 | self_affirmation | anchor | self_affirmation | bright |  | True |  |  |  | light | dark |  |
 | sb_95 | 万事皆合时宜 | All in season | 顺遂祝福 | soft_hope | anchor | soft_hope | bright | festival | True |  | festival:spring_festival:2.0<br>festival:new_year:1.5 |  | warm | dark |  |
@@ -234,3 +234,4 @@
 | sb_2023 | 月亮今晚好像特别圆 | Moon looks extra full tonight | 节日祝福 | luck_blessing | active | luck_blessing | calm | festival | False | festival:mid_autumn | festival:mid_autumn:4.0<br>daypart:evening:1.0 |  | light<br>dark | warm |  |
 | sb_2035 | 一年已经过半了 | Half the year already gone | 人生感怀 | quiet_mirror | active | quiet_mirror | calm |  | False | month:6 | month:6:1.5 |  | cool | warm |  |
 | sb_2041 | 下雨天最适合赖床 | Rainy days are made for sleeping in | 季节画面 | daily_romance | active | daily_romance | calm | rainy_day | False | weather:rain | weather:rain:3.0<br>scene:rainy_day:1.5 |  | cool<br>light | warm |  |
+| sb_2042 | 站在能分割世界的桥 | Standing on a bridge that divides the world | 诗性意象 | lyric_image | active | lyric_image | calm | decision_wait<br>travel | True |  | scene:decision_wait:1.5<br>scene:travel:1.0 |  | cool<br>dark | warm |  |

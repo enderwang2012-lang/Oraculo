@@ -12,10 +12,12 @@
 		08A69834B5941F6919A115FB /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B0A74825F2A74887D314D /* AppConstants.swift */; };
 		08BF02F4471FF4F83878601E /* WidgetTimelineRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09130B1C42D545939354180A /* WidgetTimelineRefresher.swift */; };
 		10D6174DC814D900948ACBE3 /* NipponColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84A3B3FB7271A3CF71CC13 /* NipponColor.swift */; };
+		1116AFDAC5BFF2B9995FDF6F /* OraculoMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447E353154737128DF286775 /* OraculoMark.swift */; };
 		1294E1136911CC829352CA09 /* DailyOracle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EE75B9B90AB6BCFF5E4178 /* DailyOracle.swift */; };
 		13C6D965936479CA23F6572D /* BreathingBottomGlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE6A3D57D031312F58A0004 /* BreathingBottomGlow.swift */; };
 		16B4D2EC4E531A44E6F970BB /* PhraseDispatchScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE012B503C227516BADBBB59 /* PhraseDispatchScorer.swift */; };
 		16BAD90FAF898203EF60A279 /* OraculoTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B382505ECE55478D085DFEC0 /* OraculoTypography.swift */; };
+		16F98EC02AF07A69090C9326 /* OraculoChargeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D472C8C8293C8B40CA78048 /* OraculoChargeGesture.swift */; };
 		18D2EC0865878B3B58E2A704 /* PhrasePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B994708A0A24C4ABDFE9E8 /* PhrasePicker.swift */; };
 		1EC1265B4FA0254AF0FFEDCD /* DailyOracle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EE75B9B90AB6BCFF5E4178 /* DailyOracle.swift */; };
 		21C7B007417819D0535E9DE5 /* PhraseColorHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ACCA7AC9831E4C61B7C66 /* PhraseColorHint.swift */; };
@@ -37,6 +39,7 @@
 		5612512048C6BCAB9C2289A4 /* LocationContextCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEF157B8DA40B058D726F5 /* LocationContextCache.swift */; };
 		5670EF0B4BEC189AABE854B8 /* GeoCoordinateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A31BFEE1A3EFB86616C5FA /* GeoCoordinateMapper.swift */; };
 		5AA045126FDAB84D166454E4 /* CorpusBundledMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BBBE77C4008147393A3F63 /* CorpusBundledMeta.swift */; };
+		5D238DA9106F7AA361835970 /* OraculoHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B802ABB90B875F120C6B7A /* OraculoHaptics.swift */; };
 		611CAEBB296395313279193F /* InstallID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57226918A5A06E7EC7A7F67C /* InstallID.swift */; };
 		662126D39FD5EC5EC57412C1 /* WidgetTimelineRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09130B1C42D545939354180A /* WidgetTimelineRefresher.swift */; };
 		67FD9301E551AA4E30DAA3CD /* SessionOracleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56420C1766EA2738BE6139F7 /* SessionOracleService.swift */; };
@@ -76,11 +79,11 @@
 		C551D7E179C84C36A62815AE /* PhraseDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D508FD3905C869704EF26C /* PhraseDispatch.swift */; };
 		C756AC48988EA0D4D98EE972 /* LocationContextCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEF157B8DA40B058D726F5 /* LocationContextCache.swift */; };
 		C899FC7F1559B8CAB7CE5B70 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEFB39176A27404DF245AC1 /* WidgetKit.framework */; };
+		C99D4E7855134A4C7F99DD73 /* OraculoChargeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852F48C9C1B916627CF7EF0 /* OraculoChargeController.swift */; };
 		CBE2BE7AD1EF4482DBD5A119 /* phrases.json in Resources */ = {isa = PBXBuildFile; fileRef = 58AB6282009775871274E6ED /* phrases.json */; };
 		CDE49B83CE2DA084D2C2BB04 /* CorpusRemoteUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33D730302EEF8B691F14CA /* CorpusRemoteUpdateService.swift */; };
 		CFD08DA53785B8922BA3E38E /* OracleMoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB998C2D17A79F85625CB06C /* OracleMoment.swift */; };
 		D00E5A34B948A34D7F48127D /* PhraseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95E4376D90FA89DAFD1F308 /* PhraseStore.swift */; };
-		D08852C3B071DC4299DCF175 /* DeviceShakeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006ADC8E20245A4F1C581F76 /* DeviceShakeDetector.swift */; };
 		D27302CA437B9713D7210009 /* PhraseDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D508FD3905C869704EF26C /* PhraseDispatch.swift */; };
 		D29747CB825A6BF49C0D2AC9 /* PhraseColorHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214ACCA7AC9831E4C61B7C66 /* PhraseColorHint.swift */; };
 		D543C9BCBB2454882964D461 /* OpenMeteoWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED17C48AE89C1CBF7EC71F70 /* OpenMeteoWeatherService.swift */; };
@@ -88,6 +91,7 @@
 		D9DB462303C893A4E74CCB30 /* PhrasePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B994708A0A24C4ABDFE9E8 /* PhrasePicker.swift */; };
 		DA15579FCF315DB687F93140 /* ContextSnapshotBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D3DB5407851B6455ED830 /* ContextSnapshotBuilder.swift */; };
 		E0BE3D27373671A756FF52B7 /* CorpusRemoteUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33D730302EEF8B691F14CA /* CorpusRemoteUpdateService.swift */; };
+		E21C8A753BE32E06CDD30E7E /* OraculoChargeMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A6BFB864146DB850158B5 /* OraculoChargeMark.swift */; };
 		E44B61B552F34C0CC31E8B62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F02574FAE26ECC147F64675 /* Assets.xcassets */; };
 		E49CEEE1D6B447962EB99815 /* corpus_bundled_meta.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B4D3BE4D5F2FBB972E0E156 /* corpus_bundled_meta.json */; };
 		E7852CC1FA72E21E896827FB /* OraculoTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B382505ECE55478D085DFEC0 /* OraculoTypography.swift */; };
@@ -124,13 +128,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		006ADC8E20245A4F1C581F76 /* DeviceShakeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceShakeDetector.swift; sourceTree = "<group>"; };
 		09130B1C42D545939354180A /* WidgetTimelineRefresher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTimelineRefresher.swift; sourceTree = "<group>"; };
 		0B4D3BE4D5F2FBB972E0E156 /* corpus_bundled_meta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = corpus_bundled_meta.json; sourceTree = "<group>"; };
 		0E354E68A3A649C3656352B5 /* DailyPhraseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPhraseService.swift; sourceTree = "<group>"; };
 		0EFD33117543DA3B1E2A5A14 /* OraculoWidgetMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OraculoWidgetMark.swift; sourceTree = "<group>"; };
 		16A31BFEE1A3EFB86616C5FA /* GeoCoordinateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCoordinateMapper.swift; sourceTree = "<group>"; };
+		1852F48C9C1B916627CF7EF0 /* OraculoChargeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OraculoChargeController.swift; sourceTree = "<group>"; };
 		1B9B0A74825F2A74887D314D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		1F2A6BFB864146DB850158B5 /* OraculoChargeMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OraculoChargeMark.swift; sourceTree = "<group>"; };
 		214ACCA7AC9831E4C61B7C66 /* PhraseColorHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseColorHint.swift; sourceTree = "<group>"; };
 		257B38E6910C176109E3CB8E /* Phrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrase.swift; sourceTree = "<group>"; };
 		27BEF157B8DA40B058D726F5 /* LocationContextCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationContextCache.swift; sourceTree = "<group>"; };
@@ -140,12 +145,14 @@
 		2FE4DF5D6491B8052C1073B3 /* ContextSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextSnapshot.swift; sourceTree = "<group>"; };
 		37BCC488CCE2C8CA22F7FE11 /* OraculoWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OraculoWidget.entitlements; sourceTree = "<group>"; };
 		3D47155F29CF4A831AC339DD /* PhraseWidgetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseWidgetViews.swift; sourceTree = "<group>"; };
+		447E353154737128DF286775 /* OraculoMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OraculoMark.swift; sourceTree = "<group>"; };
 		4BE6A3D57D031312F58A0004 /* BreathingBottomGlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingBottomGlow.swift; sourceTree = "<group>"; };
 		4F0AECD19F25E5AAEBD8F60F /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		56420C1766EA2738BE6139F7 /* SessionOracleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionOracleService.swift; sourceTree = "<group>"; };
 		57226918A5A06E7EC7A7F67C /* InstallID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallID.swift; sourceTree = "<group>"; };
 		57727F6477BCC955651A37FD /* ClockVerticalSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockVerticalSlide.swift; sourceTree = "<group>"; };
 		58AB6282009775871274E6ED /* phrases.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = phrases.json; sourceTree = "<group>"; };
+		5D472C8C8293C8B40CA78048 /* OraculoChargeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OraculoChargeGesture.swift; sourceTree = "<group>"; };
 		62B994708A0A24C4ABDFE9E8 /* PhrasePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasePicker.swift; sourceTree = "<group>"; };
 		67BE81D03B4E3717E2FCDF00 /* GeoContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoContext.swift; sourceTree = "<group>"; };
 		68B3EC9AF6A99A30E37A42D4 /* FestivalCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalCalendar.swift; sourceTree = "<group>"; };
@@ -157,6 +164,7 @@
 		782B8DAD71FE97914E788978 /* solar_terms_cn.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = solar_terms_cn.json; sourceTree = "<group>"; };
 		798C1365A10E743DEFE7D69C /* NipponCrossfadeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NipponCrossfadeBackground.swift; sourceTree = "<group>"; };
 		7A91D1C93FD2EA1E5403F92B /* NipponAmbienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NipponAmbienceView.swift; sourceTree = "<group>"; };
+		93B802ABB90B875F120C6B7A /* OraculoHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OraculoHaptics.swift; sourceTree = "<group>"; };
 		992B199119608953BFB47C6A /* LiveClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveClockView.swift; sourceTree = "<group>"; };
 		9BB796BF371257D36B81A6F8 /* OracleSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OracleSessionModel.swift; sourceTree = "<group>"; };
 		9F02574FAE26ECC147F64675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -243,11 +251,15 @@
 				A6B87D5C43ED8CAC68216329 /* Assets.xcassets */,
 				57727F6477BCC955651A37FD /* ClockVerticalSlide.swift */,
 				EF1640B3900A9F41606E2783 /* ContentView.swift */,
-				006ADC8E20245A4F1C581F76 /* DeviceShakeDetector.swift */,
 				992B199119608953BFB47C6A /* LiveClockView.swift */,
 				9BB796BF371257D36B81A6F8 /* OracleSessionModel.swift */,
 				D22053C97EA0AAF889CB705B /* Oraculo.entitlements */,
 				6DA6821FDD729C4BE307075F /* OraculoApp.swift */,
+				1852F48C9C1B916627CF7EF0 /* OraculoChargeController.swift */,
+				5D472C8C8293C8B40CA78048 /* OraculoChargeGesture.swift */,
+				1F2A6BFB864146DB850158B5 /* OraculoChargeMark.swift */,
+				93B802ABB90B875F120C6B7A /* OraculoHaptics.swift */,
+				447E353154737128DF286775 /* OraculoMark.swift */,
 				7569E583A1F18B88C36601B1 /* OraculoMotion.swift */,
 				CECCFA4F82399E71D4D25702 /* PhraseAppearSweep.swift */,
 			);
@@ -472,7 +484,6 @@
 				E0BE3D27373671A756FF52B7 /* CorpusRemoteUpdateService.swift in Sources */,
 				1EC1265B4FA0254AF0FFEDCD /* DailyOracle.swift in Sources */,
 				37AEA475FB7096F371B2A863 /* DailyPhraseService.swift in Sources */,
-				D08852C3B071DC4299DCF175 /* DeviceShakeDetector.swift in Sources */,
 				B3B3471155B47F77C785CB92 /* FestivalCalendar.swift in Sources */,
 				782E2F468A9946B8BA2F40FE /* GeoContext.swift in Sources */,
 				5670EF0B4BEC189AABE854B8 /* GeoCoordinateMapper.swift in Sources */,
@@ -488,6 +499,11 @@
 				C548B7DF47C09D1BA95C1E82 /* OracleMoment.swift in Sources */,
 				ECB30685DE62DF9B2EA5B58B /* OracleSessionModel.swift in Sources */,
 				C5027215F9B8ACED09D33457 /* OraculoApp.swift in Sources */,
+				C99D4E7855134A4C7F99DD73 /* OraculoChargeController.swift in Sources */,
+				16F98EC02AF07A69090C9326 /* OraculoChargeGesture.swift in Sources */,
+				E21C8A753BE32E06CDD30E7E /* OraculoChargeMark.swift in Sources */,
+				5D238DA9106F7AA361835970 /* OraculoHaptics.swift in Sources */,
+				1116AFDAC5BFF2B9995FDF6F /* OraculoMark.swift in Sources */,
 				B182F3AFC81E6D1CC2E09B52 /* OraculoMotion.swift in Sources */,
 				16BAD90FAF898203EF60A279 /* OraculoTypography.swift in Sources */,
 				B1D05D05A52B5E42D20AA63E /* Phrase.swift in Sources */,

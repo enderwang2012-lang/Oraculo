@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var session: OracleSessionModel
+    @StateObject private var charge = OraculoChargeController()
 
     /// 主句锚点：约在屏高 38% 处（方案 A）
     private let phraseVerticalRatio: CGFloat = 0.38
@@ -9,6 +10,10 @@ struct ContentView: View {
     private let subtitleFontSize: CGFloat = 15
     /// 时钟距安全区底缘的内边距（抬高，避免贴底）
     private let clockBottomPadding: CGFloat = 44
+    /// LOGO 与时钟：紧凑底栏组合（印记下沉、时钟贴其下）
+    private let footerMarkClockSpacing: CGFloat = 10
+    /// 仅收紧视觉间距，蓄力光晕仍向上溢出
+    private let footerMarkDownshift: CGFloat = 18
 
     var body: some View {
         GeometryReader { geo in
@@ -51,11 +56,24 @@ struct ContentView: View {
                 }
             }
             .safeAreaInset(edge: .bottom, spacing: 0) {
-                LiveClockView(foregroundStyle: clockForegroundStyle)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .animation(.easeInOut(duration: OraculoMotion.backgroundCrossfade), value: session.usesLightText)
-                    .padding(.horizontal, 28)
-                    .padding(.bottom, clockBottomPadding)
+                VStack(spacing: footerMarkClockSpacing) {
+                    OraculoChargeFooter(
+                        controller: charge,
+                        foregroundStyle: clockForegroundStyle,
+                        onCharged: { session.refreshOnCharge() }
+                    )
+                    .frame(width: 128, height: 96, alignment: .bottom)
+                    .offset(y: footerMarkDownshift)
+                    .accessibilityElement(children: .ignore)
+                    .accessibilityLabel("换一句")
+                    .accessibilityHint("长按 LOGO 蓄力可换一句、换一色")
+
+                    LiveClockView(foregroundStyle: clockForegroundStyle)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
+                .animation(.easeInOut(duration: OraculoMotion.backgroundCrossfade), value: session.usesLightText)
+                .padding(.horizontal, 28)
+                .padding(.bottom, clockBottomPadding)
             }
         }
         .ignoresSafeArea()
@@ -64,10 +82,6 @@ struct ContentView: View {
             // scenePhase.onChange 在冷启动首帧不一定触发；此处保证杀进程重进也会播放入场动画。
             session.refreshOnOpen()
         }
-        .onDeviceShake {
-            session.refreshOnShake()
-        }
-        .accessibilityHint("摇一摇可换一句、换一色")
     }
 
     private func phraseTopInset(in geo: GeometryProxy) -> CGFloat {

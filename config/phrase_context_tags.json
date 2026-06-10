@@ -4300,5 +4300,32 @@
         "rainy_day"
       ]
     }
+  },
+  "sb_2042": {
+    "colorMoods": [
+      "cool",
+      "dark"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "scene:decision_wait",
+        "weight": 1.5
+      },
+      {
+        "tag": "scene:travel",
+        "weight": 1.0
+      }
+    ],
+    "_meta": {
+      "emotion": "lyric_image",
+      "tone": "calm",
+      "scene": [
+        "decision_wait",
+        "travel"
+      ]
+    }
   }
 }
