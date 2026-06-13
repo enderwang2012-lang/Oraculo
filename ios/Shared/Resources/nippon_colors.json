@@ -20,7 +20,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "002",
@@ -41,7 +42,8 @@
         "valentine"
       ]
     },
-    "family": "pink"
+    "family": "pink",
+    "textMode": "softInk"
   },
   {
     "id": "003",
@@ -57,7 +59,8 @@
         "autumn"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "004",
@@ -82,7 +85,8 @@
         "snow"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "ink"
   },
   {
     "id": "005",
@@ -99,7 +103,8 @@
         "spring"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "ink"
   },
   {
     "id": "006",
@@ -116,7 +121,8 @@
         "autumn"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "007",
@@ -135,7 +141,8 @@
         "valentine"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "ink"
   },
   {
     "id": "008",
@@ -151,7 +158,8 @@
         "autumn"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "softInk"
   },
   {
     "id": "009",
@@ -172,7 +180,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "ink"
   },
   {
     "id": "010",
@@ -192,7 +201,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "softInk"
   },
   {
     "id": "011",
@@ -212,7 +222,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "softInk"
   },
   {
     "id": "012",
@@ -232,7 +243,8 @@
         "snow"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "ink"
   },
   {
     "id": "013",
@@ -254,7 +266,8 @@
         "overcast"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "014",
@@ -274,7 +287,8 @@
         "spring_festival"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "015",
@@ -290,7 +304,8 @@
         "autumn"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "016",
@@ -310,7 +325,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "017",
@@ -330,7 +346,8 @@
         "valentine"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "ink"
   },
   {
     "id": "018",
@@ -346,7 +363,8 @@
         "spring"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "softInk"
   },
   {
     "id": "019",
@@ -367,7 +385,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "020",
@@ -389,7 +408,8 @@
         "overcast"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "ink"
   },
   {
     "id": "021",
@@ -409,7 +429,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "ink"
   },
   {
     "id": "022",
@@ -425,7 +446,8 @@
         "autumn"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "023",
@@ -441,7 +463,8 @@
         "autumn"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "024",
@@ -461,7 +484,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "softInk"
   },
   {
     "id": "025",
@@ -484,7 +508,8 @@
         "clear"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "026",
@@ -507,7 +532,8 @@
         "overcast"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "027",
@@ -524,7 +550,8 @@
         "spring"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "028",
@@ -540,7 +567,8 @@
         "autumn"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "029",
@@ -564,7 +592,8 @@
         "clear"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "softInk"
   },
   {
     "id": "030",
@@ -582,7 +611,8 @@
         "winter"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "031",
@@ -602,7 +632,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "032",
@@ -621,7 +652,8 @@
         "clear"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "ink"
   },
   {
     "id": "033",
@@ -641,7 +673,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "034",
@@ -657,7 +690,8 @@
         "summer"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "035",
@@ -680,7 +714,8 @@
         "clear"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "ink"
   },
   {
     "id": "036",
@@ -700,7 +735,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "037",
@@ -720,7 +756,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "softInk"
   },
   {
     "id": "038",
@@ -740,7 +777,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "softInk"
   },
   {
     "id": "039",
@@ -756,7 +794,8 @@
         "autumn"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "softInk"
   },
   {
     "id": "040",
@@ -772,7 +811,8 @@
         "autumn"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "041",
@@ -788,7 +828,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "042",
@@ -808,7 +849,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "softInk"
   },
   {
     "id": "043",
@@ -824,7 +866,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "044",
@@ -844,7 +887,8 @@
         "spring_festival"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "softInk"
   },
   {
     "id": "045",
@@ -862,7 +906,8 @@
         "winter"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "046",
@@ -878,7 +923,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "047",
@@ -894,7 +940,8 @@
         "autumn"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "softInk"
   },
   {
     "id": "048",
@@ -910,7 +957,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "049",
@@ -933,7 +981,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "050",
@@ -949,7 +998,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "051",
@@ -965,7 +1015,8 @@
         "autumn"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "softInk"
   },
   {
     "id": "052",
@@ -984,7 +1035,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "053",
@@ -1004,7 +1056,8 @@
         "spring_festival"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "softInk"
   },
   {
     "id": "054",
@@ -1023,7 +1076,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "055",
@@ -1042,7 +1096,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "softInk"
   },
   {
     "id": "056",
@@ -1058,7 +1113,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "057",
@@ -1076,7 +1132,8 @@
         "winter"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "058",
@@ -1099,7 +1156,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "059",
@@ -1115,7 +1173,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "060",
@@ -1134,7 +1193,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "061",
@@ -1150,7 +1210,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "062",
@@ -1166,7 +1227,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "063",
@@ -1186,7 +1248,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "064",
@@ -1206,7 +1269,8 @@
         "valentine"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "paper"
   },
   {
     "id": "065",
@@ -1222,7 +1286,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "066",
@@ -1241,7 +1306,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "067",
@@ -1257,7 +1323,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "068",
@@ -1277,7 +1344,8 @@
         "spring_festival"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "softInk"
   },
   {
     "id": "069",
@@ -1293,7 +1361,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "070",
@@ -1318,7 +1387,8 @@
         "snow"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "071",
@@ -1334,7 +1404,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "072",
@@ -1353,7 +1424,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "073",
@@ -1372,7 +1444,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "074",
@@ -1392,7 +1465,8 @@
         "spring_festival"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "075",
@@ -1412,7 +1486,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "076",
@@ -1428,7 +1503,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "077",
@@ -1444,7 +1520,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "078",
@@ -1462,7 +1539,8 @@
         "winter"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "079",
@@ -1478,7 +1556,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "080",
@@ -1498,7 +1577,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "081",
@@ -1515,7 +1595,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "082",
@@ -1531,7 +1612,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "083",
@@ -1547,7 +1629,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "084",
@@ -1566,7 +1649,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "085",
@@ -1582,7 +1666,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "086",
@@ -1598,7 +1683,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "087",
@@ -1619,7 +1705,8 @@
         "overcast"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "088",
@@ -1639,7 +1726,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "089",
@@ -1658,7 +1746,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "090",
@@ -1680,7 +1769,8 @@
         "overcast"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "091",
@@ -1696,7 +1786,8 @@
         "autumn"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "softInk"
   },
   {
     "id": "092",
@@ -1716,7 +1807,8 @@
         "snow"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "093",
@@ -1732,7 +1824,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "094",
@@ -1748,7 +1841,8 @@
         "autumn"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "paper"
   },
   {
     "id": "095",
@@ -1770,7 +1864,8 @@
         "clear"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "096",
@@ -1789,7 +1884,8 @@
         "mid_autumn"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "097",
@@ -1805,7 +1901,8 @@
         "autumn"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "098",
@@ -1821,7 +1918,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "ink"
   },
   {
     "id": "099",
@@ -1843,7 +1941,8 @@
         "clear"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "100",
@@ -1864,7 +1963,8 @@
         "snow"
       ]
     },
-    "family": "orange"
+    "family": "orange",
+    "textMode": "ink"
   },
   {
     "id": "101",
@@ -1880,7 +1980,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "ink"
   },
   {
     "id": "102",
@@ -1899,7 +2000,8 @@
         "clear"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "103",
@@ -1918,7 +2020,8 @@
         "clear"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "104",
@@ -1934,7 +2037,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "105",
@@ -1956,7 +2060,8 @@
         "clear"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "106",
@@ -1979,7 +2084,8 @@
         "clear"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "107",
@@ -1998,7 +2104,8 @@
         "clear"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "108",
@@ -2020,7 +2127,8 @@
         "clear"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "109",
@@ -2036,7 +2144,8 @@
         "autumn"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "110",
@@ -2052,7 +2161,8 @@
         "autumn"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "111",
@@ -2071,7 +2181,8 @@
         "clear"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "112",
@@ -2092,7 +2203,8 @@
         "overcast"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "113",
@@ -2112,7 +2224,8 @@
         "snow"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "114",
@@ -2133,7 +2246,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "115",
@@ -2150,7 +2264,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "116",
@@ -2166,7 +2281,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "117",
@@ -2182,7 +2298,8 @@
         "autumn"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "118",
@@ -2200,7 +2317,8 @@
         "winter"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "119",
@@ -2219,7 +2337,8 @@
         "christmas"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "120",
@@ -2240,7 +2359,8 @@
         "christmas"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "121",
@@ -2259,7 +2379,8 @@
         "clear"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "122",
@@ -2281,7 +2402,8 @@
         "clear"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "123",
@@ -2303,7 +2425,8 @@
         "clear"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "124",
@@ -2326,7 +2449,8 @@
         "clear"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "125",
@@ -2343,7 +2467,8 @@
         "summer"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "126",
@@ -2359,7 +2484,8 @@
         "autumn"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "127",
@@ -2375,7 +2501,8 @@
         "autumn"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "128",
@@ -2391,7 +2518,8 @@
         "autumn"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "129",
@@ -2409,7 +2537,8 @@
         "winter"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "paper"
   },
   {
     "id": "130",
@@ -2428,7 +2557,8 @@
         "qingming"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "paper"
   },
   {
     "id": "131",
@@ -2445,7 +2575,8 @@
         "summer"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "paper"
   },
   {
     "id": "132",
@@ -2461,7 +2592,8 @@
         "autumn"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "ink"
   },
   {
     "id": "133",
@@ -2479,7 +2611,8 @@
         "winter"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "paper"
   },
   {
     "id": "134",
@@ -2497,7 +2630,8 @@
         "winter"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "paper"
   },
   {
     "id": "135",
@@ -2518,7 +2652,8 @@
         "christmas"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "paper"
   },
   {
     "id": "136",
@@ -2539,7 +2674,8 @@
         "christmas"
       ]
     },
-    "family": "yellow"
+    "family": "yellow",
+    "textMode": "paper"
   },
   {
     "id": "137",
@@ -2559,7 +2695,8 @@
         "rain"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "paper"
   },
   {
     "id": "138",
@@ -2581,7 +2718,8 @@
         "qingming"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "ink"
   },
   {
     "id": "139",
@@ -2603,7 +2741,8 @@
         "rain"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "ink"
   },
   {
     "id": "140",
@@ -2622,7 +2761,8 @@
         "qingming"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "ink"
   },
   {
     "id": "141",
@@ -2643,7 +2783,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "142",
@@ -2665,7 +2806,8 @@
         "qingming"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "ink"
   },
   {
     "id": "143",
@@ -2684,7 +2826,8 @@
         "qingming"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "ink"
   },
   {
     "id": "144",
@@ -2708,7 +2851,8 @@
         "overcast"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "paper"
   },
   {
     "id": "145",
@@ -2730,7 +2874,8 @@
         "christmas"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "paper"
   },
   {
     "id": "146",
@@ -2753,7 +2898,8 @@
         "rain"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "paper"
   },
   {
     "id": "147",
@@ -2774,7 +2920,8 @@
         "rain"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "ink"
   },
   {
     "id": "148",
@@ -2798,7 +2945,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "149",
@@ -2818,7 +2966,8 @@
         "christmas"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "paper"
   },
   {
     "id": "150",
@@ -2841,7 +2990,8 @@
         "rain"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "ink"
   },
   {
     "id": "151",
@@ -2862,7 +3012,8 @@
         "christmas"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "paper"
   },
   {
     "id": "152",
@@ -2882,7 +3033,8 @@
         "christmas"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "paper"
   },
   {
     "id": "153",
@@ -2906,7 +3058,8 @@
         "snow"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "ink"
   },
   {
     "id": "154",
@@ -2926,7 +3079,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "155",
@@ -2946,7 +3100,8 @@
         "christmas"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "paper"
   },
   {
     "id": "156",
@@ -2966,7 +3121,8 @@
         "rain"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "paper"
   },
   {
     "id": "157",
@@ -2986,7 +3142,8 @@
         "christmas"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "158",
@@ -3005,7 +3162,8 @@
         "rain"
       ]
     },
-    "family": "green"
+    "family": "green",
+    "textMode": "ink"
   },
   {
     "id": "159",
@@ -3023,7 +3181,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "160",
@@ -3041,7 +3200,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "161",
@@ -3059,7 +3219,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "162",
@@ -3081,7 +3242,8 @@
         "christmas"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "163",
@@ -3101,7 +3263,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "164",
@@ -3121,7 +3284,8 @@
         "christmas"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "ink"
   },
   {
     "id": "165",
@@ -3140,7 +3304,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "ink"
   },
   {
     "id": "166",
@@ -3157,7 +3322,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "167",
@@ -3176,7 +3342,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "ink"
   },
   {
     "id": "168",
@@ -3193,7 +3360,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "169",
@@ -3213,7 +3381,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "170",
@@ -3231,7 +3400,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "171",
@@ -3252,7 +3422,8 @@
         "snow"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "ink"
   },
   {
     "id": "172",
@@ -3273,7 +3444,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "173",
@@ -3289,7 +3461,8 @@
         "summer"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "ink"
   },
   {
     "id": "174",
@@ -3311,7 +3484,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "175",
@@ -3330,7 +3504,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "176",
@@ -3346,7 +3521,8 @@
         "summer"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "ink"
   },
   {
     "id": "177",
@@ -3362,7 +3538,8 @@
         "summer"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "ink"
   },
   {
     "id": "178",
@@ -3380,7 +3557,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "179",
@@ -3398,7 +3576,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "180",
@@ -3415,7 +3594,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "181",
@@ -3435,7 +3615,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "182",
@@ -3453,7 +3634,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "183",
@@ -3470,7 +3652,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "184",
@@ -3492,7 +3675,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "185",
@@ -3511,7 +3695,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "186",
@@ -3527,7 +3712,8 @@
         "summer"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "ink"
   },
   {
     "id": "187",
@@ -3545,7 +3731,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "188",
@@ -3561,7 +3748,8 @@
         "summer"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "189",
@@ -3579,7 +3767,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "190",
@@ -3597,7 +3786,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "191",
@@ -3613,7 +3803,8 @@
         "summer"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "ink"
   },
   {
     "id": "192",
@@ -3629,7 +3820,8 @@
         "summer"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "ink"
   },
   {
     "id": "193",
@@ -3645,7 +3837,8 @@
         "summer"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "ink"
   },
   {
     "id": "194",
@@ -3662,7 +3855,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "195",
@@ -3680,7 +3874,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "196",
@@ -3698,7 +3893,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "197",
@@ -3715,7 +3911,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "198",
@@ -3733,7 +3930,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "199",
@@ -3753,7 +3951,8 @@
         "spring_festival"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "200",
@@ -3776,7 +3975,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "201",
@@ -3794,7 +3994,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "202",
@@ -3812,7 +4013,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "203",
@@ -3836,7 +4038,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "204",
@@ -3855,7 +4058,8 @@
         "winter"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "205",
@@ -3875,7 +4079,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "206",
@@ -3894,7 +4099,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "paper"
   },
   {
     "id": "207",
@@ -3913,7 +4119,8 @@
         "rain"
       ]
     },
-    "family": "blue"
+    "family": "blue",
+    "textMode": "ink"
   },
   {
     "id": "208",
@@ -3929,7 +4136,8 @@
         "spring"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "softInk"
   },
   {
     "id": "209",
@@ -3945,7 +4153,8 @@
         "autumn"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "210",
@@ -3961,7 +4170,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "211",
@@ -3978,7 +4188,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "212",
@@ -3995,7 +4206,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "ink"
   },
   {
     "id": "213",
@@ -4011,7 +4223,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "214",
@@ -4027,7 +4240,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "215",
@@ -4044,7 +4258,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "216",
@@ -4061,7 +4276,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "217",
@@ -4078,7 +4294,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "218",
@@ -4095,7 +4312,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "219",
@@ -4111,7 +4329,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "220",
@@ -4133,7 +4352,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "221",
@@ -4153,7 +4373,8 @@
         "spring_festival"
       ]
     },
-    "family": "pink"
+    "family": "pink",
+    "textMode": "paper"
   },
   {
     "id": "222",
@@ -4174,7 +4395,8 @@
         "spring_festival"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "223",
@@ -4191,7 +4413,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "224",
@@ -4212,7 +4435,8 @@
         "overcast"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "225",
@@ -4233,7 +4457,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "226",
@@ -4251,7 +4476,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "227",
@@ -4268,7 +4494,8 @@
         "winter"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "228",
@@ -4288,7 +4515,8 @@
         "spring_festival"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "229",
@@ -4304,7 +4532,8 @@
         "spring"
       ]
     },
-    "family": "purple"
+    "family": "purple",
+    "textMode": "paper"
   },
   {
     "id": "230",
@@ -4322,7 +4551,8 @@
         "winter"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "231",
@@ -4338,7 +4568,8 @@
         "spring"
       ]
     },
-    "family": "pink"
+    "family": "pink",
+    "textMode": "softInk"
   },
   {
     "id": "232",
@@ -4356,7 +4587,8 @@
         "winter"
       ]
     },
-    "family": "red"
+    "family": "red",
+    "textMode": "paper"
   },
   {
     "id": "235",
@@ -4379,7 +4611,8 @@
         "snow"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "ink"
   },
   {
     "id": "236",
@@ -4400,7 +4633,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "ink"
   },
   {
     "id": "237",
@@ -4420,7 +4654,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "238",
@@ -4441,7 +4676,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "239",
@@ -4462,7 +4698,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "240",
@@ -4483,7 +4720,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "241",
@@ -4503,7 +4741,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "242",
@@ -4524,7 +4763,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "243",
@@ -4545,7 +4785,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "244",
@@ -4571,7 +4812,8 @@
         "overcast"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "245",
@@ -4593,7 +4835,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "246",
@@ -4611,7 +4854,8 @@
         "winter"
       ]
     },
-    "family": "brown"
+    "family": "brown",
+    "textMode": "paper"
   },
   {
     "id": "247",
@@ -4632,7 +4876,8 @@
         "overcast"
       ]
     },
-    "family": "gray"
+    "family": "gray",
+    "textMode": "paper"
   },
   {
     "id": "248",
@@ -4649,7 +4894,8 @@
         "winter"
       ]
     },
-    "family": "black"
+    "family": "black",
+    "textMode": "paper"
   },
   {
     "id": "249",
@@ -4666,7 +4912,8 @@
         "winter"
       ]
     },
-    "family": "black"
+    "family": "black",
+    "textMode": "paper"
   },
   {
     "id": "250",
@@ -4683,6 +4930,7 @@
         "winter"
       ]
     },
-    "family": "black"
+    "family": "black",
+    "textMode": "paper"
   }
 ]
