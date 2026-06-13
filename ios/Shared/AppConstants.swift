@@ -12,6 +12,8 @@ enum AppConstants {
     static let sharedTodayColorCnameKey = "todayColorCname"
     static let sharedTodayColorNameKey = "todayColorName"
     static let sharedTodayColorForegroundKey = "todayColorForeground"
+    static let sharedTodayColorFamilyKey = "todayColorFamily"
+    static let sharedTodayColorTextModeKey = "todayColorTextMode"
 
     static let sharedWeatherTagKey = "contextWeatherTag"
     static let sharedTempBandKey = "contextTempBand"

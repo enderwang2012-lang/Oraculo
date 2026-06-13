@@ -8,6 +8,8 @@ struct PhraseEntry: TimelineEntry {
     let dayKey: String
     let colorHex: String
     let usesLightText: Bool
+    let colorFamily: String
+    let colorTextMode: String?
 }
 
 struct PhraseTimelineProvider: TimelineProvider {
@@ -53,7 +55,9 @@ struct PhraseTimelineProvider: TimelineProvider {
                 phraseTextEn: snapshot.phraseTextEn,
                 dayKey: snapshot.dayKey,
                 colorHex: snapshot.colorHex,
-                usesLightText: snapshot.usesLightText
+                usesLightText: snapshot.usesLightText,
+                colorFamily: snapshot.colorFamily,
+                colorTextMode: snapshot.colorTextMode
             )
         }
 
@@ -75,7 +79,9 @@ struct PhraseTimelineProvider: TimelineProvider {
             phraseTextEn: phrase.textEn,
             dayKey: dayKey,
             colorHex: nippon.hex,
-            usesLightText: nippon.usesLightText
+            usesLightText: nippon.usesLightText,
+            colorFamily: nippon.family,
+            colorTextMode: nippon.textMode?.rawValue
         )
     }
 
@@ -86,7 +92,9 @@ struct PhraseTimelineProvider: TimelineProvider {
             phraseTextEn: "Pause, and soften",
             dayKey: PhraseStore.dayKey(for: Date()),
             colorHex: "DB4D6D",
-            usesLightText: true
+            usesLightText: true,
+            colorFamily: "red",
+            colorTextMode: "softInk"
         )
     }
 

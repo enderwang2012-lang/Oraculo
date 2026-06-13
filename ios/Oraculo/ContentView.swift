@@ -91,7 +91,7 @@ struct ContentView: View {
     }
 
     private var clockForegroundStyle: Color {
-        session.usesLightText ? Color.white.opacity(0.52) : Color(white: 0.12).opacity(0.45)
+        session.moment.nipponColor.tertiaryTextColor
     }
 
     private var phraseAccessibilityLabel: String {

@@ -43,6 +43,9 @@ struct DailyOracleService {
         defaults.set(moment.nipponColor.cname, forKey: AppConstants.sharedTodayColorCnameKey)
         defaults.set(moment.nipponColor.name, forKey: AppConstants.sharedTodayColorNameKey)
         defaults.set(moment.nipponColor.foreground, forKey: AppConstants.sharedTodayColorForegroundKey)
+        defaults.set(moment.nipponColor.family, forKey: AppConstants.sharedTodayColorFamilyKey)
+        defaults.set(moment.nipponColor.textMode?.rawValue, forKey: AppConstants.sharedTodayColorTextModeKey)
+        defaults.synchronize()
         WidgetTimelineRefresher.reloadAllIfPossible()
     }
 
@@ -63,12 +66,16 @@ struct DailyOracleService {
             phraseID: phraseID
         )
         let foreground = defaults.string(forKey: AppConstants.sharedTodayColorForegroundKey) ?? "dark"
+        let colorFamily = defaults.string(forKey: AppConstants.sharedTodayColorFamilyKey) ?? ""
+        let textMode = defaults.string(forKey: AppConstants.sharedTodayColorTextModeKey)
         return DisplayedOracleSnapshot(
             dayKey: dayKey,
             phraseText: phraseText,
             phraseTextEn: phraseTextEn,
             colorHex: colorHex,
-            usesLightText: foreground == "light"
+            usesLightText: foreground == "light",
+            colorFamily: colorFamily,
+            colorTextMode: textMode
         )
     }
 }
@@ -79,6 +86,8 @@ struct DisplayedOracleSnapshot: Equatable {
     let phraseTextEn: String
     let colorHex: String
     let usesLightText: Bool
+    let colorFamily: String
+    let colorTextMode: String?
 }
 
 private func resolvePhraseTextEn(stored: String?, phraseID: String?) -> String {
