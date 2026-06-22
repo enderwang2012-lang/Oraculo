@@ -4327,5 +4327,190 @@
         "travel"
       ]
     }
+  },
+  "sb_2043": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    },
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_2044": {
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_2045": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "boostAdd": [
+      {
+        "tag": "weather:windy",
+        "weight": 2.0
+      }
+    ],
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    }
+  },
+  "sb_2046": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    },
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_2047": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    },
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_2048": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    },
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_2049": {
+    "colorMoods": [
+      "warm",
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_2050": {
+    "_meta": {
+      "emotion": "light_comfort",
+      "tone": "calm"
+    },
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_2051": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    },
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_2052": {
+    "colorMoods": [
+      "warm"
+    ],
+    "colorBan": [
+      "dark"
+    ],
+    "boostAdd": [
+      {
+        "tag": "festival:spring_festival",
+        "weight": 2.5
+      },
+      {
+        "tag": "festival:new_year",
+        "weight": 1.5
+      }
+    ],
+    "_meta": {
+      "emotion": "soft_hope",
+      "tone": "tender"
+    }
+  },
+  "sb_2053": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    },
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_2054": {
+    "_meta": {
+      "emotion": "daily_romance",
+      "tone": "tender"
+    },
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_2055": {
+    "_meta": {
+      "emotion": "lyric_image",
+      "tone": "calm"
+    },
+    "colorMoods": [
+      "light"
+    ],
+    "colorBan": [
+      "dark"
+    ]
+  },
+  "sb_2056": {
+    "colorMoods": [
+      "cool"
+    ],
+    "colorBan": [
+      "warm"
+    ],
+    "_meta": {
+      "emotion": "lyric_image",
+      "tone": "calm"
+    }
   }
 }

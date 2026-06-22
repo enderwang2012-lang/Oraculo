@@ -91,6 +91,8 @@ WEATHER_BOOST: list[tuple[re.Pattern[str], str, float]] = [
     (re.compile(r"雾|霾|阴|乌云"), "weather:overcast", 1.2),
 ]
 
+ICE_DRINK_TEXT = re.compile(r"加冰|冰美式|冰咖啡|冰饮|冰拿铁|吃冰|喝冰|冰一下")
+
 # 时段：句面明确时间意象才标，避免误伤（语义层的早安/晚安交给 overlay）。
 DAYPART_BOOST: list[tuple[re.Pattern[str], str, float]] = [
     (re.compile(r"清晨|晨光|破晓|黎明|日出|朝阳|早安"), "daypart:morning", 1.0),
@@ -132,6 +134,8 @@ def collect_boosts(text: str, theme_slug_value: str) -> list[dict]:
             add(tag, w)
 
     for pattern, tag, w in WEATHER_BOOST:
+        if tag == "weather:snow" and ICE_DRINK_TEXT.search(text):
+            continue
         if pattern.search(text):
             add(tag, w)
 

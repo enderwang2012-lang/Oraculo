@@ -230,6 +230,21 @@ TRANSLATIONS: dict[str, str] = {
     "sb_2023": "Moon looks extra full tonight",
     "sb_2035": "Half the year already gone",
     "sb_2041": "Rainy days are made for sleeping in",
+    "sb_2042": "Standing on a bridge that divides the world",
+    "sb_2043": "Waiting for rain",
+    "sb_2044": "After rain, a glimmer",
+    "sb_2045": "Wind down the long street",
+    "sb_2046": "Listening to cicadas",
+    "sb_2047": "Long daylight wanes",
+    "sb_2048": "Summer, half-ripe",
+    "sb_2049": "Sweat catches light",
+    "sb_2050": "Rest awhile",
+    "sb_2051": "Joy bubbles up",
+    "sb_2052": "Luck on ice",
+    "sb_2053": "Walk after rain",
+    "sb_2054": "Steal half a day of ease",
+    "sb_2055": "Far hills in the cup",
+    "sb_2056": "Green hills say nothing",
 }
 
 if __name__ == "__main__":

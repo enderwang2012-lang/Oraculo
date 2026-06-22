@@ -5399,5 +5399,287 @@
         "warm"
       ]
     }
+  },
+  {
+    "id": "sb_2043",
+    "text": "等一场雨",
+    "textEn": "Waiting for rain",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:rain",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    }
+  },
+  {
+    "id": "sb_2044",
+    "text": "雨后有微光",
+    "textEn": "After rain, a glimmer",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:rain",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    }
+  },
+  {
+    "id": "sb_2045",
+    "text": "风过长街",
+    "textEn": "Wind down the long street",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    }
+  },
+  {
+    "id": "sb_2046",
+    "text": "听蝉声",
+    "textEn": "Listening to cicadas",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    }
+  },
+  {
+    "id": "sb_2047",
+    "text": "长昼将尽",
+    "textEn": "Long daylight wanes",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    }
+  },
+  {
+    "id": "sb_2048",
+    "text": "夏意半熟",
+    "textEn": "Summer, half-ripe",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    }
+  },
+  {
+    "id": "sb_2049",
+    "text": "汗水发光",
+    "textEn": "Sweat catches light",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    }
+  },
+  {
+    "id": "sb_2050",
+    "text": "歇会儿",
+    "textEn": "Rest awhile",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    }
+  },
+  {
+    "id": "sb_2051",
+    "text": "快乐冒泡",
+    "textEn": "Joy bubbles up",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    }
+  },
+  {
+    "id": "sb_2052",
+    "text": "好运加冰",
+    "textEn": "Luck on ice",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    }
+  },
+  {
+    "id": "sb_2053",
+    "text": "雨停再走",
+    "textEn": "Walk after rain",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:rain",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    }
+  },
+  {
+    "id": "sb_2054",
+    "text": "偷得浮生半日凉",
+    "textEn": "Steal half a day of ease",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    }
+  },
+  {
+    "id": "sb_2055",
+    "text": "杯中有远山",
+    "textEn": "Far hills in the cup",
+    "layer": "active",
+    "emotionTheme": "lyric_image",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    }
+  },
+  {
+    "id": "sb_2056",
+    "text": "青山不语",
+    "textEn": "Green hills say nothing",
+    "layer": "active",
+    "emotionTheme": "lyric_image",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    }
   }
 ]

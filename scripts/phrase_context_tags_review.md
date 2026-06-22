@@ -2,7 +2,7 @@
 
 AI 语义层产出，逐条扫一眼接受/改写。锚点句在 tag_phrases_llm.py 的 OVERRIDES 里。
 
-覆盖 230 / 230 条。
+覆盖 244 / 244 条。
 
 - `sb_1` **今日锦鲤** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_2` **文艺青年** — moods=['cool']; ban=['warm']
@@ -234,3 +234,17 @@ AI 语义层产出，逐条扫一眼接受/改写。锚点句在 tag_phrases_llm
 - `sb_2035` **一年已经过半了** — moods=['cool']; ban=['warm']; boost=month:6×1.5
 - `sb_2041` **下雨天最适合赖床** — moods=['cool', 'light']; ban=['warm']; boost=weather:rain×3.0,scene:rainy_day×1.5
 - `sb_2042` **站在能分割世界的桥** — moods=['cool', 'dark']; ban=['warm']; boost=scene:decision_wait×1.5,scene:travel×1.0
+- `sb_2043` **等一场雨** — moods=['light']; ban=['dark']
+- `sb_2044` **雨后有微光** — moods=['light']; ban=['dark']
+- `sb_2045` **风过长街** — moods=['cool']; ban=['warm']; boost=weather:windy×2.0
+- `sb_2046` **听蝉声** — moods=['light']; ban=['dark']
+- `sb_2047` **长昼将尽** — moods=['light']; ban=['dark']
+- `sb_2048` **夏意半熟** — moods=['light']; ban=['dark']
+- `sb_2049` **汗水发光** — moods=['warm', 'light']; ban=['dark']
+- `sb_2050` **歇会儿** — moods=['light']; ban=['dark']
+- `sb_2051` **快乐冒泡** — moods=['light']; ban=['dark']
+- `sb_2052` **好运加冰** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2053` **雨停再走** — moods=['light']; ban=['dark']
+- `sb_2054` **偷得浮生半日凉** — moods=['light']; ban=['dark']
+- `sb_2055` **杯中有远山** — moods=['light']; ban=['dark']
+- `sb_2056` **青山不语** — moods=['cool']; ban=['warm']
