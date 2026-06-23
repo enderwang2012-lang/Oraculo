@@ -49,7 +49,7 @@ App Store Connect privacy answers should match the actual release behavior:
 - If location context is enabled, rounded coordinates may be sent to Open-Meteo for weather/elevation lookup.
 - Local App Group storage is used to sync the current phrase/color and widget state.
 
-Publish a privacy policy URL. `docs/PRIVACY_POLICY_DRAFT.md` is a draft; replace `support@example.com` before publication.
+Publish a privacy policy URL. `docs/PRIVACY_POLICY_DRAFT.md` is a draft; confirm the contact email and host the final policy before publication.
 
 ## Corpus Release
 

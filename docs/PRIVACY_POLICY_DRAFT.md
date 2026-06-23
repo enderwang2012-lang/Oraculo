@@ -41,4 +41,4 @@ Oraculo does not track you across apps or websites. Oraculo does not use IDFA, a
 
 ## Contact
 
-For privacy questions, contact: support@example.com
+For privacy questions, contact: enderwang2012@gmail.com
