@@ -6,7 +6,11 @@ enum PhrasePicker {
         from phrases: [Phrase],
         context: ContextSnapshot,
         seed: String,
-        excluding: Phrase?
+        excluding: Phrase?,
+        source: PhraseSelectionSource = .appInteraction,
+        history: [PhraseExposure] = [],
+        now: Date = Date(),
+        corpusVersion: Int = 0
     ) -> Phrase {
         let pool = phrases.filter { $0.id != excluding?.id }
         guard !pool.isEmpty else {
@@ -15,7 +19,15 @@ enum PhrasePicker {
 
         var weighted: [(phrase: Phrase, weight: Double)] = []
         for phrase in pool {
-            let w = PhraseDispatchScorer.score(phrase: phrase, context: context)
+            let contextWeight = PhraseDispatchScorer.score(phrase: phrase, context: context)
+            let freshnessWeight = PhraseFreshnessScorer.score(
+                phrase: phrase,
+                history: history,
+                source: source,
+                now: now,
+                corpusVersion: corpusVersion
+            )
+            let w = contextWeight * freshnessWeight
             if w > 0 {
                 weighted.append((phrase, w))
             }

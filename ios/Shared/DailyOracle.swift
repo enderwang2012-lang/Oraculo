@@ -24,58 +24,44 @@ struct DailyOracleService {
     }
 
     func refreshSharedCache(date: Date = Date()) {
-        syncDisplayedMoment(oracle(for: date).asMoment)
+        syncDisplayedMoment(oracle(for: date).asMoment, source: .dailyAuto)
     }
 
     /// 主 App 当前展示的一帧写入 App Group，供 Widget 与主屏同步。
-    func syncDisplayedMoment(_ moment: OracleMoment) {
-        guard let defaults = UserDefaults(suiteName: AppConstants.appGroupID) else {
-            #if DEBUG
-            print("[Oraculo] Widget sync failed: App Group \(AppConstants.appGroupID) unavailable — check entitlements & Signing.")
-            #endif
-            return
-        }
-        defaults.set(moment.phrase.text, forKey: AppConstants.sharedTodayPhraseKey)
-        defaults.set(moment.phrase.textEn, forKey: AppConstants.sharedTodayPhraseTextEnKey)
-        defaults.set(moment.phrase.id, forKey: AppConstants.sharedTodayPhraseIDKey)
-        defaults.set(moment.dayKey, forKey: AppConstants.sharedTodayDayKeyKey)
-        defaults.set(moment.nipponColor.hex, forKey: AppConstants.sharedTodayColorHexKey)
-        defaults.set(moment.nipponColor.cname, forKey: AppConstants.sharedTodayColorCnameKey)
-        defaults.set(moment.nipponColor.name, forKey: AppConstants.sharedTodayColorNameKey)
-        defaults.set(moment.nipponColor.foreground, forKey: AppConstants.sharedTodayColorForegroundKey)
-        defaults.set(moment.nipponColor.family, forKey: AppConstants.sharedTodayColorFamilyKey)
-        defaults.set(moment.nipponColor.textMode?.rawValue, forKey: AppConstants.sharedTodayColorTextModeKey)
-        defaults.synchronize()
-        WidgetTimelineRefresher.reloadAllIfPossible()
+    func syncDisplayedMoment(
+        _ moment: OracleMoment,
+        source: PhraseSelectionSource = .appInteraction,
+        recordExposure: Bool = true,
+        reloadWidgets: Bool = true
+    ) {
+        SharedOracleMomentStore.shared.save(
+            moment: moment,
+            source: source,
+            corpusVersion: PhraseStore.shared.activeCorpusVersion,
+            recordExposure: recordExposure,
+            reloadWidgets: reloadWidgets
+        )
     }
 
     /// Widget 优先读主 App 已同步的展示；未打开过 App 时返回 nil，由 Widget 自行推算。
     func loadDisplayedSnapshot(for date: Date = Date()) -> DisplayedOracleSnapshot? {
         let dayKey = PhraseStore.dayKey(for: date)
-        guard let defaults = UserDefaults(suiteName: AppConstants.appGroupID),
-              defaults.string(forKey: AppConstants.sharedTodayDayKeyKey) == dayKey,
-              let phraseText = defaults.string(forKey: AppConstants.sharedTodayPhraseKey),
-              !phraseText.isEmpty,
-              let colorHex = defaults.string(forKey: AppConstants.sharedTodayColorHexKey),
-              !colorHex.isEmpty
+        guard let shared = SharedOracleMomentStore.shared.load(),
+              shared.dayKey == dayKey
         else { return nil }
 
-        let phraseID = defaults.string(forKey: AppConstants.sharedTodayPhraseIDKey)
         let phraseTextEn = resolvePhraseTextEn(
-            stored: defaults.string(forKey: AppConstants.sharedTodayPhraseTextEnKey),
-            phraseID: phraseID
+            stored: shared.phraseTextEn,
+            phraseID: shared.phraseId
         )
-        let foreground = defaults.string(forKey: AppConstants.sharedTodayColorForegroundKey) ?? "dark"
-        let colorFamily = defaults.string(forKey: AppConstants.sharedTodayColorFamilyKey) ?? ""
-        let textMode = defaults.string(forKey: AppConstants.sharedTodayColorTextModeKey)
         return DisplayedOracleSnapshot(
-            dayKey: dayKey,
-            phraseText: phraseText,
+            dayKey: shared.dayKey,
+            phraseText: shared.phraseText,
             phraseTextEn: phraseTextEn,
-            colorHex: colorHex,
-            usesLightText: foreground == "light",
-            colorFamily: colorFamily,
-            colorTextMode: textMode
+            colorHex: shared.colorHex,
+            usesLightText: shared.colorForeground == "light",
+            colorFamily: shared.colorFamily,
+            colorTextMode: shared.colorTextMode
         )
     }
 }

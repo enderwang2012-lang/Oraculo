@@ -34,6 +34,7 @@ targets:
         buildPhase: resources
     resources:
       - path: Oraculo/Assets.xcassets
+      - path: Oraculo/PrivacyInfo.xcprivacy
     entitlements:
       path: Oraculo/Oraculo.entitlements
       properties:
@@ -46,6 +47,7 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIRequiresFullScreen: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
         INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "用于根据你所在的位置、海拔与节气，推荐更契合的一句。"
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
@@ -77,6 +79,7 @@ targets:
         buildPhase: resources
     resources:
       - path: OraculoWidget/Assets.xcassets
+      - path: OraculoWidget/PrivacyInfo.xcprivacy
     entitlements:
       path: OraculoWidget/OraculoWidget.entitlements
       properties:

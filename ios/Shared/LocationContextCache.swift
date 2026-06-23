@@ -8,7 +8,7 @@ struct LocationContextCache: Equatable {
     var altitudeMeters: Double?
     var geoRegion: String
     var altitudeBand: String
-    /// 约 0.01° 网格，用于精细情境指纹（不暴露原始坐标到 UI）。
+    /// 约 0.1° 网格，用于情境指纹（不暴露原始坐标到 UI）。
     var geoCell: String
     var source: String
     var updatedAt: Date

@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var session: OracleSessionModel
     @StateObject private var charge = OraculoChargeController()
+    @State private var locationContextEnabled = LocationContextProvider.isLocationContextEnabled
 
     /// 主句锚点：约在屏高 38% 处（方案 A）
     private let phraseVerticalRatio: CGFloat = 0.38
@@ -75,6 +76,26 @@ struct ContentView: View {
                 .padding(.horizontal, 28)
                 .padding(.bottom, clockBottomPadding)
             }
+            .safeAreaInset(edge: .top, spacing: 0) {
+                HStack {
+                    Spacer()
+                    Button {
+                        toggleLocationContext()
+                    } label: {
+                        Label(locationControlTitle, systemImage: locationContextEnabled ? "location.fill" : "location")
+                            .labelStyle(.iconOnly)
+                            .font(.system(size: 16, weight: .medium))
+                            .frame(width: 44, height: 44)
+                            .contentShape(Circle())
+                    }
+                    .buttonStyle(.plain)
+                    .foregroundStyle(session.moment.nipponColor.tertiaryTextColor)
+                    .accessibilityLabel(locationControlTitle)
+                    .accessibilityHint("启用后会请求定位，用天气与海拔优化今日一句")
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 8)
+            }
         }
         .ignoresSafeArea()
         .preferredColorScheme(session.usesLightText ? .dark : .light)
@@ -99,6 +120,20 @@ struct ContentView: View {
         let en = session.moment.phrase.textEn
         if en.isEmpty { return zh }
         return "\(zh)，\(en)"
+    }
+
+    private var locationControlTitle: String {
+        locationContextEnabled ? "关闭位置情境" : "开启位置情境"
+    }
+
+    private func toggleLocationContext() {
+        locationContextEnabled.toggle()
+        LocationContextProvider.shared.setLocationContextEnabled(locationContextEnabled)
+        if locationContextEnabled {
+            Task {
+                await OpenMeteoWeatherService.refreshSharedCacheIfPossible(force: true)
+            }
+        }
     }
 }
 

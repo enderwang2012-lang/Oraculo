@@ -49,10 +49,20 @@ enum GeoCoordinateMapper {
         return "global"
     }
 
-    static func geoCell(latitude: Double, longitude: Double, precision: Double = 0.01) -> String {
+    static func geoCell(latitude: Double, longitude: Double, precision: Double = 0.1) -> String {
         let lat = (latitude / precision).rounded() * precision
         let lon = (longitude / precision).rounded() * precision
-        return String(format: "%.2f,%.2f", lat, lon)
+        return String(format: "%.1f,%.1f", lat, lon)
+    }
+
+    static func coarseCoordinate(
+        latitude: Double,
+        longitude: Double,
+        precision: Double = 0.1
+    ) -> (latitude: Double, longitude: Double) {
+        let lat = (latitude / precision).rounded() * precision
+        let lon = (longitude / precision).rounded() * precision
+        return (lat, lon)
     }
 
     static func altitudeBand(meters: Double?, geoRegion: String) -> String {

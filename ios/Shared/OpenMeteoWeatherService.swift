@@ -72,8 +72,8 @@ enum OpenMeteoWeatherService {
     }
 
     static func refreshSharedCacheIfNeeded(
-        latitude: Double = defaultLatitude,
-        longitude: Double = defaultLongitude,
+        latitude: Double,
+        longitude: Double,
         force: Bool = false
     ) async {
         if !force {
@@ -88,26 +88,28 @@ enum OpenMeteoWeatherService {
         }
     }
 
-    static var defaultLatitude: Double {
-        if let gps = LocationContextCache.load(), gps.isValid {
-            return gps.latitude
-        }
-        if let defaults = UserDefaults(suiteName: AppConstants.appGroupID),
-           defaults.object(forKey: AppConstants.sharedWeatherLatitudeKey) != nil {
-            return defaults.double(forKey: AppConstants.sharedWeatherLatitudeKey)
-        }
-        return 31.2304
+    static func refreshSharedCacheIfPossible(force: Bool = false) async {
+        guard let coordinate = defaultCoordinate else { return }
+        await refreshSharedCacheIfNeeded(
+            latitude: coordinate.latitude,
+            longitude: coordinate.longitude,
+            force: force
+        )
     }
 
-    static var defaultLongitude: Double {
+    static var defaultCoordinate: (latitude: Double, longitude: Double)? {
         if let gps = LocationContextCache.load(), gps.isValid {
-            return gps.longitude
+            return (gps.latitude, gps.longitude)
         }
         if let defaults = UserDefaults(suiteName: AppConstants.appGroupID),
+           defaults.object(forKey: AppConstants.sharedWeatherLatitudeKey) != nil,
            defaults.object(forKey: AppConstants.sharedWeatherLongitudeKey) != nil {
-            return defaults.double(forKey: AppConstants.sharedWeatherLongitudeKey)
+            return (
+                defaults.double(forKey: AppConstants.sharedWeatherLatitudeKey),
+                defaults.double(forKey: AppConstants.sharedWeatherLongitudeKey)
+            )
         }
-        return 121.4737
+        return nil
     }
 
     /// WMO weather code → 内部标签

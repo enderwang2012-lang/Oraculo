@@ -22,7 +22,8 @@ struct SessionOracleService {
         var phrase = phrases.contextualPhrase(
             for: now,
             seedSuffix: "shake|\(shakeNonce)",
-            excluding: current?.phrase
+            excluding: current?.phrase,
+            source: .appInteraction
         )
         var nippon = pickColor(
             from: colorList,
@@ -41,7 +42,8 @@ struct SessionOracleService {
                 phrase = phrases.contextualPhrase(
                     for: Date(),
                     seedSuffix: "shake|\(retryNonce)",
-                    excluding: current.phrase
+                    excluding: current.phrase,
+                    source: .appInteraction
                 )
                 nippon = pickColor(
                     from: colorList,

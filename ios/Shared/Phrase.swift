@@ -8,6 +8,7 @@ struct Phrase: Codable, Identifiable, Hashable {
     let layer: String
     let emotionTheme: String
     let dispatch: PhraseDispatch?
+    let freshness: PhraseFreshness
 
     init(
         id: String,
@@ -15,7 +16,8 @@ struct Phrase: Codable, Identifiable, Hashable {
         textEn: String = "",
         layer: String,
         emotionTheme: String,
-        dispatch: PhraseDispatch? = nil
+        dispatch: PhraseDispatch? = nil,
+        freshness: PhraseFreshness = .fallback
     ) {
         self.id = id
         self.text = text
@@ -23,6 +25,7 @@ struct Phrase: Codable, Identifiable, Hashable {
         self.layer = layer
         self.emotionTheme = emotionTheme
         self.dispatch = dispatch
+        self.freshness = freshness
     }
 
     init(from decoder: Decoder) throws {
@@ -33,10 +36,11 @@ struct Phrase: Codable, Identifiable, Hashable {
         layer = try c.decode(String.self, forKey: .layer)
         emotionTheme = try c.decode(String.self, forKey: .emotionTheme)
         dispatch = try c.decodeIfPresent(PhraseDispatch.self, forKey: .dispatch)
+        freshness = try c.decodeIfPresent(PhraseFreshness.self, forKey: .freshness) ?? .fallback
     }
 
     private enum CodingKeys: String, CodingKey {
-        case id, text, textEn, layer, emotionTheme, dispatch
+        case id, text, textEn, layer, emotionTheme, dispatch, freshness
     }
 
     /// 语料缺失时的统一兜底句（id="fallback"），全工程唯一来源。

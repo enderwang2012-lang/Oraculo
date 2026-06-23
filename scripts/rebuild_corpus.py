@@ -36,12 +36,15 @@ def main() -> None:
     if args.bump:
         bump_version()
 
+    run([sys.executable, "scripts/tag_phrase_freshness.py"])
+
     if not args.skip_preflight:
         run([sys.executable, "scripts/validate_corpus.py"])
 
     run([sys.executable, "scripts/tag_phrases_rules.py"])
     run([sys.executable, "scripts/tag_phrases_llm.py"])
     run([sys.executable, "scripts/validate_dispatch.py"])
+    run([sys.executable, "scripts/validate_phrase_freshness.py"])
     run([sys.executable, "scripts/embed_corpus.py"])
 
     if args.publish:

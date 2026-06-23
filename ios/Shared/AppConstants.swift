@@ -31,6 +31,9 @@ enum AppConstants {
     static let sharedLocationSourceKey = "contextLocationSource"
     static let sharedGeoCellKey = "contextGeoCell"
     static let sharedCorpusVersionKey = "corpusAppliedVersion"
+    static let sharedPhraseExposureHistoryKey = "phraseExposureHistory.v1"
+    static let sharedCurrentMomentKey = "currentOracleMoment.v1"
+    static let sharedLocationContextEnabledKey = "locationContextEnabled.v1"
 
     /// 安装级唯一 ID：让「同地、同日、同情境」的不同用户随机到不同句/色。
     /// 一次性写入 App Group，主 App + Widget 共用；卸载重装会变。

@@ -62,7 +62,7 @@ struct PhraseTimelineProvider: TimelineProvider {
         }
 
         let colors = NipponColorStore.loadColors(from: .main)
-        let phrase = PhraseStore.shared.contextualPhrase(for: date)
+        let phrase = PhraseStore.shared.contextualPhrase(for: date, source: .dailyAuto)
         let colorSeed = "\(dayKey)|color|\(InstallID.value)"
         let nippon: NipponColor
         if colors.isEmpty {
@@ -73,7 +73,7 @@ struct PhraseTimelineProvider: TimelineProvider {
             nippon = ColorMoodPicker.pick(from: pool, dispatch: colorDispatch, seed: colorSeed)
         }
 
-        return PhraseEntry(
+        let entry = PhraseEntry(
             date: date,
             phraseText: phrase.text,
             phraseTextEn: phrase.textEn,
@@ -83,6 +83,19 @@ struct PhraseTimelineProvider: TimelineProvider {
             colorFamily: nippon.family,
             colorTextMode: nippon.textMode?.rawValue
         )
+
+        if isToday {
+            let moment = OracleMoment(phrase: phrase, nipponColor: nippon, dayKey: dayKey)
+            SharedOracleMomentStore.shared.save(
+                moment: moment,
+                source: .dailyAuto,
+                corpusVersion: PhraseStore.shared.activeCorpusVersion,
+                recordExposure: !PhraseExposureHistory.shared.hasExposure(source: .dailyAuto, dayKey: dayKey),
+                reloadWidgets: false
+            )
+        }
+
+        return entry
     }
 
     private func sampleEntry() -> PhraseEntry {

@@ -6,6 +6,7 @@
 > 2. **季节硬排除**：字面绑定某一季的语料用 `onlyWhen: ["season:…"]` + `universal: false`；**非春天句在其他季节照常出现**；**明确春天的句在其他季节权重为 0（不参与抽样）**。  
 > 3. **Widget 与摇一摇**：共用 `PhraseDispatchScorer` + `PhrasePicker`；仅种子不同（Widget：`dayKey|情境指纹`；摇一摇：再加 `shake|UUID`）。  
 > 4. **全维度**：季节、月、星期、时段、节日、**二十四节气**（`solar_terms_cn.json`）、天气（Open-Meteo）、**GPS 精确定位**（CoreLocation → 大区/网格/海拔 + 联动天气）、Locale；Widget 读 App Group 缓存，主 App 前台拉定位与天气。
+> 5. **新鲜度下发**：情境权重之后再乘本机曝光新鲜度权重。同一句、同语义簇、同句式组会短期降频；App 换句会同步 Widget，App 不打开时 Widget 每日自动生成新签。
 
 ## 1. 你要解决什么
 
@@ -18,7 +19,27 @@
 - 像「岁岁常欢愉」：**全年可出**（`universal`），但**春节窗口大幅加权**；
 - 像「春日暖阳」类：**春天 / 三月 / 晴日** 加权，冬天几乎不出。
 
-一句话：**通用池保底 + 情境池加分**。
+一句话：**通用池保底 + 情境池加分 + 本机新鲜度控频**。
+
+## 0. 共享当前签与每日自动签
+
+Oraculo 只有一个共享当前签，保存在 App Group：
+
+```text
+App 换句时：App 写入 currentMoment，Widget 跟随显示。
+App 不打开时：Widget 在新的一天生成 dailyAuto 今日签，写入 currentMoment。
+```
+
+优先级：
+
+| 场景 | 行为 |
+| --- | --- |
+| 今天 App 已展示新签 | Widget 显示 App 最新签 |
+| 今天 App 没打开 | Widget 自动生成并显示今日签 |
+| Widget 生成今日签后 App 又换句 | App 签覆盖 Widget dailyAuto 签 |
+| Widget 只是读取已有 currentMoment | 不重复记录曝光 |
+
+曝光历史按「新 moment 被生成」记录，不按 Widget 渲染次数记录，避免 WidgetKit 多次刷新把同一句误判为高频。
 
 ---
 

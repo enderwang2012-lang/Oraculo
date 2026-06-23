@@ -48,6 +48,8 @@ python3 scripts/embed_corpus.py           # 合并 dispatch → 写入 App
 
 静态热更新（CDN manifest，无需后端）见 [CORPUS_REMOTE.md](CORPUS_REMOTE.md)。
 
+新鲜度下发：每条语料同时带 `freshness.semanticCluster`、`freshness.cadenceGroup`、`freshness.lifecycle`。App 与 Widget 将本机最近曝光写入 App Group，抽句时在情境权重后追加新鲜度权重，避免同一句、同一类语义、同一种句式短期反复出现。
+
 输出：
 
 - `ios/Shared/Resources/phrases.json`
@@ -63,11 +65,14 @@ python3 scripts/embed_corpus.py           # 合并 dispatch → 写入 App
 | `evidence` | `layer`：`official_text` / `image_verified` → `anchor`，其余 → `active` |
 | — | `textEn` 来自 `scripts/phrases_en.json`（诗意 paraphrase，非直译；由 `starbucks_phrases_en.py` 维护） |
 | — | `dispatch` 来自 `scripts/phrase_dispatch.json`（`universal` / `onlyWhen` / `boost`） |
+| — | `freshness` 来自 `config/phrase_freshness_tags.json`（语义簇 / 句式组 / 生命周期） |
 
 ## 使用规则
 
-- **Widget 今日句**：`hash(yyyy-MM-dd) % 语料数`
-- **App 摇一摇 / 回前台**：从全库随机，避开当前句+色
+- **共享当前签**：App Group 保存当前展示的句+色。App 里换句后，桌面 / 锁屏 Widget 优先显示这次 App 当前签。
+- **Widget 每日自动更新**：如果今天还没有共享当前签，Widget 在当天 timeline 里自动生成 `dailyAuto` 今日签，写入共享当前签并记录一次曝光。
+- **App 摇一摇 / 回前台**：从情境加权候选池抽取，并乘以本机新鲜度权重，避开当前句+色。
+- **曝光记账**：只有新 moment 被 App 或 Widget dailyAuto 生成时记录曝光；Widget 只是渲染已有共享当前签时不重复记账。
 
 ## 研究资产（不进 App）
 

@@ -17,7 +17,30 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
     }
 
+    static var isLocationContextEnabled: Bool {
+        get {
+            UserDefaults(suiteName: AppConstants.appGroupID)?
+                .bool(forKey: AppConstants.sharedLocationContextEnabledKey) ?? false
+        }
+        set {
+            UserDefaults(suiteName: AppConstants.appGroupID)?
+                .set(newValue, forKey: AppConstants.sharedLocationContextEnabledKey)
+        }
+    }
+
+    var authorizationStatus: CLAuthorizationStatus {
+        manager.authorizationStatus
+    }
+
+    func setLocationContextEnabled(_ enabled: Bool) {
+        Self.isLocationContextEnabled = enabled
+        if enabled {
+            refreshIfNeeded()
+        }
+    }
+
     func refreshIfNeeded() {
+        guard Self.isLocationContextEnabled else { return }
         // 不在主线程调用 CLLocationManager.locationServicesEnabled()（iOS 17 起会刷主线程警告）。
         // 鉴权状态足以判断是否能继续：denied/restricted 走 default 分支不动作；
         // 服务被系统关时 requestLocation 会以 didFailWithError 形式回来，由 delegate 重置 isUpdating。
@@ -59,15 +82,19 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
     private func apply(location: CLLocation) async {
         let lat = location.coordinate.latitude
         let lon = location.coordinate.longitude
+        let weatherCoordinate = GeoCoordinateMapper.coarseCoordinate(latitude: lat, longitude: lon)
         let region = GeoCoordinateMapper.geoRegion(latitude: lat, longitude: lon)
         var altitude = location.altitude
         if location.verticalAccuracy < 0 || location.verticalAccuracy > 100 {
-            altitude = await OpenMeteoWeatherService.fetchElevationMeters(latitude: lat, longitude: lon) ?? altitude
+            altitude = await OpenMeteoWeatherService.fetchElevationMeters(
+                latitude: weatherCoordinate.latitude,
+                longitude: weatherCoordinate.longitude
+            ) ?? altitude
         }
         let band = GeoCoordinateMapper.altitudeBand(meters: altitude, geoRegion: region)
         let cache = LocationContextCache(
-            latitude: lat,
-            longitude: lon,
+            latitude: weatherCoordinate.latitude,
+            longitude: weatherCoordinate.longitude,
             horizontalAccuracy: location.horizontalAccuracy,
             altitudeMeters: altitude,
             geoRegion: region,
@@ -78,8 +105,8 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
         )
         cache.save()
         await OpenMeteoWeatherService.refreshSharedCacheIfNeeded(
-            latitude: lat,
-            longitude: lon,
+            latitude: weatherCoordinate.latitude,
+            longitude: weatherCoordinate.longitude,
             force: true
         )
     }

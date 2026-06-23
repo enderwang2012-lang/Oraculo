@@ -54,7 +54,7 @@ final class OracleSessionModel: ObservableObject {
 
         baseColor = baseline.nipponColor
 
-        dailyOracle.syncDisplayedMoment(baseline)
+        dailyOracle.syncDisplayedMoment(baseline, recordExposure: false)
 
     }
 

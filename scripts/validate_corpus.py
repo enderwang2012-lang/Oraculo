@@ -12,6 +12,7 @@ SOURCE = ROOT / "starbucks_now_passphrases.csv"
 EN_MAP = ROOT / "scripts" / "phrases_en.json"
 DISPATCH_MAP = ROOT / "scripts" / "phrase_dispatch.json"
 OVERLAY = ROOT / "config" / "phrase_context_tags.json"
+FRESHNESS = ROOT / "config" / "phrase_freshness_tags.json"
 DELETIONS = ROOT / "scripts" / "corpus_deletions.json"
 
 
@@ -45,6 +46,7 @@ def main() -> None:
     en_map = load_json(EN_MAP)
     dispatch_map = load_json(DISPATCH_MAP)
     overlay_map = load_json(OVERLAY)
+    freshness_map = load_json(FRESHNESS)
     deleted = deletion_ids(load_json(DELETIONS))
 
     errors: list[str] = []
@@ -62,6 +64,7 @@ def main() -> None:
     missing_en = [pid for pid in ids if not str(en_map.get(pid, "")).strip()]
     missing_dispatch = [pid for pid in ids if pid not in dispatch_map]
     missing_overlay = [pid for pid in ids if pid not in overlay_map]
+    missing_freshness = [pid for pid in ids if pid not in freshness_map]
     deleted_present = sorted(set(ids) & deleted, key=lambda pid: int(pid.split("_", 1)[1]))
 
     if missing_en:
@@ -70,6 +73,8 @@ def main() -> None:
         warnings.append("Missing dispatch before rebuild: " + ", ".join(missing_dispatch))
     if missing_overlay:
         warnings.append("Missing overlay before rebuild: " + ", ".join(missing_overlay))
+    if missing_freshness:
+        warnings.append("Missing freshness before rebuild: " + ", ".join(missing_freshness))
     if deleted_present:
         errors.append("Deleted ids present in CSV: " + ", ".join(deleted_present))
 
@@ -77,6 +82,7 @@ def main() -> None:
     print(f"English entries: {len(en_map)}")
     print(f"Dispatch entries: {len(dispatch_map)}")
     print(f"Overlay entries: {len(overlay_map)}")
+    print(f"Freshness entries: {len(freshness_map)}")
 
     for warning in warnings:
         print(f"WARNING: {warning}")

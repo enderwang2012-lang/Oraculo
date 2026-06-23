@@ -56,14 +56,15 @@ final class PhraseStore {
     }
 
     func phrase(for date: Date = Date()) -> Phrase {
-        contextualPhrase(for: date, seedSuffix: nil, excluding: nil)
+        contextualPhrase(for: date, seedSuffix: nil, excluding: nil, source: .dailyAuto)
     }
 
     /// Widget / 今日一句：日种子 + 情境指纹，与摇一摇共用打分。
     func contextualPhrase(
         for date: Date = Date(),
         seedSuffix: String? = nil,
-        excluding: Phrase? = nil
+        excluding: Phrase? = nil,
+        source: PhraseSelectionSource = .appInteraction
     ) -> Phrase {
         guard !phrases.isEmpty else {
             return Phrase.fallback
@@ -76,18 +77,30 @@ final class PhraseStore {
         if let seedSuffix, !seedSuffix.isEmpty {
             seed += "|\(seedSuffix)"
         }
-        return PhrasePicker.pick(from: phrases, context: context, seed: seed, excluding: excluding)
+        return PhrasePicker.pick(
+            from: phrases,
+            context: context,
+            seed: seed,
+            excluding: excluding,
+            source: source,
+            history: PhraseExposureHistory.shared.load(now: date),
+            now: date,
+            corpusVersion: activeCorpusVersion
+        )
     }
 
     func syncTodayToSharedDefaults(date: Date = Date()) {
-        let phrase = phrase(for: date)
         let key = Self.dayKey(for: date, calendar: calendar)
-        guard let defaults = UserDefaults(suiteName: AppConstants.appGroupID) else { return }
-        defaults.set(phrase.text, forKey: AppConstants.sharedTodayPhraseKey)
-        defaults.set(phrase.textEn, forKey: AppConstants.sharedTodayPhraseTextEnKey)
-        defaults.set(phrase.id, forKey: AppConstants.sharedTodayPhraseIDKey)
-        defaults.set(key, forKey: AppConstants.sharedTodayDayKeyKey)
-        defaults.set(activeCorpusVersion, forKey: AppConstants.sharedCorpusVersionKey)
+        let context = ContextSnapshotBuilder.snapshot(for: date, calendar: calendar)
+        let phrase = contextualPhrase(for: date, source: .dailyAuto)
+        let color = NipponColorStore.shared.color(for: date, phrase: phrase, context: context)
+        let moment = OracleMoment(phrase: phrase, nipponColor: color, dayKey: key)
+        SharedOracleMomentStore.shared.save(
+            moment: moment,
+            source: .dailyAuto,
+            corpusVersion: activeCorpusVersion,
+            recordExposure: !PhraseExposureHistory.shared.hasExposure(source: .dailyAuto, dayKey: key)
+        )
     }
 
     static func dayKey(for date: Date, calendar: Calendar = .current) -> String {

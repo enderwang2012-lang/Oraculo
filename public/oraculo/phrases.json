@@ -24,6 +24,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "short_plain_u4eca_u9ca4",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -42,6 +47,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "short_plain_u6587_u5e74",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -60,6 +70,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "short_modifier_u90fd_u597d",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -78,6 +93,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "short_modifier_u5c0f_u554a",
+      "lifecycle": "active"
     }
   },
   {
@@ -101,6 +121,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "medium_plain_u80fd_u591a",
+      "lifecycle": "active"
     }
   },
   {
@@ -124,6 +149,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "short_plain_u9526_u9ca4",
+      "lifecycle": "active"
     }
   },
   {
@@ -142,6 +172,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "short_plain_u51cc_u6b65",
+      "lifecycle": "active"
     }
   },
   {
@@ -160,6 +195,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_affirmation",
+      "cadenceGroup": "short_plain_u9b45_u5c04",
+      "lifecycle": "active"
     }
   },
   {
@@ -178,6 +218,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_affirmation",
+      "cadenceGroup": "short_plain_u8fd9_u79c0",
+      "lifecycle": "active"
     }
   },
   {
@@ -196,6 +241,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u9e1f_u9e23",
+      "lifecycle": "active"
     }
   },
   {
@@ -214,6 +264,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "medium_plain_u522b_u5b50",
+      "lifecycle": "active"
     }
   },
   {
@@ -237,6 +292,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u7a81_u5fc3",
+      "lifecycle": "active"
     }
   },
   {
@@ -257,6 +317,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_cool",
+      "cadenceGroup": "short_plain_u559c_u5929",
+      "lifecycle": "active"
     }
   },
   {
@@ -275,6 +340,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "short_plain_u5c60_u5200",
+      "lifecycle": "active"
     }
   },
   {
@@ -309,6 +379,11 @@
       "colorFamilies": [
         "blue"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_water",
+      "cadenceGroup": "short_plain_u851a_u9762",
+      "lifecycle": "active"
     }
   },
   {
@@ -332,6 +407,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_water",
+      "cadenceGroup": "invitation_ba",
+      "lifecycle": "active"
     }
   },
   {
@@ -363,6 +443,11 @@
       "colorFamilies": [
         "green"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u4e07_u957f",
+      "lifecycle": "active"
     }
   },
   {
@@ -381,6 +466,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_water",
+      "cadenceGroup": "short_plain_u6c34_u56ed",
+      "lifecycle": "active"
     }
   },
   {
@@ -404,6 +494,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "short_plain_u552f_u7834",
+      "lifecycle": "active"
     }
   },
   {
@@ -430,6 +525,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_cool",
+      "cadenceGroup": "medium_plain_u4ed6_u5929",
+      "lifecycle": "active"
     }
   },
   {
@@ -461,6 +561,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "short_plain_u4e4c_u5f00",
+      "lifecycle": "active"
     }
   },
   {
@@ -484,6 +589,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "short_plain_u70e6_u6563",
+      "lifecycle": "active"
     }
   },
   {
@@ -507,6 +617,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "short_plain_u4eba_u5f97",
+      "lifecycle": "active"
     }
   },
   {
@@ -530,6 +645,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "short_plain_u5965_u7ed9",
+      "lifecycle": "active"
     }
   },
   {
@@ -548,6 +668,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "short_plain_u5999_u554a",
+      "lifecycle": "active"
     }
   },
   {
@@ -571,6 +696,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "short_plain_u91cd_u8bd5",
+      "lifecycle": "active"
     }
   },
   {
@@ -601,6 +731,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "medium_relational_u6700_u5904",
+      "lifecycle": "active"
     }
   },
   {
@@ -639,6 +774,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_quantified_u65b0_u5929",
+      "lifecycle": "active"
     }
   },
   {
@@ -668,6 +808,11 @@
       "colorBan": [
         "cool"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "winter_warmth",
+      "cadenceGroup": "short_plain_u51ac_u9633",
+      "lifecycle": "active"
     }
   },
   {
@@ -697,6 +842,11 @@
       "colorBan": [
         "light"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "lyric_image",
+      "cadenceGroup": "medium_relational_u6708_u660e",
+      "lifecycle": "active"
     }
   },
   {
@@ -717,6 +867,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "winter_warmth",
+      "cadenceGroup": "medium_plain_u79cb_u996e",
+      "lifecycle": "active"
     }
   },
   {
@@ -740,6 +895,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_modifier_u7f8e_u5e55",
+      "lifecycle": "active"
     }
   },
   {
@@ -767,6 +927,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "short_plain_u5e73_u4e50",
+      "lifecycle": "active"
     }
   },
   {
@@ -794,6 +959,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "short_plain_u8d22_u5bb6",
+      "lifecycle": "active"
     }
   },
   {
@@ -823,6 +993,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "medium_plain_u5c81_u6109",
+      "lifecycle": "active"
     }
   },
   {
@@ -852,6 +1027,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "medium_plain_u5e74_u610f",
+      "lifecycle": "active"
     }
   },
   {
@@ -870,6 +1050,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "medium_plain_u66b4_u9177",
+      "lifecycle": "active"
     }
   },
   {
@@ -893,6 +1078,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "short_modifier_u7b11_u5927",
+      "lifecycle": "active"
     }
   },
   {
@@ -911,6 +1101,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_affirmation",
+      "cadenceGroup": "short_relational_u6700_u4ed4",
+      "lifecycle": "active"
     }
   },
   {
@@ -934,6 +1129,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "short_plain_h_u5566",
+      "lifecycle": "active"
     }
   },
   {
@@ -954,6 +1154,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "love_meeting",
+      "cadenceGroup": "long_relational_u662f_u554a",
+      "lifecycle": "active"
     }
   },
   {
@@ -977,6 +1182,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "short_plain_u5929_u5b50",
+      "lifecycle": "active"
     }
   },
   {
@@ -995,6 +1205,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_affirmation",
+      "cadenceGroup": "medium_modifier_u5168_u624d",
+      "lifecycle": "active"
     }
   },
   {
@@ -1018,6 +1233,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "short_plain_u7529_u7ebf",
+      "lifecycle": "active"
     }
   },
   {
@@ -1041,6 +1261,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "short_plain_u51b2_u9e2d",
+      "lifecycle": "active"
     }
   },
   {
@@ -1068,6 +1293,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "short_plain_u8bf8_u5b9c",
+      "lifecycle": "active"
     }
   },
   {
@@ -1091,6 +1321,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "short_plain_u6c34_u884c",
+      "lifecycle": "active"
     }
   },
   {
@@ -1115,6 +1350,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_cool",
+      "cadenceGroup": "short_quantified_u5feb_u590f",
+      "lifecycle": "active"
     }
   },
   {
@@ -1138,6 +1378,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_plain_u8d50_u91cf",
+      "lifecycle": "active"
     }
   },
   {
@@ -1156,6 +1401,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "short_plain_u7f8e_u751f",
+      "lifecycle": "active"
     }
   },
   {
@@ -1183,6 +1433,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_plain_u83ab_u5df1",
+      "lifecycle": "active"
     }
   },
   {
@@ -1206,6 +1461,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_water",
+      "cadenceGroup": "short_plain_u6d6a_u6b62",
+      "lifecycle": "active"
     }
   },
   {
@@ -1230,6 +1490,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_modifier_u597d_u81f3",
+      "lifecycle": "active"
     }
   },
   {
@@ -1259,6 +1524,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_relational_u65b0_u610f",
+      "lifecycle": "active"
     }
   },
   {
@@ -1284,6 +1554,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_quantified_u4e94_u6ee1",
+      "lifecycle": "active"
     }
   },
   {
@@ -1302,6 +1577,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "medium_plain_u5389_u4eec",
+      "lifecycle": "active"
     }
   },
   {
@@ -1320,6 +1600,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "medium_modifier_u6084_u5bb6",
+      "lifecycle": "active"
     }
   },
   {
@@ -1347,6 +1632,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_light",
+      "cadenceGroup": "medium_relational_u81ea_u6cd5",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -1371,6 +1661,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "short_plain_u5411_u957f",
+      "lifecycle": "active"
     }
   },
   {
@@ -1389,6 +1684,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_affirmation",
+      "cadenceGroup": "medium_relational_u4eca_u8d5e",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -1416,6 +1716,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_plain_u4e07_u5b9c",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -1437,6 +1742,11 @@
       "colorFamilies": [
         "red"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_light",
+      "cadenceGroup": "medium_plain_u8d64_u6562",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -1466,6 +1776,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_plain_u65b0_u5fc3",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -1498,6 +1813,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "winter_warmth",
+      "cadenceGroup": "short_plain_u6302_u4f60",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -1530,6 +1850,11 @@
       "colorFamilies": [
         "red"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_plain_u65b0_u7ea2",
+      "lifecycle": "active"
     }
   },
   {
@@ -1557,6 +1882,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_plain_u8bf8_u987a",
+      "lifecycle": "active"
     }
   },
   {
@@ -1575,6 +1905,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "latin_phrase",
+      "cadenceGroup": "latin_phrase",
+      "lifecycle": "active"
     }
   },
   {
@@ -1593,6 +1928,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "latin_phrase",
+      "cadenceGroup": "latin_phrase",
+      "lifecycle": "active"
     }
   },
   {
@@ -1611,6 +1951,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "latin_phrase",
+      "cadenceGroup": "latin_phrase",
+      "lifecycle": "active"
     }
   },
   {
@@ -1629,6 +1974,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "latin_phrase",
+      "cadenceGroup": "latin_phrase",
+      "lifecycle": "active"
     }
   },
   {
@@ -1656,6 +2006,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "medium_quantified_u6bcf_u8d74",
+      "lifecycle": "active"
     }
   },
   {
@@ -1674,6 +2029,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "wish_sentence",
+      "lifecycle": "active"
     }
   },
   {
@@ -1692,6 +2052,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "love_meeting",
+      "cadenceGroup": "medium_punctuated_u4e3a_u573a",
+      "lifecycle": "active"
     }
   },
   {
@@ -1718,6 +2083,11 @@
       "colorFamilies": [
         "yellow"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "short_plain_u7855_u7d2f",
+      "lifecycle": "active"
     }
   },
   {
@@ -1741,6 +2111,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u8bb0_u7b11",
+      "lifecycle": "active"
     }
   },
   {
@@ -1764,6 +2139,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "short_plain_u4e8b_u5706",
+      "lifecycle": "active"
     }
   },
   {
@@ -1782,6 +2162,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "short_plain_u9002_u5f2f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -1805,6 +2190,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "short_plain_u8fdc_u7f8e",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -1828,6 +2218,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "medium_plain_u70e6_u672f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -1846,6 +2241,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_light",
+      "cadenceGroup": "medium_modifier_u505a_u597d",
+      "lifecycle": "active"
     }
   },
   {
@@ -1878,6 +2278,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "medium_plain_u6e05_u4e66",
+      "lifecycle": "active"
     }
   },
   {
@@ -1896,6 +2301,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "medium_plain_u5fc3_u5bbd",
+      "lifecycle": "active"
     }
   },
   {
@@ -1926,6 +2336,11 @@
       "colorFamilies": [
         "blue"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "medium_plain_u5929_u98de",
+      "lifecycle": "active"
     }
   },
   {
@@ -1949,6 +2364,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_relational_u91cd_u53d1",
+      "lifecycle": "active"
     }
   },
   {
@@ -1972,6 +2392,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "medium_relational_u89c1_u4e8b",
+      "lifecycle": "active"
     }
   },
   {
@@ -1995,6 +2420,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "short_plain_u65b0_u7ae0",
+      "lifecycle": "active"
     }
   },
   {
@@ -2018,6 +2448,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "love_meeting",
+      "cadenceGroup": "short_plain_u5b9c_u89c1",
+      "lifecycle": "active"
     }
   },
   {
@@ -2041,6 +2476,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "short_relational_u8f7b_u5728",
+      "lifecycle": "active"
     }
   },
   {
@@ -2059,6 +2499,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_meme",
+      "cadenceGroup": "medium_plain_u60ec_u513f",
+      "lifecycle": "active"
     }
   },
   {
@@ -2084,6 +2529,11 @@
         "dark",
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "medium_quantified_u4e00_u8bd7",
+      "lifecycle": "active"
     }
   },
   {
@@ -2107,6 +2557,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_relational_u5927_u4e3a",
+      "lifecycle": "active"
     }
   },
   {
@@ -2130,6 +2585,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "medium_relational_u81ea_u91cc",
+      "lifecycle": "active"
     }
   },
   {
@@ -2148,6 +2608,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_light",
+      "cadenceGroup": "short_plain_u70ed_u7531",
+      "lifecycle": "active"
     }
   },
   {
@@ -2171,6 +2636,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_plain_u6240_u9014",
+      "lifecycle": "active"
     }
   },
   {
@@ -2198,6 +2668,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_relational_u7f8e_u5728",
+      "lifecycle": "active"
     }
   },
   {
@@ -2221,6 +2696,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_relational_u6709_u8651",
+      "lifecycle": "active"
     }
   },
   {
@@ -2239,6 +2719,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_light",
+      "cadenceGroup": "medium_modifier_u5927_u5df1",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2262,6 +2747,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "short_plain_u5353_u884c",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2280,6 +2770,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "short_plain_u601d_u6670",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2303,6 +2798,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "wish_sentence",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2321,6 +2821,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "love_meeting",
+      "cadenceGroup": "medium_plain_u7231_u706b",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2339,6 +2844,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_plain_u72b6_u7ebf",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2357,6 +2867,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "medium_plain_u751f_u751f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2384,6 +2899,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_plain_u6240_u613f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2407,6 +2927,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "medium_relational_u6709_u65b9",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2425,6 +2950,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "medium_plain_u65e0_u80dc",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2444,6 +2974,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_plain_u5f00_u5f0f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2462,6 +2997,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "quiet_mirror",
+      "cadenceGroup": "medium_relational_u603b_u8f7b",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2480,6 +3020,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "medium_quantified_u6bcf_u80fd",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2498,6 +3043,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "medium_relational_u52aa_u9177",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2521,6 +3071,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "medium_plain_u53ea_u5fe7",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2541,6 +3096,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_cool",
+      "cadenceGroup": "medium_plain_u590f_u4f60",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2568,6 +3128,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_plain_u5fc3_u613f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2586,6 +3151,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u9e1f_u9999",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2614,6 +3184,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "medium_relational_u524d_u5149",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2637,6 +3212,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "medium_relational_u5927_u836f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2660,6 +3240,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_water",
+      "cadenceGroup": "go_action",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2683,6 +3268,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "love_meeting",
+      "cadenceGroup": "short_plain_u5fc3_u5df1",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2701,6 +3291,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u4e0d_u61be",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2719,6 +3314,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "love_meeting",
+      "cadenceGroup": "medium_punctuated_u7231_u523b",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2742,6 +3342,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u5fc3_u91ce",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2765,6 +3370,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_modifier_u6070_u5904",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2788,6 +3398,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "medium_plain_u559d_u98ce",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2820,6 +3435,11 @@
         "dark",
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "medium_modifier_u62ac_u8fd0",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2847,6 +3467,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_relational_u671f_u4e8b",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2865,6 +3490,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_affirmation",
+      "cadenceGroup": "short_plain_u4eca_u4f73",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2888,6 +3518,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "medium_punctuated_u5fd9_u8da3",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2915,6 +3550,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "go_action",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2938,6 +3578,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "medium_quantified_u5c0f_u5168",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2965,6 +3610,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_modifier_u6070_u4e8b",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -2992,6 +3642,11 @@
         "red",
         "pink"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "love_meeting",
+      "cadenceGroup": "medium_plain_u4f60_u7470",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3019,6 +3674,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "medium_plain_u88ab_u56f4",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3042,6 +3702,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "medium_modifier_u6162_u754c",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3065,6 +3730,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "medium_relational_u4f60_u666f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3089,6 +3759,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_relational_u66d9_u524d",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3112,6 +3787,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "short_plain_u65b0_u70b9",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3135,6 +3815,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "ip_collab",
+      "cadenceGroup": "medium_relational_u5bb6_u5821",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3166,6 +3851,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "ip_collab",
+      "cadenceGroup": "short_plain_u624b_u624b",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3189,6 +3879,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "medium_relational_u5fc3_u6848",
+      "lifecycle": "active"
     }
   },
   {
@@ -3212,6 +3907,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_plain_u524d_u707f",
+      "lifecycle": "active"
     }
   },
   {
@@ -3239,6 +3939,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "medium_modifier_u597d_u4f4f",
+      "lifecycle": "active"
     }
   },
   {
@@ -3257,6 +3962,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "medium_plain_u65e0_u60e7",
+      "lifecycle": "active"
     }
   },
   {
@@ -3275,6 +3985,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "short_plain_u5411_u770b",
+      "lifecycle": "active"
     }
   },
   {
@@ -3293,6 +4008,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "medium_modifier_u597d_u82bd",
+      "lifecycle": "active"
     }
   },
   {
@@ -3316,6 +4036,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_quantified_u6ce8_u6c14",
+      "lifecycle": "active"
     }
   },
   {
@@ -3335,6 +4060,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "medium_relational_u8ffd_u5149",
+      "lifecycle": "active"
     }
   },
   {
@@ -3353,6 +4083,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_affirmation",
+      "cadenceGroup": "medium_plain_u4f60_u8361",
+      "lifecycle": "active"
     }
   },
   {
@@ -3371,6 +4106,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_plain_u4eba_u80fd",
+      "lifecycle": "active"
     }
   },
   {
@@ -3394,6 +4134,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_relational_u4fdd_u60c5",
+      "lifecycle": "active"
     }
   },
   {
@@ -3421,6 +4166,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_modifier_u7f8e_u81f3",
+      "lifecycle": "active"
     }
   },
   {
@@ -3444,6 +4194,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "love_meeting",
+      "cadenceGroup": "medium_plain_u5fc3_u52a8",
+      "lifecycle": "active"
     }
   },
   {
@@ -3472,6 +4227,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "medium_relational_u81ea_u6cb3",
+      "lifecycle": "active"
     }
   },
   {
@@ -3490,6 +4250,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_plain_u5c06_u5f80",
+      "lifecycle": "active"
     }
   },
   {
@@ -3508,6 +4273,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_light",
+      "cadenceGroup": "medium_relational_u6210_u5b99",
+      "lifecycle": "active"
     }
   },
   {
@@ -3531,6 +4301,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "love_meeting",
+      "cadenceGroup": "medium_quantified_u65b0_u5df1",
+      "lifecycle": "active"
     }
   },
   {
@@ -3554,6 +4329,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "medium_relational_u4e0e_u548c",
+      "lifecycle": "active"
     }
   },
   {
@@ -3585,6 +4365,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u6267_u6daf",
+      "lifecycle": "active"
     }
   },
   {
@@ -3608,6 +4393,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "love_meeting",
+      "cadenceGroup": "go_action",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3631,6 +4421,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "ip_collab",
+      "cadenceGroup": "short_relational_u6709_u5f97",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3654,6 +4449,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "ip_collab",
+      "cadenceGroup": "short_plain_u6b64_u771f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3681,6 +4481,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "ip_collab",
+      "cadenceGroup": "short_plain_u4e22_u607c",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3704,6 +4509,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "ip_collab",
+      "cadenceGroup": "short_plain_u77e5_u523b",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3731,6 +4541,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "invitation_ba",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3762,6 +4577,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "ip_collab",
+      "cadenceGroup": "short_plain_u52fe_u624b",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3789,6 +4609,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "short_plain_u9006_u7fd4",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3814,6 +4639,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_cool",
+      "cadenceGroup": "short_plain_u6293_u5929",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3837,6 +4667,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u5b9c_u9762",
+      "lifecycle": "active"
     }
   },
   {
@@ -3860,6 +4695,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "medium_relational_u7b54_u4e0a",
+      "lifecycle": "active"
     }
   },
   {
@@ -3887,6 +4727,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_modifier_u597d_u4e2d",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3914,6 +4759,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "medium_plain_u4e0d_u98ce",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3941,6 +4791,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "imperative_soft",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3973,6 +4828,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_quantified_u6bcf_u5a9a",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -3996,6 +4856,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "medium_quantified_u5141_u751f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4023,6 +4888,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_plain_u5fc3_u507f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4041,6 +4911,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "love_meeting",
+      "cadenceGroup": "medium_quantified_u53ef_u540d",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4072,6 +4947,11 @@
       "colorFamilies": [
         "pink"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_plain_u6843_u82b3",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4099,6 +4979,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_plain_u5bb6_u5eb7",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4132,6 +5017,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_quantified_u65b0_u4e0a",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4159,6 +5049,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_plain_u5411_u53d1",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4177,6 +5072,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_light",
+      "cadenceGroup": "short_plain_u5496_u7531",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4204,6 +5104,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "short_plain_u5154_u6c14",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4231,6 +5136,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "medium_relational_u7ed9_u8fd0",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4258,6 +5168,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_plain_u5341_u7f8e",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4285,6 +5200,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "short_plain_u82f9_u5b89",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4303,6 +5223,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_relational_u6709_u671f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4326,6 +5251,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u542c_u5fc3",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4349,6 +5279,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "medium_relational_u603b_u8d74",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4372,6 +5307,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "short_plain_u7709_u5c55",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4390,6 +5330,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u968f_u6027",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4413,6 +5358,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_plain_u4f46_u8d1f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4431,6 +5381,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "self_light",
+      "cadenceGroup": "medium_plain_u5f00_u5df1",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4449,6 +5404,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "medium_punctuated_u6709_u5411",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4467,6 +5427,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "short_plain_u52aa_u6dc0",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4496,6 +5461,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "short_plain_u65b0_u5bcc",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4527,6 +5497,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "arrival_statement",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4545,6 +5520,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "love_meeting",
+      "cadenceGroup": "medium_plain_u70ed_u606f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4572,6 +5552,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_punctuated_u4eca_u59cb",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4590,6 +5575,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "lyric_image",
+      "cadenceGroup": "short_plain_u65f6_u6d45",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4618,6 +5608,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_relational_u660e_u6765",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4645,6 +5640,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_plain_u6240_u771f",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4665,6 +5665,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "medium_plain_u9010_u51c9",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4688,6 +5693,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "medium_plain_u4e91_u7531",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4717,6 +5727,11 @@
         "dark",
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "medium_plain_u8fdc_u6717",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4735,6 +5750,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "short_plain_u6602_u77bb",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4758,6 +5778,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "medium_plain_u81ea_u9022",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4781,6 +5806,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "short_plain_u8fc7_u607c",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4799,6 +5829,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "medium_modifier_u4fdd_u5fc3",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4822,6 +5857,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "medium_plain_u98ce_u52a8",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4841,6 +5881,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_plain_u5fc3_u5a9a",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4859,6 +5904,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "gentle_departure",
+      "cadenceGroup": "short_plain_u5faa_u884c",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4886,6 +5936,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "medium_modifier_u7f8e_u9047",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4915,6 +5970,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "short_plain_u4e07_u65b0",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4942,6 +6002,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "short_modifier_u65e0_u8fd0",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4965,6 +6030,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u503c_u5f55",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -4988,6 +6058,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_plain_u65e0_u8fbe",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -5011,6 +6086,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_modifier_u6162_u5f97",
+      "lifecycle": "active"
     }
   },
   {
@@ -5029,6 +6109,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_modifier_u4fdd_u5947",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -5047,6 +6132,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "new_beginning",
+      "cadenceGroup": "medium_plain_u89e3_u5c31",
+      "lifecycle": "anchor"
     }
   },
   {
@@ -5080,6 +6170,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_cool",
+      "cadenceGroup": "medium_plain_u6765_u5f0f",
+      "lifecycle": "active"
     }
   },
   {
@@ -5113,6 +6208,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_cool",
+      "cadenceGroup": "long_quantified_u7b2c_u5934",
+      "lifecycle": "active"
     }
   },
   {
@@ -5142,6 +6242,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_cool",
+      "cadenceGroup": "long_relational_u7a7a_u5c11",
+      "lifecycle": "active"
     }
   },
   {
@@ -5171,6 +6276,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_cool",
+      "cadenceGroup": "long_relational_u4eca_u4e86",
+      "lifecycle": "active"
     }
   },
   {
@@ -5205,6 +6315,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "long_relational_u508d_u4e86",
+      "lifecycle": "active"
     }
   },
   {
@@ -5235,6 +6350,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "long_relational_u697c_u566a",
+      "lifecycle": "active"
     }
   },
   {
@@ -5260,6 +6380,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "long_relational_u5988_u5403",
+      "lifecycle": "active"
     }
   },
   {
@@ -5285,6 +6410,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "long_relational_u751c_u8fb9",
+      "lifecycle": "active"
     }
   },
   {
@@ -5315,6 +6445,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "luck_blessing",
+      "cadenceGroup": "long_modifier_u6708_u5706",
+      "lifecycle": "active"
     }
   },
   {
@@ -5340,6 +6475,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "quiet_mirror",
+      "cadenceGroup": "medium_quantified_u4e00_u4e86",
+      "lifecycle": "active"
     }
   },
   {
@@ -5370,6 +6510,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "weather_rain",
+      "cadenceGroup": "long_plain_u4e0b_u5e8a",
+      "lifecycle": "active"
     }
   },
   {
@@ -5398,6 +6543,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "long_relational_u7ad9_u6865",
+      "lifecycle": "active"
     }
   },
   {
@@ -5421,6 +6571,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "weather_rain",
+      "cadenceGroup": "short_quantified_u7b49_u96e8",
+      "lifecycle": "active"
     }
   },
   {
@@ -5444,6 +6599,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "weather_rain",
+      "cadenceGroup": "medium_relational_u96e8_u5149",
+      "lifecycle": "active"
     }
   },
   {
@@ -5467,6 +6627,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "short_plain_u98ce_u8857",
+      "lifecycle": "active"
     }
   },
   {
@@ -5485,6 +6650,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u542c_u58f0",
+      "lifecycle": "active"
     }
   },
   {
@@ -5503,6 +6673,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u957f_u5c3d",
+      "lifecycle": "active"
     }
   },
   {
@@ -5521,6 +6696,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_cool",
+      "cadenceGroup": "short_plain_u590f_u719f",
+      "lifecycle": "active"
     }
   },
   {
@@ -5540,6 +6720,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "soft_hope",
+      "cadenceGroup": "short_plain_u6c57_u5149",
+      "lifecycle": "active"
     }
   },
   {
@@ -5558,6 +6743,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "light_comfort",
+      "cadenceGroup": "short_plain_u6b47_u513f",
+      "lifecycle": "active"
     }
   },
   {
@@ -5576,6 +6766,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u5feb_u6ce1",
+      "lifecycle": "active"
     }
   },
   {
@@ -5603,6 +6798,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_cool",
+      "cadenceGroup": "short_modifier_u597d_u51b0",
+      "lifecycle": "active"
     }
   },
   {
@@ -5626,6 +6826,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "weather_rain",
+      "cadenceGroup": "short_quantified_u96e8_u8d70",
+      "lifecycle": "active"
     }
   },
   {
@@ -5644,6 +6849,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "medium_plain_u5077_u51c9",
+      "lifecycle": "active"
     }
   },
   {
@@ -5662,6 +6872,11 @@
       "colorBan": [
         "dark"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "medium_relational_u676f_u5c71",
+      "lifecycle": "active"
     }
   },
   {
@@ -5680,6 +6895,11 @@
       "colorBan": [
         "warm"
       ]
+    },
+    "freshness": {
+      "semanticCluster": "travel_distance",
+      "cadenceGroup": "short_plain_u9752_u8bed",
+      "lifecycle": "active"
     }
   }
 ]

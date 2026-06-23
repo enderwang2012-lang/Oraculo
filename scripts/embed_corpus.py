@@ -24,6 +24,7 @@ from dispatch_overlay import load_overlay, merge_dispatch, strip_for_embed  # no
 SOURCE = ROOT / "starbucks_now_passphrases.csv"
 EN_MAP = ROOT / "scripts" / "phrases_en.json"
 DISPATCH_MAP = ROOT / "scripts" / "phrase_dispatch.json"
+FRESHNESS_MAP = ROOT / "config" / "phrase_freshness_tags.json"
 VERSION_FILE = ROOT / "config" / "corpus_version.txt"
 OUT = ROOT / "ios" / "Shared" / "Resources" / "phrases.json"
 META_OUT = ROOT / "ios" / "Shared" / "Resources" / "corpus_bundled_meta.json"
@@ -157,6 +158,14 @@ def load_dispatch_map() -> dict[str, dict]:
     return json.loads(DISPATCH_MAP.read_text(encoding="utf-8"))
 
 
+def load_freshness_map() -> dict[str, dict]:
+    if not FRESHNESS_MAP.exists():
+        raise SystemExit(
+            f"Missing {FRESHNESS_MAP}. Run: python3 scripts/tag_phrase_freshness.py"
+        )
+    return json.loads(FRESHNESS_MAP.read_text(encoding="utf-8"))
+
+
 def read_corpus_version() -> int:
     if not VERSION_FILE.exists():
         raise SystemExit(f"Missing {VERSION_FILE}")
@@ -174,6 +183,7 @@ def main() -> None:
 
     en_map = load_en_map()
     dispatch_map = load_dispatch_map()
+    freshness_map = load_freshness_map()
     overlay_map = load_overlay()
     corpus_version = read_corpus_version()
     phrases = []
@@ -200,6 +210,9 @@ def main() -> None:
 
             merged = merge_dispatch(base, overlay_map.get(pid))
             dispatch = strip_for_embed(merged)
+            freshness = freshness_map.get(pid)
+            if not freshness:
+                raise SystemExit(f"Missing freshness for {pid} in {FRESHNESS_MAP}")
 
             phrases.append({
                 "id": pid,
@@ -208,6 +221,7 @@ def main() -> None:
                 "layer": layer,
                 "emotionTheme": theme_slug(row.get("theme", "")),
                 "dispatch": dispatch,
+                "freshness": freshness,
             })
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
