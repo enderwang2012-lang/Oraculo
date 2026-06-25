@@ -1,6 +1,6 @@
 # Oraculo 视觉规范
 
-参考 [NIPPON COLORS](https://nipponcolors.com/#nakabeni)（小野寺拓美设计）：**纯色铺满 + 传统色名 + 克制动效**。
+色系借鉴日本传统色，但**不展示色名、不绑定其文化语义**。视觉气质：**纯色铺满 + 克制动效**。
 
 ## 品牌
 
@@ -10,7 +10,7 @@
 
 ## 色彩
 
-- 数据源：`ios/Shared/Resources/nippon_colors.json`（248 色，来自 [lcat/nippon-colors](https://github.com/lcat/nippon-colors)，与官网一致）
+- 数据源：`ios/Shared/Resources/nippon_colors.json`（248 色，色值借鉴自 [lcat/nippon-colors](https://github.com/lcat/nippon-colors)；仅用色值，App 内不展示色名）
 - 每日一色：`stableIndex(dayKey + "|color")`，与「每日一句」独立，避免同序配对
 - 代表色：**中紅 nakabeni** `#DB4D6D`（官网锚点色）
 - 字色：按背景自动 `light` / `dark`（对比度筛选）
@@ -21,12 +21,12 @@
 - 英文与数字：**Helvetica**（按字符与中文混排）
 - 实现：`OraculoTypography.styledText` / `phraseText` / `metaText`
 
-## 动效（对齐 nipponcolors.com 气质）
+## 动效（纯色淡入淡出 + 横向扫字的克制气质）
 
 | 动效 | 说明 |
 | --- | --- |
 | 冷启动 | 首帧文案透明 → 随机句/色 **仅淡入**（避免先显示今日句再淡出） |
-| 再次进入前台 / 摇一摇 | 背景 **2s ease-in**；中文 **1.5s opacity 渐隐** → **2.5s 横向扫字出现**（自左向右，`ease-out`）；英文 **约 0.99s 淡出 → 2.5s 淡入**，同 [nipponcolors.com](https://nipponcolors.com/) |
+| 再次进入前台 / 摇一摇 | 背景 **2s ease-in**；中文 **1.5s opacity 渐隐** → **2.5s 横向扫字出现**（自左向右，`ease-out`）；英文 **约 0.99s 淡出 → 2.5s 淡入** |
 | 午夜 | Widget / 共享缓存仍用「今日」固定句 + 色（`DailyOracleService`） |
 | 背景呼吸 | 底部径向光晕约 5.2s（吸短呼长），透明度约 1%～3%，无全屏明暗 |
 | 主屏布局 | **方案 A**：主句约屏高 38%、中文 **40pt** + 英文 **15pt**；**实时时钟** 按**单 digit** 上下滑 **3s**（离场快、入场缓出）、秒每 **5s** 跳格 |
@@ -38,7 +38,7 @@ App 内每次进入前台都会 `refreshOnOpen()`；**摇一摇**触发同款换
 - 主 App：全屏 `NipponAmbienceView` + 居中短语
 - 主屏 Widget：`containerBackground` 铺满当日色
 - 锁屏 Inline：仅短语（系统限制）
-- 锁屏 Rectangular：短语 + 色名/HEX，半透明底色
+- 锁屏 Rectangular：仅短语，半透明底色（不展示色名 / HEX）
 
 ## 可选后续
 

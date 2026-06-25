@@ -1,6 +1,6 @@
 # Oraculo
 
-**Oraculo**（iOS 17+）：纯色传统色 + 每日一句；视觉参考 [nipponcolors.com](https://nipponcolors.com/#nakabeni)。含啡快式语料研究资产。
+**Oraculo**（iOS 17+）：每日一句 + 每日一色，纯色铺满、居中一句、无导航。色系借鉴日本传统色，但不展示色名、不绑定其文化语义。含啡快式语料研究资产。
 
 ## 仓库结构
 
