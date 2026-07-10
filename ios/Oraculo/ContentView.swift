@@ -97,6 +97,7 @@ struct ContentView: View {
                     }
                     .buttonStyle(.plain)
                     .foregroundStyle(session.moment.nipponColor.tertiaryTextColor)
+                    .opacity(locationProvider.isEnabled ? 0.5 : 1.0)
                     .disabled(isRequestingLocationAuthorization)
                     .accessibilityLabel(locationControlTitle)
                     .accessibilityHint(locationControlHint)
