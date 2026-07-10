@@ -1,9 +1,16 @@
 import SwiftUI
+#if canImport(UIKit)
+import UIKit
+#endif
 
 struct ContentView: View {
+    @Environment(\.openURL) private var openURL
     @ObservedObject var session: OracleSessionModel
+    @ObservedObject private var locationProvider = LocationContextProvider.shared
     @StateObject private var charge = OraculoChargeController()
-    @State private var locationContextEnabled = LocationContextProvider.isLocationContextEnabled
+    @State private var isShowingLocationRationale = false
+    @State private var isRequestingLocationAuthorization = false
+    @State private var locationPermissionIssue: LocationPermissionIssue?
 
     /// 主句锚点：约在屏高 38% 处（方案 A）
     private let phraseVerticalRatio: CGFloat = 0.38
@@ -82,7 +89,7 @@ struct ContentView: View {
                     Button {
                         toggleLocationContext()
                     } label: {
-                        Label(locationControlTitle, systemImage: locationContextEnabled ? "location.fill" : "location")
+                        Label(locationControlTitle, systemImage: locationProvider.isEnabled ? "location.fill" : "location")
                             .labelStyle(.iconOnly)
                             .font(.system(size: 16, weight: .medium))
                             .frame(width: 44, height: 44)
@@ -90,18 +97,29 @@ struct ContentView: View {
                     }
                     .buttonStyle(.plain)
                     .foregroundStyle(session.moment.nipponColor.tertiaryTextColor)
+                    .disabled(isRequestingLocationAuthorization)
                     .accessibilityLabel(locationControlTitle)
-                    .accessibilityHint("启用后会请求定位，用天气与海拔优化今日一句")
+                    .accessibilityHint(locationControlHint)
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 8)
             }
         }
-        .ignoresSafeArea()
         .preferredColorScheme(session.usesLightText ? .dark : .light)
         .task {
             // scenePhase.onChange 在冷启动首帧不一定触发；此处保证杀进程重进也会播放入场动画。
             session.refreshOnOpen()
+        }
+        .alert("开启位置情境？", isPresented: $isShowingLocationRationale) {
+            Button("继续") {
+                requestLocationContextAccess()
+            }
+            Button("暂不", role: .cancel) {}
+        } message: {
+            Text("Oraculo 会在你使用 App 时获取一次大致位置，并结合海拔与当地天气优化今日一句。位置情境可随时关闭，关闭时会清除缓存。")
+        }
+        .alert(item: $locationPermissionIssue) { issue in
+            permissionAlert(for: issue)
         }
     }
 
@@ -123,17 +141,85 @@ struct ContentView: View {
     }
 
     private var locationControlTitle: String {
-        locationContextEnabled ? "关闭位置情境" : "开启位置情境"
+        locationProvider.isEnabled ? "关闭位置情境" : "开启位置情境"
+    }
+
+    private var locationControlHint: String {
+        if locationProvider.isEnabled {
+            return "关闭后会停止使用位置并清除位置与天气缓存"
+        }
+        return "开启后会请求定位，用天气与海拔优化今日一句"
     }
 
     private func toggleLocationContext() {
-        locationContextEnabled.toggle()
-        LocationContextProvider.shared.setLocationContextEnabled(locationContextEnabled)
-        if locationContextEnabled {
-            Task {
-                await OpenMeteoWeatherService.refreshSharedCacheIfPossible(force: true)
+        if locationProvider.isEnabled {
+            locationProvider.disableLocationContext()
+            return
+        }
+
+        switch locationProvider.activationAction() {
+        case .requestPermission:
+            isShowingLocationRationale = true
+        case .enable:
+            requestLocationContextAccess()
+        case .showSettings:
+            locationPermissionIssue = .denied
+        case .showRestriction:
+            locationPermissionIssue = .restricted
+        }
+    }
+
+    private func requestLocationContextAccess() {
+        guard !isRequestingLocationAuthorization else { return }
+        isRequestingLocationAuthorization = true
+
+        Task {
+            let result = await locationProvider.enableLocationContext()
+            isRequestingLocationAuthorization = false
+
+            switch result {
+            case .enabled:
+                break
+            case .denied:
+                locationPermissionIssue = .denied
+            case .restricted:
+                locationPermissionIssue = .restricted
             }
         }
+    }
+
+    private func permissionAlert(for issue: LocationPermissionIssue) -> Alert {
+        switch issue {
+        case .denied:
+            return Alert(
+                title: Text("位置权限已关闭"),
+                message: Text("Oraculo 无法使用位置情境。你可以前往系统设置，在“位置”中选择“使用 App 时”。"),
+                primaryButton: .default(Text("前往设置")) {
+                    openAppSettings()
+                },
+                secondaryButton: .cancel(Text("暂不"))
+            )
+        case .restricted:
+            return Alert(
+                title: Text("位置权限受限"),
+                message: Text("当前设备不允许 Oraculo 使用位置，可能受到系统限制或家长控制。"),
+                dismissButton: .default(Text("知道了"))
+            )
+        }
+    }
+
+    private func openAppSettings() {
+        #if canImport(UIKit)
+        guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+        openURL(url)
+        #endif
+    }
+
+    private enum LocationPermissionIssue: String, Identifiable {
+        case denied
+        case restricted
+
+        var id: String { rawValue }
     }
 }
 

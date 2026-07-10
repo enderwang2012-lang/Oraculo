@@ -1,4 +1,5 @@
 import Foundation
+import CoreLocation
 import XCTest
 @testable import OraculoCore
 
@@ -122,6 +123,40 @@ final class LocationContextPrivacyTests: XCTestCase {
         XCTAssertNil(visibleWeather.weatherTag)
         XCTAssertNil(visibleWeather.tempBand)
         XCTAssertNil(visibleWeather.updatedAt)
+    }
+
+    func testUndeterminedAuthorizationRequiresSystemPermissionRequest() {
+        XCTAssertEqual(
+            LocationAuthorizationPolicy.activationAction(for: .notDetermined),
+            .requestPermission
+        )
+    }
+
+    func testAuthorizedStatusCanEnableLocationContext() {
+        #if os(iOS)
+        XCTAssertEqual(
+            LocationAuthorizationPolicy.activationAction(for: .authorizedWhenInUse),
+            .enable
+        )
+        #endif
+        XCTAssertEqual(
+            LocationAuthorizationPolicy.activationAction(for: .authorizedAlways),
+            .enable
+        )
+    }
+
+    func testDeniedAuthorizationRequiresSettingsGuidance() {
+        XCTAssertEqual(
+            LocationAuthorizationPolicy.activationAction(for: .denied),
+            .showSettings
+        )
+    }
+
+    func testRestrictedAuthorizationShowsRestrictionExplanation() {
+        XCTAssertEqual(
+            LocationAuthorizationPolicy.activationAction(for: .restricted),
+            .showRestriction
+        )
     }
 
     private var cachedContextKeys: [String] {

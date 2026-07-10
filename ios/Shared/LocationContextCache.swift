@@ -1,4 +1,33 @@
 import Foundation
+#if canImport(CoreLocation)
+import CoreLocation
+#endif
+
+#if canImport(CoreLocation)
+enum LocationAuthorizationActivationAction: Equatable {
+    case requestPermission
+    case enable
+    case showSettings
+    case showRestriction
+}
+
+enum LocationAuthorizationPolicy {
+    static func activationAction(for status: CLAuthorizationStatus) -> LocationAuthorizationActivationAction {
+        switch status {
+        case .notDetermined:
+            return .requestPermission
+        case .authorizedWhenInUse, .authorizedAlways:
+            return .enable
+        case .denied:
+            return .showSettings
+        case .restricted:
+            return .showRestriction
+        @unknown default:
+            return .showRestriction
+        }
+    }
+}
+#endif
 
 /// 位置情境的授权状态与缓存生命周期。关闭授权时必须同时删除原始坐标和所有派生数据。
 enum LocationContextSettings {

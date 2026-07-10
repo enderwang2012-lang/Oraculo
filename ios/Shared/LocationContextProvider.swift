@@ -1,17 +1,32 @@
 import Foundation
 
 #if !APPLICATION_EXTENSION_API_ONLY
+import Combine
 import CoreLocation
+
+enum LocationContextActivationResult: Equatable {
+    case enabled
+    case denied
+    case restricted
+}
 
 /// 主 App：请求 GPS，写入 App Group，并触发该坐标下的天气刷新。
 @MainActor
-final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
+final class LocationContextProvider: NSObject, CLLocationManagerDelegate, ObservableObject {
     static let shared = LocationContextProvider()
 
-    private let manager = CLLocationManager()
+    @Published private(set) var isEnabled: Bool
+    @Published private(set) var authorizationStatus: CLAuthorizationStatus
+
+    private let manager: CLLocationManager
     private var isUpdating = false
+    private var authorizationContinuations: [CheckedContinuation<CLAuthorizationStatus, Never>] = []
 
     override private init() {
+        let manager = CLLocationManager()
+        self.manager = manager
+        isEnabled = LocationContextSettings.isEnabled()
+        authorizationStatus = manager.authorizationStatus
         super.init()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
@@ -26,40 +41,70 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
         }
     }
 
-    var authorizationStatus: CLAuthorizationStatus {
-        manager.authorizationStatus
+    func activationAction() -> LocationAuthorizationActivationAction {
+        let currentStatus = manager.authorizationStatus
+        authorizationStatus = currentStatus
+        return LocationAuthorizationPolicy.activationAction(for: currentStatus)
     }
 
-    func setLocationContextEnabled(_ enabled: Bool) {
-        Self.isLocationContextEnabled = enabled
-        if enabled {
-            refreshIfNeeded()
-        } else {
-            isUpdating = false
-            manager.stopUpdatingLocation()
+    func enableLocationContext() async -> LocationContextActivationResult {
+        var currentStatus = manager.authorizationStatus
+        authorizationStatus = currentStatus
+
+        if LocationAuthorizationPolicy.activationAction(for: currentStatus) == .requestPermission {
+            currentStatus = await requestWhenInUseAuthorization()
+            authorizationStatus = currentStatus
+        }
+
+        switch LocationAuthorizationPolicy.activationAction(for: currentStatus) {
+        case .enable:
+            updateEnabledState(true)
+            requestLocationIfNeeded()
+            return .enabled
+        case .showSettings:
+            updateEnabledState(false)
+            return .denied
+        case .showRestriction, .requestPermission:
+            updateEnabledState(false)
+            return .restricted
         }
     }
 
+    func disableLocationContext() {
+        updateEnabledState(false)
+    }
+
     func refreshIfNeeded() {
-        guard Self.isLocationContextEnabled else { return }
+        guard isEnabled else { return }
         // 不在主线程调用 CLLocationManager.locationServicesEnabled()（iOS 17 起会刷主线程警告）。
-        // 鉴权状态足以判断是否能继续：denied/restricted 走 default 分支不动作；
+        // 鉴权状态足以判断是否能继续；权限失效时同步关闭位置情境并清除缓存。
         // 服务被系统关时 requestLocation 会以 didFailWithError 形式回来，由 delegate 重置 isUpdating。
-        switch manager.authorizationStatus {
-        case .notDetermined:
-            manager.requestWhenInUseAuthorization()
-        case .authorizedWhenInUse, .authorizedAlways:
-            guard !isUpdating else { return }
-            isUpdating = true
-            manager.requestLocation()
-        default:
-            break
+        let currentStatus = manager.authorizationStatus
+        authorizationStatus = currentStatus
+        switch LocationAuthorizationPolicy.activationAction(for: currentStatus) {
+        case .enable:
+            requestLocationIfNeeded()
+        case .requestPermission, .showSettings, .showRestriction:
+            // 不在回前台时突兀弹权限；必须由用户再次点击定位按钮发起。
+            updateEnabledState(false)
         }
     }
 
     nonisolated func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        let currentStatus = manager.authorizationStatus
         Task { @MainActor in
-            refreshIfNeeded()
+            authorizationStatus = currentStatus
+            if currentStatus != .notDetermined {
+                resumeAuthorizationRequests(with: currentStatus)
+            }
+
+            guard isEnabled else { return }
+            switch LocationAuthorizationPolicy.activationAction(for: currentStatus) {
+            case .enable:
+                requestLocationIfNeeded()
+            case .requestPermission, .showSettings, .showRestriction:
+                updateEnabledState(false)
+            }
         }
     }
 
@@ -81,7 +126,7 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
     }
 
     private func apply(location: CLLocation) async {
-        guard Self.isLocationContextEnabled else { return }
+        guard isEnabled else { return }
         let lat = location.coordinate.latitude
         let lon = location.coordinate.longitude
         let weatherCoordinate = GeoCoordinateMapper.coarseCoordinate(latitude: lat, longitude: lon)
@@ -93,7 +138,7 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
                 longitude: weatherCoordinate.longitude
             ) ?? altitude
         }
-        guard Self.isLocationContextEnabled else { return }
+        guard isEnabled else { return }
         let band = GeoCoordinateMapper.altitudeBand(meters: altitude, geoRegion: region)
         let cache = LocationContextCache(
             latitude: weatherCoordinate.latitude,
@@ -107,7 +152,7 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
             updatedAt: Date()
         )
         cache.save()
-        guard Self.isLocationContextEnabled else {
+        guard isEnabled else {
             LocationContextSettings.clearCachedContext()
             return
         }
@@ -116,6 +161,41 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
             longitude: weatherCoordinate.longitude,
             force: true
         )
+    }
+
+    private func requestWhenInUseAuthorization() async -> CLAuthorizationStatus {
+        let currentStatus = manager.authorizationStatus
+        guard currentStatus == .notDetermined else { return currentStatus }
+
+        return await withCheckedContinuation { continuation in
+            authorizationContinuations.append(continuation)
+            if authorizationContinuations.count == 1 {
+                manager.requestWhenInUseAuthorization()
+            }
+        }
+    }
+
+    private func resumeAuthorizationRequests(with status: CLAuthorizationStatus) {
+        let continuations = authorizationContinuations
+        authorizationContinuations.removeAll()
+        for continuation in continuations {
+            continuation.resume(returning: status)
+        }
+    }
+
+    private func requestLocationIfNeeded() {
+        guard !isUpdating else { return }
+        isUpdating = true
+        manager.requestLocation()
+    }
+
+    private func updateEnabledState(_ enabled: Bool) {
+        isEnabled = enabled
+        Self.isLocationContextEnabled = enabled
+        if !enabled {
+            isUpdating = false
+            manager.stopUpdatingLocation()
+        }
     }
 }
 
