@@ -296,7 +296,7 @@ final class OracleSessionModel: ObservableObject {
 
     private func applyMoment(_ next: OracleMoment) {
         moment = next
-        dailyOracle.syncDisplayedMoment(next)
+        dailyOracle.syncDisplayedMoment(next, recordExposure: true)
     }
 
     /// 回前台首帧：确保离开前那句完整可见（避免上次动画半途被挂起）。
@@ -311,7 +311,7 @@ final class OracleSessionModel: ObservableObject {
 
     /// 退到后台时再推一次 Widget，避免系统节流 reload 后锁屏仍停在旧句。
     func syncWidgetDisplay() {
-        dailyOracle.syncDisplayedMoment(moment)
+        dailyOracle.syncDisplayedMoment(moment, recordExposure: false)
     }
 
     var usesLightText: Bool {

@@ -33,6 +33,10 @@ final class FestivalCalendar {
         festivals = Self.loadFestivals()
     }
 
+    init(data: Data) throws {
+        festivals = try JSONDecoder().decode(Config.self, from: data).festivals
+    }
+
     private static func loadFestivals() -> [Config.Festival] {
         guard let url = Bundle.main.url(forResource: "festivals_cn", withExtension: "json")
             ?? Bundle.main.url(forResource: "festivals_cn", withExtension: "json", subdirectory: "Resources"),
@@ -46,16 +50,37 @@ final class FestivalCalendar {
 
     func activeFestivals(on date: Date, calendar cal: Calendar = .current) -> Set<String> {
         var result = Set<String>()
+        let targetDay = cal.startOfDay(for: date)
         let year = cal.component(.year, from: date)
         for fest in festivals {
             let pre = fest.preDays ?? 0
             let post = fest.postDays ?? 0
             for range in fest.ranges {
-                guard let window = resolveWindow(range: range, year: year, calendar: cal) else { continue }
-                let start = cal.date(byAdding: .day, value: -pre, to: window.start) ?? window.start
-                let end = cal.date(byAdding: .day, value: post, to: window.end) ?? window.end
-                if date >= start && date <= end {
-                    result.insert(fest.id)
+                // 同时检查相邻 anchor year：
+                // - year - 1：1 月日期可命中上一年 12 月开始的跨年窗口；
+                // - year + 1：12 月日期可命中下一年 1 月节日的 preDays。
+                for anchorYear in (year - 1) ... (year + 1) {
+                    guard let window = resolveWindow(
+                        range: range,
+                        year: anchorYear,
+                        calendar: cal
+                    ) else { continue }
+                    let windowStart = cal.startOfDay(for: window.start)
+                    let windowEnd = cal.startOfDay(for: window.end)
+                    let start = cal.date(
+                        byAdding: .day,
+                        value: -pre,
+                        to: windowStart
+                    ) ?? windowStart
+                    let endExclusive = cal.date(
+                        byAdding: .day,
+                        value: post + 1,
+                        to: windowEnd
+                    ) ?? windowEnd
+                    if targetDay >= start && targetDay < endExclusive {
+                        result.insert(fest.id)
+                        break
+                    }
                 }
             }
         }

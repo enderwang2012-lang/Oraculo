@@ -38,7 +38,7 @@ final class SharedOracleMomentStore {
         source: PhraseSelectionSource,
         corpusVersion: Int,
         shownAt: Date = Date(),
-        recordExposure: Bool = true,
+        recordExposure: Bool = false,
         reloadWidgets: Bool = true
     ) {
         let shared = SharedOracleMoment(

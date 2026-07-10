@@ -32,10 +32,10 @@ struct OraculoApp: App {
                     #if !APPLICATION_EXTENSION_API_ONLY
                     if LocationContextProvider.isLocationContextEnabled {
                         LocationContextProvider.shared.refreshIfNeeded()
+                        await OpenMeteoWeatherService.refreshSharedCacheIfPossible()
                     }
                     await CorpusRemoteUpdateService.refreshIfNeeded()
                     #endif
-                    await OpenMeteoWeatherService.refreshSharedCacheIfPossible()
                 }
             case .background:
                 Task { @MainActor in

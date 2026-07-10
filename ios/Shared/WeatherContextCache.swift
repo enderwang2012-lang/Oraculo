@@ -6,8 +6,10 @@ struct WeatherContextCache: Equatable {
     var tempBand: String?
     var updatedAt: Date?
 
-    static func load() -> WeatherContextCache {
-        guard let defaults = UserDefaults(suiteName: AppConstants.appGroupID) else {
+    static func load(
+        defaults: UserDefaults? = UserDefaults(suiteName: AppConstants.appGroupID)
+    ) -> WeatherContextCache {
+        guard let defaults else {
             return WeatherContextCache()
         }
         let tag = defaults.string(forKey: AppConstants.sharedWeatherTagKey)
@@ -16,8 +18,10 @@ struct WeatherContextCache: Equatable {
         return WeatherContextCache(weatherTag: tag, tempBand: temp, updatedAt: updated)
     }
 
-    func save() {
-        guard let defaults = UserDefaults(suiteName: AppConstants.appGroupID) else { return }
+    func save(
+        defaults: UserDefaults? = UserDefaults(suiteName: AppConstants.appGroupID)
+    ) {
+        guard let defaults else { return }
         if let weatherTag {
             defaults.set(weatherTag, forKey: AppConstants.sharedWeatherTagKey)
         } else {

@@ -45,6 +45,16 @@ xcodebuild -project Oraculo.xcodeproj -scheme Oraculo \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build
 ```
 
+## 回归测试
+
+核心隐私、节日边界、曝光去重和每日选色逻辑可通过独立 Swift Package 测试，
+无需重新生成当前 Xcode 工程：
+
+```bash
+cd ios
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun swift test
+```
+
 ## 工程结构
 
 | 路径 | 说明 |
@@ -54,6 +64,7 @@ xcodebuild -project Oraculo.xcodeproj -scheme Oraculo \
 | `Oraculo/` | 主 App SwiftUI |
 | `OraculoWidget/` | Widget + 锁屏 |
 | `Shared/` | 选句、配色、JSON（双 target 共享） |
+| `OraculoCoreTests/` | 不依赖模拟器的核心 Swift 回归测试 |
 
 ## 更新语料
 

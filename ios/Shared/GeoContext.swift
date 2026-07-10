@@ -2,14 +2,20 @@ import Foundation
 
 /// 地理与海拔：优先 GPS 缓存，其次手动覆盖，最后 Locale/时区推断。
 enum GeoContext {
-    static func region(for locale: Locale = .current) -> String {
-        if let gps = LocationContextCache.load(), gps.isValid {
+    static func region(
+        for locale: Locale = .current,
+        defaults: UserDefaults? = UserDefaults(suiteName: AppConstants.appGroupID),
+        allowCachedLocationContext: Bool = true
+    ) -> String {
+        if allowCachedLocationContext,
+           let gps = LocationContextCache.load(defaults: defaults),
+           gps.isValid {
             return gps.geoRegion
         }
-        if let stored = UserDefaults(suiteName: AppConstants.appGroupID)?
-            .string(forKey: AppConstants.sharedGeoRegionKey),
+        if allowCachedLocationContext,
+           let stored = defaults?.string(forKey: AppConstants.sharedGeoRegionKey),
             !stored.isEmpty,
-            LocationContextCache.load() == nil {
+            LocationContextCache.load(defaults: defaults) == nil {
             return stored
         }
         let code = locale.region?.identifier ?? locale.identifier
@@ -31,12 +37,19 @@ enum GeoContext {
         }
     }
 
-    static func altitudeBand(for region: String) -> String {
-        if let gps = LocationContextCache.load(), gps.isValid {
+    static func altitudeBand(
+        for region: String,
+        defaults: UserDefaults? = UserDefaults(suiteName: AppConstants.appGroupID),
+        allowCachedLocationContext: Bool = true
+    ) -> String {
+        if allowCachedLocationContext,
+           let gps = LocationContextCache.load(defaults: defaults),
+           gps.isValid {
             return gps.altitudeBand
         }
-        if let stored = UserDefaults(suiteName: AppConstants.appGroupID)?
-            .string(forKey: AppConstants.sharedAltitudeBandKey), !stored.isEmpty {
+        if allowCachedLocationContext,
+           let stored = defaults?.string(forKey: AppConstants.sharedAltitudeBandKey),
+           !stored.isEmpty {
             return stored
         }
         switch region {
@@ -49,15 +62,27 @@ enum GeoContext {
         }
     }
 
-    static func locationSource() -> String {
-        if let gps = LocationContextCache.load(), gps.isValid {
+    static func locationSource(
+        defaults: UserDefaults? = UserDefaults(suiteName: AppConstants.appGroupID),
+        allowCachedLocationContext: Bool = true
+    ) -> String {
+        if allowCachedLocationContext,
+           let gps = LocationContextCache.load(defaults: defaults),
+           gps.isValid {
             return gps.source
         }
         return "locale"
     }
 
-    static func geoCell() -> String? {
-        guard let gps = LocationContextCache.load(), gps.isValid, !gps.geoCell.isEmpty else {
+    static func geoCell(
+        defaults: UserDefaults? = UserDefaults(suiteName: AppConstants.appGroupID),
+        allowCachedLocationContext: Bool = true
+    ) -> String? {
+        guard allowCachedLocationContext,
+              let gps = LocationContextCache.load(defaults: defaults),
+              gps.isValid,
+              !gps.geoCell.isEmpty
+        else {
             return nil
         }
         return gps.geoCell

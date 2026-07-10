@@ -1,6 +1,6 @@
 # Oraculo Privacy Policy Draft
 
-Last updated: 2026-06-23
+Last updated: 2026-07-10
 
 Oraculo is a minimal daily phrase and color app. It does not require an account, does not show ads, and does not use third-party analytics or tracking SDKs.
 
@@ -24,7 +24,7 @@ If you enable location-enhanced daily context, Oraculo asks iOS for when-in-use 
 
 Oraculo may send rounded latitude and longitude to Open-Meteo to retrieve current weather and elevation. Open-Meteo is used only for this weather/elevation lookup. Oraculo does not sell location data, does not use it for advertising, and does not use it for tracking.
 
-You can disable location context at any time in the app. You can also revoke location permission in iOS Settings.
+You can disable location context at any time in the app. When you disable it, Oraculo stops weather and elevation requests, deletes cached coordinates and location-derived weather, region, altitude, and geo-cell values, and returns to locale-only context. You can also revoke location permission in iOS Settings.
 
 ## Network Requests
 

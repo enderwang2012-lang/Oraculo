@@ -297,3 +297,108 @@ private extension NipponColor {
         )
     }
 }
+
+/// 跨进程、跨版本稳定的 FNV-1a 种子工具，避免使用会漂移的 `hashValue`。
+enum StableSeed {
+    static func index(for seed: String, count: Int) -> Int {
+        guard count > 0 else { return 0 }
+        return Int(hash64(for: seed) % UInt64(count))
+    }
+
+    static func hash64(for string: String) -> UInt64 {
+        var hash: UInt64 = 0xcbf29ce484222325
+        let prime: UInt64 = 0x100000001b3
+        for byte in string.utf8 {
+            hash ^= UInt64(byte)
+            hash &*= prime
+        }
+        return hash
+    }
+}
+
+/// App 与 Widget 共用的每日选色入口，确保种子、禁色、情绪和情境权重完全一致。
+enum DailyColorSelector {
+    static func color(
+        from colors: [NipponColor],
+        dispatch: PhraseDispatch?,
+        dayKey: String,
+        installID: String,
+        contextTags: Set<String> = []
+    ) -> NipponColor {
+        guard !colors.isEmpty else { return NipponColor.fallback }
+        let seed = "\(dayKey)|color|\(installID)"
+        let pool = ColorMoodPicker.candidatePool(from: colors, dispatch: dispatch)
+        guard !pool.isEmpty else {
+            return colors[StableSeed.index(for: seed, count: colors.count)]
+        }
+        return ColorMoodPicker.pick(
+            from: pool,
+            dispatch: dispatch,
+            seed: seed,
+            contextTags: contextTags
+        )
+    }
+}
+
+/// 与 PhrasePicker 对称：从色板里按 colorMoods/colorBan 挑色。
+enum ColorMoodPicker {
+    /// 池低于此值时停止 ban，回落为只加权——避免长期看到同样几个色。
+    static let minPoolSize = 30
+    static let moodBoostMultiplier: Double = 2.0
+    /// 情境亲和加权：命中当前 context 标签的色再乘此系数（与 mood 加权可叠乘）。
+    static let contextBoostMultiplier: Double = 2.0
+    /// 细色族加权：命中句 colorFamilies 的色再乘此系数（比 mood 更精确，故更强）。
+    static let familyBoostMultiplier: Double = 3.0
+
+    static func candidatePool(
+        from colors: [NipponColor],
+        dispatch: PhraseDispatch?
+    ) -> [NipponColor] {
+        guard let bans = dispatch?.colorBan, !bans.isEmpty else { return colors }
+        let banSet = Set(bans)
+        let filtered = colors.filter { color in
+            color.moods.allSatisfy { !banSet.contains($0) }
+        }
+        return filtered.count >= minPoolSize ? filtered : colors
+    }
+
+    static func pick(
+        from pool: [NipponColor],
+        dispatch: PhraseDispatch?,
+        seed: String,
+        contextTags: Set<String> = []
+    ) -> NipponColor {
+        guard !pool.isEmpty else { return NipponColor.fallback }
+        let moods = Set(dispatch?.colorMoods ?? [])
+        let families = Set(dispatch?.colorFamilies ?? [])
+        if moods.isEmpty && families.isEmpty && contextTags.isEmpty {
+            // 无情绪偏好、无色族偏好、无情境信息：均匀切片，与原行为一致。
+            return pool[StableSeed.index(for: seed, count: pool.count)]
+        }
+
+        let weights: [Double] = pool.map { color in
+            var weight = 1.0
+            if !moods.isEmpty, color.moods.contains(where: { moods.contains($0) }) {
+                weight *= moodBoostMultiplier
+            }
+            if !families.isEmpty, families.contains(color.family) {
+                weight *= familyBoostMultiplier
+            }
+            if !contextTags.isEmpty,
+               color.contextTags.contains(where: { contextTags.contains($0) }) {
+                weight *= contextBoostMultiplier
+            }
+            return weight
+        }
+        let total = weights.reduce(0, +)
+        guard total > 0 else { return pool[0] }
+
+        let unit = Double(StableSeed.hash64(for: seed) % 1_000_000) / 1_000_000.0
+        var roll = unit * total
+        for (color, weight) in zip(pool, weights) {
+            roll -= weight
+            if roll <= 0 { return color }
+        }
+        return pool.last ?? NipponColor.fallback
+    }
+}

@@ -113,17 +113,10 @@ final class PhraseStore {
 
     /// FNV-1a 风格稳定哈希，避免 `hashValue` 跨版本漂移。
     static func stableIndex(for dayKey: String, count: Int) -> Int {
-        guard count > 0 else { return 0 }
-        return Int(stableHash64(for: dayKey) % UInt64(count))
+        StableSeed.index(for: dayKey, count: count)
     }
 
     static func stableHash64(for string: String) -> UInt64 {
-        var hash: UInt64 = 0xcbf29ce484222325
-        let prime: UInt64 = 0x100000001b3
-        for byte in string.utf8 {
-            hash ^= UInt64(byte)
-            hash &*= prime
-        }
-        return hash
+        StableSeed.hash64(for: string)
     }
 }

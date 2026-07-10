@@ -8,6 +8,13 @@ struct PhraseExposure: Codable, Equatable, Hashable {
     let dayKey: String
     let shownAt: Date
     let corpusVersion: Int
+
+    func hasSameDisplayIdentity(as other: PhraseExposure) -> Bool {
+        phraseId == other.phraseId
+            && source == other.source
+            && dayKey == other.dayKey
+            && corpusVersion == other.corpusVersion
+    }
 }
 
 final class PhraseExposureHistory {
@@ -46,7 +53,7 @@ final class PhraseExposureHistory {
             corpusVersion: corpusVersion
         )
         var entries = load(now: shownAt)
-        if entries.last == exposure { return }
+        if entries.last?.hasSameDisplayIdentity(as: exposure) == true { return }
         entries.append(exposure)
         save(trimmed(entries, now: shownAt))
     }

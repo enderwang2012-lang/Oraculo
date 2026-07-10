@@ -63,15 +63,14 @@ struct PhraseTimelineProvider: TimelineProvider {
 
         let colors = NipponColorStore.loadColors(from: .main)
         let phrase = PhraseStore.shared.contextualPhrase(for: date, source: .dailyAuto)
-        let colorSeed = "\(dayKey)|color|\(InstallID.value)"
-        let nippon: NipponColor
-        if colors.isEmpty {
-            nippon = NipponColor.fallback
-        } else {
-            let colorDispatch = phrase.effectiveColorDispatch
-            let pool = ColorMoodPicker.candidatePool(from: colors, dispatch: colorDispatch)
-            nippon = ColorMoodPicker.pick(from: pool, dispatch: colorDispatch, seed: colorSeed)
-        }
+        let context = ContextSnapshotBuilder.snapshot(for: date)
+        let nippon = DailyColorSelector.color(
+            from: colors,
+            dispatch: phrase.effectiveColorDispatch,
+            dayKey: dayKey,
+            installID: InstallID.value,
+            contextTags: context.activeTags
+        )
 
         let entry = PhraseEntry(
             date: date,

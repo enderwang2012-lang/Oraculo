@@ -22,7 +22,7 @@ enum OpenMeteoWeatherService {
         }
     }
 
-    static func fetch(
+    private static func fetch(
         latitude: Double,
         longitude: Double,
         session: URLSession = .shared
@@ -51,8 +51,10 @@ enum OpenMeteoWeatherService {
     static func fetchElevationMeters(
         latitude: Double,
         longitude: Double,
-        session: URLSession = .shared
+        session: URLSession = .shared,
+        defaults: UserDefaults? = UserDefaults(suiteName: AppConstants.appGroupID)
     ) async -> Double? {
+        guard LocationContextSettings.isEnabled(in: defaults) else { return nil }
         var components = URLComponents(string: "https://api.open-meteo.com/v1/elevation")!
         components.queryItems = [
             URLQueryItem(name: "latitude", value: String(latitude)),
@@ -64,6 +66,7 @@ enum OpenMeteoWeatherService {
             guard let http = response as? HTTPURLResponse, (200 ... 299).contains(http.statusCode) else {
                 return nil
             }
+            guard LocationContextSettings.isEnabled(in: defaults) else { return nil }
             let decoded = try JSONDecoder().decode(ElevationResponse.self, from: data)
             return decoded.elevation.first
         } catch {
@@ -74,34 +77,53 @@ enum OpenMeteoWeatherService {
     static func refreshSharedCacheIfNeeded(
         latitude: Double,
         longitude: Double,
-        force: Bool = false
+        force: Bool = false,
+        defaults: UserDefaults? = UserDefaults(suiteName: AppConstants.appGroupID),
+        session: URLSession = .shared
     ) async {
+        guard LocationContextSettings.isEnabled(in: defaults) else { return }
         if !force {
-            let existing = WeatherContextCache.load()
+            let existing = WeatherContextCache.load(defaults: defaults)
             guard existing.isStale else { return }
         }
         do {
-            let fresh = try await fetch(latitude: latitude, longitude: longitude)
-            fresh.save()
+            let fresh = try await fetch(
+                latitude: latitude,
+                longitude: longitude,
+                session: session
+            )
+            guard LocationContextSettings.isEnabled(in: defaults) else { return }
+            fresh.save(defaults: defaults)
         } catch {
             // 保留旧缓存；无网络时情境下发仍可用季节/节日维度。
         }
     }
 
-    static func refreshSharedCacheIfPossible(force: Bool = false) async {
-        guard let coordinate = defaultCoordinate else { return }
+    static func refreshSharedCacheIfPossible(
+        force: Bool = false,
+        defaults: UserDefaults? = UserDefaults(suiteName: AppConstants.appGroupID),
+        session: URLSession = .shared
+    ) async {
+        guard LocationContextSettings.isEnabled(in: defaults),
+              let coordinate = defaultCoordinate(defaults: defaults)
+        else { return }
         await refreshSharedCacheIfNeeded(
             latitude: coordinate.latitude,
             longitude: coordinate.longitude,
-            force: force
+            force: force,
+            defaults: defaults,
+            session: session
         )
     }
 
-    static var defaultCoordinate: (latitude: Double, longitude: Double)? {
-        if let gps = LocationContextCache.load(), gps.isValid {
+    static func defaultCoordinate(
+        defaults: UserDefaults? = UserDefaults(suiteName: AppConstants.appGroupID)
+    ) -> (latitude: Double, longitude: Double)? {
+        guard LocationContextSettings.isEnabled(in: defaults) else { return nil }
+        if let gps = LocationContextCache.load(defaults: defaults), gps.isValid {
             return (gps.latitude, gps.longitude)
         }
-        if let defaults = UserDefaults(suiteName: AppConstants.appGroupID),
+        if let defaults,
            defaults.object(forKey: AppConstants.sharedWeatherLatitudeKey) != nil,
            defaults.object(forKey: AppConstants.sharedWeatherLongitudeKey) != nil {
             return (

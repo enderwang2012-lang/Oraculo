@@ -24,14 +24,18 @@ struct DailyOracleService {
     }
 
     func refreshSharedCache(date: Date = Date()) {
-        syncDisplayedMoment(oracle(for: date).asMoment, source: .dailyAuto)
+        syncDisplayedMoment(
+            oracle(for: date).asMoment,
+            source: .dailyAuto,
+            recordExposure: true
+        )
     }
 
     /// 主 App 当前展示的一帧写入 App Group，供 Widget 与主屏同步。
     func syncDisplayedMoment(
         _ moment: OracleMoment,
         source: PhraseSelectionSource = .appInteraction,
-        recordExposure: Bool = true,
+        recordExposure: Bool = false,
         reloadWidgets: Bool = true
     ) {
         SharedOracleMomentStore.shared.save(

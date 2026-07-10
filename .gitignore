@@ -4,6 +4,7 @@
 xcuserdata/
 DerivedData/
 build/
+.build/
 
 # Python / 本地构建产物（勿提交；线上用 public/oraculo/）
 dist/

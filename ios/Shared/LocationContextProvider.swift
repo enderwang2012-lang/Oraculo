@@ -19,12 +19,10 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
 
     static var isLocationContextEnabled: Bool {
         get {
-            UserDefaults(suiteName: AppConstants.appGroupID)?
-                .bool(forKey: AppConstants.sharedLocationContextEnabledKey) ?? false
+            LocationContextSettings.isEnabled()
         }
         set {
-            UserDefaults(suiteName: AppConstants.appGroupID)?
-                .set(newValue, forKey: AppConstants.sharedLocationContextEnabledKey)
+            LocationContextSettings.setEnabled(newValue)
         }
     }
 
@@ -36,6 +34,9 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
         Self.isLocationContextEnabled = enabled
         if enabled {
             refreshIfNeeded()
+        } else {
+            isUpdating = false
+            manager.stopUpdatingLocation()
         }
     }
 
@@ -80,6 +81,7 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
     }
 
     private func apply(location: CLLocation) async {
+        guard Self.isLocationContextEnabled else { return }
         let lat = location.coordinate.latitude
         let lon = location.coordinate.longitude
         let weatherCoordinate = GeoCoordinateMapper.coarseCoordinate(latitude: lat, longitude: lon)
@@ -91,6 +93,7 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
                 longitude: weatherCoordinate.longitude
             ) ?? altitude
         }
+        guard Self.isLocationContextEnabled else { return }
         let band = GeoCoordinateMapper.altitudeBand(meters: altitude, geoRegion: region)
         let cache = LocationContextCache(
             latitude: weatherCoordinate.latitude,
@@ -104,6 +107,10 @@ final class LocationContextProvider: NSObject, CLLocationManagerDelegate {
             updatedAt: Date()
         )
         cache.save()
+        guard Self.isLocationContextEnabled else {
+            LocationContextSettings.clearCachedContext()
+            return
+        }
         await OpenMeteoWeatherService.refreshSharedCacheIfNeeded(
             latitude: weatherCoordinate.latitude,
             longitude: weatherCoordinate.longitude,
