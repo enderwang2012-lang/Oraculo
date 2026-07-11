@@ -12,8 +12,8 @@ struct ContentView: View {
     @State private var isRequestingLocationAuthorization = false
     @State private var locationPermissionIssue: LocationPermissionIssue?
 
-    /// 主句锚点：约在屏高 38% 处（方案 A）
-    private let phraseVerticalRatio: CGFloat = 0.38
+    /// 中英文文字块中心位于整屏高度的黄金分割点。
+    private let phraseVerticalRatio: CGFloat = 0.382
     private let phraseFontSize: CGFloat = 40
     private let subtitleFontSize: CGFloat = 15
     /// 时钟距安全区底缘的内边距（抬高，避免贴底）
@@ -24,45 +24,13 @@ struct ContentView: View {
     private let footerMarkDownshift: CGFloat = 18
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                NipponCrossfadeBackground(
-                    base: session.baseColor,
-                    overlay: session.overlayColor,
-                    blend: session.colorBlend,
-                    usesLightText: session.usesLightText
-                )
-
-                VStack(spacing: 0) {
-                    Spacer()
-                        .frame(height: phraseTopInset(in: geo))
-
-                    VStack(spacing: 12) {
-                        OraculoTypography.phraseText(session.moment.phrase.text, size: phraseFontSize)
-                            .multilineTextAlignment(.center)
-                            .lineSpacing(14)
-                            .tracking(1)
-                            .foregroundStyle(session.moment.nipponColor.primaryTextColor)
-                            .minimumScaleFactor(0.72)
-                            .opacity(session.phraseFadeOpacity)
-                            .phraseAppearSweep(reveal: session.phraseAppearReveal)
-                            .accessibilityAddTraits(.isHeader)
-
-                        if !session.moment.phrase.textEn.isEmpty {
-                            OraculoTypography.latinText(session.moment.phrase.textEn, size: subtitleFontSize)
-                                .multilineTextAlignment(.center)
-                                .tracking(0.6)
-                                .foregroundStyle(session.moment.nipponColor.secondaryTextColor)
-                                .opacity(session.subtitleOpacity)
-                        }
-                    }
-                    .padding(.horizontal, 40)
-                    .accessibilityElement(children: .combine)
-                    .accessibilityLabel(phraseAccessibilityLabel)
-
-                    Spacer(minLength: 0)
-                }
-            }
+        ZStack {
+            NipponCrossfadeBackground(
+                base: session.baseColor,
+                overlay: session.overlayColor,
+                blend: session.colorBlend,
+                usesLightText: session.usesLightText
+            )
             .safeAreaInset(edge: .bottom, spacing: 0) {
                 VStack(spacing: footerMarkClockSpacing) {
                     OraculoChargeFooter(
@@ -97,7 +65,7 @@ struct ContentView: View {
                     }
                     .buttonStyle(.plain)
                     .foregroundStyle(session.moment.nipponColor.tertiaryTextColor)
-                    .opacity(locationProvider.isEnabled ? 0.5 : 1.0)
+                    .opacity(locationProvider.isEnabled ? 0.3 : 1.0)
                     .disabled(isRequestingLocationAuthorization)
                     .accessibilityLabel(locationControlTitle)
                     .accessibilityHint(locationControlHint)
@@ -105,6 +73,38 @@ struct ContentView: View {
                 .padding(.horizontal, 20)
                 .padding(.top, 8)
             }
+
+            GeometryReader { screenGeo in
+                VStack(spacing: 12) {
+                    OraculoTypography.phraseText(session.moment.phrase.text, size: phraseFontSize)
+                        .multilineTextAlignment(.center)
+                        .lineSpacing(14)
+                        .tracking(1)
+                        .foregroundStyle(session.moment.nipponColor.primaryTextColor)
+                        .minimumScaleFactor(0.72)
+                        .opacity(session.phraseFadeOpacity)
+                        .phraseAppearSweep(reveal: session.phraseAppearReveal)
+                        .accessibilityAddTraits(.isHeader)
+
+                    if !session.moment.phrase.textEn.isEmpty {
+                        OraculoTypography.latinText(session.moment.phrase.textEn, size: subtitleFontSize)
+                            .multilineTextAlignment(.center)
+                            .tracking(0.6)
+                            .foregroundStyle(session.moment.nipponColor.secondaryTextColor)
+                            .opacity(session.subtitleOpacity)
+                    }
+                }
+                .padding(.horizontal, 40)
+                .frame(width: screenGeo.size.width)
+                .position(
+                    x: screenGeo.size.width / 2,
+                    y: phraseCenterY(in: screenGeo)
+                )
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel(phraseAccessibilityLabel)
+            }
+            .ignoresSafeArea()
+            .allowsHitTesting(false)
         }
         .preferredColorScheme(session.usesLightText ? .dark : .light)
         .task {
@@ -124,10 +124,10 @@ struct ContentView: View {
         }
     }
 
-    private func phraseTopInset(in geo: GeometryProxy) -> CGFloat {
-        let safeTop = geo.safeAreaInsets.top
-        let anchor = geo.size.height * phraseVerticalRatio
-        return max(safeTop + 20, anchor)
+    private func phraseCenterY(in geo: GeometryProxy) -> CGFloat {
+        // GeometryReader 位于页面根层，size.height 表示整个屏幕高度（包含安全区）。
+        let screenHeight = geo.size.height
+        return screenHeight * phraseVerticalRatio
     }
 
     private var clockForegroundStyle: Color {
