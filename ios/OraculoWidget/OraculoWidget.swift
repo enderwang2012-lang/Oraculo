@@ -83,14 +83,21 @@ struct PhraseTimelineProvider: TimelineProvider {
             colorTextMode: nippon.textMode?.rawValue
         )
 
+        let moment = OracleMoment(phrase: phrase, nipponColor: nippon, dayKey: dayKey)
         if isToday {
-            let moment = OracleMoment(phrase: phrase, nipponColor: nippon, dayKey: dayKey)
             SharedOracleMomentStore.shared.save(
                 moment: moment,
                 source: .dailyAuto,
                 corpusVersion: PhraseStore.shared.activeCorpusVersion,
                 recordExposure: !PhraseExposureHistory.shared.hasExposure(source: .dailyAuto, dayKey: dayKey),
                 reloadWidgets: false
+            )
+        } else {
+            SharedOracleMomentStore.shared.saveScheduled(
+                moment: moment,
+                source: .dailyAuto,
+                corpusVersion: PhraseStore.shared.activeCorpusVersion,
+                shownAt: date
             )
         }
 

@@ -46,7 +46,7 @@ final class OracleSessionModel: ObservableObject {
 
     init() {
 
-        let baseline = session.todayBaseline()
+        let baseline = dailyOracle.loadDisplayedMoment() ?? session.todayBaseline()
 
         moment = baseline
 
@@ -75,7 +75,13 @@ final class OracleSessionModel: ObservableObject {
         resumeRefreshTask = Task { @MainActor in
             try? await Task.sleep(nanoseconds: UInt64(OraculoMotion.resumeDwellBeforeRefresh * 1_000_000_000))
             guard !Task.isCancelled, !isTransitioning else { return }
-            let next = session.randomMoment(excluding: moment)
+            let displayed = dailyOracle.loadDisplayedMoment()
+            let next: OracleMoment
+            if let displayed, displayed != moment {
+                next = displayed
+            } else {
+                next = session.randomMoment(excluding: moment)
+            }
             transition(to: next)
         }
     }
@@ -89,15 +95,11 @@ final class OracleSessionModel: ObservableObject {
         cancelPendingResumeRefresh()
         guard !isTransitioning else { return }
 
-        let next = session.randomMoment(excluding: moment)
-
-
-
         if !hasPresentedOnce {
 
             hasPresentedOnce = true
 
-            presentInitialOpen(to: next)
+            presentInitialOpen(to: moment)
 
             return
 
@@ -105,6 +107,7 @@ final class OracleSessionModel: ObservableObject {
 
 
 
+        let next = session.randomMoment(excluding: moment)
         transition(to: next)
 
     }

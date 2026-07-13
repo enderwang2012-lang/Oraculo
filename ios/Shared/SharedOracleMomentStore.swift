@@ -21,6 +21,7 @@ final class SharedOracleMomentStore {
 
     private let defaults: UserDefaults?
     private let key = AppConstants.sharedCurrentMomentKey
+    private let scheduledKey = AppConstants.sharedScheduledMomentsKey
 
     init(defaults: UserDefaults? = UserDefaults(suiteName: AppConstants.appGroupID)) {
         self.defaults = defaults
@@ -41,20 +42,11 @@ final class SharedOracleMomentStore {
         recordExposure: Bool = false,
         reloadWidgets: Bool = true
     ) {
-        let shared = SharedOracleMoment(
-            phraseId: moment.phrase.id,
-            phraseText: moment.phrase.text,
-            phraseTextEn: moment.phrase.textEn,
-            colorHex: moment.nipponColor.hex,
-            colorName: moment.nipponColor.name,
-            colorCname: moment.nipponColor.cname,
-            colorForeground: moment.nipponColor.foreground,
-            colorFamily: moment.nipponColor.family,
-            colorTextMode: moment.nipponColor.textMode?.rawValue,
-            dayKey: moment.dayKey,
-            shownAt: shownAt,
+        let shared = makeSharedMoment(
+            moment: moment,
             source: source,
-            corpusVersion: corpusVersion
+            corpusVersion: corpusVersion,
+            shownAt: shownAt
         )
         save(shared)
         if recordExposure {
@@ -69,6 +61,32 @@ final class SharedOracleMomentStore {
         if reloadWidgets {
             WidgetTimelineRefresher.reloadAllIfPossible()
         }
+    }
+
+    func loadScheduled(forDayKey dayKey: String) -> SharedOracleMoment? {
+        loadScheduledMoments()[dayKey]
+    }
+
+    /// Future Widget entries are generated ahead of time, so persist their exact display state now.
+    func saveScheduled(
+        moment: OracleMoment,
+        source: PhraseSelectionSource,
+        corpusVersion: Int,
+        shownAt: Date
+    ) {
+        var moments = loadScheduledMoments()
+        moments[moment.dayKey] = makeSharedMoment(
+            moment: moment,
+            source: source,
+            corpusVersion: corpusVersion,
+            shownAt: shownAt
+        )
+
+        let retained = moments.sorted { $0.key < $1.key }.suffix(32)
+        let pruned = Dictionary(uniqueKeysWithValues: retained.map { ($0.key, $0.value) })
+        guard let data = try? JSONEncoder().encode(pruned) else { return }
+        defaults?.set(data, forKey: scheduledKey)
+        defaults?.synchronize()
     }
 
     func save(_ shared: SharedOracleMoment) {
@@ -89,6 +107,36 @@ final class SharedOracleMomentStore {
         defaults?.set(shared.colorForeground, forKey: AppConstants.sharedTodayColorForegroundKey)
         defaults?.set(shared.colorFamily, forKey: AppConstants.sharedTodayColorFamilyKey)
         defaults?.set(shared.colorTextMode, forKey: AppConstants.sharedTodayColorTextModeKey)
+    }
+
+    private func loadScheduledMoments() -> [String: SharedOracleMoment] {
+        guard let data = defaults?.data(forKey: scheduledKey),
+              let moments = try? JSONDecoder().decode([String: SharedOracleMoment].self, from: data)
+        else { return [:] }
+        return moments
+    }
+
+    private func makeSharedMoment(
+        moment: OracleMoment,
+        source: PhraseSelectionSource,
+        corpusVersion: Int,
+        shownAt: Date
+    ) -> SharedOracleMoment {
+        SharedOracleMoment(
+            phraseId: moment.phrase.id,
+            phraseText: moment.phrase.text,
+            phraseTextEn: moment.phrase.textEn,
+            colorHex: moment.nipponColor.hex,
+            colorName: moment.nipponColor.name,
+            colorCname: moment.nipponColor.cname,
+            colorForeground: moment.nipponColor.foreground,
+            colorFamily: moment.nipponColor.family,
+            colorTextMode: moment.nipponColor.textMode?.rawValue,
+            dayKey: moment.dayKey,
+            shownAt: shownAt,
+            source: source,
+            corpusVersion: corpusVersion
+        )
     }
 
     private func loadLegacySnapshot() -> SharedOracleMoment? {

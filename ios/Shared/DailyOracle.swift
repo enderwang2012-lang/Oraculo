@@ -47,12 +47,9 @@ struct DailyOracleService {
         )
     }
 
-    /// Widget 优先读主 App 已同步的展示；未打开过 App 时返回 nil，由 Widget 自行推算。
+    /// Widget 优先读今天的 current moment；current 过期时恢复预生成的今日计划。
     func loadDisplayedSnapshot(for date: Date = Date()) -> DisplayedOracleSnapshot? {
-        let dayKey = PhraseStore.dayKey(for: date)
-        guard let shared = SharedOracleMomentStore.shared.load(),
-              shared.dayKey == dayKey
-        else { return nil }
+        guard let shared = loadPreferredSharedMoment(for: date) else { return nil }
 
         let phraseTextEn = resolvePhraseTextEn(
             stored: shared.phraseTextEn,
@@ -67,6 +64,58 @@ struct DailyOracleService {
             colorFamily: shared.colorFamily,
             colorTextMode: shared.colorTextMode
         )
+    }
+
+    /// App 冷启动或回前台时恢复 Widget 当前显示的完整句色。
+    func loadDisplayedMoment(for date: Date = Date()) -> OracleMoment? {
+        guard let shared = loadPreferredSharedMoment(for: date) else { return nil }
+
+        let catalogPhrase = phrases.phrases.first { $0.id == shared.phraseId }
+            ?? phrases.phrases.first { $0.text == shared.phraseText }
+        let phrase = Phrase(
+            id: shared.phraseId.isEmpty
+                ? catalogPhrase?.id ?? "shared-\(shared.dayKey)"
+                : shared.phraseId,
+            text: shared.phraseText,
+            textEn: shared.phraseTextEn.isEmpty ? catalogPhrase?.textEn ?? "" : shared.phraseTextEn,
+            layer: catalogPhrase?.layer ?? "shared",
+            emotionTheme: catalogPhrase?.emotionTheme ?? "shared",
+            dispatch: catalogPhrase?.dispatch,
+            freshness: catalogPhrase?.freshness ?? .fallback
+        )
+
+        let color = colors.colors.first {
+            $0.hex.caseInsensitiveCompare(shared.colorHex) == .orderedSame
+        } ?? NipponColor(
+            id: "shared-\(shared.colorHex)",
+            name: shared.colorName,
+            cname: shared.colorCname,
+            hex: shared.colorHex,
+            foreground: shared.colorForeground,
+            family: shared.colorFamily,
+            textMode: shared.colorTextMode.flatMap(NipponTextMode.init(rawValue:))
+        )
+
+        return OracleMoment(phrase: phrase, nipponColor: color, dayKey: shared.dayKey)
+    }
+
+    private func loadPreferredSharedMoment(for date: Date) -> SharedOracleMoment? {
+        let dayKey = PhraseStore.dayKey(for: date)
+        let current = SharedOracleMomentStore.shared.load()
+        let scheduled = SharedOracleMomentStore.shared.loadScheduled(forDayKey: dayKey)
+
+        switch SharedMomentSelectionPolicy.preferredSource(
+            for: dayKey,
+            currentDayKey: current?.dayKey,
+            scheduledDayKey: scheduled?.dayKey
+        ) {
+        case .current:
+            return current
+        case .scheduled:
+            return scheduled
+        case .none:
+            return nil
+        }
     }
 }
 

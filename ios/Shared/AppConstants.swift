@@ -33,6 +33,7 @@ enum AppConstants {
     static let sharedCorpusVersionKey = "corpusAppliedVersion"
     static let sharedPhraseExposureHistoryKey = "phraseExposureHistory.v1"
     static let sharedCurrentMomentKey = "currentOracleMoment.v1"
+    static let sharedScheduledMomentsKey = "scheduledOracleMoments.v1"
     static let sharedLocationContextEnabledKey = "locationContextEnabled.v1"
 
     /// 安装级唯一 ID：让「同地、同日、同情境」的不同用户随机到不同句/色。

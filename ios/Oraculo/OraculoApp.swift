@@ -4,6 +4,7 @@ import SwiftUI
 struct OraculoApp: App {
     @Environment(\.scenePhase) private var scenePhase
     @StateObject private var session = OracleSessionModel()
+    @State private var wasInBackground = false
 
     init() {
         #if DEBUG
@@ -20,14 +21,13 @@ struct OraculoApp: App {
         WindowGroup {
             ContentView(session: session)
         }
-        .onChange(of: scenePhase) { oldPhase, phase in
+        .onChange(of: scenePhase) { _, phase in
             switch phase {
             case .active:
-                // 回前台：先展示当前句，略停后再换句；勿等待语料或天气网络。
-                if oldPhase == .background {
+                if wasInBackground {
+                    wasInBackground = false
                     session.refreshOnResumeFromBackground()
                 }
-                session.syncWidgetDisplay()
                 Task { @MainActor in
                     #if !APPLICATION_EXTENSION_API_ONLY
                     if LocationContextProvider.isLocationContextEnabled {
@@ -38,6 +38,7 @@ struct OraculoApp: App {
                     #endif
                 }
             case .background:
+                wasInBackground = true
                 Task { @MainActor in
                     session.cancelPendingResumeRefresh()
                     session.syncWidgetDisplay()
