@@ -6901,5 +6901,125 @@
       "cadenceGroup": "short_plain_u9752_u8bed",
       "lifecycle": "active"
     }
+  },
+  {
+    "id": "sb_2057",
+    "text": "孤独海怪",
+    "textEn": "A lonely sea beast",
+    "layer": "active",
+    "emotionTheme": "lyric_image",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "dark"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "summer_water",
+      "cadenceGroup": "short_plain_u5b64_u602a",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2058",
+    "text": "蝉声稀",
+    "textEn": "Cicada song grows sparse",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.5
+        },
+        {
+          "tag": "season:autumn",
+          "weight": 1.5
+        },
+        {
+          "tag": "solar_term:chushu",
+          "weight": 2.5
+        },
+        {
+          "tag": "scene:season_change",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "light"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_romance",
+      "cadenceGroup": "short_plain_u8749_u7a00",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2059",
+    "text": "囿于昼夜",
+    "textEn": "Bound within day and night",
+    "layer": "active",
+    "emotionTheme": "lyric_image",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "dark"
+      ],
+      "colorBan": [
+        "light"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "lyric_image",
+      "cadenceGroup": "short_plain_u56ff_u591c",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2060",
+    "text": "旧钟慢两分",
+    "textEn": "The old clock runs two minutes slow",
+    "layer": "active",
+    "emotionTheme": "quiet_mirror",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.0
+        }
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "quiet_mirror",
+      "cadenceGroup": "medium_modifier_u65e7_u5206",
+      "lifecycle": "active"
+    }
   }
 ]

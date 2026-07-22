@@ -2,7 +2,7 @@
 
 AI 语义层产出，逐条扫一眼接受/改写。锚点句在 tag_phrases_llm.py 的 OVERRIDES 里。
 
-覆盖 244 / 244 条。
+覆盖 248 / 248 条。
 
 - `sb_1` **今日锦鲤** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_2` **文艺青年** — moods=['cool']; ban=['warm']
@@ -248,3 +248,7 @@ AI 语义层产出，逐条扫一眼接受/改写。锚点句在 tag_phrases_llm
 - `sb_2054` **偷得浮生半日凉** — moods=['light']; ban=['dark']
 - `sb_2055` **杯中有远山** — moods=['light']; ban=['dark']
 - `sb_2056` **青山不语** — moods=['cool']; ban=['warm']
+- `sb_2057` **孤独海怪** — moods=['cool', 'dark']; ban=['warm']; boost=scene:self_time×1.2
+- `sb_2058` **蝉声稀** — moods=['cool', 'light']; ban=['warm']; boost=season:summer×2.5,season:autumn×1.5,solar_term:chushu×2.5,scene:season_change×1.5
+- `sb_2059` **囿于昼夜** — moods=['dark']; ban=['light']; boost=scene:self_time×1.2
+- `sb_2060` **旧钟慢两分** — boost=scene:self_time×1.0

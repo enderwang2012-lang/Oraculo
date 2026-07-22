@@ -281,6 +281,10 @@ OVERRIDES: dict[str, dict] = {
     "sb_2035": {"colorMoods": ["cool"], "colorBan": ["warm"], "boostAdd": [{"tag": "month:6", "weight": 1.5}], "_meta": {"emotion": "quiet_mirror", "tone": "calm"}},
     "sb_2041": {"colorMoods": ["cool", "light"], "colorBan": ["warm"], "boostAdd": [{"tag": "weather:rain", "weight": 3.0}, {"tag": "scene:rainy_day", "weight": 1.5}], "_meta": {"emotion": "daily_romance", "tone": "calm", "scene": ["rainy_day"]}},
     "sb_2042": {"colorMoods": ["cool", "dark"], "colorBan": ["warm"], "boostAdd": [{"tag": "scene:decision_wait", "weight": 1.5}, {"tag": "scene:travel", "weight": 1.0}], "_meta": {"emotion": "lyric_image", "tone": "calm", "scene": ["decision_wait", "travel"]}},
+    "sb_2057": {"colorMoods": ["cool", "dark"], "colorBan": ["warm"], "boostAdd": [{"tag": "scene:self_time", "weight": 1.2}], "_meta": {"emotion": "lyric_image", "tone": "calm", "scene": ["self_time"]}},
+    "sb_2058": {"colorMoods": ["cool", "light"], "colorBan": ["warm"], "boostAdd": [{"tag": "season:summer", "weight": 2.5}, {"tag": "season:autumn", "weight": 1.5}, {"tag": "solar_term:chushu", "weight": 2.5}, {"tag": "scene:season_change", "weight": 1.5}], "_meta": {"emotion": "daily_romance", "tone": "calm", "scene": ["season_change"]}},
+    "sb_2059": {"colorMoods": ["dark"], "colorBan": ["light"], "boostAdd": [{"tag": "scene:self_time", "weight": 1.2}], "_meta": {"emotion": "lyric_image", "tone": "calm", "scene": ["self_time"]}},
+    "sb_2060": {"boostAdd": [{"tag": "scene:self_time", "weight": 1.0}], "_meta": {"emotion": "quiet_mirror", "tone": "calm", "scene": ["self_time"]}},
     "sb_20": {  # 蔚蓝海面
         "colorMoods": ["cool"], "colorBan": ["warm"], "colorFamilies": ["blue"],
         "boostAdd": [{"tag": "season:summer", "weight": 2.0}, {"tag": "weather:clear", "weight": 1.5}, {"tag": "scene:travel", "weight": 1.2}],

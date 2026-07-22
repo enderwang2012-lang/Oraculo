@@ -1,10 +1,10 @@
 {
-  "corpusVersion": 6,
-  "publishedAt": "2026-06-23T11:24:57Z",
+  "corpusVersion": 7,
+  "publishedAt": "2026-07-22T13:20:42Z",
   "minAppVersion": "0.1.0",
   "releaseNotes": null,
   "phrases": {
     "url": "https://oraculo-corpus.vercel.app/oraculo/phrases.json",
-    "sha256": "d93c97ad894f6f3153bf12a7b1af7451b35f402f258810894820d0a47451e0e8"
+    "sha256": "34f84187db2481973afe996b1e71bc1dc670103a281092aed230d30aabd0dd4f"
   }
 }

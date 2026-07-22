@@ -245,6 +245,10 @@ TRANSLATIONS: dict[str, str] = {
     "sb_2054": "Steal half a day of ease",
     "sb_2055": "Far hills in the cup",
     "sb_2056": "Green hills say nothing",
+    "sb_2057": "A lonely sea beast",
+    "sb_2058": "Cicada song grows sparse",
+    "sb_2059": "Bound within day and night",
+    "sb_2060": "The old clock runs two minutes slow",
 }
 
 if __name__ == "__main__":

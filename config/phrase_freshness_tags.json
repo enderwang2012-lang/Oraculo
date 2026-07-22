@@ -1218,5 +1218,25 @@
     "semanticCluster": "travel_distance",
     "cadenceGroup": "short_plain_u9752_u8bed",
     "lifecycle": "active"
+  },
+  "sb_2057": {
+    "semanticCluster": "summer_water",
+    "cadenceGroup": "short_plain_u5b64_u602a",
+    "lifecycle": "active"
+  },
+  "sb_2058": {
+    "semanticCluster": "daily_romance",
+    "cadenceGroup": "short_plain_u8749_u7a00",
+    "lifecycle": "active"
+  },
+  "sb_2059": {
+    "semanticCluster": "lyric_image",
+    "cadenceGroup": "short_plain_u56ff_u591c",
+    "lifecycle": "active"
+  },
+  "sb_2060": {
+    "semanticCluster": "quiet_mirror",
+    "cadenceGroup": "medium_modifier_u65e7_u5206",
+    "lifecycle": "active"
   }
 }
