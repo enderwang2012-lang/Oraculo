@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Oraculo 隐私政策" />
+    <title>隐私政策 - Oraculo</title>
+    <link rel="icon" href="/assets/app-icon.png" />
+    <link rel="stylesheet" href="/assets/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/" aria-label="Oraculo 首页">
+          <img src="/assets/app-icon.png" alt="" width="36" height="36" />
+          <span>Oraculo</span>
+        </a>
+        <nav aria-label="主要导航">
+          <a href="/support/">支持</a>
+          <a href="/privacy/" aria-current="page">隐私</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro wrap">
+        <p class="eyebrow">Oraculo</p>
+        <h1>隐私政策</h1>
+        <p class="lede">我们只处理提供核心体验所需的数据，不建立账户，不投放广告，也不追踪你。</p>
+        <p class="meta">更新日期：2026 年 7 月 28 日</p>
+      </section>
+
+      <section class="band">
+        <div class="wrap prose">
+          <section>
+            <h2>概览</h2>
+            <p>
+              Oraculo 是一款每日短签与色彩应用。它不要求注册账户，不包含广告，不使用第三方分析、广告归因或跨 App 追踪 SDK。
+            </p>
+          </section>
+
+          <section>
+            <h2>设备上的数据</h2>
+            <p>为了让 App 与小组件保持一致，并减少短签重复，Oraculo 会在设备上保存：</p>
+            <ul>
+              <li>当前短签、颜色与小组件状态；</li>
+              <li>已安装语料版本；</li>
+              <li>只用于在本机变化选句结果的随机安装标识；</li>
+              <li>近期短签展示记录；</li>
+              <li>你主动开启位置情境后产生的近似位置、天气和海拔缓存。</li>
+            </ul>
+            <p>
+              这些内容保存在 App 及其小组件共用的本地容器中，不用于识别你在其他 App 或网站上的活动。卸载 App 会移除由 iOS 管理的本地数据。
+            </p>
+          </section>
+
+          <section>
+            <h2>可选的位置情境</h2>
+            <p>
+              位置情境默认关闭。只有你点击位置按钮、阅读用途说明并继续后，Oraculo 才会申请“使用 App 时”位置权限。
+            </p>
+            <p>
+              开启后，Oraculo 会把坐标转换为较粗粒度后再缓存，并将取整后的经纬度发送给 Open-Meteo，用于查询当前天气或海拔。近似位置只用于改善当日短签的情境选择，不与账户关联，也不用于广告或追踪。
+            </p>
+            <p>
+              你可以随时在 App 中关闭位置情境。关闭后，Oraculo 会停止位置、天气和海拔请求，并清除本地保存的位置、天气、区域、海拔与地理网格缓存。你也可以在 iOS“设置”中撤回位置权限。
+            </p>
+          </section>
+
+          <section>
+            <h2>网络请求</h2>
+            <p>Oraculo 可能连接以下服务：</p>
+            <ul>
+              <li><code>oraculo-corpus.vercel.app</code>：获取静态语料更新文件；</li>
+              <li><code>api.open-meteo.com</code>：仅在位置情境开启时查询天气或海拔。</li>
+            </ul>
+            <p>
+              网络不可用时，Oraculo 会继续使用内置语料和色板。第三方服务对请求数据的处理同时受其服务条款与隐私实践约束。
+            </p>
+          </section>
+
+          <section>
+            <h2>你的选择</h2>
+            <ul>
+              <li>可以不授予位置权限，App 与小组件的核心功能仍可使用；</li>
+              <li>可以随时关闭位置情境并清除相关本地缓存；</li>
+              <li>可以通过 iOS“设置”管理或撤回系统权限；</li>
+              <li>可以卸载 App，移除由 iOS 管理的本地应用数据。</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>政策变更</h2>
+            <p>如果数据处理方式发生实质变化，我们会更新本页，并在页面顶部标明新的更新日期。</p>
+          </section>
+
+          <section>
+            <h2>联系我们</h2>
+            <p>
+              如有隐私问题，请发送邮件至
+              <a href="mailto:enderwang2012@gmail.com">enderwang2012@gmail.com</a>。
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <span>© 2026 Oraculo</span>
+        <a href="/support/">支持</a>
+      </div>
+    </footer>
+  </body>
+</html>

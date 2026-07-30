@@ -1,15 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hans">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Oraculo Corpus CDN</title>
+    <meta
+      name="description"
+      content="Oraculo 是一款每日短签与色彩小组件应用。"
+    />
+    <title>Oraculo</title>
+    <link rel="icon" href="/assets/app-icon.png" />
+    <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body>
-    <p>Oraculo 语料静态托管。</p>
-    <ul>
-      <li><a href="/oraculo/manifest.json">manifest.json</a></li>
-      <li><a href="/oraculo/phrases.json">phrases.json</a></li>
-    </ul>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/" aria-label="Oraculo 首页">
+          <img src="/assets/app-icon.png" alt="" width="36" height="36" />
+          <span>Oraculo</span>
+        </a>
+        <nav aria-label="主要导航">
+          <a href="/support/">支持</a>
+          <a href="/privacy/">隐私</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro wrap">
+        <img
+          class="app-icon"
+          src="/assets/app-icon.png"
+          alt="Oraculo 应用图标"
+          width="104"
+          height="104"
+        />
+        <p class="eyebrow">每日短签与色彩小组件</p>
+        <h1>Oraculo</h1>
+        <p class="lede">
+          打开屏幕，留下一句话、一种颜色和片刻停顿。主屏与锁屏小组件，让今天的一句随时可见。
+        </p>
+      </section>
+
+      <section class="band">
+        <div class="wrap prose">
+          <h2>简单，但不单调</h2>
+          <p>
+            Oraculo 每天准备一句短签与一种颜色。你也可以在 App 中长按底部印记，换一句、换一色；App 与小组件会保持当天状态一致。
+          </p>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap prose">
+          <h2>无需账户</h2>
+          <p>
+            核心内容内置在设备中，离线也能使用。位置情境默认关闭，只有主动开启后才会用于天气与海拔情境。
+          </p>
+          <div class="actions">
+            <a class="button primary" href="/support/">获取支持</a>
+            <a class="button secondary" href="/privacy/">查看隐私政策</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <span>© 2026 Oraculo</span>
+        <a href="mailto:enderwang2012@gmail.com">enderwang2012@gmail.com</a>
+      </div>
+    </footer>
   </body>
 </html>
