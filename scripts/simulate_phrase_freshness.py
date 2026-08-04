@@ -8,10 +8,80 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PHRASES = ROOT / "ios" / "Shared" / "Resources" / "phrases.json"
+NEGATIVE_MULTIPLIER = 0.12
 
 
 def load_phrases() -> list[dict]:
     return json.loads(PHRASES.read_text(encoding="utf-8"))
+
+
+def stable_hash64(value: str) -> int:
+    result = 0xCBF29CE484222325
+    for byte in value.encode("utf-8"):
+        result ^= byte
+        result = (result * 0x100000001B3) & 0xFFFFFFFFFFFFFFFF
+    return result
+
+
+def stable_unit(value: str) -> float:
+    return (stable_hash64(value) % 1_000_000) / 1_000_000
+
+
+def season_for_month(month: int) -> str:
+    if month in (3, 4, 5):
+        return "spring"
+    if month in (6, 7, 8):
+        return "summer"
+    if month in (9, 10, 11):
+        return "autumn"
+    return "winter"
+
+
+def daypart_for_hour(hour: int) -> str:
+    if 5 <= hour < 11:
+        return "morning"
+    if 11 <= hour < 14:
+        return "noon"
+    if 14 <= hour < 18:
+        return "afternoon"
+    if 18 <= hour < 22:
+        return "evening"
+    return "late_night"
+
+
+def simulated_context_tags(now: datetime, user: int) -> set[str]:
+    season = season_for_month(now.month)
+    weather = ("clear", "rain", "windy", "overcast")[(now.timetuple().tm_yday + user) % 4]
+    temp = {
+        "spring": "mild",
+        "summer": "hot",
+        "autumn": "mild",
+        "winter": "cold",
+    }[season]
+    return {
+        f"season:{season}",
+        f"month:{now.month}",
+        f"weekday:{((now.weekday() + 1) % 7) + 1}",
+        f"daypart:{daypart_for_hour(now.hour)}",
+        f"weather:{weather}",
+        f"temp:{temp}",
+    }
+
+
+def context_weight(phrase: dict, active_tags: set[str]) -> float:
+    dispatch = phrase.get("dispatch") or {"universal": True, "onlyWhen": [], "boost": []}
+    required = dispatch.get("onlyWhen") or []
+    if required and not any(tag in active_tags for tag in required):
+        return 0
+
+    weight = 1.0 if dispatch.get("universal", True) else 0.6
+    for boost in dispatch.get("boost") or []:
+        if boost.get("tag") in active_tags:
+            weight += float(boost.get("weight", 0))
+    for tag in dispatch.get("negative") or []:
+        if tag in active_tags:
+            weight *= NEGATIVE_MULTIPLIER
+    return max(0, weight)
 
 
 def history_stats(history: list[dict], now: datetime) -> dict:
@@ -78,28 +148,41 @@ def lifecycle_boost(lifecycle: str) -> float:
     }.get(lifecycle, 1)
 
 
-def score(phrase: dict, stats: dict, now: datetime) -> float:
+def score(phrase: dict, stats: dict, now: datetime, active_tags: set[str]) -> float:
     freshness = phrase.get("freshness", {})
     pid = phrase["id"]
     cluster = freshness.get("semanticCluster", "general")
     cadence = freshness.get("cadenceGroup", "general")
     lifecycle = freshness.get("lifecycle", "active")
     return (
-        item_freshness(pid, stats, now)
+        context_weight(phrase, active_tags)
+        * item_freshness(pid, stats, now)
         * cluster_freshness(cluster, stats)
         * cadence_freshness(cadence, stats)
         * lifecycle_boost(lifecycle)
     )
 
 
-def pick(phrases: list[dict], history: list[dict], now: datetime, seed: int) -> dict:
+def pick(
+    phrases: list[dict],
+    history: list[dict],
+    now: datetime,
+    seed: str,
+    active_tags: set[str],
+) -> dict:
     stats = history_stats(history, now)
-    weighted = [(phrase, score(phrase, stats, now)) for phrase in phrases]
+    weighted = [(phrase, score(phrase, stats, now, active_tags)) for phrase in phrases]
     weighted = [(phrase, weight) for phrase, weight in weighted if weight > 0]
     if not weighted:
-        return phrases[seed % len(phrases)]
+        eligible = [
+            phrase
+            for phrase in phrases
+            if context_weight(phrase, active_tags) > 0
+            and phrase.get("freshness", {}).get("lifecycle") != "retired"
+        ]
+        return (eligible or phrases)[stable_hash64(seed) % len(eligible or phrases)]
     total = sum(weight for _, weight in weighted)
-    roll = (seed % 1_000_000) / 1_000_000 * total
+    roll = stable_unit(seed) * total
     for phrase, weight in weighted:
         roll -= weight
         if roll <= 0:
@@ -107,7 +190,7 @@ def pick(phrases: list[dict], history: list[dict], now: datetime, seed: int) -> 
     return weighted[-1][0]
 
 
-def simulate(days: int = 60, users: int = 100) -> dict[str, float]:
+def simulate(days: int = 365, users: int = 30) -> dict[str, float]:
     phrases = load_phrases()
     exact_7d = 0
     cluster_3 = 0
@@ -116,15 +199,25 @@ def simulate(days: int = 60, users: int = 100) -> dict[str, float]:
     anchor_count = 0
     total = 0
     fallback_count = 0
+    context_violation_count = 0
+    retired_count = 0
+    lifecycle_counts = {
+        "active": 0,
+        "anchor": 0,
+        "cooling": 0,
+        "new": 0,
+    }
 
     for user in range(users):
         history: list[dict] = []
-        start = datetime(2026, 6, 1, tzinfo=timezone.utc)
+        start = datetime(2026, 1, 1, tzinfo=timezone.utc)
         for day in range(days):
             draws = 1 + ((user + day) % 6)
             for draw in range(draws):
                 now = start + timedelta(days=day, hours=draw * 3)
-                phrase = pick(phrases, history, now, seed=(user + 1) * 1009 + day * 97 + draw * 17)
+                active_tags = simulated_context_tags(now, user)
+                seed = f"user-{user}|{now.isoformat()}|draw-{draw}"
+                phrase = pick(phrases, history, now, seed=seed, active_tags=active_tags)
                 freshness = phrase.get("freshness", {})
                 pid = phrase["id"]
                 cluster = freshness.get("semanticCluster", "general")
@@ -141,6 +234,14 @@ def simulate(days: int = 60, users: int = 100) -> dict[str, float]:
                     anchor_count += 1
                 if pid == "fallback":
                     fallback_count += 1
+                required = phrase.get("dispatch", {}).get("onlyWhen") or []
+                if required and not any(tag in active_tags for tag in required):
+                    context_violation_count += 1
+                lifecycle = freshness.get("lifecycle", "active")
+                if lifecycle == "retired":
+                    retired_count += 1
+                elif lifecycle in lifecycle_counts:
+                    lifecycle_counts[lifecycle] += 1
                 history.append({
                     "id": pid,
                     "cluster": cluster,
@@ -158,6 +259,12 @@ def simulate(days: int = 60, users: int = 100) -> dict[str, float]:
         "cadence_three_in_5_draws": cadence_three_in_5 / total,
         "anchor_exposure_rate": anchor_count / total,
         "fallback_rate": fallback_count / total,
+        "context_violation_rate": context_violation_count / total,
+        "lifecycle_active_exposure_rate": lifecycle_counts["active"] / total,
+        "lifecycle_anchor_exposure_rate": lifecycle_counts["anchor"] / total,
+        "lifecycle_cooling_exposure_rate": lifecycle_counts["cooling"] / total,
+        "lifecycle_new_exposure_rate": lifecycle_counts["new"] / total,
+        "retired_exposure_rate": retired_count / total,
     }
 
 

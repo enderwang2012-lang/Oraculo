@@ -11,6 +11,14 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 
 class PhraseFreshnessTagTests(unittest.TestCase):
+    def test_generate_tags_applies_reviewed_lifecycle_override(self) -> None:
+        from tag_phrase_freshness import generate_tags
+
+        rows = [{"id": "1", "phrase": "晚云转薄", "theme": "季节画面", "evidence": "generated"}]
+        tags = generate_tags(rows, overrides={"sb_1": {"lifecycle": "retired"}})
+
+        self.assertEqual(tags["sb_1"]["lifecycle"], "retired")
+
     def test_generate_tags_covers_each_phrase_with_valid_fields(self) -> None:
         from tag_phrase_freshness import generate_tags, load_rows
 

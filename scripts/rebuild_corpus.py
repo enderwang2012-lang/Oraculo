@@ -25,13 +25,15 @@ def bump_version() -> int:
     return next_version
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--bump", action="store_true", help="Increment config/corpus_version.txt before embedding")
     parser.add_argument("--publish", action="store_true", help="Publish to dist/corpus and sync public/oraculo")
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL, help="Base URL for publish_corpus_static.py")
+    parser.add_argument("--min-app-version", default="1.0.0", help="Minimum app version written to the manifest")
+    parser.add_argument("--release-notes", default="", help="Release notes written to the manifest")
     parser.add_argument("--skip-preflight", action="store_true", help="Skip validate_corpus.py before rebuild")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     if args.bump:
         bump_version()
@@ -48,7 +50,17 @@ def main() -> None:
     run([sys.executable, "scripts/embed_corpus.py"])
 
     if args.publish:
-        run([sys.executable, "scripts/publish_corpus_static.py", "--base-url", args.base_url])
+        publish_args = [
+            sys.executable,
+            "scripts/publish_corpus_static.py",
+            "--base-url",
+            args.base_url,
+            "--min-app-version",
+            args.min_app_version,
+            "--release-notes",
+            args.release_notes,
+        ]
+        run(publish_args)
 
     print("✅ Corpus rebuild complete")
 

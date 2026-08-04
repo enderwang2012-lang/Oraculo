@@ -15,7 +15,7 @@
 
 ```bash
 python3 scripts/promote_corpus_candidates.py
-python3 scripts/rebuild_corpus.py --publish --bump
+python3 scripts/rebuild_corpus.py --publish --bump --release-notes "本次语料调整摘要"
 python3 scripts/validate_corpus.py
 ```
 
@@ -25,6 +25,8 @@ python3 scripts/validate_corpus.py
 - 情绪/场景标签只做分类展示或软加权，不做硬条件。
 - `onlyWhen` 只放可靠上下文：季节、节日、天气、温度、月份、节气、星期、时段。
 - 发布热更新时需要递增 `config/corpus_version.txt`；`rebuild_corpus.py --bump` 会自动处理。
+- 人工生命周期判断写入 `config/phrase_freshness_overrides.json`，由重建流程稳定覆盖自动标签。
+- `retired` 只保留在源 CSV 台账中，不进入 Bundle 或 CDN payload；`cooling` 继续下发但降低权重。
 
 ## 数据源
 

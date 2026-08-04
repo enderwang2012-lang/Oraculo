@@ -28,9 +28,13 @@ FESTIVAL_EXCLUSIVE_THEMES: dict[str, str] = {
 FESTIVAL_EXCLUSIVE_TEXT: list[re.Pattern[str]] = [
     re.compile(r"岁岁常欢愉"),
     re.compile(r"年年皆胜意"),
+    re.compile(r"新年|春节|新春|财神|兔里兔气"),
 ]
 
-SUMMER_EXCLUSIVE = [r"夏天", r"夏日", r"夏夜", r"盛夏", r"夏至", r"消暑", r"乘凉"]
+SUMMER_EXCLUSIVE = [
+    r"夏天", r"夏日", r"夏夜", r"盛夏", r"夏至", r"消暑", r"乘凉",
+    r"一夏", r"夏意", r"余夏", r"长夏", r"伏天", r"暑气", r"暑热",
+]
 AUTUMN_EXCLUSIVE = [r"秋天", r"秋日", r"秋夜", r"金秋", r"秋意", r"秋枫", r"秋凉", r"秋高气爽"]
 WINTER_EXCLUSIVE = [r"冬天", r"冬日", r"冬夜", r"寒冬", r"冬至", r"围炉", r"冬日暖阳"]
 

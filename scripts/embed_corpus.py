@@ -177,6 +177,10 @@ def sha256_hex(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def should_embed(freshness: dict) -> bool:
+    return freshness.get("lifecycle") != "retired"
+
+
 def main() -> None:
     if not SOURCE.exists():
         raise SystemExit(f"Missing corpus: {SOURCE}")
@@ -200,6 +204,12 @@ def main() -> None:
             layer = "anchor" if evidence in ANCHOR_EVIDENCE else "active"
 
             pid = f"sb_{row['id'].strip()}"
+            freshness = freshness_map.get(pid)
+            if not freshness:
+                raise SystemExit(f"Missing freshness for {pid} in {FRESHNESS_MAP}")
+            if not should_embed(freshness):
+                continue
+
             text_en = en_map.get(pid, "")
             if not text_en:
                 raise SystemExit(f"Missing textEn for {pid} in {EN_MAP}")
@@ -210,9 +220,6 @@ def main() -> None:
 
             merged = merge_dispatch(base, overlay_map.get(pid))
             dispatch = strip_for_embed(merged)
-            freshness = freshness_map.get(pid)
-            if not freshness:
-                raise SystemExit(f"Missing freshness for {pid} in {FRESHNESS_MAP}")
 
             phrases.append({
                 "id": pid,

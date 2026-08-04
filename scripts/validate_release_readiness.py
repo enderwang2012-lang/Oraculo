@@ -9,6 +9,10 @@ import plistlib
 import re
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
+
+from publish_corpus_static import asset_filename
+from validate_app_store_assets import validate_repository as validate_app_store_assets
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,7 +27,7 @@ WEATHER_SERVICE = IOS / "Shared" / "OpenMeteoWeatherService.swift"
 BUNDLED_META = IOS / "Shared" / "Resources" / "corpus_bundled_meta.json"
 BUNDLED_PHRASES = IOS / "Shared" / "Resources" / "phrases.json"
 PUBLIC_MANIFEST = ROOT / "public" / "oraculo" / "manifest.json"
-PUBLIC_PHRASES = ROOT / "public" / "oraculo" / "phrases.json"
+PUBLIC_CORPUS = ROOT / "public" / "oraculo"
 
 
 def read_text(path: Path) -> str:
@@ -101,20 +105,42 @@ def check_corpus_alignment(errors: list[str]) -> None:
     meta = load_json(BUNDLED_META)
     manifest = load_json(PUBLIC_MANIFEST)
     bundled_hash = sha256(BUNDLED_PHRASES)
-    public_hash = sha256(PUBLIC_PHRASES)
+    phrases_url = str(manifest.get("phrases", {}).get("url", ""))
+    public_filename = Path(urlparse(phrases_url).path).name
+    public_phrases = PUBLIC_CORPUS / public_filename
 
     if meta.get("phrasesSHA256") != bundled_hash:
         fail(errors, "bundled meta phrasesSHA256 does not match bundled phrases.json")
+    if not public_filename or not public_phrases.exists():
+        fail(errors, f"public manifest asset does not exist: {public_filename or '(missing URL)'}")
+        return
+
+    public_hash = sha256(public_phrases)
     if manifest.get("phrases", {}).get("sha256") != public_hash:
-        fail(errors, "public manifest sha256 does not match public phrases.json")
+        fail(errors, f"public manifest sha256 does not match {public_filename}")
     if meta.get("corpusVersion") != manifest.get("corpusVersion"):
         fail(errors, "bundled and public corpusVersion must match before release")
     if meta.get("phrasesSHA256") != manifest.get("phrases", {}).get("sha256"):
         fail(errors, "bundled and public phrases SHA must match before release")
 
+    version = manifest.get("corpusVersion")
+    digest = str(manifest.get("phrases", {}).get("sha256", ""))
+    if isinstance(version, int) and version >= 8:
+        try:
+            expected_filename = asset_filename(version, digest)
+        except ValueError as error:
+            fail(errors, f"invalid public corpus asset metadata: {error}")
+        else:
+            if public_filename != expected_filename:
+                fail(
+                    errors,
+                    f"public corpus v{version} must reference immutable asset {expected_filename}",
+                )
+
 
 def main() -> int:
     errors: list[str] = []
+    errors.extend(validate_app_store_assets(ROOT))
     check_privacy_manifest(APP_PRIVACY, "Oraculo app", errors)
     check_privacy_manifest(WIDGET_PRIVACY, "Oraculo widget", errors)
     check_project_references(errors)

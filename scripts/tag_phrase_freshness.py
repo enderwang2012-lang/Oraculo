@@ -14,6 +14,8 @@ from pathlib import Path
 from embed_corpus import ANCHOR_EVIDENCE, SOURCE, theme_slug
 
 OUT = Path(__file__).resolve().parents[1] / "config" / "phrase_freshness_tags.json"
+OVERRIDES = Path(__file__).resolve().parents[1] / "config" / "phrase_freshness_overrides.json"
+OVERRIDE_FIELDS = {"semanticCluster", "cadenceGroup", "lifecycle"}
 
 RESTART_WORDS = ("新", "开始", "出发", "启程", "重启", "未来", "明天", "前路")
 RAIN_WORDS = ("雨", "伞", "淋", "晴雨")
@@ -114,7 +116,23 @@ def lifecycle(row: dict[str, str]) -> str:
     return "anchor" if evidence in ANCHOR_EVIDENCE else "active"
 
 
-def generate_tags(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
+def load_overrides(path: Path = OVERRIDES) -> dict[str, dict[str, str]]:
+    if not path.exists():
+        return {}
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(raw, dict):
+        raise SystemExit(f"Freshness overrides must be an object: {path}")
+    return {
+        pid: value
+        for pid, value in raw.items()
+        if not pid.startswith("_")
+    }
+
+
+def generate_tags(
+    rows: list[dict[str, str]],
+    overrides: dict[str, dict[str, str]] | None = None,
+) -> dict[str, dict[str, str]]:
     result: dict[str, dict[str, str]] = {}
     for row in rows:
         phrase = row["phrase"].strip()
@@ -124,14 +142,26 @@ def generate_tags(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
             "cadenceGroup": cadence_group(phrase),
             "lifecycle": lifecycle(row),
         }
+
+    for pid, override in (overrides or {}).items():
+        if pid not in result:
+            raise SystemExit(f"Unknown freshness override id: {pid}")
+        if not isinstance(override, dict):
+            raise SystemExit(f"Freshness override for {pid} must be an object")
+        unknown_fields = set(override) - OVERRIDE_FIELDS
+        if unknown_fields:
+            fields = ", ".join(sorted(unknown_fields))
+            raise SystemExit(f"Unknown freshness override fields for {pid}: {fields}")
+        result[pid].update(override)
     return result
 
 
 def main() -> None:
-    tags = generate_tags(load_rows())
+    overrides = load_overrides()
+    tags = generate_tags(load_rows(), overrides=overrides)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(tags, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {len(tags)} phrase freshness tags -> {OUT}")
+    print(f"Wrote {len(tags)} phrase freshness tags ({len(overrides)} overridden) -> {OUT}")
 
 
 if __name__ == "__main__":
