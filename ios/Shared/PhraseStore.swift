@@ -1,6 +1,6 @@
 import Foundation
 
-/// 加载语料（App Group 热更新缓存 → Bundle 兜底），并向 App Group 同步「今日一句」供 Widget 读取。
+/// 按版本选择 App Group 热更新缓存或 Bundle 语料，并向 App Group 同步「今日一句」供 Widget 读取。
 final class PhraseStore {
     static let shared = PhraseStore()
 
@@ -22,13 +22,18 @@ final class PhraseStore {
     }
 
     private static func loadEffectivePhrases() -> (phrases: [Phrase], corpusVersion: Int) {
-        if let cached = PhraseCorpusStorage.loadCachedPhrases(), !cached.isEmpty {
-            let version = PhraseCorpusStorage.loadAppliedVersion()
-            return (cached, version)
+        let bundledVersion = CorpusBundledMeta.load()?.corpusVersion ?? 0
+        let cachedVersion = PhraseCorpusStorage.loadAppliedVersion()
+        let cached = PhraseCorpusStorage.loadCachedPhrases()
+        if CorpusVersionSelection.shouldUseCached(
+            cachedVersion: cachedVersion,
+            bundledVersion: bundledVersion,
+            hasCachedPayload: cached?.isEmpty == false
+        ), let cached {
+            return (cached, cachedVersion)
         }
         let bundled = loadBundledPhrases()
-        let version = CorpusBundledMeta.load()?.corpusVersion ?? 0
-        return (bundled, version)
+        return (bundled, bundledVersion)
     }
 
     static func loadBundledPhrases() -> [Phrase] {

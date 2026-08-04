@@ -1,4 +1,4 @@
-# Oraculo — 产品说明（v0.1）
+# Oraculo — 产品说明（v1.0）
 
 ## 一句话
 
@@ -28,16 +28,16 @@
 - SwiftUI 主界面
 - WidgetKit：主屏 Small / Medium
 - 锁屏：Inline + Rectangular
-- 内置语料：收集的啡快口令 [starbucks_now_passphrases.csv](../starbucks_now_passphrases.csv)（约 300+ 条，见 [CORPUS.md](CORPUS.md)）
+- 语料源台账：248 条短签 [starbucks_now_passphrases.csv](../starbucks_now_passphrases.csv)；生成 payload 排除 `retired` 内容（见 [CORPUS.md](CORPUS.md)）
 - 小组件 / 共享缓存：按本地日历日稳定选句 + 色（午夜刷新）
 - **App 内**：每次进入前台随机换句 + 随机色，背景叠化 + 文字渐隐渐现
+- 静态语料热更新：HTTPS manifest + SHA256 校验，网络失败时回退内置语料
 
 ### 不做（后续）
 
 - 推送提醒
 - iCloud 同步 / 账号
 - 用户自定义语料
-- 远程语料：静态 manifest 热更新（可选 CDN），见 [CORPUS_REMOTE.md](CORPUS_REMOTE.md)
 - iPad 专属布局
 
 ## 语料策略
@@ -55,6 +55,6 @@ Shared/              共享：PhraseStore、选句算法、JSON
 App Group            group.ai.oraculo.shared
 ```
 
-## 命名与品牌（待定）
+## 命名与品牌
 
-工作目录名 Oraculo；上架名称、图标、中文名可后续定为「今日一句」「日签」等。
+应用名与上架品牌统一为 **Oraculo**。

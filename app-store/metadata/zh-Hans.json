@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "sku": "oraculo-ios-001",
+  "name": "Oraculo",
+  "subtitle": "每日一句与色彩小组件",
+  "promotionalText": "一天很长，也可以只留下一句话。Oraculo 用每日短签、每日一色与主屏和锁屏小组件，让片刻的停顿随时可见。",
+  "description": "Oraculo 是一款每日短签与色彩小组件应用。\n\n打开 App，屏幕只留下一句话、一种颜色和此刻的时间。你也可以长按底部印记，换一句、换一色。\n\n主要功能\n\n• 每日短签与每日一色\n• 主屏小号和中号小组件\n• 锁屏行内和矩形小组件\n• App 与小组件共享当天状态\n• 内置语料和色板，断网也能使用\n• 可选的位置情境，结合天气与海拔改善当日选择\n• 支持 VoiceOver 与减少动态效果\n\n位置情境默认关闭。只有你主动开启后，Oraculo 才会申请“使用 App 时”位置权限，并使用取整后的近似位置查询天气或海拔。关闭位置情境时，相关本地缓存会被清除。\n\nOraculo 不需要账户，不包含广告，不使用第三方分析或跨 App 追踪 SDK。",
+  "keywords": "每日一句,日签,小组件,锁屏组件,色彩,短句,桌面组件,心情,诗意,每日",
+  "primaryCategory": "Lifestyle",
+  "secondaryCategory": "Utilities",
+  "privacyPolicyUrl": "https://oraculo-corpus.vercel.app/privacy/",
+  "supportUrl": "https://oraculo-corpus.vercel.app/support/",
+  "marketingUrl": "https://oraculo-corpus.vercel.app/",
+  "contactEmail": "enderwang2012@gmail.com",
+  "primaryLocale": "zh-Hans",
+  "price": "Free"
+}

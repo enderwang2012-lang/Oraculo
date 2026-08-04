@@ -44,6 +44,7 @@ let package = Package(
             sources: [
                 "AppConstants.swift",
                 "Color+Hex.swift",
+                "CorpusVersionSelection.swift",
                 "FestivalCalendar.swift",
                 "GeoContext.swift",
                 "LocationContextCache.swift",

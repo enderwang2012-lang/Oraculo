@@ -1,6 +1,6 @@
 # Oraculo
 
-**Oraculo**（iOS 17+）：每日一句 + 每日一色，纯色铺满、居中一句、无导航。色系借鉴日本传统色，但不展示色名、不绑定其文化语义。含啡快式语料研究资产。
+**Oraculo 1.0**（iOS 17+）：每日一句 + 每日一色，纯色铺满、居中一句、无导航。色系借鉴日本传统色，但不展示色名、不绑定其文化语义。语料源台账含 248 条审查记录，生成 payload 按生命周期排除 `retired` 内容。
 
 ## 仓库结构
 
@@ -23,4 +23,4 @@ open ios/Oraculo.xcodeproj   # 在 Xcode 中选 Team 后 Run
 
 ## 语料（第一版）
 
-App 内置收集的啡快口令：`starbucks_now_passphrases.csv` → `scripts/embed_corpus.py` → `phrases.json`。说明见 [docs/CORPUS.md](docs/CORPUS.md)。
+语料源台账：`starbucks_now_passphrases.csv` → `scripts/embed_corpus.py` → `phrases.json`。当前 payload 数量与生命周期决策见 [docs/CORPUS.md](docs/CORPUS.md)。

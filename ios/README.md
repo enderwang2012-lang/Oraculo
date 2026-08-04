@@ -4,7 +4,7 @@
 
 ## 环境
 
-- **Xcode 15+**（建议 16），且须为完整 Xcode（非仅 Command Line Tools）
+- **Xcode 26.5**，且须为完整 Xcode（非仅 Command Line Tools）
 - **iOS 17.0+** 部署目标
 - 可选：[XcodeGen](https://github.com/yonaskolb/XcodeGen)（`brew install xcodegen`），用于从 `project.yml` 再生工程
 
@@ -33,7 +33,7 @@ open Oraculo.xcodeproj
 
 在 Xcode 中：
 
-1. 选中 **Oraculo** target → **Signing & Capabilities** → 选择你的 **Team**
+1. 选中 **Oraculo** target → **Signing & Capabilities**，确认 `project.yml` 中配置的付费 **Team** 正确
 2. 对 **OraculoWidget** 重复；确认 App Group `group.ai.oraculo.shared` 已启用
 3. 运行 **Oraculo** scheme（模拟器或真机）
 
@@ -105,4 +105,4 @@ cd ios && xcodegen generate
 - [ ] 缩 Nippon 色板子集
 - [ ] 内嵌 LXGW 文楷
 - [ ] 锁屏 Circular 组件
-- [ ] TestFlight
+- [ ] 完成签名 Archive 与 TestFlight 真机验收
