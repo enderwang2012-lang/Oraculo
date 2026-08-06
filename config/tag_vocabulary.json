@@ -27,7 +27,7 @@
       "values": [
         "new_year", "spring_festival", "lantern_festival", "qingming",
         "labor_day", "dragon_boat", "mid_autumn", "national_day",
-        "valentine", "christmas"
+        "valentine", "father_day", "christmas"
       ],
       "weight_range": [1.5, 6.0]
     },

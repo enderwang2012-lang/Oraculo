@@ -93,6 +93,19 @@
       "post_days": 0
     },
     {
+      "id": "father_day",
+      "name": "父亲节",
+      "ranges": [],
+      "recurrence": {
+        "type": "nth_weekday_of_month",
+        "month": 6,
+        "weekday": 1,
+        "ordinal": 3
+      },
+      "pre_days": 0,
+      "post_days": 0
+    },
+    {
       "id": "christmas",
       "name": "圣诞",
       "ranges": [

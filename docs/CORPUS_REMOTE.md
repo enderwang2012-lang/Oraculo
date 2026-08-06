@@ -52,6 +52,14 @@ git push
 
 `rebuild_corpus.py --publish` 会调用 `publish_corpus_static.py`，把 `dist/corpus/` 的 manifest 与不可变资源复制到 `public/oraculo/`。直接调用发布器做本地试跑时可加 `--no-sync-public`。
 
+本地审核候选尚未发布时，Bundle 版本可能高于现网版本。此时使用：
+
+```bash
+python3 scripts/validate_release_readiness.py --allow-unpublished-candidate
+```
+
+该模式仍校验本地 Bundle 和现有 public 资源各自完整，只跳过两者必须相同的版本与 SHA 闸门。默认不带参数的模式继续用于真正发布前检查。
+
 push 后不要只看 HTTP 200。用预期版本、SHA、数量和关键条目做精确轮询：
 
 ```bash

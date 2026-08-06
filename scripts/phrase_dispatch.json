@@ -180,7 +180,7 @@
   "sb_42": {
     "universal": false,
     "onlyWhen": [
-      "season:autumn"
+      "festival:mid_autumn"
     ],
     "boost": []
   },
@@ -197,8 +197,10 @@
     "boost": []
   },
   "sb_49": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
     "boost": []
   },
   "sb_50": {
@@ -270,8 +272,10 @@
     "boost": []
   },
   "sb_68": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
     "boost": []
   },
   "sb_69": {
@@ -316,12 +320,7 @@
     "onlyWhen": [
       "festival:spring_festival"
     ],
-    "boost": [
-      {
-        "tag": "festival:spring_festival",
-        "weight": 3.0
-      }
-    ]
+    "boost": []
   },
   "sb_80": {
     "universal": false,
@@ -336,8 +335,10 @@
     ]
   },
   "sb_81": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:father_day"
+    ],
     "boost": []
   },
   "sb_83": {
@@ -380,32 +381,32 @@
     "onlyWhen": [
       "festival:spring_festival"
     ],
-    "boost": [
-      {
-        "tag": "festival:spring_festival",
-        "weight": 3.0
-      }
-    ]
+    "boost": []
   },
   "sb_100": {
     "universal": false,
     "onlyWhen": [
+      "season:autumn",
       "season:winter",
       "weather:snow"
     ],
-    "boost": []
+    "boost": [
+      {
+        "tag": "temp:cold",
+        "weight": 2.0
+      },
+      {
+        "tag": "solar_term:shuangjiang",
+        "weight": 2.0
+      }
+    ]
   },
   "sb_101": {
     "universal": false,
     "onlyWhen": [
       "festival:spring_festival"
     ],
-    "boost": [
-      {
-        "tag": "festival:spring_festival",
-        "weight": 3.0
-      }
-    ]
+    "boost": []
   },
   "sb_102": {
     "universal": true,
@@ -665,8 +666,10 @@
     "boost": []
   },
   "sb_164": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "season:spring"
+    ],
     "boost": []
   },
   "sb_165": {
@@ -755,8 +758,10 @@
     ]
   },
   "sb_188": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
     "boost": [
       {
         "tag": "solar_term:xiaoman",
@@ -775,8 +780,10 @@
     "boost": []
   },
   "sb_194": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:christmas"
+    ],
     "boost": []
   },
   "sb_195": {
@@ -915,8 +922,10 @@
     "boost": []
   },
   "sb_222": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "festival:new_year"
+    ],
     "boost": []
   },
   "sb_227": {
@@ -1090,7 +1099,7 @@
   "sb_257": {
     "universal": false,
     "onlyWhen": [
-      "festival:spring_festival"
+      "festival:new_year"
     ],
     "boost": []
   },
@@ -1124,7 +1133,7 @@
   "sb_263": {
     "universal": false,
     "onlyWhen": [
-      "festival:spring_festival"
+      "festival:christmas"
     ],
     "boost": []
   },
@@ -1176,14 +1185,9 @@
   "sb_273": {
     "universal": false,
     "onlyWhen": [
-      "festival:spring_festival"
+      "festival:new_year"
     ],
-    "boost": [
-      {
-        "tag": "festival:spring_festival",
-        "weight": 3.0
-      }
-    ]
+    "boost": []
   },
   "sb_274": {
     "universal": true,
@@ -1385,9 +1389,14 @@
   "sb_2035": {
     "universal": false,
     "onlyWhen": [
-      "month:6"
+      "month:7"
     ],
-    "boost": []
+    "boost": [
+      {
+        "tag": "month:7",
+        "weight": 1.5
+      }
+    ]
   },
   "sb_2041": {
     "universal": false,
@@ -1442,7 +1451,7 @@
   "sb_2047": {
     "universal": false,
     "onlyWhen": [
-      "season:summer"
+      "solar_term:xiazhi"
     ],
     "boost": []
   },
@@ -1469,8 +1478,10 @@
     "boost": []
   },
   "sb_2052": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
     "boost": []
   },
   "sb_2053": {
@@ -1484,8 +1495,10 @@
     ]
   },
   "sb_2054": {
-    "universal": true,
-    "onlyWhen": [],
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
     "boost": []
   },
   "sb_2055": {

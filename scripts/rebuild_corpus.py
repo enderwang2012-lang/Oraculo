@@ -7,8 +7,12 @@ import subprocess
 import sys
 from pathlib import Path
 
+from corpus_release_guard import require_rights_clear, require_version_above_public
+
 ROOT = Path(__file__).resolve().parents[1]
 VERSION_FILE = ROOT / "config" / "corpus_version.txt"
+EDITORIAL_REVIEW = ROOT / "config" / "phrase_editorial_review.json"
+PUBLIC_MANIFEST = ROOT / "public" / "oraculo" / "manifest.json"
 DEFAULT_BASE_URL = "https://oraculo-corpus.vercel.app/oraculo"
 
 
@@ -34,6 +38,13 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--release-notes", default="", help="Release notes written to the manifest")
     parser.add_argument("--skip-preflight", action="store_true", help="Skip validate_corpus.py before rebuild")
     args = parser.parse_args(argv)
+
+    if args.publish:
+        require_rights_clear(EDITORIAL_REVIEW)
+        if not args.bump:
+            raise SystemExit("Refusing corpus publish without explicit --bump")
+        current_version = int(VERSION_FILE.read_text(encoding="utf-8").strip())
+        require_version_above_public(current_version + 1, PUBLIC_MANIFEST)
 
     if args.bump:
         bump_version()

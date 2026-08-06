@@ -48,6 +48,33 @@ final class FestivalCalendarTests: XCTestCase {
         )
     }
 
+    func testFatherDayMatchesOnlyTheReviewedCalendarDay() {
+        XCTAssertTrue(
+            festivals.activeFestivals(
+                on: date(2026, 6, 21, 23, 59),
+                calendar: calendar
+            ).contains("father_day")
+        )
+        XCTAssertFalse(
+            festivals.activeFestivals(
+                on: date(2026, 6, 22, 0, 0),
+                calendar: calendar
+            ).contains("father_day")
+        )
+        XCTAssertTrue(
+            festivals.activeFestivals(
+                on: date(2028, 6, 18, 12, 0),
+                calendar: calendar
+            ).contains("father_day")
+        )
+        XCTAssertFalse(
+            festivals.activeFestivals(
+                on: date(2028, 6, 19, 0, 0),
+                calendar: calendar
+            ).contains("father_day")
+        )
+    }
+
     func testCrossYearFestivalMatchesJanuaryDatesFromPreviousAnchorYear() {
         XCTAssertTrue(
             festivals.activeFestivals(
@@ -120,6 +147,18 @@ final class FestivalCalendarTests: XCTestCase {
                 { "start": "02-14", "end": "02-14" }
               ],
               "pre_days": 1,
+              "post_days": 0
+            },
+            {
+              "id": "father_day",
+              "ranges": [],
+              "recurrence": {
+                "type": "nth_weekday_of_month",
+                "month": 6,
+                "weekday": 1,
+                "ordinal": 3
+              },
+              "pre_days": 0,
               "post_days": 0
             }
           ]

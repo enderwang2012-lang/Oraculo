@@ -42,8 +42,10 @@
 
 ## 语料策略
 
-- **当前**：真实收集样本 → `scripts/embed_corpus.py` → `phrases.json`（见 [CORPUS.md](CORPUS.md)）
-- **原则**：不生成、不改写；随收集 CSV 增删同步嵌入
+- **源台账**：外部观察样本、人工审核后的生成语料和用户提供语料统一保留来源记录。
+- **编辑审核**：`config/phrase_editorial_review.json` 为生产取舍和标签的唯一机器可读来源；每个源 ID 必须有显式决定。
+- **进入 App**：只嵌入 `decision=keep` 的条目；本次初始审核中所有保留项 lifecycle 统一为 `active`（见 [CORPUS.md](CORPUS.md)）。
+- **原则**：来源可信度与内容质量分开判断；短、克制、具体、有关系留白优先，玩梗、口号、训诫和完整结果保证退出主库。
 - **换句规则**：`hash(yyyy-MM-dd) % 语料数`（Widget）；App 摇一摇/回前台全库随机
 
 ## 技术架构

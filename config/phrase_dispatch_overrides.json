@@ -1,21 +1,298 @@
 {
   "_comment": "手工授权的派发覆盖。口语句字面抽不出场合词，规则打标器无法生成硬锁，这里直接指定最终派发规则。tag_phrases_rules.py 在生成后会用本表覆盖对应 pid，确保重跑不丢。",
-  "sb_10": { "universal": false, "onlyWhen": ["season:summer", "season:autumn"], "boost": [] },
-  "sb_100": { "universal": false, "onlyWhen": ["season:winter", "weather:snow"], "boost": [] },
-  "sb_255": { "universal": false, "onlyWhen": ["festival:spring_festival"], "boost": [] },
-  "sb_263": { "universal": false, "onlyWhen": ["festival:spring_festival"], "boost": [] },
-  "sb_2001": { "universal": false, "onlyWhen": ["season:summer"], "boost": [] },
-  "sb_2002": { "universal": false, "onlyWhen": ["season:summer"], "boost": [] },
-  "sb_2003": { "universal": false, "onlyWhen": ["season:summer"], "boost": [] },
-  "sb_2004": { "universal": false, "onlyWhen": ["season:summer"], "boost": [] },
-  "sb_2005": { "universal": false, "onlyWhen": ["season:summer"], "boost": [{ "tag": "weather:windy", "weight": 1.2 }] },
-  "sb_2006": { "universal": false, "onlyWhen": ["season:summer"], "boost": [] },
-  "sb_2021": { "universal": false, "onlyWhen": ["festival:dragon_boat"], "boost": [] },
-  "sb_2022": { "universal": false, "onlyWhen": ["festival:dragon_boat"], "boost": [] },
-  "sb_2023": { "universal": false, "onlyWhen": ["festival:mid_autumn"], "boost": [] },
-  "sb_2035": { "universal": false, "onlyWhen": ["month:6"], "boost": [] },
-  "sb_2041": { "universal": false, "onlyWhen": ["weather:rain"], "boost": [] },
-  "sb_2046": { "universal": false, "onlyWhen": ["season:summer", "season:autumn"], "boost": [] },
-  "sb_2047": { "universal": false, "onlyWhen": ["season:summer"], "boost": [] },
-  "sb_2058": { "universal": false, "onlyWhen": ["season:summer", "season:autumn"], "boost": [] }
+  "sb_10": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer",
+      "season:autumn"
+    ],
+    "boost": []
+  },
+  "sb_100": {
+    "universal": false,
+    "onlyWhen": [
+      "season:autumn",
+      "season:winter",
+      "weather:snow"
+    ],
+    "boost": [
+      {
+        "tag": "temp:cold",
+        "weight": 2.0
+      },
+      {
+        "tag": "solar_term:shuangjiang",
+        "weight": 2.0
+      }
+    ]
+  },
+  "sb_255": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
+    "boost": []
+  },
+  "sb_263": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:christmas"
+    ],
+    "boost": []
+  },
+  "sb_2001": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": []
+  },
+  "sb_2002": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": []
+  },
+  "sb_2003": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": []
+  },
+  "sb_2004": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": []
+  },
+  "sb_2005": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": [
+      {
+        "tag": "weather:windy",
+        "weight": 1.2
+      }
+    ]
+  },
+  "sb_2006": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": []
+  },
+  "sb_2021": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:dragon_boat"
+    ],
+    "boost": []
+  },
+  "sb_2022": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:dragon_boat"
+    ],
+    "boost": []
+  },
+  "sb_2023": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:mid_autumn"
+    ],
+    "boost": []
+  },
+  "sb_2035": {
+    "universal": false,
+    "onlyWhen": [
+      "month:7"
+    ],
+    "boost": [
+      {
+        "tag": "month:7",
+        "weight": 1.5
+      }
+    ]
+  },
+  "sb_2041": {
+    "universal": false,
+    "onlyWhen": [
+      "weather:rain"
+    ],
+    "boost": []
+  },
+  "sb_2046": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer",
+      "season:autumn"
+    ],
+    "boost": []
+  },
+  "sb_2047": {
+    "universal": false,
+    "onlyWhen": [
+      "solar_term:xiazhi"
+    ],
+    "boost": []
+  },
+  "sb_2058": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer",
+      "season:autumn"
+    ],
+    "boost": []
+  },
+  "sb_188": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": [
+      {
+        "tag": "solar_term:xiaoman",
+        "weight": 2.0
+      }
+    ]
+  },
+  "sb_164": {
+    "universal": false,
+    "onlyWhen": [
+      "season:spring"
+    ],
+    "boost": []
+  },
+  "sb_2052": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": []
+  },
+  "sb_2054": {
+    "universal": false,
+    "onlyWhen": [
+      "season:summer"
+    ],
+    "boost": []
+  },
+  "sb_39": {
+    "universal": false,
+    "onlyWhen": [
+      "season:spring"
+    ],
+    "boost": []
+  },
+  "sb_41": {
+    "universal": false,
+    "onlyWhen": [
+      "season:winter"
+    ],
+    "boost": []
+  },
+  "sb_42": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:mid_autumn"
+    ],
+    "boost": []
+  },
+  "sb_49": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
+    "boost": []
+  },
+  "sb_50": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
+    "boost": []
+  },
+  "sb_51": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
+    "boost": []
+  },
+  "sb_52": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
+    "boost": []
+  },
+  "sb_68": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
+    "boost": []
+  },
+  "sb_78": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
+    "boost": []
+  },
+  "sb_81": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:father_day"
+    ],
+    "boost": []
+  },
+  "sb_99": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
+    "boost": []
+  },
+  "sb_101": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:spring_festival"
+    ],
+    "boost": []
+  },
+  "sb_194": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:christmas"
+    ],
+    "boost": []
+  },
+  "sb_222": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:new_year"
+    ],
+    "boost": []
+  },
+  "sb_257": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:new_year"
+    ],
+    "boost": []
+  },
+  "sb_273": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:new_year"
+    ],
+    "boost": []
+  }
 }

@@ -1,4 +1,12 @@
-# Oraculo 语料（第一版）
+# Oraculo 语料
+
+## 当前口径
+
+- 源台账：`starbucks_now_passphrases.csv`，共 248 条，保留来源、证据与历史记录。
+- 编辑审核源：`config/phrase_editorial_review.json`，248 个 ID 均有显式决定和审核理由。
+- 人工查看表：`review/corpus_review_2026_08_full.csv`，与审核源逐条对应。
+- 本地 Bundle 候选：`corpusVersion 9`，161 条；这是待审产物，尚未同步到 `public/oraculo/` 或生产 CDN。
+- 当前生产：`corpusVersion 8`，110 条；生产状态以远程 manifest 回读为准。
 
 ## 快速更新流程
 
@@ -22,27 +30,36 @@ python3 scripts/validate_corpus.py
 语料约束：
 
 - 入库源仍然只有 `starbucks_now_passphrases.csv`。
+- 每个源 ID 必须先存在于 `config/phrase_editorial_review.json`，否则校验失败。
 - 情绪/场景标签只做分类展示或软加权，不做硬条件。
 - `onlyWhen` 只放可靠上下文：季节、节日、天气、温度、月份、节气、星期、时段。
 - 发布热更新时需要递增 `config/corpus_version.txt`；`rebuild_corpus.py --bump` 会自动处理。
-- 人工生命周期判断写入 `config/phrase_freshness_overrides.json`，由重建流程稳定覆盖自动标签。
-- `retired` 只保留在源 CSV 台账中，不进入 Bundle 或 CDN payload；`cooling` 继续下发但降低权重。
+- 人工生命周期、编辑主题、语义簇和句式组统一写入 `config/phrase_editorial_review.json`。
+- `retired` 只保留在源 CSV 台账中，不进入 Bundle 或 CDN payload。
+- 2026-08-06 人工全量初始审核后，161 条保留项 lifecycle 全部为 `active`，其中 13 条直接采用已确认改写稿。87 条 `retire` 保留在源台账，不进入候选。本轮不使用 `cooling`、`anchor` 或 `new` 权重。
 
 ## 数据源
 
-App 内置句库**仅**来自收集的真实啡快口令：
+源台账混合保存三类可审计来源：
 
 - 文件：[starbucks_now_passphrases.csv](../starbucks_now_passphrases.csv)
 - 来源说明：[starbucks_now_sources.md](../starbucks_now_sources.md)
 - 风格观察：[starbucks_now_style_notes.md](../starbucks_now_style_notes.md)
 
-**不**使用 AI 生成句、`feikuai_corpus_v1` / `lab`、或 `oraculo_corpus_v2`。
+- 外部活动、订单或社交来源记录：218 条。
+- 生成后经人工审核的编辑语料：27 条。
+- 用户提供并单独记录来源的语料：3 条。
+
+来源进入台账不代表进入 App。只有审核源中 `decision=keep` 的条目才进入本地候选。`feikuai_corpus_v1`、`feikuai_corpus_v1_lab` 和 `oraculo_corpus_v2` 仍是研究资产，不参与生成。
 
 ## 生成进 App
 
 ```bash
+python3 scripts/reset_corpus_review.py # 生成 248 条初始审核底稿
+python3 scripts/import_corpus_review.py # 原生解析人工审核工作簿，导入最终决定和备注
 python3 scripts/starbucks_phrases_en.py   # 更新 phrases_en.json（改译文时）
 python3 scripts/tag_phrases_rules.py      # 更新 phrase_dispatch.json（情境打标）
+python3 scripts/tag_phrase_freshness.py   # 从审核源生成 freshness
 python3 scripts/embed_corpus.py           # 合并 dispatch → 写入 App
 ```
 
@@ -63,11 +80,11 @@ python3 scripts/embed_corpus.py           # 合并 dispatch → 写入 App
 | --- | --- |
 | `id` | `sb_{id}` |
 | `phrase` | `text` |
-| `theme` | `emotionTheme`（主题 → 稳定 slug，便于后续统计） |
-| `evidence` | `layer`：`official_text` / `image_verified` → `anchor`，其余 → `active` |
+| `config/phrase_editorial_review.json.editorialTheme` | `emotionTheme`（审核后的编辑主题 → 稳定 slug） |
+| `evidence` | `layer`：历史兼容的来源证据层，不参与 lifecycle 加权；来源细分以审核源的 `sourceCategory` 为准 |
 | — | `textEn` 来自 `scripts/phrases_en.json`（诗意 paraphrase，非直译；由 `starbucks_phrases_en.py` 维护） |
 | — | `dispatch` 来自 `scripts/phrase_dispatch.json`（`universal` / `onlyWhen` / `boost`） |
-| — | `freshness` 来自 `config/phrase_freshness_tags.json`（语义簇 / 句式组 / 生命周期） |
+| — | `freshness` 由审核源生成到 `config/phrase_freshness_tags.json`（语义簇 / 句式组 / 生命周期） |
 
 ## 使用规则
 

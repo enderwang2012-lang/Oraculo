@@ -19,11 +19,15 @@ import json
 import shutil
 from pathlib import Path
 
+from corpus_release_guard import require_rights_clear, require_version_above_public
+
 ROOT = Path(__file__).resolve().parents[1]
 PHRASES = ROOT / "ios" / "Shared" / "Resources" / "phrases.json"
 META = ROOT / "ios" / "Shared" / "Resources" / "corpus_bundled_meta.json"
 DIST = ROOT / "dist" / "corpus"
 PUBLIC = ROOT / "public" / "oraculo"
+PUBLIC_MANIFEST = PUBLIC / "manifest.json"
+EDITORIAL_REVIEW = ROOT / "config" / "phrase_editorial_review.json"
 
 
 def asset_filename(corpus_version: int, digest: str) -> str:
@@ -61,7 +65,7 @@ def copy_immutable(source: Path, destination: Path) -> None:
     shutil.copy2(source, destination)
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Build static corpus hot-update bundle")
     parser.add_argument(
         "--base-url",
@@ -79,12 +83,17 @@ def main() -> None:
         action="store_true",
         help="不复制到 public/oraculo/（Vercel 从该目录发布）",
     )
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
+
+    # Local candidates may retain editorial decisions awaiting rights review;
+    # the static publish boundary may never promote them.
+    require_rights_clear(EDITORIAL_REVIEW)
 
     if not PHRASES.exists() or not META.exists():
         raise SystemExit("Run: python3 scripts/embed_corpus.py first")
 
     meta = json.loads(META.read_text(encoding="utf-8"))
+    require_version_above_public(int(meta["corpusVersion"]), PUBLIC_MANIFEST)
     base = args.base_url.rstrip("/")
     body = PHRASES.read_bytes()
     actual_hash = hashlib.sha256(body).hexdigest()

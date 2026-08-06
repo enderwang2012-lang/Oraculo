@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import plistlib
@@ -11,6 +12,7 @@ import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
+from corpus_release_guard import unresolved_rights_ids
 from publish_corpus_static import asset_filename
 from validate_app_store_assets import validate_repository as validate_app_store_assets
 
@@ -28,6 +30,7 @@ BUNDLED_META = IOS / "Shared" / "Resources" / "corpus_bundled_meta.json"
 BUNDLED_PHRASES = IOS / "Shared" / "Resources" / "phrases.json"
 PUBLIC_MANIFEST = ROOT / "public" / "oraculo" / "manifest.json"
 PUBLIC_CORPUS = ROOT / "public" / "oraculo"
+EDITORIAL_REVIEW = ROOT / "config" / "phrase_editorial_review.json"
 
 
 def read_text(path: Path) -> str:
@@ -41,6 +44,21 @@ def fail(errors: list[str], message: str) -> None:
 def load_json(path: Path) -> dict:
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def check_corpus_rights(errors: list[str], review: dict | None = None) -> None:
+    if review is None:
+        if not EDITORIAL_REVIEW.exists():
+            fail(errors, f"editorial review missing: {EDITORIAL_REVIEW.relative_to(ROOT)}")
+            return
+        review = load_json(EDITORIAL_REVIEW)
+    blocked = unresolved_rights_ids(review)
+    if blocked:
+        fail(
+            errors,
+            "unresolved account-holder rights review blocks release: "
+            + ", ".join(blocked),
+        )
 
 
 def sha256(path: Path) -> str:
@@ -101,7 +119,11 @@ def check_location_opt_in(errors: list[str]) -> None:
         fail(errors, "OpenMeteoWeatherService should expose a no-coordinate safe refresh path")
 
 
-def check_corpus_alignment(errors: list[str]) -> None:
+def check_corpus_alignment(
+    errors: list[str],
+    *,
+    require_public_alignment: bool = True,
+) -> None:
     meta = load_json(BUNDLED_META)
     manifest = load_json(PUBLIC_MANIFEST)
     bundled_hash = sha256(BUNDLED_PHRASES)
@@ -118,10 +140,11 @@ def check_corpus_alignment(errors: list[str]) -> None:
     public_hash = sha256(public_phrases)
     if manifest.get("phrases", {}).get("sha256") != public_hash:
         fail(errors, f"public manifest sha256 does not match {public_filename}")
-    if meta.get("corpusVersion") != manifest.get("corpusVersion"):
-        fail(errors, "bundled and public corpusVersion must match before release")
-    if meta.get("phrasesSHA256") != manifest.get("phrases", {}).get("sha256"):
-        fail(errors, "bundled and public phrases SHA must match before release")
+    if require_public_alignment:
+        if meta.get("corpusVersion") != manifest.get("corpusVersion"):
+            fail(errors, "bundled and public corpusVersion must match before release")
+        if meta.get("phrasesSHA256") != manifest.get("phrases", {}).get("sha256"):
+            fail(errors, "bundled and public phrases SHA must match before release")
 
     version = manifest.get("corpusVersion")
     digest = str(manifest.get("phrases", {}).get("sha256", ""))
@@ -138,14 +161,26 @@ def check_corpus_alignment(errors: list[str]) -> None:
                 )
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--allow-unpublished-candidate",
+        action="store_true",
+        help="Validate the local bundle and existing public release independently without requiring version/SHA parity.",
+    )
+    args = parser.parse_args(argv)
     errors: list[str] = []
     errors.extend(validate_app_store_assets(ROOT))
     check_privacy_manifest(APP_PRIVACY, "Oraculo app", errors)
     check_privacy_manifest(WIDGET_PRIVACY, "Oraculo widget", errors)
     check_project_references(errors)
     check_location_opt_in(errors)
-    check_corpus_alignment(errors)
+    if not args.allow_unpublished_candidate:
+        check_corpus_rights(errors)
+    check_corpus_alignment(
+        errors,
+        require_public_alignment=not args.allow_unpublished_candidate,
+    )
 
     if errors:
         print("Release readiness checks failed:")
@@ -153,7 +188,8 @@ def main() -> int:
             print(f"- {error}")
         return 1
 
-    print("✅ Release readiness checks passed")
+    label = "Candidate" if args.allow_unpublished_candidate else "Release"
+    print(f"✅ {label} readiness checks passed")
     return 0
 
 

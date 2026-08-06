@@ -8,11 +8,12 @@ final class FestivalCalendar {
         struct Festival: Decodable {
             let id: String
             let ranges: [RangeEntry]
+            let recurrence: Recurrence?
             let preDays: Int?
             let postDays: Int?
 
             enum CodingKeys: String, CodingKey {
-                case id, ranges
+                case id, ranges, recurrence
                 case preDays = "pre_days"
                 case postDays = "post_days"
             }
@@ -21,6 +22,13 @@ final class FestivalCalendar {
         struct RangeEntry: Decodable {
             let start: String
             let end: String
+        }
+
+        struct Recurrence: Decodable {
+            let type: String
+            let month: Int
+            let weekday: Int
+            let ordinal: Int
         }
 
         let festivals: [Festival]
@@ -55,6 +63,18 @@ final class FestivalCalendar {
         for fest in festivals {
             let pre = fest.preDays ?? 0
             let post = fest.postDays ?? 0
+            if let recurrence = fest.recurrence,
+               let recurringDay = resolveRecurringDate(
+                   recurrence: recurrence,
+                   year: year,
+                   calendar: cal
+               ) {
+                let start = cal.date(byAdding: .day, value: -pre, to: recurringDay) ?? recurringDay
+                let endExclusive = cal.date(byAdding: .day, value: post + 1, to: recurringDay) ?? recurringDay
+                if targetDay >= start && targetDay < endExclusive {
+                    result.insert(fest.id)
+                }
+            }
             for range in fest.ranges {
                 // 同时检查相邻 anchor year：
                 // - year - 1：1 月日期可命中上一年 12 月开始的跨年窗口；
@@ -85,6 +105,26 @@ final class FestivalCalendar {
             }
         }
         return result
+    }
+
+    private func resolveRecurringDate(
+        recurrence: Config.Recurrence,
+        year: Int,
+        calendar cal: Calendar
+    ) -> Date? {
+        guard recurrence.type == "nth_weekday_of_month",
+              (1...12).contains(recurrence.month),
+              (1...7).contains(recurrence.weekday),
+              recurrence.ordinal > 0,
+              let first = cal.date(from: DateComponents(year: year, month: recurrence.month, day: 1))
+        else { return nil }
+        let firstWeekday = cal.component(.weekday, from: first)
+        let offset = (recurrence.weekday - firstWeekday + 7) % 7
+        let day = 1 + offset + (recurrence.ordinal - 1) * 7
+        guard let candidate = cal.date(byAdding: .day, value: day - 1, to: first),
+              cal.component(.month, from: candidate) == recurrence.month
+        else { return nil }
+        return candidate
     }
 
     private func resolveWindow(

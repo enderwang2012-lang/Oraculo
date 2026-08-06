@@ -25,6 +25,7 @@ SOURCE = ROOT / "starbucks_now_passphrases.csv"
 EN_MAP = ROOT / "scripts" / "phrases_en.json"
 DISPATCH_MAP = ROOT / "scripts" / "phrase_dispatch.json"
 FRESHNESS_MAP = ROOT / "config" / "phrase_freshness_tags.json"
+EDITORIAL_REVIEW = ROOT / "config" / "phrase_editorial_review.json"
 VERSION_FILE = ROOT / "config" / "corpus_version.txt"
 OUT = ROOT / "ios" / "Shared" / "Resources" / "phrases.json"
 META_OUT = ROOT / "ios" / "Shared" / "Resources" / "corpus_bundled_meta.json"
@@ -166,6 +167,12 @@ def load_freshness_map() -> dict[str, dict]:
     return json.loads(FRESHNESS_MAP.read_text(encoding="utf-8"))
 
 
+def load_editorial_review() -> dict[str, dict]:
+    if not EDITORIAL_REVIEW.exists():
+        raise SystemExit(f"Missing {EDITORIAL_REVIEW}. Run: python3 scripts/reset_corpus_review.py")
+    return json.loads(EDITORIAL_REVIEW.read_text(encoding="utf-8"))
+
+
 def read_corpus_version() -> int:
     if not VERSION_FILE.exists():
         raise SystemExit(f"Missing {VERSION_FILE}")
@@ -181,6 +188,31 @@ def should_embed(freshness: dict) -> bool:
     return freshness.get("lifecycle") != "retired"
 
 
+def reviewed_copy(
+    pid: str,
+    source_text: str,
+    source_english: str,
+    editorial: dict,
+) -> tuple[str, str] | None:
+    """Resolve the reviewed bilingual copy used by the local candidate."""
+    decision = editorial.get("decision")
+    if decision in {"retire", "needs_rewrite"}:
+        return None
+    if decision != "keep":
+        raise SystemExit(f"Invalid editorial decision for {pid}: {decision!r}")
+    proposed_phrase = str(editorial.get("proposedPhrase", "")).strip()
+    proposed_english = str(editorial.get("proposedEnglish", "")).strip()
+    if bool(proposed_phrase) != bool(proposed_english):
+        raise SystemExit(
+            f"Reviewed rewrite for {pid} must include both proposedPhrase and proposedEnglish"
+        )
+    return (
+        (proposed_phrase, proposed_english)
+        if proposed_phrase
+        else (source_text, source_english)
+    )
+
+
 def main() -> None:
     if not SOURCE.exists():
         raise SystemExit(f"Missing corpus: {SOURCE}")
@@ -188,6 +220,7 @@ def main() -> None:
     en_map = load_en_map()
     dispatch_map = load_dispatch_map()
     freshness_map = load_freshness_map()
+    editorial_review = load_editorial_review()
     overlay_map = load_overlay()
     corpus_version = read_corpus_version()
     phrases = []
@@ -207,10 +240,15 @@ def main() -> None:
             freshness = freshness_map.get(pid)
             if not freshness:
                 raise SystemExit(f"Missing freshness for {pid} in {FRESHNESS_MAP}")
-            if not should_embed(freshness):
+            editorial = editorial_review.get(pid)
+            if not editorial:
+                raise SystemExit(f"Missing editorial review for {pid} in {EDITORIAL_REVIEW}")
+            source_english = en_map.get(pid, "").strip()
+            reviewed = reviewed_copy(pid, text, source_english, editorial)
+            if reviewed is None or not should_embed(freshness):
                 continue
 
-            text_en = en_map.get(pid, "")
+            text, text_en = reviewed
             if not text_en:
                 raise SystemExit(f"Missing textEn for {pid} in {EN_MAP}")
 
@@ -226,7 +264,7 @@ def main() -> None:
                 "text": text,
                 "textEn": text_en,
                 "layer": layer,
-                "emotionTheme": theme_slug(row.get("theme", "")),
+                "emotionTheme": editorial.get("emotionTheme") or theme_slug(row.get("theme", "")),
                 "dispatch": dispatch,
                 "freshness": freshness,
             })
