@@ -1,0 +1,4589 @@
+[
+  {
+    "id": "sb_2",
+    "text": "文艺青年",
+    "textEn": "Artsy soul",
+    "layer": "anchor",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_social",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_3",
+    "text": "都挺好",
+    "textEn": "All's well enough",
+    "layer": "anchor",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_social",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_9",
+    "text": "这么优秀",
+    "textEn": "So brilliant",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_10",
+    "text": "鸟语蝉鸣",
+    "textEn": "Birdsong and cicada hum",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer",
+        "season:autumn"
+      ],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_12",
+    "text": "突然开心",
+    "textEn": "Sudden joy",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "daypart:afternoon",
+          "weight": 0.6
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_mood",
+      "cadenceGroup": "mood_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_13",
+    "text": "喜欢夏天",
+    "textEn": "Loving summer",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_20",
+    "text": "蔚蓝海面",
+    "textEn": "An azure sea",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.0
+        },
+        {
+          "tag": "weather:clear",
+          "weight": 1.5
+        },
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ],
+      "colorFamilies": [
+        "blue"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "distance_landscape",
+      "cadenceGroup": "short_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_21",
+    "text": "去潜水吧",
+    "textEn": "Go dive",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "distance_landscape",
+      "cadenceGroup": "departure_action",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_22",
+    "text": "万物生长",
+    "textEn": "All things growing",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "season:spring",
+          "weight": 2.0
+        },
+        {
+          "tag": "solar_term:jingzhe",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ],
+      "colorFamilies": [
+        "green"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_23",
+    "text": "水上乐园",
+    "textEn": "Water park dreams",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_26",
+    "text": "夏了夏天",
+    "textEn": "Summer in full swing",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_29",
+    "text": "乌云散开",
+    "textEn": "Clouds begin to part",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:overcast",
+          "weight": 1.2
+        },
+        {
+          "tag": "weather:clear",
+          "weight": 2.5
+        },
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "short_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_31",
+    "text": "烦恼退散",
+    "textEn": "Worries scatter",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_32",
+    "text": "人间值得",
+    "textEn": "The world still holds you",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_34",
+    "text": "妙啊妙啊",
+    "textEn": "Nice, so nice",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_social",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_37",
+    "text": "重启试试",
+    "textEn": "Reboot and try",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_social",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_39",
+    "text": "最是一年春好处",
+    "textEn": "Spring at its finest",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:spring"
+      ],
+      "boost": [
+        {
+          "tag": "season:spring",
+          "weight": 2.0
+        },
+        {
+          "tag": "solar_term:yushui",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light",
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "time_observation",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_41",
+    "text": "冬日暖阳",
+    "textEn": "Warm winter sun",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:winter"
+      ],
+      "boost": [
+        {
+          "tag": "weather:clear",
+          "weight": 2.0
+        },
+        {
+          "tag": "temp:cold",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "cool"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_42",
+    "text": "月是秋夜明",
+    "textEn": "Autumn moon, bright night",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:mid_autumn"
+      ],
+      "boost": [
+        {
+          "tag": "daypart:late_night",
+          "weight": 1.2
+        },
+        {
+          "tag": "festival:mid_autumn",
+          "weight": 2.5
+        }
+      ],
+      "colorMoods": [
+        "dark"
+      ],
+      "colorBan": [
+        "light"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "landscape_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_45",
+    "text": "美好拉开帷幕",
+    "textEn": "Beauty takes the stage",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_49",
+    "text": "平安喜乐",
+    "textEn": "Peace and joy",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:spring_festival"
+      ],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "blessing_wish",
+      "cadenceGroup": "blessing_parallel",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_50",
+    "text": "财神到家",
+    "textEn": "Fortune at the door",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:spring_festival"
+      ],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "blessing_wish",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_51",
+    "text": "岁岁常欢愉",
+    "textEn": "Joy, year after year",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:spring_festival"
+      ],
+      "boost": [
+        {
+          "tag": "festival:new_year",
+          "weight": 4.0
+        },
+        {
+          "tag": "festival:lantern_festival",
+          "weight": 3.0
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_52",
+    "text": "年年皆胜意",
+    "textEn": "May each year exceed your hopes",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:spring_festival"
+      ],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "blessing_wish",
+      "cadenceGroup": "blessing_parallel",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_53",
+    "text": "暴富暴瘦暴酷",
+    "textEn": "Rich, lean, cool",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_60",
+    "text": "Hi走啦",
+    "textEn": "Hi, I'm off",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:commute",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_social",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_61",
+    "text": "是最喜欢的秋天啊",
+    "textEn": "Favorite season: fall",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:autumn"
+      ],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "long_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_64",
+    "text": "天选之子",
+    "textEn": "Chosen one",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_social",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_65",
+    "text": "全能小天才",
+    "textEn": "Little prodigy",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_social",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_67",
+    "text": "冲鸭冲鸭",
+    "textEn": "Go go duck!",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_social",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_68",
+    "text": "诸事皆宜",
+    "textEn": "An auspicious day for all things",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:spring_festival"
+      ],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "blessing_wish",
+      "cadenceGroup": "blessing_parallel",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_69",
+    "text": "水逆绕行",
+    "textEn": "Mercury, step aside",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_70",
+    "text": "快乐一夏",
+    "textEn": "Summer of joy",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_73",
+    "text": "美式发生",
+    "textEn": "Americano happens",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_74",
+    "text": "莫愁前路无知己",
+    "textEn": "Friends await along the road",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        },
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "departure_motion",
+      "cadenceGroup": "stance_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_77",
+    "text": "好事将至",
+    "textEn": "Good things are on their way",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light",
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "hope_arrival",
+      "cadenceGroup": "process_arrival",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_78",
+    "text": "新年有新意",
+    "textEn": "Fresh year, fresh spark",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:spring_festival"
+      ],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "time_reflection",
+      "cadenceGroup": "time_observation",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_81",
+    "text": "厉害了爹地们",
+    "textEn": "Dads on fire",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:father_day"
+      ],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_social",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_83",
+    "text": "悄悄惊艳",
+    "textEn": "Quietly dazzling",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_91",
+    "text": "自由是终极魔法",
+    "textEn": "Freedom, final magic",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        },
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "self_stance",
+      "cadenceGroup": "medium_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_93",
+    "text": "向上生长",
+    "textEn": "Growing upward",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "departure_action",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_94",
+    "text": "今天的你赞赞赞",
+    "textEn": "Triple thumbs-up today",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_95",
+    "text": "万事皆合时宜",
+    "textEn": "All in season",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.0
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "blessing_parallel",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_96",
+    "text": "赤诚亦勇敢",
+    "textEn": "Wholehearted and brave",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ],
+      "colorFamilies": [
+        "red"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "relational_phrase",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_99",
+    "text": "新年万事定称心",
+    "textEn": "New year, heart's desire",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:spring_festival"
+      ],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "time_reflection",
+      "cadenceGroup": "time_observation",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_100",
+    "text": "挂霜予你",
+    "textEn": "Frost for you",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:autumn",
+        "season:winter",
+        "weather:snow"
+      ],
+      "boost": [
+        {
+          "tag": "temp:cold",
+          "weight": 2.0
+        },
+        {
+          "tag": "solar_term:shuangjiang",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "light",
+        "cool"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_101",
+    "text": "新春开门红",
+    "textEn": "Spring opens red-hot",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:spring_festival"
+      ],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ],
+      "colorFamilies": [
+        "red"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "medium_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_103",
+    "text": "take it easy.",
+    "textEn": "Take it easy.",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_latin",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_104",
+    "text": "be real.",
+    "textEn": "Be real.",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_latin",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_105",
+    "text": "good vibes.",
+    "textEn": "Good vibes.",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_latin",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_106",
+    "text": "dare to dream.",
+    "textEn": "Dare to dream.",
+    "layer": "active",
+    "emotionTheme": "playful_meme",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "playful_wordplay",
+      "cadenceGroup": "wordplay_latin",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_111",
+    "text": "硕果累累",
+    "textEn": "Heavy with fruit",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "season:autumn",
+          "weight": 1.8
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ],
+      "colorFamilies": [
+        "yellow"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_113",
+    "text": "事缓则圆",
+    "textEn": "With patience, things find their shape",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "rest_pause",
+      "cadenceGroup": "rest_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_116",
+    "text": "适时转弯",
+    "textEn": "Turn in good time",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_118",
+    "text": "烦恼消除术",
+    "textEn": "Worry-dissolving spell",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_124",
+    "text": "天高任鸟飞",
+    "textEn": "Sky high, birds roam",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        },
+        {
+          "tag": "weather:clear",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ],
+      "colorFamilies": [
+        "blue"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "medium_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_129",
+    "text": "新序章",
+    "textEn": "A new chapter",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "departure_motion",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_131",
+    "text": "轻松自在",
+    "textEn": "Easy and free",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "rest_pause",
+      "cadenceGroup": "rest_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_133",
+    "text": "一路风光一路诗",
+    "textEn": "A scenic road, a line of verse",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "light"
+      ],
+      "colorBan": [
+        "dark",
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "landscape_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_138",
+    "text": "大有可为",
+    "textEn": "So much is possible",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_140",
+    "text": "答案在风中",
+    "textEn": "The answer is in the wind",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "landscape_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_143",
+    "text": "美好常在",
+    "textEn": "Beauty stays near",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_144",
+    "text": "有趣有盼无忧虑",
+    "textEn": "Fun, hope, no frets",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "stance_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_147",
+    "text": "卓然前行",
+    "textEn": "Walk with distinction",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_148",
+    "text": "思路清晰",
+    "textEn": "Mind, crystal clear",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_mood",
+      "cadenceGroup": "mood_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_149",
+    "text": "前路可奔赴",
+    "textEn": "A road worth taking",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "departure_motion",
+      "cadenceGroup": "departure_action",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_150",
+    "text": "爱人间烟火",
+    "textEn": "Love the glow of ordinary life",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "connection",
+      "cadenceGroup": "medium_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_151",
+    "text": "状态不掉线",
+    "textEn": "Never drop offline",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_mood",
+      "cadenceGroup": "stance_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_153",
+    "text": "所念皆所愿",
+    "textEn": "Wishes thought, granted",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "blessing_wish",
+      "cadenceGroup": "blessing_parallel",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_154",
+    "text": "有诗有远方",
+    "textEn": "Verse and far horizons",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "distance_landscape",
+      "cadenceGroup": "relational_phrase",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_156",
+    "text": "开启高光模式",
+    "textEn": "Highlight mode on",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_157",
+    "text": "总有人正年轻",
+    "textEn": "Someone, somewhere, is still young",
+    "layer": "anchor",
+    "emotionTheme": "quiet_mirror",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "time_reflection",
+      "cadenceGroup": "time_observation",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_161",
+    "text": "只记欢喜不记忧",
+    "textEn": "Joy remembered, not sorrow",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "stance_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_164",
+    "text": "鸟语花香",
+    "textEn": "Birdsong, floral air",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:spring"
+      ],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_165",
+    "text": "前行有曙光",
+    "textEn": "Dawn ahead on the road",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:clear",
+          "weight": 2.0
+        },
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_action",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_166",
+    "text": "大笑是困难解药",
+    "textEn": "Laughter, hardship's cure",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_174",
+    "text": "爱，不止此刻",
+    "textEn": "Love beyond this moment",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "connection",
+      "cadenceGroup": "stance_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_176",
+    "text": "恰到好处",
+    "textEn": "Just enough, just right",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_181",
+    "text": "抬头见天光",
+    "textEn": "Look up and find the light",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        },
+        {
+          "tag": "weather:clear",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "dark",
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_183",
+    "text": "期待新故事",
+    "textEn": "Looking forward to new stories",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "hope_arrival",
+      "cadenceGroup": "process_arrival",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_184",
+    "text": "今日最佳",
+    "textEn": "Today's finest",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_186",
+    "text": "忙有度，闲有趣",
+    "textEn": "Work in measure, rest with joy",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_188",
+    "text": "小满胜万全",
+    "textEn": "A little fullness beats perfection",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [
+        {
+          "tag": "solar_term:xiaoman",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "medium_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_189",
+    "text": "恰逢好事",
+    "textEn": "Good things, just in time",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "hope_arrival",
+      "cadenceGroup": "blessing_parallel",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_194",
+    "text": "被礼物包围",
+    "textEn": "Wrapped in gifts",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:christmas"
+      ],
+      "boost": [
+        {
+          "tag": "festival:christmas",
+          "weight": 4.0
+        },
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_195",
+    "text": "慢下来看世界",
+    "textEn": "Slow down and see the world",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "rest_pause",
+      "cadenceGroup": "rest_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_197",
+    "text": "你亦是风景",
+    "textEn": "You are part of the view",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "relational_phrase",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_198",
+    "text": "曙光在前",
+    "textEn": "Dawn up ahead",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:clear",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_201",
+    "text": "手牵手",
+    "textEn": "Hand in hand",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        },
+        {
+          "tag": "festival:valentine",
+          "weight": 2.0
+        },
+        {
+          "tag": "scene:meeting_friend",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "connection",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_206",
+    "text": "前路漫漫亦灿灿",
+    "textEn": "The long road still glimmers",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "departure_motion",
+      "cadenceGroup": "relational_phrase",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_208",
+    "text": "无忧亦无惧",
+    "textEn": "Carefree, unafraid",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "stance_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_209",
+    "text": "向前看",
+    "textEn": "Eyes forward",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "departure_action",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_210",
+    "text": "好心情正发芽",
+    "textEn": "A good mood takes root",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "hope_arrival",
+      "cadenceGroup": "process_arrival",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_212",
+    "text": "元气满满",
+    "textEn": "Full of good energy",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "daypart:morning",
+          "weight": 0.8
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_213",
+    "text": "追光的人会发光",
+    "textEn": "Light-chasers glow",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_action",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_217",
+    "text": "美好不期而至",
+    "textEn": "Something lovely arrives unannounced",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "stance_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_218",
+    "text": "心动不如行动",
+    "textEn": "Heartbeat to motion",
+    "layer": "active",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:valentine",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "self_stance",
+      "cadenceGroup": "stance_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_219",
+    "text": "自有明月照山河",
+    "textEn": "The moon lights mountains and rivers",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "daypart:late_night",
+          "weight": 1.0
+        },
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "dark"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "distance_landscape",
+      "cadenceGroup": "landscape_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_221",
+    "text": "成为自己的宇宙",
+    "textEn": "A cosmos of your own",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "self_stance",
+      "cadenceGroup": "medium_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_222",
+    "text": "新一年多爱自己",
+    "textEn": "New year, more self-love",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:new_year"
+      ],
+      "boost": [
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "connection",
+      "cadenceGroup": "time_observation",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_227",
+    "text": "与万事言和",
+    "textEn": "At peace with all things",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "relational_phrase",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_236",
+    "text": "去疯去爱",
+    "textEn": "Run wild, love hard",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "connection",
+      "cadenceGroup": "departure_action",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_237",
+    "text": "有失有得",
+    "textEn": "Lose some, gain some",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_238",
+    "text": "此刻纯真",
+    "textEn": "This moment, pure",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_239",
+    "text": "丢掉烦恼",
+    "textEn": "Drop the worries",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        },
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_240",
+    "text": "知足此刻",
+    "textEn": "Enough, right now",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_241",
+    "text": "一起走吧",
+    "textEn": "Walk on together",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        },
+        {
+          "tag": "scene:meeting_friend",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "departure_motion",
+      "cadenceGroup": "departure_action",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_242",
+    "text": "勾勾手",
+    "textEn": "Pinky promise",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "theme:ip",
+          "weight": 1.5
+        },
+        {
+          "tag": "festival:valentine",
+          "weight": 2.0
+        },
+        {
+          "tag": "scene:meeting_friend",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "connection",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_245",
+    "text": "宜见面",
+    "textEn": "A good day to meet",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:meeting_friend",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "connection",
+      "cadenceGroup": "blessing_parallel",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_246",
+    "text": "答案在路上",
+    "textEn": "Answers still en route",
+    "layer": "active",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "departure_motion",
+      "cadenceGroup": "process_arrival",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_247",
+    "text": "好消息加载中",
+    "textEn": "Good news is loading",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "hope_arrival",
+      "cadenceGroup": "process_arrival",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_252",
+    "text": "心愿得偿",
+    "textEn": "Wishes come true",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "blessing_wish",
+      "cadenceGroup": "blessing_parallel",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_254",
+    "text": "可爱第一名",
+    "textEn": "Cutest rank one",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "connection",
+      "cadenceGroup": "medium_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_257",
+    "text": "新一年蓄力向上",
+    "textEn": "New year, charge upward",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:new_year"
+      ],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        },
+        {
+          "tag": "scene:restart",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "time_reflection",
+      "cadenceGroup": "departure_action",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_259",
+    "text": "咖啡自由",
+    "textEn": "Coffee freedom",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "self_stance",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_262",
+    "text": "十全十美",
+    "textEn": "Ten of ten perfect",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_263",
+    "text": "苹苹安安",
+    "textEn": "Peace, apple by apple",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:christmas"
+      ],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_264",
+    "text": "有梦可期",
+    "textEn": "Dreams within reach",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "hope_arrival",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_265",
+    "text": "听从内心",
+    "textEn": "Listen inside",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "self_stance",
+      "cadenceGroup": "stance_short",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_266",
+    "text": "奔赴",
+    "textEn": "Set forth",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "departure_motion",
+      "cadenceGroup": "departure_action",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_267",
+    "text": "眉目舒展",
+    "textEn": "Brows unfurrowed",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "rest_pause",
+      "cadenceGroup": "rest_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_268",
+    "text": "随心随性",
+    "textEn": "Heart-led, free-spirited",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "self_stance",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_272",
+    "text": "努力沉淀",
+    "textEn": "Earn your depth",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_273",
+    "text": "新年暴富",
+    "textEn": "New year, sudden wealth",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:new_year"
+      ],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "time_reflection",
+      "cadenceGroup": "time_observation",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_274",
+    "text": "美好正在路上",
+    "textEn": "Something lovely is on its way",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        },
+        {
+          "tag": "scene:travel",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "departure_motion",
+      "cadenceGroup": "process_arrival",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_275",
+    "text": "热爱经久不息",
+    "textEn": "Passion long-burning",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "connection",
+      "cadenceGroup": "stance_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_277",
+    "text": "时光清浅",
+    "textEn": "Time, clear and unhurried",
+    "layer": "anchor",
+    "emotionTheme": "lyric_image",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "time_reflection",
+      "cadenceGroup": "time_observation",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_278",
+    "text": "明媚",
+    "textEn": "Radiance",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_mood",
+      "cadenceGroup": "mood_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_286",
+    "text": "昂首前瞻",
+    "textEn": "Head high, look on",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_288",
+    "text": "过滤烦恼",
+    "textEn": "Filter the frets",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:after_setback",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_289",
+    "text": "保持好奇心",
+    "textEn": "Keep curiosity alive",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_mood",
+      "cadenceGroup": "stance_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_291",
+    "text": "心情明媚",
+    "textEn": "A sunlit mood",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_mood",
+      "cadenceGroup": "mood_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_292",
+    "text": "循梦而行",
+    "textEn": "Walk the dream line",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_293",
+    "text": "美好不期而遇",
+    "textEn": "Beauty meets by chance",
+    "layer": "anchor",
+    "emotionTheme": "soft_hope",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "stance_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_294",
+    "text": "万象更新",
+    "textEn": "Everything begins anew",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:spring_festival"
+      ],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_295",
+    "text": "无限好运",
+    "textEn": "Luck without limit",
+    "layer": "anchor",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "blessing_wish",
+      "cadenceGroup": "stance_short",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_297",
+    "text": "值得记录",
+    "textEn": "Worth the jotting down",
+    "layer": "anchor",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_300",
+    "text": "慢慢懂得",
+    "textEn": "Understanding comes slowly",
+    "layer": "active",
+    "emotionTheme": "quiet_mirror",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "time_reflection",
+      "cadenceGroup": "time_observation",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_302",
+    "text": "保持好奇",
+    "textEn": "Stay curious",
+    "layer": "anchor",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_mood",
+      "cadenceGroup": "stance_short",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_304",
+    "text": "解锁新成就",
+    "textEn": "New achievement unlocked",
+    "layer": "anchor",
+    "emotionTheme": "gentle_departure",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "medium_action",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2001",
+    "text": "来杯冰美式",
+    "textEn": "An iced americano, please",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.5
+        },
+        {
+          "tag": "temp:hot",
+          "weight": 2.0
+        },
+        {
+          "tag": "daypart:afternoon",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "medium_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2006",
+    "text": "楼下的青蛙好聒噪",
+    "textEn": "Frogs downstairs won't hush",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.0
+        },
+        {
+          "tag": "daypart:late_night",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "dark"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "long_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2021",
+    "text": "妈妈包的粽子最好吃",
+    "textEn": "Mom's zongzi are the best",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:dragon_boat"
+      ],
+      "boost": [
+        {
+          "tag": "festival:dragon_boat",
+          "weight": 4.0
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "long_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2022",
+    "text": "甜还是咸",
+    "textEn": "Sweet or savory?",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "festival:dragon_boat"
+      ],
+      "boost": [
+        {
+          "tag": "festival:dragon_boat",
+          "weight": 4.0
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_blessing",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2042",
+    "text": "站在能分割世界的桥",
+    "textEn": "On a bridge that divides the world",
+    "layer": "active",
+    "emotionTheme": "lyric_image",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:decision_wait",
+          "weight": 1.5
+        },
+        {
+          "tag": "scene:travel",
+          "weight": 1.0
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "dark"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "distance_landscape",
+      "cadenceGroup": "long_sentence",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2043",
+    "text": "等一场雨",
+    "textEn": "Waiting for rain",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:rain",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "weather_rain",
+      "cadenceGroup": "process_arrival",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2044",
+    "text": "雨后有微光",
+    "textEn": "A glimmer after rain",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:rain",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "weather_rain",
+      "cadenceGroup": "landscape_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2045",
+    "text": "风过长街",
+    "textEn": "Wind passes down the long street",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:windy",
+          "weight": 2.0
+        }
+      ],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "sky_wind",
+      "cadenceGroup": "short_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2046",
+    "text": "听蝉声",
+    "textEn": "Listening to cicadas",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer",
+        "season:autumn"
+      ],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2047",
+    "text": "长昼将尽",
+    "textEn": "The long day is ending",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "solar_term:xiazhi"
+      ],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2048",
+    "text": "夏意半熟",
+    "textEn": "Summer, half-ripe",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2049",
+    "text": "汗水发光",
+    "textEn": "Sweat catches light",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "warm",
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2050",
+    "text": "歇会儿",
+    "textEn": "Rest for a while",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "rest_pause",
+      "cadenceGroup": "rest_state",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2051",
+    "text": "快乐冒泡",
+    "textEn": "Joy bubbles up",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "daily_observation",
+      "cadenceGroup": "short_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2052",
+    "text": "好运加冰",
+    "textEn": "Luck on ice",
+    "layer": "active",
+    "emotionTheme": "luck_blessing",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [
+        {
+          "tag": "festival:spring_festival",
+          "weight": 2.5
+        },
+        {
+          "tag": "festival:new_year",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "warm"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "blessing_wish",
+      "cadenceGroup": "blessing_parallel",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2053",
+    "text": "雨停再走",
+    "textEn": "Wait for the rain to stop",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "weather:rain",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "weather_rain",
+      "cadenceGroup": "departure_action",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2054",
+    "text": "偷得浮生半日凉",
+    "textEn": "A stolen half-day in the cool",
+    "layer": "active",
+    "emotionTheme": "light_comfort",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer"
+      ],
+      "boost": [],
+      "colorMoods": [
+        "light"
+      ],
+      "colorBan": [
+        "dark"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "rest_pause",
+      "cadenceGroup": "medium_plain",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2056",
+    "text": "青山妩媚",
+    "textEn": "Green hills, graceful",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [],
+      "colorMoods": [
+        "cool"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "distance_landscape",
+      "cadenceGroup": "short_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2057",
+    "text": "孤独的海怪",
+    "textEn": "The lonely sea monster",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "dark"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "distance_landscape",
+      "cadenceGroup": "landscape_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2058",
+    "text": "蝉声稀",
+    "textEn": "Cicada song grows sparse",
+    "layer": "active",
+    "emotionTheme": "daily_romance",
+    "dispatch": {
+      "universal": false,
+      "onlyWhen": [
+        "season:summer",
+        "season:autumn"
+      ],
+      "boost": [
+        {
+          "tag": "season:summer",
+          "weight": 2.5
+        },
+        {
+          "tag": "season:autumn",
+          "weight": 1.5
+        },
+        {
+          "tag": "solar_term:chushu",
+          "weight": 2.5
+        },
+        {
+          "tag": "scene:season_change",
+          "weight": 1.5
+        }
+      ],
+      "colorMoods": [
+        "cool",
+        "light"
+      ],
+      "colorBan": [
+        "warm"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "seasonal_nature",
+      "cadenceGroup": "short_image",
+      "lifecycle": "active"
+    }
+  },
+  {
+    "id": "sb_2059",
+    "text": "囿于昼夜",
+    "textEn": "Bound within day and night",
+    "layer": "active",
+    "emotionTheme": "lyric_image",
+    "dispatch": {
+      "universal": true,
+      "onlyWhen": [],
+      "boost": [
+        {
+          "tag": "scene:self_time",
+          "weight": 1.2
+        }
+      ],
+      "colorMoods": [
+        "dark"
+      ],
+      "colorBan": [
+        "light"
+      ]
+    },
+    "freshness": {
+      "semanticCluster": "time_reflection",
+      "cadenceGroup": "time_observation",
+      "lifecycle": "active"
+    }
+  }
+]

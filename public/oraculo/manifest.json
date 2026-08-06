@@ -1,10 +1,10 @@
 {
-  "corpusVersion": 8,
-  "publishedAt": "2026-08-04T06:45:59Z",
+  "corpusVersion": 9,
+  "publishedAt": "2026-08-06T13:11:31Z",
   "minAppVersion": "1.0.0",
-  "releaseNotes": "语料生命周期审查与情境投放修正",
+  "releaseNotes": "248条语料全量初始审核：161条保留，87条退出；13条采用审核改写稿",
   "phrases": {
-    "url": "https://oraculo-corpus.vercel.app/oraculo/phrases-v8-91aa5df8a57bc1fd7432142998500806856a61bf4978d79ae56f99827ea55241.json",
-    "sha256": "91aa5df8a57bc1fd7432142998500806856a61bf4978d79ae56f99827ea55241"
+    "url": "https://oraculo-corpus.vercel.app/oraculo/phrases-v9-ea8432fcd71db44141825262128c3bb5bdd3233bc74ccf9fd43865d3b5b1911f.json",
+    "sha256": "ea8432fcd71db44141825262128c3bb5bdd3233bc74ccf9fd43865d3b5b1911f"
   }
 }
