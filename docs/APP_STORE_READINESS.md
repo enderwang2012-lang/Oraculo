@@ -6,7 +6,7 @@ This runbook separates repository-complete work from Apple-account, legal, deplo
 
 The repository is configured for:
 
-- App version `1.0.0`, build `1`
+- App version `1.0.0`, build `3`
 - iOS 17.0+
 - iPhone and iPad device families
 - Main bundle ID `ai.oraculo.app`

@@ -23,7 +23,7 @@ python3 scripts/validate_app_store_assets.py
 - Bundle ID: `ai.oraculo.app`
 - SKU: `oraculo-ios-001`
 - Version: `1.0.0`
-- Build: `1`
+- Build: `3`
 - Price: Free
 - Primary category: Lifestyle
 - Secondary category: Utilities
