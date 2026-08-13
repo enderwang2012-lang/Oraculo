@@ -5,12 +5,18 @@ import UIKit
 
 struct ContentView: View {
     @Environment(\.openURL) private var openURL
+    @AppStorage(AppConstants.interactionHintCompletedKey) private var hasCompletedInteractionHint = false
+    @AppStorage(AppConstants.interactionHintHighlightShownKey) private var hasShownInteractionHintHighlight = false
     @ObservedObject var session: OracleSessionModel
     @ObservedObject private var locationProvider = LocationContextProvider.shared
     @StateObject private var charge = OraculoChargeController()
     @State private var isShowingLocationRationale = false
     @State private var isRequestingLocationAuthorization = false
     @State private var locationPermissionIssue: LocationPermissionIssue?
+    @State private var isInteractionHintPresented = false
+    @State private var hasPreparedInteractionHint = false
+    @State private var hintDissolveProgress: CGFloat = 0
+    @State private var hintHighlightAmount: CGFloat = 0
 
     /// 中英文文字块中心位于整屏高度的黄金分割点。
     private let phraseVerticalRatio: CGFloat = 0.382
@@ -33,16 +39,29 @@ struct ContentView: View {
             )
             .safeAreaInset(edge: .bottom, spacing: 0) {
                 VStack(spacing: footerMarkClockSpacing) {
-                    OraculoChargeFooter(
-                        controller: charge,
-                        foregroundStyle: clockForegroundStyle,
-                        onCharged: { session.refreshOnCharge() }
-                    )
-                    .frame(width: 128, height: 96, alignment: .bottom)
+                    ZStack(alignment: .bottom) {
+                        OraculoChargeFooter(
+                            controller: charge,
+                            foregroundStyle: clockForegroundStyle,
+                            idleEmphasis: hintHighlightAmount,
+                            onCharged: handleChargedRefresh
+                        )
+                        .frame(width: 128, height: 96, alignment: .bottom)
+
+                        if isInteractionHintPresented {
+                            OraculoInteractionHint(
+                                dissolveProgress: hintDissolveProgress
+                            )
+                            .offset(y: -96)
+                            .transition(.opacity)
+                        }
+                    }
+                    .frame(width: 184, height: 96, alignment: .bottom)
                     .offset(y: footerMarkDownshift)
-                    .accessibilityElement(children: .ignore)
+                    .accessibilityElement(children: .combine)
                     .accessibilityLabel("换一句")
-                    .accessibilityHint("长按 LOGO 蓄力可换一句、换一色")
+                    .accessibilityHint("长按印记蓄力可换一句、换一色")
+                    .accessibilityAddTraits(.isButton)
 
                     LiveClockView(foregroundStyle: clockForegroundStyle)
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -110,6 +129,7 @@ struct ContentView: View {
         .task {
             // scenePhase.onChange 在冷启动首帧不一定触发；此处保证杀进程重进也会播放入场动画。
             session.refreshOnOpen()
+            prepareInteractionHintIfNeeded()
         }
         .alert("开启位置情境？", isPresented: $isShowingLocationRationale) {
             Button("继续") {
@@ -132,6 +152,47 @@ struct ContentView: View {
 
     private var clockForegroundStyle: Color {
         session.moment.nipponColor.tertiaryTextColor
+    }
+
+    private func prepareInteractionHintIfNeeded() {
+        guard !hasPreparedInteractionHint else { return }
+        hasPreparedInteractionHint = true
+        guard !hasCompletedInteractionHint else { return }
+
+        isInteractionHintPresented = true
+        let shouldPlayFirstLoadEffects = !hasShownInteractionHintHighlight
+        guard shouldPlayFirstLoadEffects else { return }
+        hasShownInteractionHintHighlight = true
+
+        withAnimation(.easeInOut(duration: 0.65)) {
+            hintHighlightAmount = 1
+        }
+        Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(850))
+            withAnimation(.easeOut(duration: 0.9)) {
+                hintHighlightAmount = 0
+            }
+        }
+    }
+
+    private func handleChargedRefresh() {
+        dismissInteractionHintAtChargeCompletion()
+        session.refreshOnCharge()
+    }
+
+    private func dismissInteractionHintAtChargeCompletion() {
+        guard isInteractionHintPresented, !hasCompletedInteractionHint else { return }
+        hasCompletedInteractionHint = true
+        hintHighlightAmount = 0
+
+        withAnimation(.easeOut(duration: 1.05)) {
+            hintDissolveProgress = 1
+        }
+
+        Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(1_050))
+            isInteractionHintPresented = false
+        }
     }
 
     private var phraseAccessibilityLabel: String {

@@ -115,8 +115,8 @@ final class OracleSessionModel: ObservableObject {
 
 
     /// 长按蓄力：与再次进入前台相同的全套 crossfade（需已完成首屏呈现）。
-
-    func refreshOnCharge() {
+    /// `onPhraseReplaced` 只在新文字真正替换到界面后调用。
+    func refreshOnCharge(onPhraseReplaced: @escaping () -> Void = {}) {
         cancelPendingResumeRefresh()
         chargeRefreshTask?.cancel()
 
@@ -126,22 +126,23 @@ final class OracleSessionModel: ObservableObject {
                     try? await Task.sleep(nanoseconds: 50_000_000)
                 }
                 guard !Task.isCancelled else { return }
-                performChargeRefresh()
+                performChargeRefresh(onPhraseReplaced: onPhraseReplaced)
             }
             return
         }
 
-        performChargeRefresh()
+        performChargeRefresh(onPhraseReplaced: onPhraseReplaced)
     }
 
-    private func performChargeRefresh() {
+    private func performChargeRefresh(onPhraseReplaced: @escaping () -> Void) {
         guard let next = drawDistinctMoment() else { return }
         if !hasPresentedOnce {
             hasPresentedOnce = true
             presentInitialOpen(to: next)
+            onPhraseReplaced()
             return
         }
-        transition(to: next)
+        transition(to: next, onPhraseReplaced: onPhraseReplaced)
     }
 
     /// 抽与当前不同的句+色；语料未打进包时仅 fallback，返回 nil 避免空播动画。
@@ -218,7 +219,10 @@ final class OracleSessionModel: ObservableObject {
 
 
 
-    private func transition(to next: OracleMoment) {
+    private func transition(
+        to next: OracleMoment,
+        onPhraseReplaced: @escaping () -> Void = {}
+    ) {
         guard next != moment else { return }
         isTransitioning = true
         overlayColor = next.nipponColor
@@ -250,6 +254,7 @@ final class OracleSessionModel: ObservableObject {
             guard let self else { return }
 
             self.applyMoment(next)
+            onPhraseReplaced()
 
             self.momentShownAt = Date()
 

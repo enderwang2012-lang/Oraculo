@@ -78,6 +78,7 @@ private struct OraculoChargePressDetector: UIViewRepresentable {
 struct OraculoChargeFooter: View {
     @ObservedObject var controller: OraculoChargeController
     var foregroundStyle: Color
+    var idleEmphasis: CGFloat = 0
     var onCharged: () -> Void
 
     var body: some View {
@@ -89,7 +90,8 @@ struct OraculoChargeFooter: View {
                 isSettling: controller.isSettling,
                 settleFromGlow: controller.settleFromGlow,
                 settleDuration: controller.settleDuration,
-                foregroundStyle: foregroundStyle
+                foregroundStyle: foregroundStyle,
+                idleEmphasis: idleEmphasis
             )
             .allowsHitTesting(false)
 

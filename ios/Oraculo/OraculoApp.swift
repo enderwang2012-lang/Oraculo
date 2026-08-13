@@ -8,6 +8,11 @@ struct OraculoApp: App {
 
     init() {
         #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("--reset-interaction-hint") {
+            UserDefaults.standard.removeObject(forKey: AppConstants.interactionHintCompletedKey)
+            UserDefaults.standard.removeObject(forKey: AppConstants.interactionHintHighlightShownKey)
+        }
+
         let phrases = PhraseStore.shared.phraseCount
         let colors = NipponColorStore.shared.colorCount
         print("[Oraculo] bundled phrases=\(phrases), colors=\(colors)")

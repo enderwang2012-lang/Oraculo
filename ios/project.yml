@@ -8,9 +8,10 @@ options:
 settings:
   base:
     SWIFT_VERSION: "5.9"
-    TARGETED_DEVICE_FAMILY: "1,2"
+    TARGETED_DEVICE_FAMILY: "1"
+    SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
     MARKETING_VERSION: "1.0.0"
-    CURRENT_PROJECT_VERSION: "4"
+    CURRENT_PROJECT_VERSION: "5"
     DEVELOPMENT_TEAM: "Z2XJ76A563"
     CODE_SIGN_STYLE: Automatic
     ENABLE_USER_SCRIPT_SANDBOXING: YES
@@ -46,6 +47,8 @@ targets:
       base:
         DEVELOPMENT_TEAM: "Z2XJ76A563"
         CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "1"
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
         PRODUCT_BUNDLE_IDENTIFIER: ai.oraculo.app
         INFOPLIST_KEY_CFBundleDisplayName: Oraculo
         GENERATE_INFOPLIST_FILE: YES
@@ -102,13 +105,32 @@ targets:
       base:
         DEVELOPMENT_TEAM: "Z2XJ76A563"
         CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "1"
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
         PRODUCT_BUNDLE_IDENTIFIER: ai.oraculo.app.OraculoWidget
         GENERATE_INFOPLIST_FILE: NO
         INFOPLIST_FILE: OraculoWidget/Info.plist
         APPLICATION_EXTENSION_API_ONLY: YES
         SKIP_INSTALL: YES
         MARKETING_VERSION: "1.0.0"
-        CURRENT_PROJECT_VERSION: "4"
+        CURRENT_PROJECT_VERSION: "5"
+
+  OraculoUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: OraculoUITests
+    dependencies:
+      - target: Oraculo
+    settings:
+      base:
+        DEVELOPMENT_TEAM: "Z2XJ76A563"
+        CODE_SIGN_STYLE: Automatic
+        PRODUCT_BUNDLE_IDENTIFIER: ai.oraculo.app.UITests
+        GENERATE_INFOPLIST_FILE: YES
+        TARGETED_DEVICE_FAMILY: "1"
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+        TEST_TARGET_NAME: Oraculo
 
 schemes:
   Oraculo:
@@ -120,6 +142,8 @@ schemes:
       config: Debug
     test:
       config: Debug
+      targets:
+        - OraculoUITests
     profile:
       config: Release
     analyze:

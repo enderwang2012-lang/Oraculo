@@ -9,9 +9,11 @@ struct OraculoChargeMark: View {
     var settleFromGlow: CGFloat
     var settleDuration: TimeInterval
     var foregroundStyle: Color
+    var idleEmphasis: CGFloat = 0
     var size: CGFloat = 128
 
     private var clampedGlow: CGFloat { min(max(glowAmount, 0), 1) }
+    private var clampedIdleEmphasis: CGFloat { min(max(idleEmphasis, 0), 1) }
     private var isLit: Bool { clampedGlow > 0.001 }
     private var showChargeGlow: Bool { isLit || rippleExpansion > 0.001 }
     private var usesIdleBreath: Bool {
@@ -37,7 +39,7 @@ struct OraculoChargeMark: View {
         if isLit || isCharging {
             return OraculoMotion.chargeScaleMin + clampedGlow * span
         }
-        return 1
+        return 1 + clampedIdleEmphasis * 0.035
     }
 
     private func markOpacity(idleBreath: Double) -> Double {
@@ -53,8 +55,9 @@ struct OraculoChargeMark: View {
             return OraculoMotion.chargeOpacityMin
                 + Double(clampedGlow) * (OraculoMotion.chargeOpacityMax - OraculoMotion.chargeOpacityMin)
         }
-        return OraculoMotion.markIdleOpacityMin
+        let idleOpacity = OraculoMotion.markIdleOpacityMin
             + (OraculoMotion.markIdleOpacityMax - OraculoMotion.markIdleOpacityMin) * idleBreath
+        return min(0.3, idleOpacity + Double(clampedIdleEmphasis) * 0.12)
     }
 
     private var innerHaloScale: CGFloat { 1.25 + clampedGlow * 1.35 }
