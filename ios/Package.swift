@@ -42,6 +42,7 @@ let package = Package(
                 "WidgetTimelineRefresher.swift",
             ],
             sources: [
+                "AppLaunchPolicy.swift",
                 "AppConstants.swift",
                 "Color+Hex.swift",
                 "CorpusVersionSelection.swift",

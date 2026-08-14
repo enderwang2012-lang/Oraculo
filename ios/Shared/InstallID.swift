@@ -10,6 +10,13 @@ enum InstallID {
     private static let fallbackKey = "fallback-install-id"
     private static var memoizedFallback: String?
 
+    static var hasPersistedValue: Bool {
+        guard let defaults = UserDefaults(suiteName: AppConstants.appGroupID) else {
+            return false
+        }
+        return !(defaults.string(forKey: AppConstants.sharedInstallIDKey) ?? "").isEmpty
+    }
+
     /// 当前安装的 UUID 字符串。
     static var value: String {
         if let defaults = UserDefaults(suiteName: AppConstants.appGroupID) {

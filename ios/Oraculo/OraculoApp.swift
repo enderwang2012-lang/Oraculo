@@ -45,7 +45,6 @@ struct OraculoApp: App {
             case .background:
                 wasInBackground = true
                 Task { @MainActor in
-                    session.cancelPendingResumeRefresh()
                     session.syncWidgetDisplay()
                 }
             default:

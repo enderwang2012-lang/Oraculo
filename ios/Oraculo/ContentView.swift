@@ -103,6 +103,7 @@ struct ContentView: View {
                         .minimumScaleFactor(0.72)
                         .opacity(session.phraseFadeOpacity)
                         .phraseAppearSweep(reveal: session.phraseAppearReveal)
+                        .accessibilityIdentifier("current-oracle-phrase")
                         .accessibilityAddTraits(.isHeader)
 
                     if !session.moment.phrase.textEn.isEmpty {

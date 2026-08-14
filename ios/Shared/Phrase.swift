@@ -51,4 +51,11 @@ struct Phrase: Codable, Identifiable, Hashable {
         layer: "anchor",
         emotionTheme: "light_comfort"
     )
+
+    static let firstInstallGreeting = Phrase(
+        id: "system_first_install_greeting",
+        text: "你好呀",
+        layer: "greeting",
+        emotionTheme: "warm_greeting"
+    )
 }

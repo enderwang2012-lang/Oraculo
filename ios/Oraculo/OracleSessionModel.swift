@@ -38,31 +38,47 @@ final class OracleSessionModel: ObservableObject {
 
     private var hasPresentedOnce = false
 
-    private var resumeRefreshTask: Task<Void, Never>?
-
     private var chargeRefreshTask: Task<Void, Never>?
 
 
 
     init() {
 
+        let defaults = UserDefaults.standard
+        let existingSharedMoment = SharedOracleMomentStore.shared.load()
+        let shouldShowGreeting = AppLaunchPolicy.shouldShowFirstInstallGreeting(
+            hasRecordedAppLaunch: defaults.bool(forKey: AppConstants.hasLaunchedAppKey),
+            hasExistingInstallID: InstallID.hasPersistedValue,
+            hasExistingSharedMoment: existingSharedMoment != nil
+        )
         let baseline = dailyOracle.loadDisplayedMoment() ?? session.todayBaseline()
+        let initialMoment = shouldShowGreeting
+            ? OracleMoment(
+                phrase: .firstInstallGreeting,
+                nipponColor: baseline.nipponColor,
+                dayKey: baseline.dayKey
+            )
+            : baseline
 
-        moment = baseline
+        moment = initialMoment
 
         momentShownAt = Date()
 
-        baseColor = baseline.nipponColor
+        baseColor = initialMoment.nipponColor
 
-        dailyOracle.syncDisplayedMoment(baseline, recordExposure: false)
+        dailyOracle.syncDisplayedMoment(
+            initialMoment,
+            source: shouldShowGreeting ? .fallback : .appInteraction,
+            recordExposure: false
+        )
+        defaults.set(true, forKey: AppConstants.hasLaunchedAppKey)
 
     }
 
 
 
-    /// 从后台回前台（含 Widget 点开）：先完整展示离开前的句+色，停留后再自动换句。
+    /// 从后台回前台（含 Widget 点开）：采用 Widget 当前句，并重播同一句的入场动画。
     func refreshOnResumeFromBackground() {
-        cancelPendingResumeRefresh()
         guard !isTransitioning else { return }
 
         if !hasPresentedOnce {
@@ -70,29 +86,20 @@ final class OracleSessionModel: ObservableObject {
             return
         }
 
-        ensureCurrentMomentFullyVisible()
-
-        resumeRefreshTask = Task { @MainActor in
-            try? await Task.sleep(nanoseconds: UInt64(OraculoMotion.resumeDwellBeforeRefresh * 1_000_000_000))
-            guard !Task.isCancelled, !isTransitioning else { return }
-            let displayed = dailyOracle.loadDisplayedMoment()
-            let next: OracleMoment
-            if let displayed, displayed != moment {
-                next = displayed
-            } else {
-                next = session.randomMoment(excluding: moment)
+        let widgetMoment = dailyOracle.loadDisplayedMoment()
+        let widgetMomentDiffers = widgetMoment.map { $0 != moment } ?? false
+        switch AppLaunchPolicy.resumeAction(widgetMomentDiffers: widgetMomentDiffers) {
+        case .replayCurrent:
+            break
+        case .adoptWidgetMomentAndReplay:
+            if let widgetMoment {
+                restoreDisplayedMoment(widgetMoment)
             }
-            transition(to: next)
         }
-    }
-
-    func cancelPendingResumeRefresh() {
-        resumeRefreshTask?.cancel()
-        resumeRefreshTask = nil
+        replayCurrentMomentAppearance()
     }
 
     func refreshOnOpen() {
-        cancelPendingResumeRefresh()
         guard !isTransitioning else { return }
 
         if !hasPresentedOnce {
@@ -117,7 +124,6 @@ final class OracleSessionModel: ObservableObject {
     /// 长按蓄力：与再次进入前台相同的全套 crossfade（需已完成首屏呈现）。
     /// `onPhraseReplaced` 只在新文字真正替换到界面后调用。
     func refreshOnCharge(onPhraseReplaced: @escaping () -> Void = {}) {
-        cancelPendingResumeRefresh()
         chargeRefreshTask?.cancel()
 
         if isTransitioning {
@@ -305,6 +311,30 @@ final class OracleSessionModel: ObservableObject {
     private func applyMoment(_ next: OracleMoment) {
         moment = next
         dailyOracle.syncDisplayedMoment(next, recordExposure: true)
+    }
+
+    private func restoreDisplayedMoment(_ restored: OracleMoment) {
+        moment = restored
+        momentShownAt = Date()
+        baseColor = restored.nipponColor
+        overlayColor = nil
+        colorBlend = 0
+    }
+
+    private func replayCurrentMomentAppearance() {
+        ensureCurrentMomentFullyVisible()
+        phraseAppearReveal = 0
+        subtitleOpacity = 0
+        momentShownAt = Date()
+
+        withAnimation(OraculoMotion.phraseAppearAnimation) {
+            phraseAppearReveal = 1
+        }
+        if !moment.phrase.textEn.isEmpty {
+            withAnimation(OraculoMotion.subtitleFadeInAnimation) {
+                subtitleOpacity = 1
+            }
+        }
     }
 
     /// 回前台首帧：确保离开前那句完整可见（避免上次动画半途被挂起）。

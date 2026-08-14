@@ -1,6 +1,29 @@
 import XCTest
 
 final class InteractionHintUITests: XCTestCase {
+    func testResumeKeepsCurrentPhraseAfterAutomaticRefreshWindow() {
+        let app = XCUIApplication()
+        app.launch()
+
+        let phrase = app.staticTexts.matching(identifier: "current-oracle-phrase").firstMatch
+        XCTAssertTrue(phrase.waitForExistence(timeout: 5))
+        let originalText = phrase.label
+
+        Thread.sleep(forTimeInterval: 5)
+        XCUIDevice.shared.press(.home)
+        XCTAssertTrue(app.wait(for: .runningBackground, timeout: 3))
+
+        app.activate()
+        XCTAssertTrue(phrase.waitForExistence(timeout: 3))
+        Thread.sleep(forTimeInterval: 2.6)
+
+        XCTAssertEqual(
+            phrase.label,
+            originalText,
+            "回前台应重播当前句动画，不应自动换句"
+        )
+    }
+
     func testHintPersistsUntilSuccessfulLongPressThenStaysDismissed() {
         let app = XCUIApplication()
         app.launchArguments = ["--reset-interaction-hint"]
