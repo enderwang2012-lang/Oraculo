@@ -1238,5 +1238,315 @@
     "semanticCluster": "time_reflection",
     "cadenceGroup": "time_observation",
     "lifecycle": "retired"
+  },
+  "sb_2061": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "mood_state",
+    "lifecycle": "active"
+  },
+  "sb_2062": {
+    "semanticCluster": "self_stance",
+    "cadenceGroup": "mood_state",
+    "lifecycle": "active"
+  },
+  "sb_2063": {
+    "semanticCluster": "self_stance",
+    "cadenceGroup": "stance_short",
+    "lifecycle": "active"
+  },
+  "sb_2064": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "mood_state",
+    "lifecycle": "active"
+  },
+  "sb_2065": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "medium_state",
+    "lifecycle": "active"
+  },
+  "sb_2066": {
+    "semanticCluster": "self_stance",
+    "cadenceGroup": "stance_short",
+    "lifecycle": "active"
+  },
+  "sb_2067": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "mood_state",
+    "lifecycle": "active"
+  },
+  "sb_2068": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "mood_state",
+    "lifecycle": "active"
+  },
+  "sb_2069": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "mood_state",
+    "lifecycle": "active"
+  },
+  "sb_2070": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "medium_state",
+    "lifecycle": "active"
+  },
+  "sb_2071": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "stance_short",
+    "lifecycle": "active"
+  },
+  "sb_2072": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "relational_phrase",
+    "lifecycle": "active"
+  },
+  "sb_2073": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "time_observation",
+    "lifecycle": "active"
+  },
+  "sb_2074": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "medium_state",
+    "lifecycle": "active"
+  },
+  "sb_2075": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "stance_short",
+    "lifecycle": "active"
+  },
+  "sb_2076": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "rest_state",
+    "lifecycle": "active"
+  },
+  "sb_2077": {
+    "semanticCluster": "rest_pause",
+    "cadenceGroup": "rest_state",
+    "lifecycle": "active"
+  },
+  "sb_2078": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "relational_phrase",
+    "lifecycle": "active"
+  },
+  "sb_2079": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "blessing_parallel",
+    "lifecycle": "active"
+  },
+  "sb_2080": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "mood_state",
+    "lifecycle": "active"
+  },
+  "sb_2081": {
+    "semanticCluster": "distance_landscape",
+    "cadenceGroup": "short_image",
+    "lifecycle": "active"
+  },
+  "sb_2082": {
+    "semanticCluster": "distance_landscape",
+    "cadenceGroup": "short_image",
+    "lifecycle": "active"
+  },
+  "sb_2083": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "blessing_parallel",
+    "lifecycle": "active"
+  },
+  "sb_2084": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "blessing_parallel",
+    "lifecycle": "active"
+  },
+  "sb_2085": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "blessing_parallel",
+    "lifecycle": "active"
+  },
+  "sb_2086": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "blessing_parallel",
+    "lifecycle": "active"
+  },
+  "sb_2087": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "stance_sentence",
+    "lifecycle": "active"
+  },
+  "sb_2088": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "wordplay_social",
+    "lifecycle": "active"
+  },
+  "sb_2089": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "short_blessing",
+    "lifecycle": "active"
+  },
+  "sb_2090": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "short_blessing",
+    "lifecycle": "active"
+  },
+  "sb_2091": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "short_blessing",
+    "lifecycle": "active"
+  },
+  "sb_2092": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "short_blessing",
+    "lifecycle": "active"
+  },
+  "sb_2093": {
+    "semanticCluster": "seasonal_nature",
+    "cadenceGroup": "time_observation",
+    "lifecycle": "active"
+  },
+  "sb_2094": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "medium_blessing",
+    "lifecycle": "active"
+  },
+  "sb_2095": {
+    "semanticCluster": "blessing_wish",
+    "cadenceGroup": "stance_short",
+    "lifecycle": "active"
+  },
+  "sb_2096": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "short_blessing",
+    "lifecycle": "active"
+  },
+  "sb_2097": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "short_blessing",
+    "lifecycle": "active"
+  },
+  "sb_2098": {
+    "semanticCluster": "time_reflection",
+    "cadenceGroup": "time_observation",
+    "lifecycle": "active"
+  },
+  "sb_2099": {
+    "semanticCluster": "hope_arrival",
+    "cadenceGroup": "time_observation",
+    "lifecycle": "active"
+  },
+  "sb_2100": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "short_blessing",
+    "lifecycle": "active"
+  },
+  "sb_2101": {
+    "semanticCluster": "lyric_image",
+    "cadenceGroup": "short_plain",
+    "lifecycle": "active"
+  },
+  "sb_2102": {
+    "semanticCluster": "lyric_image",
+    "cadenceGroup": "medium_plain",
+    "lifecycle": "active"
+  },
+  "sb_2103": {
+    "semanticCluster": "lyric_image",
+    "cadenceGroup": "landscape_image",
+    "lifecycle": "active"
+  },
+  "sb_2104": {
+    "semanticCluster": "lyric_image",
+    "cadenceGroup": "medium_plain",
+    "lifecycle": "active"
+  },
+  "sb_2105": {
+    "semanticCluster": "seasonal_nature",
+    "cadenceGroup": "medium_plain",
+    "lifecycle": "active"
+  },
+  "sb_2106": {
+    "semanticCluster": "seasonal_nature",
+    "cadenceGroup": "long_sentence",
+    "lifecycle": "active"
+  },
+  "sb_2107": {
+    "semanticCluster": "seasonal_nature",
+    "cadenceGroup": "short_plain",
+    "lifecycle": "active"
+  },
+  "sb_2108": {
+    "semanticCluster": "lyric_image",
+    "cadenceGroup": "stance_sentence",
+    "lifecycle": "active"
+  },
+  "sb_2109": {
+    "semanticCluster": "lyric_image",
+    "cadenceGroup": "medium_plain",
+    "lifecycle": "active"
+  },
+  "sb_2110": {
+    "semanticCluster": "seasonal_nature",
+    "cadenceGroup": "long_sentence",
+    "lifecycle": "active"
+  },
+  "sb_2111": {
+    "semanticCluster": "seasonal_nature",
+    "cadenceGroup": "short_plain",
+    "lifecycle": "active"
+  },
+  "sb_2112": {
+    "semanticCluster": "seasonal_nature",
+    "cadenceGroup": "long_sentence",
+    "lifecycle": "active"
+  },
+  "sb_2113": {
+    "semanticCluster": "seasonal_nature",
+    "cadenceGroup": "long_sentence",
+    "lifecycle": "active"
+  },
+  "sb_2114": {
+    "semanticCluster": "seasonal_nature",
+    "cadenceGroup": "long_sentence",
+    "lifecycle": "active"
+  },
+  "sb_2115": {
+    "semanticCluster": "time_reflection",
+    "cadenceGroup": "time_observation",
+    "lifecycle": "active"
+  },
+  "sb_2116": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "rest_state",
+    "lifecycle": "active"
+  },
+  "sb_2117": {
+    "semanticCluster": "sky_wind",
+    "cadenceGroup": "short_image",
+    "lifecycle": "active"
+  },
+  "sb_2118": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "mood_state",
+    "lifecycle": "active"
+  },
+  "sb_2119": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "medium_state",
+    "lifecycle": "active"
+  },
+  "sb_2120": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "stance_short",
+    "lifecycle": "active"
+  },
+  "sb_2121": {
+    "semanticCluster": "daily_observation",
+    "cadenceGroup": "relational_phrase",
+    "lifecycle": "active"
+  },
+  "sb_2122": {
+    "semanticCluster": "hope_arrival",
+    "cadenceGroup": "blessing_parallel",
+    "lifecycle": "active"
   }
 }

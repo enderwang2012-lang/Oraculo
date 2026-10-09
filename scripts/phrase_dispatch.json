@@ -1533,5 +1533,368 @@
     "universal": true,
     "onlyWhen": [],
     "boost": []
+  },
+  "sb_2061": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2062": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2063": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2064": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2065": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2066": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2067": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2068": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2069": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2070": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2071": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2072": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2073": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2074": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2075": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2076": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2077": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2078": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2079": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2080": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2081": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:national_day"
+    ],
+    "boost": []
+  },
+  "sb_2082": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:national_day"
+    ],
+    "boost": []
+  },
+  "sb_2083": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:national_day"
+    ],
+    "boost": []
+  },
+  "sb_2084": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2085": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2086": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2087": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2088": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2089": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2090": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2091": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2092": {
+    "universal": false,
+    "onlyWhen": [
+      "solar_term:dongzhi"
+    ],
+    "boost": []
+  },
+  "sb_2093": {
+    "universal": false,
+    "onlyWhen": [
+      "solar_term:dongzhi"
+    ],
+    "boost": []
+  },
+  "sb_2094": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:christmas"
+    ],
+    "boost": []
+  },
+  "sb_2095": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:christmas"
+    ],
+    "boost": []
+  },
+  "sb_2096": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:christmas"
+    ],
+    "boost": []
+  },
+  "sb_2097": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:christmas"
+    ],
+    "boost": []
+  },
+  "sb_2098": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:new_year"
+    ],
+    "boost": []
+  },
+  "sb_2099": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:new_year"
+    ],
+    "boost": []
+  },
+  "sb_2100": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:new_year"
+    ],
+    "boost": []
+  },
+  "sb_2101": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2102": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2103": {
+    "universal": false,
+    "onlyWhen": [
+      "season:autumn"
+    ],
+    "boost": []
+  },
+  "sb_2104": {
+    "universal": false,
+    "onlyWhen": [
+      "season:autumn"
+    ],
+    "boost": []
+  },
+  "sb_2105": {
+    "universal": false,
+    "onlyWhen": [
+      "season:autumn"
+    ],
+    "boost": []
+  },
+  "sb_2106": {
+    "universal": false,
+    "onlyWhen": [
+      "month:11"
+    ],
+    "boost": []
+  },
+  "sb_2107": {
+    "universal": false,
+    "onlyWhen": [
+      "season:winter"
+    ],
+    "boost": []
+  },
+  "sb_2108": {
+    "universal": false,
+    "onlyWhen": [
+      "solar_term:xiaoxue"
+    ],
+    "boost": []
+  },
+  "sb_2109": {
+    "universal": false,
+    "onlyWhen": [
+      "solar_term:xiaoxue"
+    ],
+    "boost": []
+  },
+  "sb_2110": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2111": {
+    "universal": false,
+    "onlyWhen": [
+      "solar_term:dongzhi"
+    ],
+    "boost": []
+  },
+  "sb_2112": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:christmas"
+    ],
+    "boost": []
+  },
+  "sb_2113": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:christmas"
+    ],
+    "boost": []
+  },
+  "sb_2114": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:new_year"
+    ],
+    "boost": []
+  },
+  "sb_2115": {
+    "universal": false,
+    "onlyWhen": [
+      "festival:new_year"
+    ],
+    "boost": []
+  },
+  "sb_2116": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2117": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": [
+      {
+        "tag": "weather:windy",
+        "weight": 1.2
+      }
+    ]
+  },
+  "sb_2118": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2119": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2120": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2121": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
+  },
+  "sb_2122": {
+    "universal": true,
+    "onlyWhen": [],
+    "boost": []
   }
 }

@@ -19,8 +19,16 @@ class CorpusReviewResetTests(unittest.TestCase):
     def test_every_source_phrase_has_one_explicit_editorial_decision(self):
         source_ids = set(self.load_source_ids())
         review = self.load_json("config/phrase_editorial_review.json")
+        historical_ids = {
+            pid for pid in source_ids if int(pid.removeprefix("sb_")) < 2061
+        }
+        current_addition_ids = {
+            pid for pid in source_ids if int(pid.removeprefix("sb_")) >= 2061
+        }
 
-        self.assertEqual(len(source_ids), 248)
+        self.assertEqual(len(source_ids), 310)
+        self.assertEqual(len(historical_ids), 248)
+        self.assertEqual(len(current_addition_ids), 62)
         self.assertEqual(set(review), source_ids)
         self.assertTrue(all(item["decision"] in {"keep", "needs_rewrite", "retire"} for item in review.values()))
         self.assertTrue(all(item["lifecycle"] != "cooling" for item in review.values()))
@@ -30,14 +38,31 @@ class CorpusReviewResetTests(unittest.TestCase):
         self.assertTrue(all(item["proposedPhrase"] for item in review.values() if item["proposedPhrase"]))
         self.assertGreaterEqual(sum(item["decision"] == "keep" for item in review.values()), 90)
 
-        categories = Counter(item["sourceCategory"] for item in review.values())
+        historical_review = {
+            pid: item for pid, item in review.items() if pid in historical_ids
+        }
+        categories = Counter(item["sourceCategory"] for item in historical_review.values())
         self.assertEqual(categories, {"external_observed": 218, "editorial_original": 27, "user_provided": 3})
         self.assertTrue(all(item["rightsStatus"] for item in review.values()))
-        self.assertEqual(Counter(item["decision"] for item in review.values()), {
+        self.assertEqual(Counter(item["decision"] for item in historical_review.values()), {
             "keep": 161,
             "retire": 87,
         })
-        self.assertEqual(sum(bool(item.get("reviewerNote")) for item in review.values()), 40)
+        self.assertEqual(
+            sum(bool(item.get("reviewerNote")) for item in historical_review.values()),
+            40,
+        )
+        self.assertEqual(
+            Counter(item["decision"] for item in review.values()),
+            {"keep": 223, "retire": 87},
+        )
+        self.assertTrue(
+            all(
+                review[pid]["decision"] == "keep"
+                and review[pid]["lifecycle"] == "active"
+                for pid in current_addition_ids
+            )
+        )
 
         rewrites = {
             pid: (item["proposedPhrase"], item["proposedEnglish"])
@@ -78,7 +103,7 @@ class CorpusReviewResetTests(unittest.TestCase):
 
         approved_ids = {pid for pid, item in review.items() if item["decision"] == "keep"}
         self.assertEqual({item["id"] for item in payload}, approved_ids)
-        self.assertEqual(len(payload), 161)
+        self.assertEqual(len(payload), 223)
         self.assertEqual(
             {
                 item["id"] for item in payload if item["id"] in rewrites
@@ -96,7 +121,7 @@ class CorpusReviewResetTests(unittest.TestCase):
         with (ROOT / "review/corpus_review_2026_08_full.csv").open(encoding="utf-8-sig") as handle:
             rows = list(csv.DictReader(handle))
 
-        self.assertEqual(len(rows), 248)
+        self.assertEqual(len(rows), 310)
         self.assertEqual({row["id"] for row in rows}, set(review))
         for row in rows:
             item = review[row["id"]]

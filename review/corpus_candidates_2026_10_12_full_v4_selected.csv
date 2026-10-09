@@ -1,0 +1,63 @@
+candidate_id,group,phrase,user_feedback,review_decision,status,occasion,window_hint,source_kind,source_work,source_creator,source_ref,relation_kind,review_note,previous_id,source_id,assigned_id
+A01,general,想入非非,liked,通过,promoted,通用,全年,common_expression,,,COMMON,none,用户本轮明确好评；不代表发布授权,A2,GEN9,2061
+A02,general,心血来潮,liked,通过,promoted,通用,全年,common_expression,,,COMMON,none,用户本轮明确好评；不代表发布授权,A3,GEN9,2062
+A03,general,心照不宣,liked,通过,promoted,通用,全年,common_expression,,,COMMON,none,用户本轮明确好评；不代表发布授权,A5,GEN9,2063
+A05,general,欲说还休,liked,通过,promoted,通用,全年,classical_excerpt,丑奴儿·书博山道中壁,辛弃疾,P01,independent_excerpt,原词带秋意但本轮将短句用作通用心情,A8,GEN9,2064
+A07,general,自得其乐,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,不推断用户是否独处,,GEN9,2065
+A09,general,随心所欲,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,轻任性方向；不是行为建议,,GEN9,2066
+A11,general,天马行空,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,与A01有想象主题重合；可择一,,GEN9,2067
+A13,general,偷着乐,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,轻俏方向；不预设具体好消息,,GEN9,2068
+A15,general,有点意思,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,口语好奇感,,GEN9,2069
+A16,general,刚刚好,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,与既有恰到好处语义接近；不是字面重复,,GEN9,2070
+A18,general,我乐意,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,自我主张与顶嘴有歧义；入选前重点看语气,,GEN9,2071
+A19,general,好说好说,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,熟悉口气；不绑定真实对话,,GEN9,2072
+A21,general,来日方长,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,时间余地；不保证具体事情的结果,,GEN9,2073
+A24,general,乐在其中,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,轻满足；不绑定当前活动,,GEN9,2074
+A25,general,不亦乐乎,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,本轮按通行熟语使用；不声称核定最早出处,,GEN9,2075
+A26,general,得闲,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,短口语；不同地区熟悉度可能有差别,,GEN9,2076
+A27,general,自在,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,简短状态词；与原库轻松自在语义近,,GEN9,2077
+A28,general,幸会,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,日签向读者打招呼；不要求现实见面,,GEN9,2078
+A29,general,如愿,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,常用愿望词；不强挂同名歌曲出处,,GEN9,2079
+A30,general,好耶,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,偏口语和轻快；评审幼态感,,GEN9,2080
+B01,festival,山河可爱,liked,通过,promoted,国庆,2026-10-01,common_expression,,,COMMON;D01,festival_direct,本年已过仅补档；不执行过去排期,B1,GEN9,2081
+B02,festival,大好河山,new,通过,promoted,国庆,2026-10-01,common_expression,,,COMMON;D01,festival_direct,本年已过仅补档,,GEN9,2082
+B03,festival,国泰民安,new,通过,promoted,国庆,2026-10-01,common_expression,,,COMMON;D01,festival_direct,偏庄重的祝愿；本年已过仅补档,,GEN9,2083
+B04,festival,长长久久,liked,通过,promoted,重阳,2026-10-18,common_expression,,,COMMON;D01,festival_wordplay,重九与长久的编辑联想；不是指定作品引用,B2,GEN9,2084
+B05,festival,久久安康,new,通过,promoted,重阳,2026-10-18,common_expression,,,COMMON;D01,festival_wordplay,与B04同属重九祝语；建议择一,,GEN9,2085
+B06,festival,岁岁登高,new,通过,promoted,重阳,2026-10-18,editorial_phrase,,,COMMON;D01,festival_direct,愿望式节日表达；不要求用户实际登山,,GEN9,2086
+B07,festival,不给糖就捣蛋,liked,通过,promoted,万圣夜,2026-10-31,festival_saying,,,COMMON,festival_direct,通行节庆说法；不标为原创,B3,GEN9,2087
+B09,festival,装神弄鬼,new,通过,promoted,万圣夜,2026-10-31,common_expression,,,COMMON,festival_wordplay,只借节日扮装自嘲；平日易显贬义,,GEN9,2088
+B10,festival,谢谢你呀,liked,通过,promoted,感恩节,2026-11-26,common_expression,,,COMMON;D02,festival_direct,采用美国日期；不要求用户正在表达感谢,B4,GEN9,2089
+B11,festival,多谢关照,new,通过,promoted,感恩节,2026-11-26,common_expression,,,COMMON;D02,festival_direct,略有客套感；与B10可择一,,GEN9,2090
+B12,festival,幸好有你,new,通过,promoted,感恩节,2026-11-26,common_expression,,,COMMON;D02,festival_direct,不限定亲属伴侣或具体相处事件,,GEN9,2091
+B14,festival,团团圆圆,new,通过,promoted,冬至,2026-12-22,common_expression,,,COMMON;D01,festival_direct,表达祝愿而非断言全家到齐；不限地方食俗,,GEN9,2092
+B15,festival,冬至大如年,new,通过,promoted,冬至,2026-12-22,festival_saying,,,COMMON;D01,festival_direct,通行冬至俗语；不声称所有地区同等庆祝,,GEN9,2093
+B16,festival,苹果分你一半,liked,通过,promoted,平安夜,2026-12-24,editorial_phrase,,,COMMON,festival_direct,已获用户好评；不是米店逐字歌词,B5,GEN9,2094
+B17,festival,平安无事,liked,通过,promoted,平安夜,2026-12-24,common_expression,,,COMMON,festival_direct,日签祝意；不是对现实安全状况的保证,B6,GEN9,2095
+B19,festival,叮叮当,liked,通过,promoted,圣诞,2026-12-25,onomatopoeia,,,COMMON,festival_direct,铃声文化联想；不署为某一译配版本的完整歌词,B7,GEN9,2096
+B20,festival,圣诞快乐,new,通过,promoted,圣诞,2026-12-25,common_expression,,,COMMON,festival_direct,保留一句直接祝语；不默认宗教身份,,GEN9,2097
+B22,festival,明年见,liked,通过,promoted,公历跨年,2026-12-31,common_expression,,,COMMON,festival_direct,仅旧年末；不延用到2027年01月,B8,GEN9,2098
+B23,festival,来年可期,new,通过,promoted,公历跨年,2026-12-31,editorial_phrase,,,COMMON,festival_direct,期盼而非结果保证；不与春节默认合并,,GEN9,2099
+B24,festival,旧岁再见,new,通过,promoted,公历跨年,2026-12-31,editorial_phrase,,,COMMON,festival_direct,公历年末告别；不是农历除夕,,GEN9,2100
+C01,allusion,暗香盈袖,liked,通过,promoted,重阳,2026-10-18,classical_excerpt,醉花阴,李清照,P02,explicit_festival,原词直接涉及重阳,C1,P02,2101
+C02,allusion,还来就菊花,new,通过,promoted,重阳,2026-10-18,classical_excerpt,过故人庄,孟浩然,P03,explicit_festival,原诗明确提到重阳；不是要求用户实际赏菊,,P03,2102
+C03,allusion,红于二月花,liked,通过,promoted,霜降,2026-10-23,classical_excerpt,山行,杜牧,P04,seasonal_association,霜叶意象的编辑联想；原诗未指定霜降日,C2,P04,2103
+C04,allusion,橙黄橘绿时,new,通过,promoted,晚秋至初冬,2026-10-23/2026-11-07,classical_excerpt,赠刘景文,苏轼,P05,seasonal_association,原作有晚秋物候；日期窗口是编辑建议不是写作日期,,P05,2104
+C05,allusion,秋日胜春朝,new,通过,promoted,十月秋日,2026-10-09/2026-10-31,classical_excerpt,秋词二首·其一,刘禹锡,P06,explicit_season,原作直接写秋日；不另造某一天的纪念日,,P06,2105
+C06,allusion,November Rain,new,通过,promoted,十一月开篇,2026-11-01,song_title,November Rain,Guns N' Roses,M01,explicit_month,标题直接含月份；1日为编辑选择不是发行周年或降雨预报,,M01,2106
+C07,allusion,冬天快乐,new,通过,promoted,立冬,2026-11-07,song_title,冬天快乐,李宇春,M02,seasonal_association,题名含冬天；立冬为编辑选用日期不是歌曲创作背景,,M02,2107
+C08,allusion,能饮一杯无,liked,通过,promoted,小雪,2026-11-22,classical_excerpt,问刘十九,白居易,P07,seasonal_association,由全诗雪与炉火联想；原诗未指定小雪节气,C4,P07,2108
+C09,allusion,红泥小火炉,new,通过,promoted,小雪,2026-11-22,classical_excerpt,问刘十九,白居易,P07,seasonal_association,与C08同诗不同取景；建议择一,,P07,2109
+C10,allusion,not so bad,liked,通过,promoted,感恩节,2026-11-26,song_title_fragment,Thank You (Not So Bad),Dimitri Vegas & Like Mike / Tiësto / Dido,M03,theme_association,来自合作曲标题中的短语；由Thank You主题联想到感恩节；不是原版Thank You的歌词,C5,M03,2110
+C13,allusion,春又来,liked,通过,promoted,冬至,2026-12-22,classical_excerpt,小至,杜甫,P08,explicit_solar_term,原作直接写冬至；不是春季到来的气象预报,C6,P08,2111
+C14,allusion,All I want,liked,通过,promoted,圣诞,2026-12-25,title_fragment,All I Want for Christmas Is You,Mariah Carey,M06,explicit_festival,歌曲标题开头；完整作品标题仅见来源字段,C7,M06,2112
+C15,allusion,Let it snow,new,通过,promoted,圣诞,2026-12-25,title_fragment,Let It Snow!,Frank Sinatra演唱版本,M07,recording_context,已核版本收于圣诞专辑；不声称原歌为圣诞写作；不把演唱者写成词作者,,M07,2113
+C16,allusion,Happy New Year,new,通过,promoted,公历跨年,2026-12-31,song_title,Happy New Year,ABBA,M08,explicit_festival,用已存在的歌曲题名；原歌情绪复杂不写成全曲欢快,,M08,2114
+C17,allusion,明年会更好,liked,通过,promoted,公历跨年,2026-12-31,title_adaptation,明天会更好,群星,M09,date_adaptation,天改成年；明确是编辑改写而非原歌词,C8,M09,2115
+A31,general,随遇而安,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,常用成语；松弛但不消极，不绑定具体处境,,GEN9,2116
+A32,general,云淡风轻,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,常用表达；轻盈平静，不强行解释为天气,,GEN9,2117
+A33,general,小确幸,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,通行口语；一点小小的满足，不预设具体事件,,GEN9,2118
+A37,general,自成一派,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,轻微自我确认；不要求用户展示独特性,,GEN9,2119
+A38,general,不妨一试,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,带一点鼓励；不是命令，也不绑定具体行动,,GEN9,2120
+A39,general,说来话长,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,口语留白；不假设用户正在讲述某件事,,GEN9,2121
+A40,general,好事发生,new,通过,promoted,通用,全年,common_expression,,,COMMON,none,直接但不满；不承诺当天一定发生具体好事,,GEN9,2122

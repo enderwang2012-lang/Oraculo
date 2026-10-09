@@ -1,10 +1,10 @@
 {
-  "corpusVersion": 9,
-  "publishedAt": "2026-08-06T13:11:31Z",
+  "corpusVersion": 12,
+  "publishedAt": "2026-10-09T14:44:26Z",
   "minAppVersion": "1.0.0",
-  "releaseNotes": "248条语料全量初始审核：161条保留，87条退出；13条采用审核改写稿",
+  "releaseNotes": "按用户评审通过的 62 条 10-12 月候选扩充语料；补充通用、节日和日期典故内容",
   "phrases": {
-    "url": "https://oraculo-corpus.vercel.app/oraculo/phrases-v9-ea8432fcd71db44141825262128c3bb5bdd3233bc74ccf9fd43865d3b5b1911f.json",
-    "sha256": "ea8432fcd71db44141825262128c3bb5bdd3233bc74ccf9fd43865d3b5b1911f"
+    "url": "https://oraculo-corpus.vercel.app/oraculo/phrases-v12-92d80c149595681632dab3e0388fdcc09007a06939c46b5723bd335c3027e98f.json",
+    "sha256": "92d80c149595681632dab3e0388fdcc09007a06939c46b5723bd335c3027e98f"
   }
 }

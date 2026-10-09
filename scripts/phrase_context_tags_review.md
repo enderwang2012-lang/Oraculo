@@ -2,7 +2,7 @@
 
 AI 语义层产出，逐条扫一眼接受/改写。锚点句在 tag_phrases_llm.py 的 OVERRIDES 里。
 
-覆盖 248 / 248 条。
+覆盖 310 / 310 条。
 
 - `sb_1` **今日锦鲤** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
 - `sb_2` **文艺青年** — moods=['cool']; ban=['warm']
@@ -252,3 +252,65 @@ AI 语义层产出，逐条扫一眼接受/改写。锚点句在 tag_phrases_llm
 - `sb_2058` **蝉声稀** — moods=['cool', 'light']; ban=['warm']; boost=season:summer×2.5,season:autumn×1.5,solar_term:chushu×2.5,scene:season_change×1.5
 - `sb_2059` **囿于昼夜** — moods=['dark']; ban=['light']; boost=scene:self_time×1.2
 - `sb_2060` **旧钟慢两分** — boost=scene:self_time×1.0
+- `sb_2061` **想入非非** — moods=['light']; ban=['dark']
+- `sb_2062` **心血来潮** — moods=['light']; ban=['dark']
+- `sb_2063` **心照不宣** — moods=['light']; ban=['dark']
+- `sb_2064` **欲说还休** — moods=['light']; ban=['dark']
+- `sb_2065` **自得其乐** — moods=['light']; ban=['dark']
+- `sb_2066` **随心所欲** — moods=['light']; ban=['dark']
+- `sb_2067` **天马行空** — moods=['light']; ban=['dark']
+- `sb_2068` **偷着乐** — moods=['light']; ban=['dark']
+- `sb_2069` **有点意思** — moods=['light']; ban=['dark']
+- `sb_2070` **刚刚好** — moods=['light']; ban=['dark']
+- `sb_2071` **我乐意** — moods=['light']; ban=['dark']
+- `sb_2072` **好说好说** — moods=['light']; ban=['dark']
+- `sb_2073` **来日方长** — moods=['light']; ban=['dark']
+- `sb_2074` **乐在其中** — moods=['light']; ban=['dark']
+- `sb_2075` **不亦乐乎** — moods=['light']; ban=['dark']
+- `sb_2076` **得闲** — moods=['light']; ban=['dark']; boost=scene:self_time×1.0
+- `sb_2077` **自在** — moods=['light']; ban=['dark']
+- `sb_2078` **幸会** — moods=['light']; ban=['dark']
+- `sb_2079` **如愿** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2080` **好耶** — moods=['light']; ban=['dark']
+- `sb_2081` **山河可爱** — moods=['cool']; ban=['dark', 'warm']; boost=festival:spring_festival×2.5,festival:new_year×1.5,scene:travel×1.2
+- `sb_2082` **大好河山** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2083` **国泰民安** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2084` **长长久久** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2085` **久久安康** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2086` **岁岁登高** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2087` **不给糖就捣蛋** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2088` **装神弄鬼** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2089` **谢谢你呀** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2090` **多谢关照** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2091` **幸好有你** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2092` **团团圆圆** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2093` **冬至大如年** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2094` **苹果分你一半** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2095` **平安无事** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2096` **叮叮当** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2097` **圣诞快乐** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5,festival:christmas×3.0
+- `sb_2098` **明年见** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2099` **来年可期** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2100` **旧岁再见** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2101` **暗香盈袖** — moods=['light']; ban=['dark']
+- `sb_2102` **还来就菊花** — moods=['light']; ban=['dark']
+- `sb_2103` **红于二月花** — moods=['warm']; ban=['dark']; family=['red']
+- `sb_2104` **橙黄橘绿时** — moods=['warm']; ban=['dark']; family=['green']
+- `sb_2105` **秋日胜春朝** — moods=['light']; ban=['dark']
+- `sb_2106` **November Rain** — moods=['light']; ban=['dark']
+- `sb_2107` **冬天快乐** — moods=['light']; ban=['dark']
+- `sb_2108` **能饮一杯无** — moods=['light']; ban=['dark']
+- `sb_2109` **红泥小火炉** — moods=['warm']; ban=['dark']; family=['red']
+- `sb_2110` **not so bad** — moods=['light']; ban=['dark']
+- `sb_2111` **春又来** — moods=['light']; ban=['dark']
+- `sb_2112` **All I want** — moods=['light']; ban=['dark']
+- `sb_2113` **Let it snow** — moods=['light']; ban=['dark']
+- `sb_2114` **Happy New Year** — moods=['light']; ban=['dark']
+- `sb_2115` **明年会更好** — moods=['warm']; ban=['dark']; boost=festival:spring_festival×2.5,festival:new_year×1.5
+- `sb_2116` **随遇而安** — moods=['light']; ban=['dark']
+- `sb_2117` **云淡风轻** — moods=['cool']; ban=['warm']; boost=weather:windy×2.0
+- `sb_2118` **小确幸** — moods=['light']; ban=['dark']
+- `sb_2119` **自成一派** — moods=['light']; ban=['dark']
+- `sb_2120` **不妨一试** — moods=['light']; ban=['dark']
+- `sb_2121` **说来话长** — moods=['light']; ban=['dark']
+- `sb_2122` **好事发生** — moods=['light']; ban=['dark']
