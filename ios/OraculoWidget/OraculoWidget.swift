@@ -118,7 +118,7 @@ struct PhraseTimelineProvider: TimelineProvider {
     }
 
     private func nextMidnight(after date: Date) -> Date {
-        let cal = Calendar.current
+        let cal = ContextCalendar.calendar()
         let start = cal.startOfDay(for: date)
         return cal.date(byAdding: .day, value: 1, to: start) ?? date.addingTimeInterval(86400)
     }

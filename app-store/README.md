@@ -1,6 +1,8 @@
 # Oraculo App Store Package
 
-This directory contains repository-owned submission material for the Chinese-first, free 1.0.0 launch.
+This directory contains repository-owned submission material for Oraculo.
+The current repository release candidate is 1.1.0 (7), with corpus/calendar release v13.
+The historical App Store Connect record below is not proof of the current online version.
 
 ## Ready In Repository
 

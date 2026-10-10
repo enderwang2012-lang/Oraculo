@@ -21,6 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from dispatch_overlay import load_overlay, merge_dispatch, strip_for_embed  # noqa: E402
+from calendar_release import build_calendar_asset, validate_calendar
 SOURCE = ROOT / "starbucks_now_passphrases.csv"
 EN_MAP = ROOT / "scripts" / "phrases_en.json"
 DISPATCH_MAP = ROOT / "scripts" / "phrase_dispatch.json"
@@ -269,7 +270,20 @@ def main() -> None:
                 "freshness": freshness,
             })
 
+    festivals_path = ROOT / "config" / "festivals_cn.json"
+    terms_path = ROOT / "config" / "solar_terms_cn.json"
+    calendar_body = build_calendar_asset(
+        json.loads(festivals_path.read_text(encoding="utf-8")),
+        json.loads(terms_path.read_text(encoding="utf-8")),
+        version=corpus_version,
+    )
+    calendar_errors = validate_calendar(json.loads(calendar_body), corpus_version, phrases)
+    if calendar_errors:
+        raise SystemExit("\n".join(calendar_errors))
     OUT.parent.mkdir(parents=True, exist_ok=True)
+    (OUT.parent / "calendar.json").write_bytes(calendar_body)
+    for path in (festivals_path, terms_path):
+        (OUT.parent / path.name).write_bytes(path.read_bytes())
     payload = json.dumps(phrases, ensure_ascii=False, indent=2) + "\n"
     OUT.write_text(payload, encoding="utf-8")
     digest = sha256_hex(payload.encode("utf-8"))
@@ -280,6 +294,8 @@ def main() -> None:
         "generatedAt": generated_at,
         "phraseCount": len(phrases),
         "phrasesSHA256": digest,
+        "calendarVersion": corpus_version,
+        "calendarSHA256": sha256_hex(calendar_body),
     }
     META_OUT.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

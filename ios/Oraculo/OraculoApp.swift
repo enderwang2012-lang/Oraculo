@@ -39,7 +39,9 @@ struct OraculoApp: App {
                         LocationContextProvider.shared.refreshIfNeeded()
                         await OpenMeteoWeatherService.refreshSharedCacheIfPossible()
                     }
-                    await CorpusRemoteUpdateService.refreshIfNeeded()
+                    if await CorpusRemoteUpdateService.refreshIfNeeded() {
+                        session.refreshOnResumeFromBackground()
+                    }
                     #endif
                 }
             case .background:

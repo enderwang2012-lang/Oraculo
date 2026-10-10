@@ -39,6 +39,7 @@ final class OracleSessionModel: ObservableObject {
     private var hasPresentedOnce = false
 
     private var chargeRefreshTask: Task<Void, Never>?
+    private var displayedCorpusVersion = PhraseStore.shared.activeCorpusVersion
 
 
 
@@ -86,7 +87,10 @@ final class OracleSessionModel: ObservableObject {
             return
         }
 
+        let needsNewBaseline = moment.dayKey != PhraseStore.dayKey(for: Date())
+            || displayedCorpusVersion != PhraseStore.shared.activeCorpusVersion
         let widgetMoment = dailyOracle.loadDisplayedMoment()
+            ?? (needsNewBaseline ? session.todayBaseline() : nil)
         let widgetMomentDiffers = widgetMoment.map { $0 != moment } ?? false
         switch AppLaunchPolicy.resumeAction(widgetMomentDiffers: widgetMomentDiffers) {
         case .replayCurrent:
@@ -94,6 +98,7 @@ final class OracleSessionModel: ObservableObject {
         case .adoptWidgetMomentAndReplay:
             if let widgetMoment {
                 restoreDisplayedMoment(widgetMoment)
+                dailyOracle.syncDisplayedMoment(widgetMoment, recordExposure: false)
             }
         }
         replayCurrentMomentAppearance()
@@ -310,11 +315,13 @@ final class OracleSessionModel: ObservableObject {
 
     private func applyMoment(_ next: OracleMoment) {
         moment = next
+        displayedCorpusVersion = PhraseStore.shared.activeCorpusVersion
         dailyOracle.syncDisplayedMoment(next, recordExposure: true)
     }
 
     private func restoreDisplayedMoment(_ restored: OracleMoment) {
         moment = restored
+        displayedCorpusVersion = PhraseStore.shared.activeCorpusVersion
         momentShownAt = Date()
         baseColor = restored.nipponColor
         overlayColor = nil
@@ -349,6 +356,9 @@ final class OracleSessionModel: ObservableObject {
 
     /// 退到后台时再推一次 Widget，避免系统节流 reload 后锁屏仍停在旧句。
     func syncWidgetDisplay() {
+        guard displayedCorpusVersion == PhraseStore.shared.activeCorpusVersion,
+              moment.dayKey == PhraseStore.dayKey(for: Date())
+        else { return }
         dailyOracle.syncDisplayedMoment(moment, recordExposure: false)
     }
 

@@ -6,6 +6,8 @@ struct CorpusBundledMeta: Codable, Equatable {
     let generatedAt: String
     let phraseCount: Int
     let phrasesSHA256: String
+    let calendarVersion: Int?
+    let calendarSHA256: String?
 
     static func load(from bundle: Bundle = .main) -> CorpusBundledMeta? {
         guard let url = bundle.url(forResource: "corpus_bundled_meta", withExtension: "json")
@@ -24,10 +26,16 @@ struct CorpusRemoteManifest: Codable, Equatable {
     }
 
     let corpusVersion: Int
+    let releaseVersion: Int?
     let phrases: Asset
+    let calendar: Asset?
     let publishedAt: String?
     let minAppVersion: String?
     let releaseNotes: String?
+
+    var effectiveReleaseVersion: Int {
+        releaseVersion ?? corpusVersion
+    }
 }
 
 enum PhraseCorpusStorage {
@@ -112,4 +120,5 @@ enum CorpusUpdateError: Error {
     case downloadFailed
     case checksumMismatch
     case appVersionTooOld
+    case immutableAssetMismatch
 }

@@ -6,6 +6,7 @@ import Foundation
 /// 静态 manifest + JSON 语料热更新（无自建后端）。
 enum CorpusRemoteUpdateService {
     private static let appliedVersionKey = "corpusAppliedVersion"
+    @MainActor private static var isRefreshing = false
 
     /// 默认会话：单请求 15s，整个 resource 30s。
     /// 防止劫持/异常 CDN 让前台启动悬挂在默认 60s+。
@@ -19,24 +20,31 @@ enum CorpusRemoteUpdateService {
 
     /// 前台拉 manifest，有新版本则下载并校验 SHA256。
     @MainActor
-    static func refreshIfNeeded(session: URLSession? = nil) async {
-        guard let manifestURL = AppConstants.corpusManifestURL else { return }
+    @discardableResult
+    static func refreshIfNeeded(session: URLSession? = nil) async -> Bool {
+        guard !isRefreshing else { return false }
+        isRefreshing = true
+        defer { isRefreshing = false }
+        guard let manifestURL = AppConstants.corpusManifestURL else { return false }
         let session = session ?? defaultSession
 
         do {
             let updated = try await performRefresh(manifestURL: manifestURL, session: session)
             if updated {
                 PhraseStore.shared.reloadFromDisk()
+                WidgetTimelineRefresher.reloadAllIfPossible()
                 #if DEBUG
                 print("[Oraculo] corpus hot-update applied, count=\(PhraseStore.shared.phraseCount)")
                 #endif
             }
+            return updated
         } catch CorpusUpdateError.versionNotNewer {
-            return
+            return false
         } catch {
             #if DEBUG
             print("[Oraculo] corpus hot-update skipped: \(error)")
             #endif
+            return false
         }
     }
 
@@ -57,14 +65,19 @@ enum CorpusRemoteUpdateService {
         }
 
         let bundledVersion = CorpusBundledMeta.load()?.corpusVersion ?? 0
-        let appliedVersion = max(PhraseCorpusStorage.loadAppliedVersion(), UserDefaults.standard.integer(forKey: appliedVersionKey))
-        let localBest = max(bundledVersion, appliedVersion)
+        let activeVersion = CorpusReleaseStorage.loadActiveRelease()?.meta.releaseVersion ?? 0
+        let localBest = max(bundledVersion, activeVersion)
 
-        guard manifest.corpusVersion > localBest else {
+        let releaseVersion = manifest.effectiveReleaseVersion
+        guard releaseVersion > localBest else {
             throw CorpusUpdateError.versionNotNewer
         }
 
-        guard let phrasesURL = URL(string: manifest.phrases.url) else {
+        guard manifest.corpusVersion == releaseVersion,
+              let calendarAsset = manifest.calendar,
+              let calendarURL = URL(string: calendarAsset.url), calendarURL.scheme == "https",
+              let phrasesURL = URL(string: manifest.phrases.url), phrasesURL.scheme == "https"
+        else {
             throw CorpusUpdateError.manifestInvalid
         }
 
@@ -83,18 +96,42 @@ enum CorpusRemoteUpdateService {
             throw CorpusUpdateError.downloadFailed
         }
 
-        let meta = CorpusBundledMeta(
-            corpusVersion: manifest.corpusVersion,
-            generatedAt: manifest.publishedAt ?? ISO8601DateFormatter().string(from: Date()),
-            phraseCount: phrases.count,
-            phrasesSHA256: expectedHash
-        )
+        do {
+            let (calendarData, calendarResponse) = try await session.data(from: calendarURL)
+            guard let calendarHTTP = calendarResponse as? HTTPURLResponse,
+                  (200 ... 299).contains(calendarHTTP.statusCode)
+            else {
+                throw CorpusUpdateError.downloadFailed
+            }
 
-        try PhraseCorpusStorage.saveCachedPhrases(data: phrasesData, meta: meta)
-        UserDefaults.standard.set(manifest.corpusVersion, forKey: appliedVersionKey)
+            let expectedCalendarHash = calendarAsset.sha256.lowercased()
+            guard sha256Hex(calendarData) == expectedCalendarHash else {
+                throw CorpusUpdateError.checksumMismatch
+            }
+            guard let calendar = try? JSONDecoder().decode(CalendarConfig.self, from: calendarData),
+                  calendar.version == releaseVersion, calendar.isValid
+            else {
+                throw CorpusUpdateError.downloadFailed
+            }
+
+            let meta = CorpusReleaseMeta(
+                releaseVersion: releaseVersion,
+                generatedAt: manifest.publishedAt ?? ISO8601DateFormatter().string(from: Date()),
+                phraseCount: phrases.count,
+                phrasesSHA256: expectedHash,
+                calendarSHA256: expectedCalendarHash
+            )
+            try CorpusReleaseStorage.saveRelease(
+                phrasesData: phrasesData,
+                calendarData: calendarData,
+                meta: meta
+            )
+        }
+
+        UserDefaults.standard.set(releaseVersion, forKey: appliedVersionKey)
 
         if let defaults = UserDefaults(suiteName: AppConstants.appGroupID) {
-            defaults.set(manifest.corpusVersion, forKey: AppConstants.sharedCorpusVersionKey)
+            defaults.set(releaseVersion, forKey: AppConstants.sharedCorpusVersionKey)
         }
 
         return true

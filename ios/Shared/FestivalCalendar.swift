@@ -4,59 +4,26 @@ import Foundation
 final class FestivalCalendar {
     static let shared = FestivalCalendar()
 
-    private struct Config: Decodable {
-        struct Festival: Decodable {
-            let id: String
-            let ranges: [RangeEntry]
-            let recurrence: Recurrence?
-            let preDays: Int?
-            let postDays: Int?
-
-            enum CodingKeys: String, CodingKey {
-                case id, ranges, recurrence
-                case preDays = "pre_days"
-                case postDays = "post_days"
-            }
-        }
-
-        struct RangeEntry: Decodable {
-            let start: String
-            let end: String
-        }
-
-        struct Recurrence: Decodable {
-            let type: String
-            let month: Int
-            let weekday: Int
-            let ordinal: Int
-        }
-
-        let festivals: [Festival]
-    }
-
-    private let festivals: [Config.Festival]
-    private let calendar = Calendar.current
+    private var festivals: [FestivalDefinition]
 
     private init() {
-        festivals = Self.loadFestivals()
+        festivals = CalendarConfigStore.shared.config.festivals
+    }
+
+    init(config: CalendarConfig) {
+        festivals = config.festivals
     }
 
     init(data: Data) throws {
-        festivals = try JSONDecoder().decode(Config.self, from: data).festivals
+        festivals = try CalendarConfig.decodeFestivalDefinitions(from: data)
     }
 
-    private static func loadFestivals() -> [Config.Festival] {
-        guard let url = Bundle.main.url(forResource: "festivals_cn", withExtension: "json")
-            ?? Bundle.main.url(forResource: "festivals_cn", withExtension: "json", subdirectory: "Resources"),
-              let data = try? Data(contentsOf: url),
-              let decoded = try? JSONDecoder().decode(Config.self, from: data)
-        else {
-            return []
-        }
-        return decoded.festivals
+    func reloadFromStore() {
+        festivals = CalendarConfigStore.shared.config.festivals
     }
 
     func activeFestivals(on date: Date, calendar cal: Calendar = .current) -> Set<String> {
+        let cal = ContextCalendar.calendar(from: cal)
         var result = Set<String>()
         let targetDay = cal.startOfDay(for: date)
         let year = cal.component(.year, from: date)
@@ -108,7 +75,7 @@ final class FestivalCalendar {
     }
 
     private func resolveRecurringDate(
-        recurrence: Config.Recurrence,
+        recurrence: FestivalRecurrence,
         year: Int,
         calendar cal: Calendar
     ) -> Date? {
@@ -128,7 +95,7 @@ final class FestivalCalendar {
     }
 
     private func resolveWindow(
-        range: Config.RangeEntry,
+        range: FestivalDateRange,
         year: Int,
         calendar cal: Calendar
     ) -> (start: Date, end: Date)? {

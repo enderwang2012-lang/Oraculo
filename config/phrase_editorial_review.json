@@ -6635,8 +6635,10 @@
     "cadenceGroup": "blessing_parallel",
     "english": "For a long, long time",
     "englishStatus": "approved",
-    "dispatchStatus": "rule",
-    "dispatchConstraint": [],
+    "dispatchStatus": "manual",
+    "dispatchConstraint": [
+      "festival:double_ninth"
+    ],
     "reviewerNote": "重九与长久的编辑联想；不是指定作品引用",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"
   },
@@ -6659,8 +6661,10 @@
     "cadenceGroup": "blessing_parallel",
     "english": "Long-lasting good health",
     "englishStatus": "approved",
-    "dispatchStatus": "rule",
-    "dispatchConstraint": [],
+    "dispatchStatus": "manual",
+    "dispatchConstraint": [
+      "festival:double_ninth"
+    ],
     "reviewerNote": "与B04同属重九祝语；建议择一",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"
   },
@@ -6683,8 +6687,10 @@
     "cadenceGroup": "blessing_parallel",
     "english": "Rise higher every year",
     "englishStatus": "approved",
-    "dispatchStatus": "rule",
-    "dispatchConstraint": [],
+    "dispatchStatus": "manual",
+    "dispatchConstraint": [
+      "festival:double_ninth"
+    ],
     "reviewerNote": "愿望式节日表达；不要求用户实际登山",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"
   },
@@ -6707,8 +6713,10 @@
     "cadenceGroup": "stance_sentence",
     "english": "Trick or treat",
     "englishStatus": "approved",
-    "dispatchStatus": "rule",
-    "dispatchConstraint": [],
+    "dispatchStatus": "manual",
+    "dispatchConstraint": [
+      "festival:halloween"
+    ],
     "reviewerNote": "通行节庆说法；不标为原创",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"
   },
@@ -6731,8 +6739,10 @@
     "cadenceGroup": "wordplay_social",
     "english": "Playing dress-up",
     "englishStatus": "approved",
-    "dispatchStatus": "rule",
-    "dispatchConstraint": [],
+    "dispatchStatus": "manual",
+    "dispatchConstraint": [
+      "festival:halloween"
+    ],
     "reviewerNote": "只借节日扮装自嘲；平日易显贬义",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"
   },
@@ -6755,8 +6765,10 @@
     "cadenceGroup": "short_blessing",
     "english": "Thank you",
     "englishStatus": "approved",
-    "dispatchStatus": "rule",
-    "dispatchConstraint": [],
+    "dispatchStatus": "manual",
+    "dispatchConstraint": [
+      "festival:thanksgiving"
+    ],
     "reviewerNote": "采用美国日期；不要求用户正在表达感谢",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"
   },
@@ -6779,8 +6791,10 @@
     "cadenceGroup": "short_blessing",
     "english": "Thanks for your kindness",
     "englishStatus": "approved",
-    "dispatchStatus": "rule",
-    "dispatchConstraint": [],
+    "dispatchStatus": "manual",
+    "dispatchConstraint": [
+      "festival:thanksgiving"
+    ],
     "reviewerNote": "略有客套感；与B10可择一",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"
   },
@@ -6803,8 +6817,10 @@
     "cadenceGroup": "short_blessing",
     "english": "Lucky to have you",
     "englishStatus": "approved",
-    "dispatchStatus": "rule",
-    "dispatchConstraint": [],
+    "dispatchStatus": "manual",
+    "dispatchConstraint": [
+      "festival:thanksgiving"
+    ],
     "reviewerNote": "不限定亲属伴侣或具体相处事件",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"
   },
@@ -6881,7 +6897,7 @@
     "englishStatus": "approved",
     "dispatchStatus": "manual",
     "dispatchConstraint": [
-      "festival:christmas"
+      "month_day:12-24"
     ],
     "reviewerNote": "已获用户好评；不是米店逐字歌词",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"
@@ -6907,7 +6923,7 @@
     "englishStatus": "approved",
     "dispatchStatus": "manual",
     "dispatchConstraint": [
-      "festival:christmas"
+      "month_day:12-24"
     ],
     "reviewerNote": "日签祝意；不是对现实安全状况的保证",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"
@@ -6985,7 +7001,7 @@
     "englishStatus": "approved",
     "dispatchStatus": "manual",
     "dispatchConstraint": [
-      "festival:new_year"
+      "month_day:12-31"
     ],
     "reviewerNote": "仅旧年末；不延用到2027年01月",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"
@@ -7011,7 +7027,7 @@
     "englishStatus": "approved",
     "dispatchStatus": "manual",
     "dispatchConstraint": [
-      "festival:new_year"
+      "month_day:12-31"
     ],
     "reviewerNote": "期盼而非结果保证；不与春节默认合并",
     "reviewReason": "保留：关系或过程表达自然，仍给读者留下投射空间"
@@ -7037,7 +7053,7 @@
     "englishStatus": "approved",
     "dispatchStatus": "manual",
     "dispatchConstraint": [
-      "festival:new_year"
+      "month_day:12-31"
     ],
     "reviewerNote": "公历年末告别；不是农历除夕",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"
@@ -7061,8 +7077,10 @@
     "cadenceGroup": "short_plain",
     "english": "Fragrance fills the sleeves",
     "englishStatus": "approved",
-    "dispatchStatus": "rule",
-    "dispatchConstraint": [],
+    "dispatchStatus": "manual",
+    "dispatchConstraint": [
+      "festival:double_ninth"
+    ],
     "reviewerNote": "原词直接涉及重阳",
     "reviewReason": "保留：短句自然，有人味，能在静屏上独立成立"
   },
@@ -7085,8 +7103,10 @@
     "cadenceGroup": "medium_plain",
     "english": "Come back for chrysanthemums",
     "englishStatus": "approved",
-    "dispatchStatus": "rule",
-    "dispatchConstraint": [],
+    "dispatchStatus": "manual",
+    "dispatchConstraint": [
+      "festival:double_ninth"
+    ],
     "reviewerNote": "原诗明确提到重阳；不是要求用户实际赏菊",
     "reviewReason": "保留：短句自然，有人味，能在静屏上独立成立"
   },
@@ -7421,7 +7441,7 @@
     "englishStatus": "approved",
     "dispatchStatus": "manual",
     "dispatchConstraint": [
-      "festival:new_year"
+      "month_day:12-31"
     ],
     "reviewerNote": "天改成年；明确是编辑改写而非原歌词",
     "reviewReason": "保留：作为初始好运签简短自然，未因假定曝光而降级"

@@ -47,6 +47,12 @@ enum PhraseDispatchScorer {
     static func score(phrase: Phrase, context: ContextSnapshot) -> Double {
         let dispatch = phrase.dispatch ?? .fallback
         let active = context.activeTags
+        if phrase.freshness.lifecycle == "retired" { return 0 }
+        if let binding = dispatch.dateBinding,
+           binding.mode == .exclusive,
+           !binding.rules.contains(where: active.contains) {
+            return 0
+        }
 
         var requiredTags = dispatch.onlyWhen
         if requiredTags.isEmpty {
@@ -66,6 +72,11 @@ enum PhraseDispatchScorer {
         }
 
         var weight = dispatch.universal ? universalBaseWeight : nonUniversalBaseWeight
+        if let binding = dispatch.dateBinding,
+           binding.mode == .boost,
+           binding.rules.contains(where: active.contains) {
+            weight += 3.0
+        }
 
         for boost in dispatch.boost where active.contains(boost.tag) {
             weight += boost.weight

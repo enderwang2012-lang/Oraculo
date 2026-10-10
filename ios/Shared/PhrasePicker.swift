@@ -12,11 +12,14 @@ enum PhrasePicker {
         now: Date = Date(),
         corpusVersion: Int = 0
     ) -> Phrase {
-        let pool = phrases.filter { $0.id != excluding?.id }
-        guard !pool.isEmpty else {
-            return excluding ?? Phrase.fallback
-        }
-
+        // Date eligibility takes precedence over repeat avoidance.
+        let datePool = PhraseDateBindingSelector.candidatePool(
+            from: phrases.filter { PhraseDispatchScorer.score(phrase: $0, context: context) > 0 },
+            activeTags: context.activeTags
+        )
+        guard !datePool.isEmpty else { return Phrase.fallback }
+        let withoutPrevious = datePool.filter { $0.id != excluding?.id }
+        let pool = withoutPrevious.isEmpty ? datePool : withoutPrevious
         var weighted: [(phrase: Phrase, weight: Double)] = []
         for phrase in pool {
             let contextWeight = PhraseDispatchScorer.score(phrase: phrase, context: context)
@@ -34,11 +37,7 @@ enum PhrasePicker {
         }
 
         if weighted.isEmpty {
-            let universalPool = pool.filter { ($0.dispatch ?? .fallback).universal }
-            if let phrase = universalPool.randomElement() ?? pool.randomElement() {
-                return phrase
-            }
-            return Phrase.fallback
+            return pool[seededIndex(seed: seed, count: pool.count)]
         }
 
         let total = weighted.reduce(0) { $0 + $1.weight }
@@ -54,8 +53,13 @@ enum PhrasePicker {
     }
 
     static func seededUnit(_ seed: String) -> Double {
-        let hash = PhraseStore.stableHash64(for: seed)
+        let hash = StableSeed.hash64(for: seed)
         return Double(hash % 1_000_000) / 1_000_000.0
+    }
+
+    private static func seededIndex(seed: String, count: Int) -> Int {
+        guard count > 0 else { return 0 }
+        return Int(StableSeed.hash64(for: seed) % UInt64(count))
     }
 
 }

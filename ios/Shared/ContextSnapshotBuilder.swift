@@ -7,13 +7,14 @@ enum ContextSnapshotBuilder {
         calendar: Calendar = .current,
         defaults: UserDefaults? = UserDefaults(suiteName: AppConstants.appGroupID)
     ) -> ContextSnapshot {
-        let dayKey = PhraseStore.dayKey(for: date, calendar: calendar)
-        let month = calendar.component(.month, from: date)
-        let weekday = calendar.component(.weekday, from: date)
-        let hour = calendar.component(.hour, from: date)
+        let contextCalendar = ContextCalendar.calendar(from: calendar)
+        let dayKey = PhraseStore.dayKey(for: date, calendar: contextCalendar)
+        let month = contextCalendar.component(.month, from: date)
+        let weekday = contextCalendar.component(.weekday, from: date)
+        let hour = contextCalendar.component(.hour, from: date)
         let season = meteorologicalSeason(month: month)
-        let festivals = FestivalCalendar.shared.activeFestivals(on: date, calendar: calendar)
-        let solarTerm = SolarTermCalendar.shared.activeTermID(on: date, calendar: calendar)
+        let festivals = FestivalCalendar.shared.activeFestivals(on: date, calendar: contextCalendar)
+        let solarTerm = SolarTermCalendar.shared.activeTermID(on: date, calendar: contextCalendar)
         let allowLocationContext = LocationContextSettings.isEnabled(in: defaults)
         let weatherCache = LocationContextSettings.visibleWeatherCache(in: defaults)
         let region = GeoContext.region(

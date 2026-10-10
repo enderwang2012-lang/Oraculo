@@ -8,7 +8,7 @@ final class PhraseStore {
     private(set) var activeCorpusVersion: Int = 0
 
     var phraseCount: Int { phrases.count }
-    private let calendar = Calendar.current
+    private let calendar = ContextCalendar.calendar()
 
     private init() {
         reloadFromDisk()
@@ -19,21 +19,19 @@ final class PhraseStore {
         let loaded = Self.loadEffectivePhrases()
         phrases = loaded.phrases
         activeCorpusVersion = loaded.corpusVersion
+        CalendarConfigStore.shared.useRelease(loaded.calendar)
+        FestivalCalendar.shared.reloadFromStore()
+        SolarTermCalendar.shared.reloadFromStore()
     }
 
-    private static func loadEffectivePhrases() -> (phrases: [Phrase], corpusVersion: Int) {
+    private static func loadEffectivePhrases() -> (phrases: [Phrase], corpusVersion: Int, calendar: CalendarConfig?) {
         let bundledVersion = CorpusBundledMeta.load()?.corpusVersion ?? 0
-        let cachedVersion = PhraseCorpusStorage.loadAppliedVersion()
-        let cached = PhraseCorpusStorage.loadCachedPhrases()
-        if CorpusVersionSelection.shouldUseCached(
-            cachedVersion: cachedVersion,
-            bundledVersion: bundledVersion,
-            hasCachedPayload: cached?.isEmpty == false
-        ), let cached {
-            return (cached, cachedVersion)
+        if let release = CorpusReleaseStorage.loadActiveRelease(),
+           release.meta.releaseVersion >= bundledVersion {
+            return (release.phrases, release.meta.releaseVersion, release.calendar)
         }
         let bundled = loadBundledPhrases()
-        return (bundled, bundledVersion)
+        return (bundled, bundledVersion, nil)
     }
 
     static func loadBundledPhrases() -> [Phrase] {
@@ -109,6 +107,7 @@ final class PhraseStore {
     }
 
     static func dayKey(for date: Date, calendar: Calendar = .current) -> String {
+        let calendar = ContextCalendar.calendar(from: calendar)
         let start = calendar.startOfDay(for: date)
         let y = calendar.component(.year, from: start)
         let m = calendar.component(.month, from: start)

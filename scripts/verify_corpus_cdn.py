@@ -9,7 +9,10 @@ import sys
 import time
 import urllib.error
 import urllib.request
+import subprocess
 from pathlib import Path
+from urllib.parse import urlparse
+from calendar_release import validate_calendar
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MANIFEST_URL = "https://oraculo-corpus.vercel.app/oraculo/manifest.json"
@@ -28,6 +31,8 @@ def validate_release(
     expected_sha: str,
     expected_count: int,
     expected_phrases: dict[str, str],
+    calendar_body: bytes | None = None,
+    expected_calendar_sha: str | None = None,
 ) -> list[str]:
     errors: list[str] = []
     remote_version = manifest.get("corpusVersion")
@@ -62,10 +67,32 @@ def validate_release(
             errors.append(
                 f"{phrase_id} mismatch: expected {expected_text!r}, got {actual_text!r}"
             )
+    if expected_calendar_sha is not None:
+        if manifest.get("releaseVersion") != expected_version:
+            errors.append("manifest releaseVersion mismatch")
+        asset_sha = str((manifest.get("calendar") or {}).get("sha256", "")).lower()
+        if asset_sha != expected_calendar_sha.lower():
+            errors.append("manifest calendar SHA mismatch")
+        if calendar_body is None:
+            errors.append("calendar payload is missing")
+        else:
+            if sha256_hex(calendar_body) != expected_calendar_sha.lower():
+                errors.append("calendar payload SHA mismatch")
+            try:
+                errors.extend(validate_calendar(json.loads(calendar_body), expected_version, phrases))
+            except (UnicodeDecodeError, json.JSONDecodeError) as error:
+                errors.append(f"invalid calendar JSON: {error}")
     return errors
 
 
-def fetch(url: str, timeout: int) -> bytes:
+def fetch(url: str, timeout: int, resolve_ip: str | None = None) -> bytes:
+    if resolve_ip:
+        host = urlparse(url).hostname
+        return subprocess.run(
+            ["curl", "--fail", "--silent", "--show-error", "--max-time", str(timeout),
+             "--resolve", f"{host}:443:{resolve_ip}", "-H", "Cache-Control: no-cache", url],
+            check=True, capture_output=True,
+        ).stdout
     request = urllib.request.Request(url, headers={"Cache-Control": "no-cache"})
     with urllib.request.urlopen(request, timeout=timeout) as response:
         return response.read()
@@ -85,22 +112,29 @@ def main() -> int:
     parser.add_argument("--expected-version", type=int, default=local_meta["corpusVersion"])
     parser.add_argument("--expected-sha", default=local_meta["phrasesSHA256"])
     parser.add_argument("--expected-count", type=int, default=local_meta["phraseCount"])
+    parser.add_argument("--expected-calendar-sha")
+    parser.add_argument("--resolve-ip", help="Explicit CDN edge IP; HTTPS hostname validation remains enabled")
     parser.add_argument("--expect", action="append", default=[], type=parse_expected_phrase)
     parser.add_argument("--attempts", type=int, default=1)
     parser.add_argument("--interval", type=float, default=20.0)
     parser.add_argument("--timeout", type=int, default=30)
     args = parser.parse_args()
+    expected_calendar_sha = args.expected_calendar_sha
+    if expected_calendar_sha is None and args.expected_version == local_meta["corpusVersion"]:
+        expected_calendar_sha = local_meta.get("calendarSHA256")
 
     expected_phrases = dict(args.expect)
     last_errors: list[str] = []
     for attempt in range(1, max(1, args.attempts) + 1):
         try:
-            manifest = json.loads(fetch(args.manifest_url, args.timeout).decode("utf-8"))
+            manifest = json.loads(fetch(args.manifest_url, args.timeout, args.resolve_ip).decode("utf-8"))
             phrases_url = manifest.get("phrases", {}).get("url")
             if not isinstance(phrases_url, str) or not phrases_url:
                 last_errors = ["manifest is missing phrases.url"]
             else:
-                body = fetch(phrases_url, max(args.timeout, 60))
+                body = fetch(phrases_url, args.timeout, args.resolve_ip)
+                calendar_url = (manifest.get("calendar") or {}).get("url")
+                calendar_body = fetch(calendar_url, args.timeout, args.resolve_ip) if calendar_url and expected_calendar_sha else None
                 last_errors = validate_release(
                     manifest,
                     body,
@@ -108,14 +142,18 @@ def main() -> int:
                     expected_sha=args.expected_sha,
                     expected_count=args.expected_count,
                     expected_phrases=expected_phrases,
+                    calendar_body=calendar_body,
+                    expected_calendar_sha=expected_calendar_sha,
                 )
-        except (OSError, UnicodeDecodeError, json.JSONDecodeError, urllib.error.URLError) as error:
+        except (OSError, UnicodeDecodeError, json.JSONDecodeError, urllib.error.URLError, subprocess.CalledProcessError) as error:
             last_errors = [f"production request failed: {error}"]
 
         if not last_errors:
             print(f"OK: production corpus v{args.expected_version} matches local release")
             print(f"  phrases count = {args.expected_count}")
             print(f"  sha256 = {args.expected_sha.lower()}")
+            if expected_calendar_sha:
+                print(f"  calendar sha256 = {expected_calendar_sha.lower()}")
             if expected_phrases:
                 print(f"  expected phrases = {len(expected_phrases)}")
             return 0

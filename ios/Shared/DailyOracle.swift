@@ -101,8 +101,8 @@ struct DailyOracleService {
 
     private func loadPreferredSharedMoment(for date: Date) -> SharedOracleMoment? {
         let dayKey = PhraseStore.dayKey(for: date)
-        let current = SharedOracleMomentStore.shared.load()
-        let scheduled = SharedOracleMomentStore.shared.loadScheduled(forDayKey: dayKey)
+        let current = validSharedMoment(SharedOracleMomentStore.shared.load())
+        let scheduled = validSharedMoment(SharedOracleMomentStore.shared.loadScheduled(forDayKey: dayKey))
 
         switch SharedMomentSelectionPolicy.preferredSource(
             for: dayKey,
@@ -116,6 +116,11 @@ struct DailyOracleService {
         case .none:
             return nil
         }
+    }
+
+    private func validSharedMoment(_ moment: SharedOracleMoment?) -> SharedOracleMoment? {
+        guard let moment, moment.corpusVersion == phrases.activeCorpusVersion else { return nil }
+        return moment
     }
 }
 

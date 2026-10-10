@@ -13,7 +13,8 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from corpus_release_guard import unresolved_rights_ids
-from publish_corpus_static import asset_filename
+from publish_corpus_static import asset_filename, calendar_asset_filename
+from calendar_release import build_calendar_asset, validate_calendar
 from validate_app_store_assets import validate_repository as validate_app_store_assets
 
 
@@ -159,6 +160,46 @@ def check_corpus_alignment(
                     errors,
                     f"public corpus v{version} must reference immutable asset {expected_filename}",
                 )
+    bundled_calendar = BUNDLED_PHRASES.parent / "calendar.json"
+    if meta.get("calendarVersion") is not None:
+        if not bundled_calendar.exists():
+            fail(errors, "bundled calendar.json is missing")
+        else:
+            calendar = load_json(bundled_calendar)
+            errors.extend(validate_calendar(calendar, meta["corpusVersion"], load_json(BUNDLED_PHRASES)))
+            if meta.get("calendarVersion") != meta["corpusVersion"] or meta.get("calendarSHA256") != sha256(bundled_calendar):
+                fail(errors, "bundled calendar metadata mismatch")
+            expected = build_calendar_asset(
+                load_json(ROOT / "config" / "festivals_cn.json"),
+                load_json(ROOT / "config" / "solar_terms_cn.json"),
+                version=meta["corpusVersion"],
+            )
+            if bundled_calendar.read_bytes() != expected:
+                fail(errors, "bundled calendar differs from source configs; run embed_corpus.py")
+    if manifest.get("releaseVersion") is not None or manifest.get("calendar") is not None:
+        if manifest.get("releaseVersion") != version:
+            fail(errors, "manifest releaseVersion and corpusVersion must match")
+        calendar_asset = manifest.get("calendar") or {}
+        calendar_filename = Path(urlparse(str(calendar_asset.get("url", ""))).path).name
+        public_calendar = PUBLIC_CORPUS / calendar_filename
+        if not calendar_filename or not public_calendar.is_file():
+            fail(errors, "public calendar asset is missing")
+        else:
+            errors.extend(validate_calendar(load_json(public_calendar), version, load_json(public_phrases)))
+            calendar_digest = str(calendar_asset.get("sha256", ""))
+            if sha256(public_calendar) != calendar_digest:
+                fail(errors, "public calendar SHA mismatch")
+            try:
+                if calendar_filename != calendar_asset_filename(version, calendar_digest):
+                    fail(errors, "public calendar must use an immutable asset filename")
+            except ValueError as error:
+                fail(errors, str(error))
+            if require_public_alignment and meta.get("calendarSHA256") != calendar_digest:
+                fail(errors, "bundled and public calendar SHA must match before release")
+        if not manifest.get("minAppVersion") or tuple(map(int, manifest["minAppVersion"].split("."))) < (1, 1, 0):
+            fail(errors, "calendar releases require minAppVersion >= 1.1.0")
+    elif require_public_alignment and meta.get("calendarVersion") is not None:
+        fail(errors, "public manifest must include the bundled calendar release")
 
 
 def main(argv: list[str] | None = None) -> int:

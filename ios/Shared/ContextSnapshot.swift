@@ -22,6 +22,7 @@ struct ContextSnapshot: Equatable {
         var tags: Set<String> = [
             "season:\(season)",
             "month:\(month)",
+            "month_day:\(dayKey.dropFirst(5))",
             "weekday:\(weekday)",
             "daypart:\(dayPart)",
             "geo:\(geoRegion)",

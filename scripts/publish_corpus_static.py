@@ -20,10 +20,12 @@ import shutil
 from pathlib import Path
 
 from corpus_release_guard import require_rights_clear, require_version_above_public
+from calendar_release import build_calendar_asset, validate_calendar
 
 ROOT = Path(__file__).resolve().parents[1]
 PHRASES = ROOT / "ios" / "Shared" / "Resources" / "phrases.json"
 META = ROOT / "ios" / "Shared" / "Resources" / "corpus_bundled_meta.json"
+CALENDAR = ROOT / "ios" / "Shared" / "Resources" / "calendar.json"
 DIST = ROOT / "dist" / "corpus"
 PUBLIC = ROOT / "public" / "oraculo"
 PUBLIC_MANIFEST = PUBLIC / "manifest.json"
@@ -37,15 +39,20 @@ def asset_filename(corpus_version: int, digest: str) -> str:
     return f"phrases-v{corpus_version}-{normalized}.json"
 
 
+def calendar_asset_filename(version: int, digest: str) -> str:
+    return asset_filename(version, digest).replace("phrases-", "calendar-", 1)
+
+
 def build_manifest(
     meta: dict,
     *,
+    calendar_bytes: bytes | None = None,
     base_url: str,
     min_app_version: str,
     release_notes: str,
 ) -> dict:
     filename = asset_filename(int(meta["corpusVersion"]), str(meta["phrasesSHA256"]))
-    return {
+    manifest = {
         "corpusVersion": int(meta["corpusVersion"]),
         "publishedAt": meta["generatedAt"],
         "minAppVersion": min_app_version,
@@ -55,6 +62,19 @@ def build_manifest(
             "sha256": str(meta["phrasesSHA256"]).lower(),
         },
     }
+    if calendar_bytes is not None:
+        version = int(meta["corpusVersion"])
+        if json.loads(calendar_bytes).get("version") != version:
+            raise ValueError("calendar version must match release version")
+        if tuple(int(part) for part in min_app_version.split(".")) < (1, 1, 0):
+            raise ValueError("calendar releases require minAppVersion >= 1.1.0")
+        digest = hashlib.sha256(calendar_bytes).hexdigest()
+        manifest["releaseVersion"] = version
+        manifest["calendar"] = {
+            "url": f"{base_url.rstrip('/')}/{calendar_asset_filename(version, digest)}",
+            "sha256": digest,
+        }
+    return manifest
 
 
 def copy_immutable(source: Path, destination: Path) -> None:
@@ -74,7 +94,7 @@ def main(argv: list[str] | None = None) -> None:
     )
     parser.add_argument(
         "--min-app-version",
-        default="1.0.0",
+        default="1.1.0",
         help="低于此版本的 App 忽略该 manifest",
     )
     parser.add_argument("--release-notes", default="")
@@ -104,18 +124,30 @@ def main(argv: list[str] | None = None) -> None:
             f"  expected {expected_hash}\n"
             f"  actual   {actual_hash}"
         )
+    if not CALENDAR.exists():
+        raise SystemExit("Run embed_corpus.py to generate calendar.json")
+    calendar_body = CALENDAR.read_bytes()
+    calendar_hash = hashlib.sha256(calendar_body).hexdigest()
+    if meta.get("calendarSHA256") != calendar_hash or meta.get("calendarVersion") != meta["corpusVersion"]:
+        raise SystemExit("Bundled calendar metadata does not match the release")
+    calendar_errors = validate_calendar(json.loads(calendar_body), int(meta["corpusVersion"]), json.loads(body))
+    if calendar_errors:
+        raise SystemExit("\n".join(calendar_errors))
+    manifest = build_manifest(
+        meta,
+        calendar_bytes=calendar_body,
+        base_url=base,
+        min_app_version=args.min_app_version,
+        release_notes=args.release_notes,
+    )
 
     DIST.mkdir(parents=True, exist_ok=True)
     filename = asset_filename(int(meta["corpusVersion"]), expected_hash)
     asset_path = DIST / filename
     copy_immutable(PHRASES, asset_path)
-
-    manifest = build_manifest(
-        meta,
-        base_url=base,
-        min_app_version=args.min_app_version,
-        release_notes=args.release_notes,
-    )
+    calendar_filename = calendar_asset_filename(int(meta["corpusVersion"]), calendar_hash)
+    calendar_path = DIST / calendar_filename
+    copy_immutable(CALENDAR, calendar_path)
     manifest_path = DIST / "manifest.json"
     manifest_path.write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
@@ -125,12 +157,14 @@ def main(argv: list[str] | None = None) -> None:
     if not args.no_sync_public:
         PUBLIC.mkdir(parents=True, exist_ok=True)
         copy_immutable(asset_path, PUBLIC / filename)
+        copy_immutable(calendar_path, PUBLIC / calendar_filename)
         shutil.copy2(manifest_path, PUBLIC / "manifest.json")
         print(f"  synced → {PUBLIC}/")
 
     print(f"Published corpus v{meta['corpusVersion']} → {DIST}")
     print(f"  manifest: {manifest_path}")
     print(f"  phrases:  {asset_path}")
+    print(f"  calendar: {calendar_path}")
     print(f"\nApp 配置: AppConstants.corpusManifestURLString = \"{base}/manifest.json\"")
     if not args.no_sync_public:
         print("Vercel: git push 后自动部署 public/oraculo/（仓库 https://github.com/enderwang2012-lang/Oraculo）")

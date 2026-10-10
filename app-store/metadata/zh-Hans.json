@@ -1,5 +1,6 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "whatsNew": "更新秋冬短签\n让节日与特别日期遇见更应景的一句\n优化 App 与小组件的内容同步",
   "sku": "oraculo-ios-001",
   "name": "Oraculo",
   "subtitle": "每日一句与色彩小组件",

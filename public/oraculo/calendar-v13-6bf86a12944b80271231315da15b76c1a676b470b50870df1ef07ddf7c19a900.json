@@ -1,0 +1,584 @@
+{
+  "festivals": [
+    {
+      "id": "new_year",
+      "name": "元旦",
+      "post_days": 0,
+      "pre_days": 0,
+      "ranges": [
+        {
+          "end": "01-02",
+          "start": "12-31"
+        }
+      ]
+    },
+    {
+      "id": "spring_festival",
+      "name": "春节",
+      "post_days": 15,
+      "pre_days": 7,
+      "ranges": [
+        {
+          "end": "2025-02-04",
+          "start": "2025-01-22"
+        },
+        {
+          "end": "2026-02-23",
+          "start": "2026-02-08"
+        },
+        {
+          "end": "2027-02-20",
+          "start": "2027-02-06"
+        }
+      ]
+    },
+    {
+      "id": "lantern_festival",
+      "name": "元宵",
+      "post_days": 2,
+      "pre_days": 2,
+      "ranges": [
+        {
+          "end": "2025-02-12",
+          "start": "2025-02-12"
+        },
+        {
+          "end": "2026-03-03",
+          "start": "2026-03-03"
+        },
+        {
+          "end": "2027-02-20",
+          "start": "2027-02-20"
+        }
+      ]
+    },
+    {
+      "id": "qingming",
+      "name": "清明",
+      "post_days": 0,
+      "pre_days": 0,
+      "ranges": [
+        {
+          "end": "2025-04-06",
+          "start": "2025-04-04"
+        },
+        {
+          "end": "2026-04-06",
+          "start": "2026-04-04"
+        },
+        {
+          "end": "2027-04-05",
+          "start": "2027-04-05"
+        }
+      ]
+    },
+    {
+      "id": "labor_day",
+      "name": "劳动节",
+      "post_days": 0,
+      "pre_days": 0,
+      "ranges": [
+        {
+          "end": "05-05",
+          "start": "05-01"
+        }
+      ]
+    },
+    {
+      "id": "dragon_boat",
+      "name": "端午",
+      "post_days": 2,
+      "pre_days": 2,
+      "ranges": [
+        {
+          "end": "2025-06-02",
+          "start": "2025-05-31"
+        },
+        {
+          "end": "2026-06-21",
+          "start": "2026-06-19"
+        },
+        {
+          "end": "2027-06-09",
+          "start": "2027-06-09"
+        }
+      ]
+    },
+    {
+      "id": "mid_autumn",
+      "name": "中秋",
+      "post_days": 3,
+      "pre_days": 3,
+      "ranges": [
+        {
+          "end": "2025-10-06",
+          "start": "2025-10-06"
+        },
+        {
+          "end": "2026-09-27",
+          "start": "2026-09-25"
+        },
+        {
+          "end": "2027-10-15",
+          "start": "2027-10-15"
+        }
+      ]
+    },
+    {
+      "id": "national_day",
+      "name": "国庆",
+      "post_days": 0,
+      "pre_days": 0,
+      "ranges": [
+        {
+          "end": "10-07",
+          "start": "10-01"
+        }
+      ]
+    },
+    {
+      "id": "valentine",
+      "name": "情人节",
+      "post_days": 0,
+      "pre_days": 1,
+      "ranges": [
+        {
+          "end": "02-14",
+          "start": "02-14"
+        }
+      ]
+    },
+    {
+      "id": "father_day",
+      "name": "父亲节",
+      "post_days": 0,
+      "pre_days": 0,
+      "ranges": [],
+      "recurrence": {
+        "month": 6,
+        "ordinal": 3,
+        "type": "nth_weekday_of_month",
+        "weekday": 1
+      }
+    },
+    {
+      "id": "double_ninth",
+      "name": "重阳",
+      "post_days": 0,
+      "pre_days": 0,
+      "ranges": [
+        {
+          "end": "2026-10-18",
+          "start": "2026-10-18"
+        }
+      ]
+    },
+    {
+      "id": "halloween",
+      "name": "万圣夜",
+      "post_days": 0,
+      "pre_days": 0,
+      "ranges": [
+        {
+          "end": "10-31",
+          "start": "10-31"
+        }
+      ]
+    },
+    {
+      "id": "thanksgiving",
+      "name": "感恩节",
+      "post_days": 0,
+      "pre_days": 0,
+      "ranges": [],
+      "recurrence": {
+        "month": 11,
+        "ordinal": 4,
+        "type": "nth_weekday_of_month",
+        "weekday": 5
+      }
+    },
+    {
+      "id": "christmas",
+      "name": "圣诞",
+      "post_days": 1,
+      "pre_days": 2,
+      "ranges": [
+        {
+          "end": "12-26",
+          "start": "12-24"
+        }
+      ]
+    }
+  ],
+  "solar_terms": {
+    "2025": [
+      {
+        "id": "xiaohan",
+        "name": "小寒",
+        "start": "2025-01-05"
+      },
+      {
+        "id": "dahan",
+        "name": "大寒",
+        "start": "2025-01-20"
+      },
+      {
+        "id": "lichun",
+        "name": "立春",
+        "start": "2025-02-03"
+      },
+      {
+        "id": "yushui",
+        "name": "雨水",
+        "start": "2025-02-18"
+      },
+      {
+        "id": "jingzhe",
+        "name": "惊蛰",
+        "start": "2025-03-05"
+      },
+      {
+        "id": "chunfen",
+        "name": "春分",
+        "start": "2025-03-20"
+      },
+      {
+        "id": "qingming",
+        "name": "清明",
+        "start": "2025-04-04"
+      },
+      {
+        "id": "guyu",
+        "name": "谷雨",
+        "start": "2025-04-20"
+      },
+      {
+        "id": "lixia",
+        "name": "立夏",
+        "start": "2025-05-05"
+      },
+      {
+        "id": "xiaoman",
+        "name": "小满",
+        "start": "2025-05-21"
+      },
+      {
+        "id": "mangzhong",
+        "name": "芒种",
+        "start": "2025-06-05"
+      },
+      {
+        "id": "xiazhi",
+        "name": "夏至",
+        "start": "2025-06-21"
+      },
+      {
+        "id": "xiaoshu",
+        "name": "小暑",
+        "start": "2025-07-07"
+      },
+      {
+        "id": "dashu",
+        "name": "大暑",
+        "start": "2025-07-22"
+      },
+      {
+        "id": "liqiu",
+        "name": "立秋",
+        "start": "2025-08-07"
+      },
+      {
+        "id": "chushu",
+        "name": "处暑",
+        "start": "2025-08-23"
+      },
+      {
+        "id": "bailu",
+        "name": "白露",
+        "start": "2025-09-07"
+      },
+      {
+        "id": "qiufen",
+        "name": "秋分",
+        "start": "2025-09-23"
+      },
+      {
+        "id": "hanlu",
+        "name": "寒露",
+        "start": "2025-10-08"
+      },
+      {
+        "id": "shuangjiang",
+        "name": "霜降",
+        "start": "2025-10-23"
+      },
+      {
+        "id": "lidong",
+        "name": "立冬",
+        "start": "2025-11-07"
+      },
+      {
+        "id": "xiaoxue",
+        "name": "小雪",
+        "start": "2025-11-22"
+      },
+      {
+        "id": "daxue",
+        "name": "大雪",
+        "start": "2025-12-07"
+      },
+      {
+        "id": "dongzhi",
+        "name": "冬至",
+        "start": "2025-12-21"
+      }
+    ],
+    "2026": [
+      {
+        "id": "xiaohan",
+        "name": "小寒",
+        "start": "2026-01-05"
+      },
+      {
+        "id": "dahan",
+        "name": "大寒",
+        "start": "2026-01-20"
+      },
+      {
+        "id": "lichun",
+        "name": "立春",
+        "start": "2026-02-04"
+      },
+      {
+        "id": "yushui",
+        "name": "雨水",
+        "start": "2026-02-18"
+      },
+      {
+        "id": "jingzhe",
+        "name": "惊蛰",
+        "start": "2026-03-05"
+      },
+      {
+        "id": "chunfen",
+        "name": "春分",
+        "start": "2026-03-20"
+      },
+      {
+        "id": "qingming",
+        "name": "清明",
+        "start": "2026-04-04"
+      },
+      {
+        "id": "guyu",
+        "name": "谷雨",
+        "start": "2026-04-20"
+      },
+      {
+        "id": "lixia",
+        "name": "立夏",
+        "start": "2026-05-05"
+      },
+      {
+        "id": "xiaoman",
+        "name": "小满",
+        "start": "2026-05-21"
+      },
+      {
+        "id": "mangzhong",
+        "name": "芒种",
+        "start": "2026-06-05"
+      },
+      {
+        "id": "xiazhi",
+        "name": "夏至",
+        "start": "2026-06-21"
+      },
+      {
+        "id": "xiaoshu",
+        "name": "小暑",
+        "start": "2026-07-07"
+      },
+      {
+        "id": "dashu",
+        "name": "大暑",
+        "start": "2026-07-23"
+      },
+      {
+        "id": "liqiu",
+        "name": "立秋",
+        "start": "2026-08-07"
+      },
+      {
+        "id": "chushu",
+        "name": "处暑",
+        "start": "2026-08-23"
+      },
+      {
+        "id": "bailu",
+        "name": "白露",
+        "start": "2026-09-07"
+      },
+      {
+        "id": "qiufen",
+        "name": "秋分",
+        "start": "2026-09-23"
+      },
+      {
+        "id": "hanlu",
+        "name": "寒露",
+        "start": "2026-10-08"
+      },
+      {
+        "id": "shuangjiang",
+        "name": "霜降",
+        "start": "2026-10-23"
+      },
+      {
+        "id": "lidong",
+        "name": "立冬",
+        "start": "2026-11-07"
+      },
+      {
+        "id": "xiaoxue",
+        "name": "小雪",
+        "start": "2026-11-22"
+      },
+      {
+        "id": "daxue",
+        "name": "大雪",
+        "start": "2026-12-07"
+      },
+      {
+        "id": "dongzhi",
+        "name": "冬至",
+        "start": "2026-12-22"
+      }
+    ],
+    "2027": [
+      {
+        "id": "xiaohan",
+        "name": "小寒",
+        "start": "2027-01-05"
+      },
+      {
+        "id": "dahan",
+        "name": "大寒",
+        "start": "2027-01-20"
+      },
+      {
+        "id": "lichun",
+        "name": "立春",
+        "start": "2027-02-04"
+      },
+      {
+        "id": "yushui",
+        "name": "雨水",
+        "start": "2027-02-19"
+      },
+      {
+        "id": "jingzhe",
+        "name": "惊蛰",
+        "start": "2027-03-06"
+      },
+      {
+        "id": "chunfen",
+        "name": "春分",
+        "start": "2027-03-21"
+      },
+      {
+        "id": "qingming",
+        "name": "清明",
+        "start": "2027-04-05"
+      },
+      {
+        "id": "guyu",
+        "name": "谷雨",
+        "start": "2027-04-20"
+      },
+      {
+        "id": "lixia",
+        "name": "立夏",
+        "start": "2027-05-06"
+      },
+      {
+        "id": "xiaoman",
+        "name": "小满",
+        "start": "2027-05-21"
+      },
+      {
+        "id": "mangzhong",
+        "name": "芒种",
+        "start": "2027-06-06"
+      },
+      {
+        "id": "xiazhi",
+        "name": "夏至",
+        "start": "2027-06-21"
+      },
+      {
+        "id": "xiaoshu",
+        "name": "小暑",
+        "start": "2027-07-07"
+      },
+      {
+        "id": "dashu",
+        "name": "大暑",
+        "start": "2027-07-23"
+      },
+      {
+        "id": "liqiu",
+        "name": "立秋",
+        "start": "2027-08-08"
+      },
+      {
+        "id": "chushu",
+        "name": "处暑",
+        "start": "2027-08-23"
+      },
+      {
+        "id": "bailu",
+        "name": "白露",
+        "start": "2027-09-08"
+      },
+      {
+        "id": "qiufen",
+        "name": "秋分",
+        "start": "2027-09-23"
+      },
+      {
+        "id": "hanlu",
+        "name": "寒露",
+        "start": "2027-10-08"
+      },
+      {
+        "id": "shuangjiang",
+        "name": "霜降",
+        "start": "2027-10-23"
+      },
+      {
+        "id": "lidong",
+        "name": "立冬",
+        "start": "2027-11-07"
+      },
+      {
+        "id": "xiaoxue",
+        "name": "小雪",
+        "start": "2027-11-22"
+      },
+      {
+        "id": "daxue",
+        "name": "大雪",
+        "start": "2027-12-07"
+      },
+      {
+        "id": "dongzhi",
+        "name": "冬至",
+        "start": "2027-12-22"
+      }
+    ]
+  },
+  "timezone": "Asia/Shanghai",
+  "version": 13
+}

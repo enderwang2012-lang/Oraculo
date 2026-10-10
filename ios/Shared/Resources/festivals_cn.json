@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "festivals": [
     {
       "id": "new_year",
@@ -101,6 +101,37 @@
         "month": 6,
         "weekday": 1,
         "ordinal": 3
+      },
+      "pre_days": 0,
+      "post_days": 0
+    },
+    {
+      "id": "double_ninth",
+      "name": "重阳",
+      "ranges": [
+        { "start": "2026-10-18", "end": "2026-10-18" }
+      ],
+      "pre_days": 0,
+      "post_days": 0
+    },
+    {
+      "id": "halloween",
+      "name": "万圣夜",
+      "ranges": [
+        { "start": "10-31", "end": "10-31" }
+      ],
+      "pre_days": 0,
+      "post_days": 0
+    },
+    {
+      "id": "thanksgiving",
+      "name": "感恩节",
+      "ranges": [],
+      "recurrence": {
+        "type": "nth_weekday_of_month",
+        "month": 11,
+        "weekday": 5,
+        "ordinal": 4
       },
       "pre_days": 0,
       "post_days": 0

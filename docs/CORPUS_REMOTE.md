@@ -1,16 +1,22 @@
 # 语料静态热更新
 
-无需自建后端：把可变的 `manifest.json` 与按版本、SHA 命名的不可变语料文件放到 HTTPS 静态托管，App 启动时按需拉取。
+无需自建后端：把可变的 `manifest.json` 与按版本、SHA 命名的语料、日历文件放到 HTTPS 静态托管，App 启动时按需拉取。自 App 1.1.0 / release v13 起，两份资源属于同一个 release，一起校验、一起生效。
 
 本仓库默认使用 **Vercel** + GitHub：[enderwang2012-lang/Oraculo](https://github.com/enderwang2012-lang/Oraculo)。
 
 ## 加载顺序
 
-1. 读取 Bundle 内置版本与 App Group 已应用版本。
-2. 仅当 App Group 缓存存在且版本**严格大于** Bundle 时使用缓存。
-3. 缓存版本小于或等于 Bundle、缓存损坏或缺失时，使用 Bundle 内置 `phrases.json`。
+1. 读取 Bundle 内置版本与 App Group 的 `active_release.json`。
+2. 仅当完整 release 通过两份 SHA、版本、条数和日历结构校验，且版本不低于 Bundle 时使用它。
+3. 缓存较旧、损坏或缺失时，语料和日历一起回到 Bundle。
+4. 1.1.0 不再应用只有 phrases 的新 manifest，也不混用旧版散文件缓存与新版日历。
 
 Widget 与主 App 共用 App Group，**不单独请求网络**。
+每次 Widget 生成时间线都会从同一 release 重读语料和日历；旧 release 的展示快照不再复用。
+
+下载后先写 `corpus/releases/.staging-<uuid>/`，两份文件完整验证后移到
+`corpus/releases/v<version>/`，最后原子更新 `active_release.json`。
+失败时保留之前的 active release。发布的新 manifest 使用 `minAppVersion: 1.1.0`，旧 App 继续使用已有语料。
 
 ## Vercel 部署（一次性）
 
@@ -38,7 +44,7 @@ python3 scripts/rebuild_corpus.py \
   --publish \
   --bump \
   --base-url https://oraculo-corpus.vercel.app/oraculo \
-  --min-app-version 1.0.0 \
+  --min-app-version 1.1.0 \
   --release-notes "本次语料调整摘要"
 
 # 2. 本地验证
@@ -76,7 +82,9 @@ python3 scripts/verify_corpus_cdn.py \
   --interval 20
 ```
 
-命令每 20 秒读取一次 manifest，再按 manifest 的 `phrases.url` 下载 payload；只有版本、manifest SHA、实际文件 SHA、条数和所有 `--expect` 条目全部一致才成功。部署前验证现网旧版本时必须显式传旧版本参数，避免本地已生成的新版本被误当成线上预期。
+命令读取 manifest，再下载 phrases 和 calendar；只有 release 版本、两份 SHA、条数、日历结构和所有 `--expect` 条目全部一致才成功。默认期望值来自本地 bundle meta。部署前验证现网旧版本时必须显式传旧版本参数。
+
+默认 DNS/路由失败时，可传 `--resolve-ip <已核验的 Vercel edge IP>`，仍使用原域名做 HTTPS 证书校验。不要将连接失败解释为部署构建失败。
 
 ## 启用 / 关闭热更新
 
@@ -92,12 +100,17 @@ static let corpusManifestURLString = "https://oraculo-corpus.vercel.app/oraculo/
 
 ```json
 {
-  "corpusVersion": 2,
-  "publishedAt": "2026-05-04T12:00:00Z",
-  "minAppVersion": "1.0.0",
-  "releaseNotes": "新增 12 条口令，修正春节打标",
+  "corpusVersion": 13,
+  "releaseVersion": 13,
+  "publishedAt": "2026-10-10T00:00:00Z",
+  "minAppVersion": "1.1.0",
+  "releaseNotes": "语料与节日日历统一热更新",
   "phrases": {
-    "url": "https://oraculo-corpus.vercel.app/oraculo/phrases-v2-<sha256>.json",
+    "url": "https://oraculo-corpus.vercel.app/oraculo/phrases-v13-<sha256>.json",
+    "sha256": "全文件小写 hex"
+  },
+  "calendar": {
+    "url": "https://oraculo-corpus.vercel.app/oraculo/calendar-v13-<sha256>.json",
     "sha256": "全文件小写 hex"
   }
 }
@@ -105,17 +118,21 @@ static let corpusManifestURLString = "https://oraculo-corpus.vercel.app/oraculo/
 
 - `corpusVersion`：整数，**必须**大于用户设备上「内置版本」与「已应用热更新版本」才会下载。
 - `phrases.sha256`：与 `embed_corpus.py` 输出的 `corpus_bundled_meta.json` 中一致。
-- `minAppVersion`：可选保护，旧 App 不拉新格式语料。
+- `calendar.sha256`：与 bundle meta 中 `calendarSHA256` 一致。
+- `releaseVersion`、`corpusVersion`、日历中的 `version` 必须一致。
+- `minAppVersion`：新版发布器要求至少 1.1.0，防止旧 App 只应用语料而遗漏日历。
 
 ## 版本号约定
 
 | 文件 | 作用 |
 | --- | --- |
 | `config/corpus_version.txt` | 人工递增，写入 bundle meta 与远程 manifest |
-| `corpus_bundled_meta.json` | 打进 App，含 `phrasesSHA256` |
-| App Group `applied_meta.json` | 热更新成功后写入 |
+| `corpus_bundled_meta.json` | 打进 App，含语料与日历 SHA |
+| App Group `active_release.json` | 指向完整生效版本 |
+| App Group `releases/vN/release_meta.json` | 版本、两份 SHA 和语料条数 |
 | `public/oraculo/manifest.json` | 可变入口，提交到 Git 后由 Vercel 发布 |
 | `public/oraculo/phrases-v<version>-<sha256>.json` | 不可变版本资源，禁止原位覆盖 |
+| `public/oraculo/calendar-v<version>-<sha256>.json` | 同一 release 的不可变日历资源 |
 | `public/oraculo/phrases.json` | 固定 v7 兼容资源，不随新版本改写 |
 
 **仅改打标、不改句数**：也要递增 `corpus_version.txt`，否则客户端不会拉取。
@@ -132,16 +149,29 @@ static let corpusManifestURLString = "https://oraculo-corpus.vercel.app/oraculo/
 | 场景 | 建议 |
 | --- | --- |
 | 新增/修改句子、打标 | 热更新即可，不必等为发版 |
+| 修改节日、节气、现有日期绑定规则 | 1.1.0 起支持与语料一起热更新 |
 | 改 `Phrase` 字段结构、选句算法 | 必须发 App |
 | 新用户首装无网 | 依赖 Bundle 内置语料 |
 
 发版时仍运行 `embed_corpus.py`，保证内置版本与 CDN 版本策略一致（通常内置 ≤ 远程）。
 
-## 后续可扩展（仍无需后端）
+## 日期绑定
 
-在 manifest 中增加可选字段即可，例如：
+所有文化日期、日种子和 Widget 次日切换统一按公历、`Asia/Shanghai` 计算。
 
-- `festivals.url` + `festivals.sha256`
-- `solarTerms.url` + `solarTerms.sha256`
+`dispatch.dateBinding` 支持：
 
-App 侧按同样模式写入 App Group 并热加载。
+- `mode: exclusive`：当日命中后，仅在最高 priority 的日期句库中随机；未命中时该句不参与普通池。
+- `mode: boost`：命中后增加普通池权重，不独占。`priority` 仅用于 exclusive 冲突排序。
+- `rules`：OR 关系，支持 `month_day:MM-DD`、festival、solar_term、month、season。
+- `onlyWhen` 仍是额外硬门槛；重复规避和新鲜度不会让句子越过日期限制。
+
+v13 将重阳、万圣夜、感恩节、平安夜、圣诞节和年末短签接入独占池。
+“明年见”“来年可期”“旧岁再见”“明年会更好”只在 12-31 出现；
+“苹果分你一半”“平安无事”只在 12-24 出现。
+季节和小雪、冬至意象沿用现有节气区间，不将整个节气区间设为独占。
+
+`config/festivals_cn.json` 和 `config/solar_terms_cn.json` 是源配置，
+`embed_corpus.py` 同时生成 Bundle 的 `calendar.json` 与兼容分文件。
+农历节日按年配置，不能把 2026 年日期当成以后每年的固定公历日期。
+目前重阳已配置 2026 年，新增年份需走同一热更新发布流程。

@@ -4,36 +4,34 @@ import Foundation
 final class SolarTermCalendar {
     static let shared = SolarTermCalendar()
 
-    private struct Config: Decodable {
-        struct Term: Decodable {
-            let id: String
-            let start: String
-        }
-
-        let years: [String: [Term]]
-    }
-
-    private let termsByYear: [Int: [(id: String, start: Date)]]
-    private let calendar = Calendar.current
+    private var mutableTermsByYear: [Int: [(id: String, start: Date)]]
 
     private init() {
-        termsByYear = Self.loadTerms()
+        let terms = Self.loadTerms(config: CalendarConfigStore.shared.config)
+        mutableTermsByYear = terms
     }
 
-    private static func loadTerms() -> [Int: [(id: String, start: Date)]] {
-        guard let url = Bundle.main.url(forResource: "solar_terms_cn", withExtension: "json")
-            ?? Bundle.main.url(forResource: "solar_terms_cn", withExtension: "json", subdirectory: "Resources"),
-              let data = try? Data(contentsOf: url),
-              let decoded = try? JSONDecoder().decode(Config.self, from: data)
-        else {
-            return [:]
-        }
+    init(config: CalendarConfig) {
+        let terms = Self.loadTerms(config: config)
+        mutableTermsByYear = terms
+    }
 
-        var cal = Calendar.current
-        cal.timeZone = TimeZone(identifier: "Asia/Shanghai") ?? .current
+    init(data: Data) throws {
+        let terms = try CalendarConfig.decodeSolarTerms(from: data)
+        let config = CalendarConfig(version: 0, festivals: [], solarTerms: terms)
+        let parsed = Self.loadTerms(config: config)
+        mutableTermsByYear = parsed
+    }
+
+    func reloadFromStore() {
+        mutableTermsByYear = Self.loadTerms(config: CalendarConfigStore.shared.config)
+    }
+
+    private static func loadTerms(config: CalendarConfig) -> [Int: [(id: String, start: Date)]] {
+        let cal = ContextCalendar.calendar()
         var result: [Int: [(id: String, start: Date)]] = [:]
 
-        for (yearKey, terms) in decoded.years {
+        for (yearKey, terms) in config.solarTerms {
             guard let year = Int(yearKey) else { continue }
             var parsed: [(id: String, start: Date)] = []
             for term in terms {
@@ -60,18 +58,25 @@ final class SolarTermCalendar {
 
     /// 当日节气 ID，例如 `qingming`；无配置年份时返回 `nil`。
     func activeTermID(on date: Date, calendar cal: Calendar = .current) -> String? {
-        var shanghai = cal
-        shanghai.timeZone = TimeZone(identifier: "Asia/Shanghai") ?? cal.timeZone
+        let shanghai = ContextCalendar.calendar(from: cal)
         let year = shanghai.component(.year, from: date)
         let dayStart = shanghai.startOfDay(for: date)
 
-        if let id = latestTermID(in: year, on: dayStart) {
+        if let id = latestTermID(in: year, on: dayStart, termsByYear: mutableTermsByYear) {
             return id
         }
-        return latestTermID(in: year - 1, on: dayStart)
+        // Only early January can belong to the previous year's winter solstice.
+        guard shanghai.component(.month, from: date) == 1,
+              shanghai.component(.day, from: date) <= 6
+        else { return nil }
+        return latestTermID(in: year - 1, on: dayStart, termsByYear: mutableTermsByYear)
     }
 
-    private func latestTermID(in year: Int, on dayStart: Date) -> String? {
+    private func latestTermID(
+        in year: Int,
+        on dayStart: Date,
+        termsByYear: [Int: [(id: String, start: Date)]]
+    ) -> String? {
         guard let terms = termsByYear[year], !terms.isEmpty else { return nil }
         var active: String?
         for term in terms where dayStart >= term.start {

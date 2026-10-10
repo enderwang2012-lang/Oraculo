@@ -316,6 +316,66 @@
     ],
     "boost": []
   },
+  "sb_2084": {
+    "universal": false,
+    "onlyWhen": ["festival:double_ninth"],
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["festival:double_ninth"], "priority": 100}
+  },
+  "sb_2085": {
+    "universal": false,
+    "onlyWhen": ["festival:double_ninth"],
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["festival:double_ninth"], "priority": 100}
+  },
+  "sb_2086": {
+    "universal": false,
+    "onlyWhen": ["festival:double_ninth"],
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["festival:double_ninth"], "priority": 100}
+  },
+  "sb_2087": {
+    "universal": false,
+    "onlyWhen": ["festival:halloween"],
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["festival:halloween"], "priority": 100}
+  },
+  "sb_2088": {
+    "universal": false,
+    "onlyWhen": ["festival:halloween"],
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["festival:halloween"], "priority": 100}
+  },
+  "sb_2089": {
+    "universal": false,
+    "onlyWhen": ["festival:thanksgiving"],
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["festival:thanksgiving"], "priority": 100}
+  },
+  "sb_2090": {
+    "universal": false,
+    "onlyWhen": ["festival:thanksgiving"],
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["festival:thanksgiving"], "priority": 100}
+  },
+  "sb_2091": {
+    "universal": false,
+    "onlyWhen": ["festival:thanksgiving"],
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["festival:thanksgiving"], "priority": 100}
+  },
+  "sb_2101": {
+    "universal": false,
+    "onlyWhen": ["festival:double_ninth"],
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["festival:double_ninth"], "priority": 100}
+  },
+  "sb_2102": {
+    "universal": false,
+    "onlyWhen": ["festival:double_ninth"],
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["festival:double_ninth"], "priority": 100}
+  },
   "sb_2092": {
     "universal": false,
     "onlyWhen": [
@@ -333,51 +393,58 @@
   "sb_2094": {
     "universal": false,
     "onlyWhen": [
-      "festival:christmas"
+      "month_day:12-24"
     ],
-    "boost": []
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["month_day:12-24"], "priority": 100}
   },
   "sb_2095": {
     "universal": false,
     "onlyWhen": [
-      "festival:christmas"
+      "month_day:12-24"
     ],
-    "boost": []
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["month_day:12-24"], "priority": 100}
   },
   "sb_2096": {
     "universal": false,
     "onlyWhen": [
       "festival:christmas"
     ],
-    "boost": []
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["month_day:12-25"], "priority": 100}
   },
   "sb_2097": {
     "universal": false,
     "onlyWhen": [
       "festival:christmas"
     ],
-    "boost": []
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["month_day:12-25"], "priority": 100}
   },
   "sb_2098": {
     "universal": false,
     "onlyWhen": [
-      "festival:new_year"
+      "month_day:12-31"
     ],
-    "boost": []
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["month_day:12-31"], "priority": 100}
   },
   "sb_2099": {
     "universal": false,
     "onlyWhen": [
-      "festival:new_year"
+      "month_day:12-31"
     ],
-    "boost": []
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["month_day:12-31"], "priority": 100}
   },
   "sb_2100": {
     "universal": false,
     "onlyWhen": [
-      "festival:new_year"
+      "month_day:12-31"
     ],
-    "boost": []
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["month_day:12-31"], "priority": 100}
   },
   "sb_2103": {
     "universal": false,
@@ -440,27 +507,31 @@
     "onlyWhen": [
       "festival:christmas"
     ],
-    "boost": []
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["month_day:12-25"], "priority": 100}
   },
   "sb_2113": {
     "universal": false,
     "onlyWhen": [
       "festival:christmas"
     ],
-    "boost": []
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["month_day:12-25"], "priority": 100}
   },
   "sb_2114": {
     "universal": false,
     "onlyWhen": [
       "festival:new_year"
     ],
-    "boost": []
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["month_day:01-01"], "priority": 100}
   },
   "sb_2115": {
     "universal": false,
     "onlyWhen": [
-      "festival:new_year"
+      "month_day:12-31"
     ],
-    "boost": []
+    "boost": [],
+    "dateBinding": {"mode": "exclusive", "rules": ["month_day:12-31"], "priority": 100}
   }
 }

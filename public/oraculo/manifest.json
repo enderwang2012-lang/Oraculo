@@ -1,10 +1,15 @@
 {
-  "corpusVersion": 12,
-  "publishedAt": "2026-10-09T14:44:26Z",
-  "minAppVersion": "1.0.0",
-  "releaseNotes": "按用户评审通过的 62 条 10-12 月候选扩充语料；补充通用、节日和日期典故内容",
+  "corpusVersion": 13,
+  "publishedAt": "2026-10-10T10:04:03Z",
+  "minAppVersion": "1.1.0",
+  "releaseNotes": "语料与节日日历统一热更新 特定日期优先展示关联短签",
   "phrases": {
-    "url": "https://oraculo-corpus.vercel.app/oraculo/phrases-v12-92d80c149595681632dab3e0388fdcc09007a06939c46b5723bd335c3027e98f.json",
-    "sha256": "92d80c149595681632dab3e0388fdcc09007a06939c46b5723bd335c3027e98f"
+    "url": "https://oraculo-corpus.vercel.app/oraculo/phrases-v13-8c1b7c852af7df9481a14fe5b23b39b6b4a7281eff0ebe80aeaba480ca1ee55e.json",
+    "sha256": "8c1b7c852af7df9481a14fe5b23b39b6b4a7281eff0ebe80aeaba480ca1ee55e"
+  },
+  "releaseVersion": 13,
+  "calendar": {
+    "url": "https://oraculo-corpus.vercel.app/oraculo/calendar-v13-6bf86a12944b80271231315da15b76c1a676b470b50870df1ef07ddf7c19a900.json",
+    "sha256": "6bf86a12944b80271231315da15b76c1a676b470b50870df1ef07ddf7c19a900"
   }
 }

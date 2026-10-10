@@ -1,6 +1,8 @@
 {
-  "corpusVersion": 12,
-  "generatedAt": "2026-10-09T14:44:26Z",
+  "corpusVersion": 13,
+  "generatedAt": "2026-10-10T10:04:03Z",
   "phraseCount": 223,
-  "phrasesSHA256": "92d80c149595681632dab3e0388fdcc09007a06939c46b5723bd335c3027e98f"
+  "phrasesSHA256": "8c1b7c852af7df9481a14fe5b23b39b6b4a7281eff0ebe80aeaba480ca1ee55e",
+  "calendarVersion": 13,
+  "calendarSHA256": "6bf86a12944b80271231315da15b76c1a676b470b50870df1ef07ddf7c19a900"
 }

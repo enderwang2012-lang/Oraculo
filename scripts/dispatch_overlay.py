@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -59,6 +60,8 @@ def merge_dispatch(base: dict, overlay: dict | None) -> dict:
         merged["colorBan"] = list(base["colorBan"])
     if base.get("colorFamilies"):
         merged["colorFamilies"] = list(base["colorFamilies"])
+    if "dateBinding" in base:
+        merged["dateBinding"] = deepcopy(base["dateBinding"])
 
     if not overlay:
         return merged
@@ -103,4 +106,6 @@ def strip_for_embed(dispatch: dict) -> dict:
         out["colorBan"] = list(dispatch["colorBan"])
     if dispatch.get("colorFamilies"):
         out["colorFamilies"] = list(dispatch["colorFamilies"])
+    if "dateBinding" in dispatch:
+        out["dateBinding"] = deepcopy(dispatch["dateBinding"])
     return out

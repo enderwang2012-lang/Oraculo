@@ -18,6 +18,8 @@ struct PhraseDispatch: Codable, Equatable, Hashable {
     /// 偏好的细色族（red/orange/.../black，见 tag_vocabulary.json color_family）。
     /// 命中时色权重 ×colorFamilyBoost——比 colorMoods 更精确，如「森林」点名 green。空表示无偏好。
     var colorFamilies: [String]?
+    /// 日期关联：exclusive 命中时优先进入独占候选池，boost 仅提高普通候选权重。
+    var dateBinding: PhraseDateBinding? = nil
 
     static let fallback = PhraseDispatch(
         universal: true,
@@ -26,11 +28,29 @@ struct PhraseDispatch: Codable, Equatable, Hashable {
         negative: nil,
         colorMoods: nil,
         colorBan: nil,
-        colorFamilies: nil
+        colorFamilies: nil,
+        dateBinding: nil
     )
 }
 
 struct PhraseTagBoost: Codable, Equatable, Hashable {
     var tag: String
     var weight: Double
+}
+
+enum PhraseDateBindingMode: String, Codable, Equatable, Hashable {
+    case boost
+    case exclusive
+}
+
+struct PhraseDateBinding: Codable, Equatable, Hashable {
+    let mode: PhraseDateBindingMode
+    let rules: [String]
+    let priority: Int
+
+    init(mode: PhraseDateBindingMode, rules: [String], priority: Int = 0) {
+        self.mode = mode
+        self.rules = rules
+        self.priority = priority
+    }
 }

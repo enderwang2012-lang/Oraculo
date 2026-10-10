@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
+from calendar_release import valid_date_token
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -29,6 +30,9 @@ COLOR_MOODS = {"warm", "cool", "light", "dark"}
 
 
 def validate_tag(tag: str, vocab: dict, errors: list[str], where: str) -> None:
+    if not isinstance(tag, str):
+        errors.append(f"[{where}] tag must be a string")
+        return
     dim, value = parse_tag(tag)
     dims = vocab["dimensions"]
     if not dim:
@@ -38,6 +42,10 @@ def validate_tag(tag: str, vocab: dict, errors: list[str], where: str) -> None:
         errors.append(f"[{where}] 未知维度 '{dim}'（tag='{tag}'）")
         return
     spec = dims[dim]
+    if dim == "month_day":
+        if len(value) != 5 or not valid_date_token(value):
+            errors.append(f"[{where}] invalid month_day: {value}")
+        return
     if spec.get("skip_value_check"):
         return
     if value not in spec["values"]:
@@ -72,6 +80,23 @@ def validate_color_family(values: list[str], vocab: dict, errors: list[str], whe
 
 
 def validate_dispatch_obj(pid: str, d: dict, vocab: dict, errors: list[str], warnings: list[str]) -> None:
+    if "dateBinding" in d:
+        binding = d["dateBinding"]
+        if not isinstance(binding, dict):
+            errors.append(f"[{pid}] dateBinding must be an object")
+        else:
+            if binding.get("mode") not in {"boost", "exclusive"}:
+                errors.append(f"[{pid}] invalid dateBinding mode")
+            if type(binding.get("priority")) is not int:
+                errors.append(f"[{pid}] dateBinding priority must be an integer")
+            rules = binding.get("rules")
+            if not isinstance(rules, list) or not rules:
+                errors.append(f"[{pid}] dateBinding rules must be a nonempty array")
+            else:
+                for tag in rules:
+                    validate_tag(tag, vocab, errors, f"{pid}.dateBinding")
+                    if isinstance(tag, str) and parse_tag(tag)[0] not in {"festival", "solar_term", "month_day", "month", "season"}:
+                        errors.append(f"[{pid}] dateBinding requires a calendar tag: {tag}")
     for tag in d.get("onlyWhen", []):
         validate_tag(tag, vocab, errors, f"{pid}.onlyWhen")
     for b in d.get("boost", []):
