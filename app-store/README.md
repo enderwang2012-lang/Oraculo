@@ -3,6 +3,8 @@
 This directory contains repository-owned submission material for Oraculo.
 The current repository release candidate is 1.1.0 (7), with corpus/calendar release v13.
 The historical App Store Connect record below is not proof of the current online version.
+On 2026-10-10, 1.1.0 (7) was uploaded and submitted for review; the UI showed "waiting for review".
+See `release-1.1.0.md` for verification and submission identifiers.
 
 ## Ready In Repository
 
